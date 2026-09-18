@@ -1,0 +1,150 @@
+  /* ================================================================
+     CUSTOM VALUES — edit these once your brand assets are ready.
+     Everything else below inherits from your Squarespace theme
+     (fonts, text color, link color, button shape) automatically
+     and shouldn't need to change.
+
+     Tag colors: every tag currently shares ONE color (below). If you
+     later want different colors per tag, each tag pill already has
+     a data-tag="<tag-id>" attribute you can target directly, e.g.:
+       .ean-tag[data-tag="campus"] { background: ... !important; }
+     No need to touch anything else if you do that.
+     ================================================================ */
+  #ean-resources-root {
+    --ean-card-bg: rgba(127,127,127,.06);      /* card fill color */
+    --ean-border: rgba(127,127,127,.3);         /* card/input border, default */
+    --ean-border-strong: rgba(127,127,127,.7);  /* card border on hover */
+    --ean-tag-bg: transparent;                  /* tag pill fill, inactive */
+    --ean-tag-border: var(--ean-border);        /* tag pill border, inactive */
+    --ean-tag-active-bg: rgba(40,40,40,.85);    /* PLACEHOLDER — tag pill fill when selected */
+    width: 100%;
+  }
+  #ean-resources-root * { box-sizing: border-box; }
+
+  /* ---- everything past this point is structural/layout only ---- */
+  .ean-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0;
+    padding: 10px 0;
+    z-index: 5;
+    background: inherit;
+  }
+  .ean-search {
+    flex: 1 1 240px;
+    padding: 0.6em 0.9em;
+    border: 1px solid var(--ean-border);
+    border-radius: 6px;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+  }
+  .ean-search:focus { outline: 2px solid currentColor; outline-offset: 1px; }
+
+  .ean-tagbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 24px;
+  }
+  /* Tag pills use Squarespace's own button element classes so they
+     inherit your Design > Buttons color/shape/hover automatically. */
+  .ean-tag {
+    padding: 0.3em 0.9em !important;
+    cursor: pointer;
+    background: var(--ean-tag-bg) !important;
+    border-color: var(--ean-tag-border) !important;
+  }
+  .ean-tag[data-active="true"] {
+    background: var(--ean-tag-active-bg) !important;
+    border-color: var(--ean-tag-active-bg) !important;
+    color: #fff !important;
+  }
+
+  .ean-crumb {
+    font-size: 0.9em;
+    opacity: 0.75;
+    margin-bottom: 16px;
+  }
+  .ean-crumb-link {
+    cursor: pointer;
+  }
+
+  .ean-cat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 16px;
+  }
+  .ean-cat-card {
+    background: var(--ean-card-bg);
+    border: 1px solid var(--ean-border);
+    border-radius: 8px;
+    padding: 20px;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  }
+  .ean-cat-card:hover {
+    border-color: var(--ean-border-strong);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.10);
+  }
+  .ean-cat-card:active { transform: translateY(-1px); }
+  .ean-cat-card h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.25; }
+  .ean-cat-card p { margin: 0 0 10px; opacity: 0.75; font-size: 0.9em; }
+  .ean-cat-count { font-size: 0.8em; opacity: 0.6; }
+
+  .ean-res-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 18px;
+  }
+  .ean-res-card {
+    background: var(--ean-card-bg);
+    border: 1px solid var(--ean-border);
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .ean-res-card h4 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
+  .ean-res-badge {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    opacity: 0.6;
+    border: 1px solid var(--ean-border);
+    border-radius: 4px;
+    padding: 2px 7px;
+  }
+  .ean-res-desc { font-size: 0.92em; line-height: 1.5; margin: 0; }
+  .ean-res-desc.empty { opacity: 0.6; font-style: italic; }
+  .ean-res-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 2px;
+  }
+  .ean-res-tags span {
+    font-size: 0.72em;
+    border: 1px solid var(--ean-border);
+    border-radius: 4px;
+    padding: 2px 7px;
+    opacity: 0.75;
+  }
+  .ean-res-ref {
+    font-size: 0.78em;
+    opacity: 0.65;
+    border-top: 1px solid var(--ean-border);
+    padding-top: 8px;
+    margin-top: 4px;
+    line-height: 1.4;
+  }
+  .ean-res-link { font-size: 0.85em; }
+  .ean-empty { opacity: 0.6; padding: 40px 0; text-align: center; }

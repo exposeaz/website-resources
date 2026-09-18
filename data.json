@@ -1,0 +1,543 @@
+{
+  "categories": [
+    { "id": "books", "label": "Books", "blurb": "Foundational and historical book-length works." },
+    { "id": "scholarly-articles", "label": "Scholarly Articles", "blurb": "Peer-reviewed and academic legal/historical research." },
+    { "id": "essays", "label": "Essays & Commentary", "blurb": "Analysis and opinion writing on antizionism as ideology and political culture." },
+    { "id": "legal-commentary", "label": "Legal & Public-Affairs Commentary", "blurb": "Legal analysis and public commentary on antizionism and discrimination." },
+    { "id": "organizations", "label": "Organizations", "blurb": "Advocacy and research organizations working on this topic." },
+    { "id": "letters", "label": "Letters & Submissions", "blurb": "Open letters and submissions to institutions and government bodies." },
+    { "id": "declarations", "label": "Declarations & Petitions", "blurb": "Public declarations and petitions." }
+  ],
+  "tags": [
+    { "id": "soviet-origins", "label": "Soviet origins" },
+    { "id": "post-oct-7", "label": "Post-October 7" },
+    { "id": "genocide-accusation", "label": "Genocide accusation" },
+    { "id": "campus", "label": "Campus" },
+    { "id": "legal-definition", "label": "Legal/IHRA definition" },
+    { "id": "history", "label": "History" },
+    { "id": "poland-1968", "label": "Poland 1968" },
+    { "id": "colonizer-narrative", "label": "Colonizer narrative" },
+    { "id": "bds", "label": "BDS" },
+    { "id": "conspiracy-theory", "label": "Conspiracy theory" },
+    { "id": "left-antisemitism", "label": "Left antisemitism" },
+    { "id": "data-analysis", "label": "Data analysis" },
+    { "id": "definitional", "label": "Definitional debate" },
+    { "id": "advocacy", "label": "Advocacy" },
+    { "id": "media-commentary", "label": "Media commentary" }
+  ],
+  "resources": [
+    {
+      "id": "amery-at-the-minds-limits",
+      "title": "At the Mind's Limits",
+      "category": "books",
+      "description": "A Holocaust survivor's reckoning with postwar antizionism.",
+      "tags": ["history"],
+      "reference": "Améry, Jean. At the Mind's Limits. 1966.",
+      "url": null
+    },
+    {
+      "id": "givet-antizionist-complex",
+      "title": "The Antizionist Complex",
+      "category": "books",
+      "description": "One of the first book-length arguments that postwar hostility to Israel is a continuation of Judeophobia in a new guise; argues that opposition to Jewish national existence, however framed, ultimately derives from a refusal to accept a Jewish nation.",
+      "tags": ["history"],
+      "reference": "Givet, Jacques. The Antizionist Complex. SBS Publishing, 1979.",
+      "url": "https://archive.org/details/antizionistcompl0000give"
+    },
+    {
+      "id": "poliakov-history-of-antisemitism",
+      "title": "The History of Anti-Semitism",
+      "category": "books",
+      "description": "A landmark four-volume history tracing Jew-hatred from antiquity through the rise of Nazism; the final volumes (\"From Voltaire to Wagner,\" \"Suicidal Europe\") trace the emergence of racial antisemitism and end with Poliakov's own prescient warning that hatred of Jews might take on a new \"anti-Zionist\" guise.",
+      "tags": ["history"],
+      "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1965–1977.",
+      "url": null
+    },
+    {
+      "id": "taguieff-new-judeophobia",
+      "title": "The New Judeophobia",
+      "category": "books",
+      "description": "Argues that a \"new Judeophobia\" emerged around the 2001 Durban conference, distinct from older racial antisemitism: it diabolizes Israel and Zionism (and by extension Jews) using antiracist and anti-imperialist language rather than racial theory.",
+      "tags": ["history", "left-antisemitism"],
+      "reference": "Taguieff, Pierre-André. The New Judeophobia. 2002.",
+      "url": null
+    },
+    {
+      "id": "taguieff-judeophobia-last-wave",
+      "title": "Judeophobia: The Last Wave",
+      "category": "books",
+      "description": "Continues Taguieff's study of the mutations of Judeophobia, extending his analysis of anti-Zionist antisemitism into its most recent, post-2000s forms.",
+      "tags": ["history"],
+      "reference": "Taguieff, Pierre-André. Judeophobia: The Last Wave. 2018.",
+      "url": null
+    },
+    {
+      "id": "wistrich-left-against-zion",
+      "title": "The Left against Zion: Communism, Israel, and the Middle East",
+      "category": "books",
+      "description": "An edited volume examining the Soviet bloc's turn against Israel after 1967 and the antisemitic character much of that \"anti-Zionist\" campaign took on.",
+      "tags": ["soviet-origins", "left-antisemitism", "history"],
+      "reference": "Wistrich, Robert S. (ed.). The Left against Zion. Vallentine, Mitchell, 1979.",
+      "url": null
+    },
+    {
+      "id": "wistrich-ambivalence-to-betrayal-chapter",
+      "title": "From Ambivalence to Betrayal: The Left, the Jews, and Israel (essay)",
+      "category": "books",
+      "description": "Traces the European left's shift from ambivalence toward, to eventual hostility against, Jewish nationalism, foreshadowing Wistrich's larger 2012 book of a similar title.",
+      "tags": ["left-antisemitism", "history"],
+      "reference": "Wistrich, Robert S. \"From Ambivalence to Betrayal: The Left, the Jews, and Israel.\" In Anti-Zionism and Antisemitism in the Contemporary World, 2009.",
+      "url": null
+    },
+    {
+      "id": "wistrich-lethal-obsession",
+      "title": "A Lethal Obsession",
+      "category": "books",
+      "description": "A sweeping single-volume history of antisemitism \"from antiquity to the global jihad,\" ending with chapters connecting the Soviet war on Zionism and contemporary jihadist and left-wing antisemitism to older Judeophobic traditions.",
+      "tags": ["history", "soviet-origins", "left-antisemitism"],
+      "reference": "Wistrich, Robert S. A Lethal Obsession. Random House, 2010.",
+      "url": null
+    },
+    {
+      "id": "levin-jews-in-soviet-union",
+      "title": "The Jews in the Soviet Union Since 1917: Paradox of Survival",
+      "category": "books",
+      "description": "A detailed two-volume history of Soviet Jewry, including the state's campaigns against Zionism and Hebrew culture from the 1920s onward.",
+      "tags": ["soviet-origins", "history"],
+      "reference": "Levin, Nora. The Jews in the Soviet Union Since 1917: Paradox of Survival. NYU Press, 1988.",
+      "url": null
+    },
+    {
+      "id": "hirsh-contemporary-left-antisemitism",
+      "title": "Contemporary Left Antisemitism",
+      "category": "books",
+      "description": "Analyzes how antisemitism that goes unacknowledged in left-wing and liberal spaces (unions, academia, campaigns to boycott Israel) can hide behind the language of anti-imperialism and human rights; introduces Hirsh's concept of the \"Livingstone Formulation,\" in which raising antisemitism is dismissed as a bad-faith attempt to silence criticism of Israel.",
+      "tags": ["left-antisemitism", "bds", "campus"],
+      "reference": "Hirsh, David. Contemporary Left Antisemitism. Routledge, 2017.",
+      "url": null
+    },
+    {
+      "id": "kirschbaum-shirazki-new-middle-east",
+      "title": "From Antizionism to a New Middle East",
+      "category": "books",
+      "description": "",
+      "tags": [],
+      "reference": "Kirschbaum-Shirazki, Olga. From Antizionism to a New Middle East. 2026.",
+      "url": null
+    },
+    {
+      "id": "marcus-accusation-in-a-mirror",
+      "title": "Accusation in a Mirror",
+      "category": "scholarly-articles",
+      "description": "",
+      "tags": ["legal-definition"],
+      "reference": "Marcus, Kenneth L. \"Accusation in a Mirror.\" 2012.",
+      "url": "https://lawecommons.luc.edu/luclj/vol43/iss2/5/"
+    },
+    {
+      "id": "marcus-antizionism-antisemitism-chapter",
+      "title": "Anti-Zionism & Anti-Semitism",
+      "category": "scholarly-articles",
+      "description": "From the book examining how the U.S. civil-rights framework (Title VI) can and should apply to campus antisemitism, including where anti-Israel activism shades into discrimination against Jewish students.",
+      "tags": ["legal-definition", "campus"],
+      "reference": "Marcus, Kenneth L. \"Anti-Zionism & Anti-Semitism.\" In The Definition of Anti-Semitism, 146–190. Oxford University Press, 2015.",
+      "url": null
+    },
+    {
+      "id": "martin-ambiguity-to-accountability",
+      "title": "From Ambiguity to Accountability: The Case for a Legal Definition of Antisemitism in Academia",
+      "category": "scholarly-articles",
+      "description": "Argues, using post–October 7 campus data, that universities should formally adopt the IHRA definition of antisemitism in their nondiscrimination policies to close the ambiguity around antizionism as a form of antisemitism and restore Title VI accountability.",
+      "tags": ["legal-definition", "campus", "post-oct-7"],
+      "reference": "Martin, Andrea J. \"From Ambiguity to Accountability: The Case for a Legal Definition of Antisemitism in Academia.\" Pepperdine Law Review, 2025.",
+      "url": "https://digitalcommons.pepperdine.edu/plr/vol2025/iss1/2"
+    },
+    {
+      "id": "shalev-hamas-oct-7-genocide",
+      "title": "Hamas' October 7th Genocide: Legal Analysis and the Weaponisation of Reverse Accusations",
+      "category": "scholarly-articles",
+      "description": "Argues under the Genocide Convention that Hamas's October 7 attack itself meets the legal definition of genocide, and examines how the reverse \"genocide\" accusation against Israel functions to deflect that recognition.",
+      "tags": ["genocide-accusation", "post-oct-7", "legal-definition"],
+      "reference": "Shalev, Avraham Russell. \"Hamas' October 7th Genocide: Legal Analysis and the Weaponisation of Reverse Accusations—A Study in Modern Genocide Recognition and Denial.\" Israel Law Review, Vol. 58, Special Issue 2–3, 2025.",
+      "url": "https://www.cambridge.org/core/journals/israel-law-review/article/hamas-october-7th-genocide-legal-analysis-and-the-weaponisation-of-reverse-accusations-a-study-in-modern-genocide-recognition-and-denial/322198E636341BE82F37ED7147FEB0F5"
+    },
+    {
+      "id": "goda-genocide-libel",
+      "title": "The Genocide Libel: How the World Has Charged Israel with Genocide",
+      "category": "scholarly-articles",
+      "description": "A Holocaust historian traces how genocide accusations against Israel, unlike those leveled at other states, have persisted throughout its existence, and argues the post-October 7 version deploys classic antisemitic tropes (blood libel, Nazi inversion, collective Jewish guilt).",
+      "tags": ["genocide-accusation", "post-oct-7", "history"],
+      "reference": "Goda, Norman J. W. \"The Genocide Libel: How the World Has Charged Israel with Genocide.\" ISCA Research Paper 2025-3, Institute for the Study of Contemporary Antisemitism, Indiana University, 2025.",
+      "url": "https://isca.indiana.edu/publication-research/research-paper-series/norman-jw-goda-research-paper.html"
+    },
+    {
+      "id": "mor-three-antizionisms",
+      "title": "On Three Antizionisms",
+      "category": "scholarly-articles",
+      "description": "Argues that \"antizionism\" is not one coherent ideology but three distinct ideological clusters that happen to share a label, and that treating them as one obscures more than it clarifies.",
+      "tags": ["definitional"],
+      "reference": "Mor, Shany. \"On Three Antizionisms.\" Israel Studies, Vol. 24, No. 2, 2019.",
+      "url": "https://tikvah.org/collegiate-forum/shani-mor-on-three-anti-zionisms/"
+    },
+    {
+      "id": "tabarovsky-demonization-blueprints",
+      "title": "Demonization Blueprints: Soviet Conspiracist Antizionism in Contemporary Left-Wing Discourse",
+      "category": "scholarly-articles",
+      "description": "Traces how Soviet-era \"anti-Zionist\" propaganda campaigns (1967–88) built a conspiracist, demonizing template for talking about Israel that Tabarovsky argues has been absorbed largely intact into today's left-wing discourse.",
+      "tags": ["soviet-origins", "left-antisemitism", "conspiracy-theory"],
+      "reference": "Tabarovsky, Izabella. \"Demonization Blueprints: Soviet Conspiracist Antizionism in Contemporary Left-Wing Discourse.\" Journal of Contemporary Antisemitism, vol. 5, no. 1, 2022, pp. 1-20.",
+      "url": "https://doi.org/10.26613/jca/5.1.97"
+    },
+    {
+      "id": "wistrich-antizionist-mythology-of-left",
+      "title": "The Anti-Zionist Mythology of the Left",
+      "category": "scholarly-articles",
+      "description": "A shorter companion piece to Wistrich's From Ambivalence to Betrayal, dissecting the intellectual myths (Zionism as racism, colonialism, imperialism) that underpin the contemporary left's hostility to Israel.",
+      "tags": ["left-antisemitism", "colonizer-narrative"],
+      "reference": "Wistrich, Robert S. \"The Anti-Zionist Mythology of the Left.\" Israel Journal of Foreign Affairs, 9:2, 2015.",
+      "url": "https://www.tandfonline.com/doi/pdf/10.1080/23739770.2015.1037579"
+    },
+    {
+      "id": "kelner-american-antizionism",
+      "title": "American Antizionism",
+      "category": "essays",
+      "description": "A sociologist argues that post-October 7 antizionism in the U.S. is best understood not as an intellectual critique of Zionism but as a mass political and social movement, with roots traced back through Poliakov's own 1969 prediction of a coming \"anti-Zionist\" mutation of antisemitism.",
+      "tags": ["post-oct-7", "soviet-origins"],
+      "reference": "Kelner, Shaul. \"American Antizionism.\" Sources: A Journal of Jewish Ideas, Fall/Winter 2025.",
+      "url": "https://www.sourcesjournal.org/articles/american-antizionism"
+    },
+    {
+      "id": "hirsh-anti-zionism-and-antizionism",
+      "title": "\"Anti-Zionism\" and \"Antizionism\"",
+      "category": "essays",
+      "description": "Subtitled \"the anti-Jewish worldview behind anti-Israel obsessions,\" it argues antizionism functions as a self-contained worldview that constructs its own caricature of Israel and positions it as central to global oppression.",
+      "tags": ["left-antisemitism", "definitional"],
+      "reference": "Hirsh, David. \"'Anti-Zionism' and 'Antizionism'.\" Australia/Israel & Jewish Affairs Council.",
+      "url": "https://aijac.org.au/australia-israel-review/essay-anti-zionism-and-antizionism/"
+    },
+    {
+      "id": "louis-klein-defeating-antizionism",
+      "title": "Defeating Antizionism",
+      "category": "essays",
+      "description": "By an anthropologist and founder of the Movement Against Antizionism (MAAZ), arguing antizionism should be named and fought as its own distinct hate ideology rather than folded into debates over \"antisemitism.\"",
+      "tags": ["definitional", "advocacy", "post-oct-7"],
+      "reference": "Louis-Klein, Adam. \"Defeating Antizionism.\" Sapir, Issue 12, 2026.",
+      "url": "https://sapirjournal.org/aspiration-ii/2026/defeating-antizionism/"
+    },
+    {
+      "id": "louis-klein-what-antizionism-really-is",
+      "title": "What Antizionism Really Is",
+      "category": "essays",
+      "description": "Continues Louis-Klein's argument that antizionism is a structured ideology with its own libels (colonizer, apartheid, genocide) rather than simply a political stance on Israeli policy.",
+      "tags": ["definitional", "colonizer-narrative", "genocide-accusation"],
+      "reference": "Louis-Klein, Adam. \"What Antizionism Really Is.\" The Free Press.",
+      "url": "https://www.thefp.com/p/what-anti-zionism-really-is"
+    },
+    {
+      "id": "louis-klein-left-wing-case",
+      "title": "The Left-Wing Case Against Anti-Zionism",
+      "category": "essays",
+      "description": "Makes the case, aimed at a left-leaning audience, that opposing antizionism is consistent with — not opposed to — progressive values.",
+      "tags": ["left-antisemitism", "definitional"],
+      "reference": "Louis-Klein, Adam. \"The Left-Wing Case Against Anti-Zionism.\" The Atlantic.",
+      "url": "https://www.theatlantic.com/ideas/2026/06/left-against-antizionism-israel/687616/"
+    },
+    {
+      "id": "tabarovsky-cult-of-antizionism",
+      "title": "The Cult of Antizionism",
+      "category": "essays",
+      "description": "Examines the founding of an academic \"Institute for the Critical Study of Zionism\" as an attempt to revive the Soviet-era discipline of \"scientific antizionism\" within American universities.",
+      "tags": ["campus", "soviet-origins"],
+      "reference": "Tabarovsky, Izabella. \"The Cult of 'Antizionism.'\" Tablet Magazine.",
+      "url": "https://www.tabletmag.com/sections/arts-letters/articles/cult-of-antizionism-icsz"
+    },
+    {
+      "id": "tabarovsky-zombie-antizionism",
+      "title": "Zombie Antizionism",
+      "category": "essays",
+      "description": "Part of Tabarovsky's ongoing argument that Soviet-origin anti-Zionist tropes, long assumed dead, keep resurfacing largely unchanged in Western left-wing discourse.",
+      "tags": ["soviet-origins", "left-antisemitism"],
+      "reference": "Tabarovsky, Izabella. \"Zombie Antizionism.\" Tablet Magazine.",
+      "url": "https://www.tabletmag.com/sections/arts-letters/articles/zombie-anti-zionism"
+    },
+    {
+      "id": "tabarovsky-soviet-antizionism-fathom",
+      "title": "Soviet Antizionism and Contemporary Left Antisemitism",
+      "category": "essays",
+      "description": "Lays out how the USSR's Cold War-era anti-Zionist propaganda apparatus supplied the conspiratorial vocabulary and imagery still used against Israel and Zionism today.",
+      "tags": ["soviet-origins", "left-antisemitism", "conspiracy-theory"],
+      "reference": "Tabarovsky, Izabella. \"Soviet Antizionism and Contemporary Left Antisemitism.\" Fathom Journal.",
+      "url": "https://fathomjournal.org/soviet-anti-zionism-and-contemporary-left-antisemitism/"
+    },
+    {
+      "id": "kirschbaum-shirazki-projection-replacement",
+      "title": "Antizionism: Projection and Replacement Theology",
+      "category": "essays",
+      "description": "",
+      "tags": [],
+      "reference": "Kirschbaum-Shirazki, Olga. \"Antizionism: Projection and Replacement Theology.\"",
+      "url": "https://olgakirschbaum.substack.com/p/antizionism-projection-and-replacement"
+    },
+    {
+      "id": "boudry-they-dont-believe-it-either",
+      "title": "They Don't Believe It Either",
+      "category": "essays",
+      "description": "A philosopher of science (known for work on belief, ideology and pseudoscience) argues that much of the post-October 7 \"genocide\" rhetoric aimed at Israel functions less as a sincerely held factual belief than as a performative, tribal signal.",
+      "tags": ["genocide-accusation", "post-oct-7", "campus"],
+      "reference": "Boudry, Maarten. \"They Don't Believe It Either.\" Quillette, Oct. 19, 2025.",
+      "url": "https://quillette.com/2025/10/19/they-dont-believe-it-either-israel-gaza-genocide/"
+    },
+    {
+      "id": "lekht-colonizer-libel",
+      "title": "The Colonizer Libel: Retracing the Assembly Line",
+      "category": "essays",
+      "description": "",
+      "tags": ["colonizer-narrative"],
+      "reference": "Lekht, Naya. \"The Colonizer Libel: Retracing the Assembly Line.\" The Free Press.",
+      "url": "https://nayalekht.substack.com/p/the-colonizer-libel-retracing-the"
+    },
+    {
+      "id": "lekht-shadow-of-babi-yar",
+      "title": "The Shadow of Babi Yar: How the Soviets Taught the West to Erase the Jews",
+      "category": "essays",
+      "description": "Uses the Soviet-era suppression of the memory of the Babi Yar massacre as a case study for how erasing Jewish victimhood became a template later adopted by Western anti-Zionist discourse.",
+      "tags": ["soviet-origins", "history"],
+      "reference": "Lekht, Naya. \"The Shadow of Babi Yar: How the Soviets Taught the West to Erase the Jews.\" Jewish Journal.",
+      "url": "https://jewishjournal.com/commentary/opinion/383141/the-shadow-of-babi-yar-how-the-soviets-taught-the-west-to-erase-the-jews/"
+    },
+    {
+      "id": "lekht-plots-libels-accusations",
+      "title": "Plots, Libels, Accusations: Fingers Pointed at Jews Go Back Centuries",
+      "category": "essays",
+      "description": "",
+      "tags": ["history"],
+      "reference": "Lekht, Naya. \"Plots, Libels, Accusations: Fingers Pointed at Jews Go Back Centuries.\" JNS.",
+      "url": "https://www.jns.org/opinion/naya-lekht/plots-libels-accusations-fingers-pointed-at-jews-go-back-centuries"
+    },
+    {
+      "id": "lekht-three-failed-strategies",
+      "title": "Three Failed Strategies of Inward Advocacy",
+      "category": "essays",
+      "description": "",
+      "tags": ["advocacy"],
+      "reference": "Lekht, Naya. \"Three Failed Strategies of Inward Advocacy.\" JNS.",
+      "url": "https://www.jns.org/opinion/naya-lekht/three-failed-strategies-of-inward-advocacy"
+    },
+    {
+      "id": "lekht-scaffolding-antizionism",
+      "title": "Scaffolding Anti-Zionism: The Hate We Missed",
+      "category": "essays",
+      "description": "",
+      "tags": [],
+      "reference": "Lekht, Naya. \"Scaffolding Anti-Zionism: The Hate We Missed.\" Jewish Journal, 2025.",
+      "url": "https://jewishjournal.com/cover_story/384910/scaffolding-anti-zionism-the-hate-we-missed/"
+    },
+    {
+      "id": "wexler-eternal-settler",
+      "title": "The Eternal Settler",
+      "category": "essays",
+      "description": "Written after a wave of antisemitic attacks in Montreal, argues that even the Diaspora's oldest and largest Jewish communities (not just Israelis) are increasingly branded \"settlers\" in anti-Zionist rhetoric — a designation Wexler argues has no logical stopping point.",
+      "tags": ["colonizer-narrative", "post-oct-7"],
+      "reference": "Wexler, Benjamin. \"The Eternal Settler.\" K. (Les Juifs, l'Europe, le XXIe siècle), June 20, 2024.",
+      "url": null
+    },
+    {
+      "id": "szeftel-history-of-genocide-charge",
+      "title": "The History of the Charge of Genocide Against Israel",
+      "category": "essays",
+      "description": "A two-part historical investigation tracing the \"genocide\" accusation against Israel back through the revival of Arab nationalism (1920s–40s) and its absorption of European fascist and antisemitic ideas, then showing how those ideological roots fed the settler-colonialism framework used to level the charge today.",
+      "tags": ["genocide-accusation", "colonizer-narrative", "history"],
+      "reference": "Szeftel, Daniel. \"The History of the Charge of Genocide Against Israel.\" K. (Part 1 and Part 2).",
+      "url": "https://k-larevue.com/en/2024/11/21/history-genocide/"
+    },
+    {
+      "id": "dabelstein-greatest-threat",
+      "title": "The Greatest Threat to Jewish Safety Has a New Name",
+      "category": "essays",
+      "description": "An Australian writer on politics and Jewish affairs argues that antizionism, rather than traditional far-right antisemitism, has become the primary vector of anti-Jewish hostility today.",
+      "tags": ["post-oct-7", "media-commentary"],
+      "reference": "Dabelstein, Joshua. \"The Greatest Threat to Jewish Safety Has a New Name.\" Australian Financial Review.",
+      "url": "https://www.afr.com/politics/federal/the-greatest-threat-to-jewish-safety-has-a-new-name-20260107-p5ns7w"
+    },
+    {
+      "id": "maccallum-poland-irony",
+      "title": "A Deep Historical Irony of Anti-Zionism: Lessons from Poland",
+      "category": "essays",
+      "description": "Draws on Poland's 1968 state-orchestrated \"anti-Zionist\" purge — in which the label \"Zionist\" functioned as a euphemism for \"Jew\" and drove out most of the country's remaining Jewish population — as a historical warning about where anti-Zionist campaigns can lead.",
+      "tags": ["poland-1968", "soviet-origins", "history"],
+      "reference": "MacCallum, Alasdair. \"A Deep Historical Irony of Anti-Zionism: Lessons from Poland.\" The Jewish Independent.",
+      "url": "https://thejewishindependent.com.au/a-deep-historical-irony-of-anti-zionism-lessons-from-poland/"
+    },
+    {
+      "id": "ive-seen-this-before",
+      "title": "I've Seen This Before",
+      "category": "essays",
+      "description": "A data-driven project that uses text analysis to show close linguistic parallels between historical Soviet anti-Zionist propaganda and contemporary anti-Israel rhetoric.",
+      "tags": ["soviet-origins", "data-analysis"],
+      "reference": "\"I've Seen This Before.\" Data analysis, mapping Soviet anti-Zionist propaganda to modern echoes using semantic similarity.",
+      "url": "https://iveseenthisbefore.org/"
+    },
+    {
+      "id": "heath-totalitarian-conspiracy-theory",
+      "title": "Antizionism Is a Totalitarian Conspiracy Theory Rotting the West From Within",
+      "category": "essays",
+      "description": "Argues antizionism is not ordinary criticism of Israeli policy but a modernized, eliminationist hate ideology with its own closed analytical framework, comparable to other totalizing conspiracy theories.",
+      "tags": ["conspiracy-theory", "definitional"],
+      "reference": "Heath, Allister. \"Antizionism Is a Totalitarian Conspiracy Theory Rotting the West From Within.\" The Telegraph.",
+      "url": "https://www.telegraph.co.uk/news/2026/05/06/antizionism-totalitarian-conspiracy-theory-rotting-west/"
+    },
+    {
+      "id": "kaufman-antizionism-not-antisemitism",
+      "title": "Antizionism Is Not Antisemitism",
+      "category": "legal-commentary",
+      "description": "By a law professor who studies antisemitism, antizionism and Jewish peoplehood; despite the title, argues (consistent with her broader work) that treating antizionism as simply one species of \"antisemitism\" undersells it as its own freestanding ideology of Jew-hatred.",
+      "tags": ["definitional", "legal-definition"],
+      "reference": "Kaufman, Rona. \"Antizionism Is Not Antisemitism.\" The Times of Israel Blogs.",
+      "url": "https://blogs.timesofisrael.com/antizionism-is-not-antisemitism/"
+    },
+    {
+      "id": "kaufman-court-is-wrong",
+      "title": "The Court Is Wrong: Antizionism Is Discriminatory",
+      "category": "legal-commentary",
+      "description": "Argues that a specific court ruling wrongly treated antizionist conduct as protected political speech rather than as discriminatory conduct against Jewish people.",
+      "tags": ["legal-definition", "campus"],
+      "reference": "Kaufman, Rona. \"The Court Is Wrong: Antizionism Is Discriminatory.\" The Times of Israel Blogs.",
+      "url": "https://blogs.timesofisrael.com/the-court-is-wrong-antizionism-is-discriminatory/"
+    },
+    {
+      "id": "martin-antizionist-movement-hate-movement",
+      "title": "The Antizionist Movement Is a Hate Movement: It's Time to Say So",
+      "category": "legal-commentary",
+      "description": "Written after the 2025 Bondi Beach Hanukkah attack in Australia, argues — using the Southern Poverty Law Center's own definition of an antisemitic hate group — that the antizionist movement now meets that standard.",
+      "tags": ["post-oct-7", "definitional"],
+      "reference": "Martin, Andrea J. \"The Antizionist Movement Is a Hate Movement: It's Time to Say So.\" The Times of Israel Blogs.",
+      "url": "https://blogs.timesofisrael.com/the-antizionist-movement-is-a-hate-movement-its-time-to-say-so/"
+    },
+    {
+      "id": "martin-when-courts-minimize-terrorism",
+      "title": "When Courts Minimize Terrorism, Jewish Students Pay the Price",
+      "category": "legal-commentary",
+      "description": "Argues that courts downplaying pro-terror conduct on campus leaves Jewish students unprotected under civil-rights law.",
+      "tags": ["legal-definition", "campus"],
+      "reference": "Martin, Andrea J. \"When Courts Minimize Terrorism, Jewish Students Pay the Price.\" The Times of Israel Blogs.",
+      "url": "https://blogs.timesofisrael.com/when-courts-minimize-terrorism-jewish-students-pay-the-price/"
+    },
+    {
+      "id": "wilf-bds-pound-of-flesh",
+      "title": "The BDS Pound of Flesh",
+      "category": "legal-commentary",
+      "description": "A former Israeli MK argues that BDS-style campaigns to publicly shame students into disavowing Israel are a deliberate strategy to raise the \"psychic and professional cost\" of being Jewish.",
+      "tags": ["bds", "campus"],
+      "reference": "Wilf, Einat. \"The BDS Pound of Flesh.\" Tablet Magazine.",
+      "url": "https://www.tabletmag.com/sections/news/articles/the-bds-pound-of-flesh"
+    },
+    {
+      "id": "dulberg-moral-inversion",
+      "title": "Moral Inversion and the Rise of Authoritarian Sympathy",
+      "category": "legal-commentary",
+      "description": "A data study finding that antizionist views correlate with a broader \"moral inversion\" — a systematic tendency to misjudge or invert the actual human-rights records of authoritarian versus democratic states.",
+      "tags": ["data-analysis", "post-oct-7"],
+      "reference": "Dulberg, Zack, et al. Moral Inversion and the Rise of Authoritarian Sympathy. Rutgers University Social Perception Lab / Network Contagion Research Institute.",
+      "url": "https://networkcontagion.us/wp-content/uploads/Moral-Inversion-and-the-Rise-of-Authoritarian-Sympathy.pdf"
+    },
+    {
+      "id": "org-maaz",
+      "title": "Movement Against Antizionism (MAAZ)",
+      "category": "organizations",
+      "description": "An advocacy organization, founded by anthropologist Adam Louis-Klein, dedicated to naming and confronting antizionism as its own distinct hate movement.",
+      "tags": ["advocacy"],
+      "reference": "Movement Against Antizionism (MAAZ).",
+      "url": "https://www.movementagainstantizionism.org/"
+    },
+    {
+      "id": "org-icsa",
+      "title": "Institute for the Critical Study of Antizionism",
+      "category": "organizations",
+      "description": "",
+      "tags": ["advocacy"],
+      "reference": "Institute for the Critical Study of Antizionism.",
+      "url": "https://icsa.substack.com/"
+    },
+    {
+      "id": "org-stop-antizionism",
+      "title": "Stop Antizionism",
+      "category": "organizations",
+      "description": "An advocacy and education initiative, including a podcast series featuring scholar Dr. Naya Lekht.",
+      "tags": ["advocacy"],
+      "reference": "Stop Antizionism.",
+      "url": "https://www.stopantizionism.org/"
+    },
+    {
+      "id": "letter-canada-ridr",
+      "title": "Antizionism in Canada — Senate Standing Committee on Human Rights (RIDR)",
+      "category": "letters",
+      "description": "",
+      "tags": ["advocacy"],
+      "reference": "\"Antizionism in Canada.\" Prepared for the Senate Standing Committee on Human Rights (RIDR).",
+      "url": "https://sencanada.ca/Content/Sen/Committee/451/RIDR/briefs/2025-11-19_RIDR_Brief_NECA_e.pdf"
+    },
+    {
+      "id": "letter-lachemi",
+      "title": "Open Letter to President Lachemi of Toronto Metropolitan University on Antizionism",
+      "category": "letters",
+      "description": "",
+      "tags": ["advocacy", "campus"],
+      "reference": "\"An Open Letter to President Lachemi of Toronto Metropolitan University on Antizionism.\"",
+      "url": "https://static1.squarespace.com/static/6549684d160e26199c911885/t/691746476984a8128b20ea39/1763132999203/NECA+Open+Letter+President+Lachemi+2025+11+09.pdf"
+    },
+    {
+      "id": "letter-green-party-bc",
+      "title": "Open Letter to the Green Party of British Columbia on Antizionism in the Party",
+      "category": "letters",
+      "description": "",
+      "tags": ["advocacy"],
+      "reference": "\"Open Letter to the Green Party of British Columbia on Antizionism in the Party.\"",
+      "url": "https://drive.google.com/file/d/132JpyzVBdqTFU3qO7UiIOll5EodQYAHo/view?usp=sharing"
+    },
+    {
+      "id": "letter-maaz-australia-royal-commission",
+      "title": "MAAZ Australia Submission to the Royal Commission into Antisemitism and Social Cohesion",
+      "category": "letters",
+      "description": "",
+      "tags": ["advocacy"],
+      "reference": "MAAZ Australia. Submission to the Royal Commission into Antisemitism and Social Cohesion.",
+      "url": "https://maazaus.substack.com/p/submission-to-the-royal-commission"
+    },
+    {
+      "id": "declaration-scholars-genocide",
+      "title": "Scholars For Truth About Genocide",
+      "category": "declarations",
+      "description": "Over 500 scholars and experts of genocide, antisemitism, and antizionism reject the genocide libel.",
+      "tags": ["genocide-accusation", "advocacy"],
+      "reference": "Scholars For Truth About Genocide.",
+      "url": "https://www.scholarsfortruthaboutgenocide.com/"
+    },
+    {
+      "id": "declaration-global-jew-hatred",
+      "title": "Global Declaration: Antizionism is Jew Hatred",
+      "category": "declarations",
+      "description": "",
+      "tags": ["advocacy", "definitional"],
+      "reference": "Global Declaration: Antizionism is Jew Hatred.",
+      "url": "https://tally.so/r/VLGLxv"
+    },
+    {
+      "id": "letter-american-jewish-orgs",
+      "title": "Open Letter to American Jewish Organizations",
+      "category": "declarations",
+      "description": "",
+      "tags": ["advocacy"],
+      "reference": "\"Open Letter to American Jewish Organizations.\"",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdODApWjYzTy1-yMivTbzCe0odeO8mpDrgOf6a3ZHkHOZBNhQ/viewform"
+    },
+    {
+      "id": "declaration-rabbinic-call-to-action",
+      "title": "A Rabbinic Call to Action: Defending the Jewish Future",
+      "category": "declarations",
+      "description": "",
+      "tags": ["advocacy"],
+      "reference": "\"A Rabbinic Call to Action: Defending the Jewish Future.\"",
+      "url": "https://jewishmajority.org/a-rabbinic-call-to-action"
+    }
+  ]
+}
