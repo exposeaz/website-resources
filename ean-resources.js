@@ -50,8 +50,27 @@
     return html;
   }
 
+  // Simple line-icon fallback shown when a resource has no image.
+  // Rendered on a colored field (--ean-card-image-bg) using currentColor,
+  // so it automatically follows text color / brand accent.
+  var CATEGORY_ICONS = {
+    "books": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5c2-1 5-1 7 0v14c-2-1-5-1-7 0V5Z"/><path d="M20 5c-2-1-5-1-7 0v14c2-1 5-1 7 0V5Z"/></svg>',
+    "scholarly-articles": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M9 12h6M9 16h6M9 8h3"/></svg>',
+    "essays": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l4.5-1.2L19 8.3a1.8 1.8 0 0 0 0-2.6l-.7-.7a1.8 1.8 0 0 0-2.6 0L5.2 15.5 4 20Z"/></svg>',
+    "legal-commentary": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3M12 6 5 9M12 6l7 3M5 9l-2.5 5A3 3 0 0 0 5 18a3 3 0 0 0 2.5-4L5 9ZM19 9l-2.5 5a3 3 0 0 0 2.5 4 3 3 0 0 0 2.5-4L19 9ZM7 21h10"/></svg>',
+    "organizations": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6M4 21h16"/></svg>',
+    "letters": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3 6 9 7 9-7"/></svg>',
+    "declarations": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v16M4 5h13l-2 3 2 3H4"/></svg>'
+  };
+
   function renderResourceCard(r) {
     var html = '<div class="ean-res-card">';
+    if (r.image) {
+      html += '<div class="ean-res-image"><img src="' + esc(r.image) + '" alt="" loading="lazy"></div>';
+    } else {
+      var icon = CATEGORY_ICONS[r.category] || CATEGORY_ICONS["essays"];
+      html += '<div class="ean-res-image ean-res-image--fallback">' + icon + '</div>';
+    }
     html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
     html += '<h4>' + esc(r.title) + '</h4>';
     if (r.description) {
