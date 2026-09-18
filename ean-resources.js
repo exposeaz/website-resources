@@ -71,7 +71,12 @@
       var icon = CATEGORY_ICONS[r.category] || CATEGORY_ICONS["essays"];
       html += '<div class="ean-res-image ean-res-image--fallback">' + icon + '</div>';
     }
+    html += '<div class="ean-res-header">';
     html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
+    if (r.year) {
+      html += '<span class="ean-res-year">' + esc(String(r.year)) + '</span>';
+    }
+    html += '</div>';
     html += '<h4>' + esc(r.title) + '</h4>';
     if (r.description) {
       html += '<p class="ean-res-desc">' + esc(r.description) + '</p>';
