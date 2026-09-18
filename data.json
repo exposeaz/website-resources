@@ -81,10 +81,6 @@
       "label": "Data analysis"
     },
     {
-      "id": "definitional",
-      "label": "Definitional debate"
-    },
-    {
       "id": "advocacy",
       "label": "Advocacy"
     },
@@ -96,17 +92,32 @@
   "resources": [
     {
       "id": "amery-at-the-minds-limits",
-      "title": "At the Mind's Limits",
+      "title": "At the Mind's Limits: Contemplations by a Survivor on Auschwitz and its Realities",
       "category": "books",
-      "description": "A Holocaust survivor's reckoning with postwar antizionism.",
+      "description": "A Holocaust survivor's autobiographical account, which also includes a reckoning with postwar antizionism.",
       "tags": [
         "history"
       ],
       "reference": "Améry, Jean. At the Mind's Limits. 1966.",
       "author": "Jean Améry",
       "url": null,
-      "image": "https://covers.openlibrary.org/b/isbn/0805207619-M.jpg",
+      "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/1966-amery.png",
       "year": 1966
+    },
+    {
+      "id": "amery-essays-antisemitism-antizionism-left",
+      "title": "Essays on Antisemitism, Anti-Zionism, and the Left",
+      "category": "books",
+      "description": "A posthumous English-language collection gathering Jean Améry's essays confronting antisemitism and anti-Zionism, including his writings on the political currents of the postwar European left.",
+      "tags": [
+        "history",
+        "antizionism"
+      ],
+      "reference": "Améry, Jean. Essays on Antisemitism, Anti-Zionism, and the Left. Edited by Marlene Gallner. Translated by Louise Fischer. Indiana University Press, 2021.",
+      "author": "Jean Améry",
+      "url": "https://www.amazon.com/dp/0253058767",
+      "image": "https://covers.openlibrary.org/b/isbn/0253058767-M.jpg",
+      "year": 2021
     },
     {
       "id": "givet-antizionist-complex",
@@ -326,12 +337,9 @@
       "title": "On Three Antizionisms",
       "category": "scholarly-articles",
       "description": "Argues that \"antizionism\" is not one coherent ideology but three distinct ideological clusters that happen to share a label, and that treating them as one obscures more than it clarifies.",
-      "tags": [
-        "definitional"
-      ],
       "reference": "Mor, Shany. \"On Three Antizionisms.\" Israel Studies, Vol. 24, No. 2, 2019.",
       "author": "Shany Mor",
-      "url": "https://tikvah.org/collegiate-forum/shani-mor-on-three-anti-zionisms/",
+      "url": "https://tikvah.org/wp-content/uploads/2026/05/Mor-On-Three-Anti-Zionisms.pdf",
       "year": 2019
     },
     {
@@ -384,8 +392,7 @@
       "category": "essays",
       "description": "Subtitled \"the anti-Jewish worldview behind anti-Israel obsessions,\" it argues antizionism functions as a self-contained worldview that constructs its own caricature of Israel and positions it as central to global oppression.",
       "tags": [
-        "antizionism",
-        "definitional"
+        "antizionism"
       ],
       "reference": "Hirsh, David. \"'Anti-Zionism' and 'Antizionism'.\" Australia/Israel & Jewish Affairs Council.",
       "author": "David Hirsh",
@@ -398,8 +405,7 @@
       "category": "essays",
       "description": "By an anthropologist and founder of the Movement Against Antizionism (MAAZ), arguing antizionism should be named and fought as its own distinct hate ideology rather than folded into debates over \"antisemitism.\"",
       "tags": [
-        "definitional",
-        "advocacy",
+                "advocacy",
         "post-oct-7"
       ],
       "reference": "Louis-Klein, Adam. \"Defeating Antizionism.\" Sapir, Issue 12, 2026.",
@@ -413,8 +419,7 @@
       "category": "essays",
       "description": "Continues Louis-Klein's argument that antizionism is a structured ideology with its own libels (colonizer, apartheid, genocide) rather than simply a political stance on Israeli policy.",
       "tags": [
-        "definitional",
-        "colonizer-narrative",
+                "colonizer-narrative",
         "genocide-accusation"
       ],
       "reference": "Louis-Klein, Adam. \"What Antizionism Really Is.\" The Free Press.",
@@ -428,8 +433,7 @@
       "category": "essays",
       "description": "Makes the case, aimed at a left-leaning audience, that opposing antizionism is consistent with — not opposed to — progressive values.",
       "tags": [
-        "antizionism",
-        "definitional"
+        "antizionism"
       ],
       "reference": "Louis-Klein, Adam. \"The Left-Wing Case Against Anti-Zionism.\" The Atlantic.",
       "author": "Adam Louis-Klein",
@@ -625,6 +629,7 @@
       ],
       "reference": "\"I've Seen This Before.\" Data analysis, mapping Soviet anti-Zionist propaganda to modern echoes using semantic similarity.",
       "author": null,
+      "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/ive-seen-this-before.png",
       "url": "https://iveseenthisbefore.org/",
       "year": 2026
     },
@@ -634,8 +639,7 @@
       "category": "essays",
       "description": "Argues antizionism is not ordinary criticism of Israeli policy but a modernized, eliminationist hate ideology with its own closed analytical framework, comparable to other totalizing conspiracy theories.",
       "tags": [
-        "conspiracy-theory",
-        "definitional"
+        "conspiracy-theory"
       ],
       "reference": "Heath, Allister. \"Antizionism Is a Totalitarian Conspiracy Theory Rotting the West From Within.\" The Telegraph.",
       "author": "Allister Heath",
@@ -648,8 +652,7 @@
       "category": "legal-commentary",
       "description": "By a law professor who studies antisemitism, antizionism and Jewish peoplehood; despite the title, argues (consistent with her broader work) that treating antizionism as simply one species of \"antisemitism\" undersells it as its own freestanding ideology of Jew-hatred.",
       "tags": [
-        "definitional",
-        "legal-definition"
+                "legal-definition"
       ],
       "reference": "Kaufman, Rona. \"Antizionism Is Not Antisemitism.\" The Times of Israel Blogs.",
       "author": "Rona Kaufman",
@@ -676,8 +679,7 @@
       "category": "legal-commentary",
       "description": "Written after the 2025 Bondi Beach Hanukkah attack in Australia, argues — using the Southern Poverty Law Center's own definition of an antisemitic hate group — that the antizionist movement now meets that standard.",
       "tags": [
-        "post-oct-7",
-        "definitional"
+        "post-oct-7"
       ],
       "reference": "Martin, Andrea J. \"The Antizionist Movement Is a Hate Movement: It's Time to Say So.\" The Times of Israel Blogs.",
       "author": "Andrea J. Martin",
@@ -730,7 +732,7 @@
       "id": "nirenberg-anti-judaism",
       "title": "Anti-Judaism: The Western Tradition",
       "category": "books",
-      "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself, tracing hostility to the idea of Judaism from antiquity through the Enlightenment and just past the Holocaust — distinct from antisemitism as persecution of actual Jews.",
+      "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself. Nirenberg shows that Jews have represented what societies tend to to define themselves against. He traces this paradigm from antiquity through the Enlightenment and just past the Holocaust.",
       "tags": [
         "history",
         "foundational"
@@ -752,7 +754,7 @@
       ],
       "reference": "Horn, Dara. The Final Solution to the Jewish Question: A Love Story for the Living. Simon & Schuster, 2026.",
       "author": "Dara Horn",
-      "image": "https://covers.openlibrary.org/b/isbn/9781668090169-M.jpg",
+      "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/final-solution-dara-horn.png",
       "url": null,
       "year": 2026
     },
@@ -973,7 +975,6 @@
       "category": "scholarly-articles",
       "description": "Argues antizionism is a coherent ideology with its own genealogy (Nazi-Islamist axis, Soviet propaganda, Western settler-colonial theory) and a recurring triad of libels (colonizer, apartheid, genocide) — and that it inverts classical antisemitism: where the old hatred cast Jews as alien outsiders, antizionism denies Jewish peoplehood and indigeneity outright.",
       "tags": [
-        "definitional",
         "colonizer-narrative",
         "soviet-origins"
       ],
@@ -989,12 +990,11 @@
       "category": "essays",
       "description": "Argues that much contemporary antizionism rests on unexamined assumptions of Arab political and cultural primacy in the Middle East, denying Jewish indigeneity and minimizing the historic persecution and displacement of Middle Eastern Jews. Calls for 'unlearning Arab supremacy' the same way other forms of ethnic or colonial privilege get critically examined.",
       "tags": [
-        "colonizer-narrative",
-        "definitional"
+        "colonizer-narrative"
       ],
       "reference": "Bacharach, Barak. 'On Antizionism and Unlearning Arab Supremacy.' Haverford College Political Science Department, Alumni Corner.",
       "author": "Barak Bacharach",
-      "image": null,
+      "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/blogpostphoto.png.webp",
       "url": "https://pols.sites.haverford.edu/alumni-corner/on-antizionism-and-unlearning-arab-supremacy/",
       "year": 2025
     },

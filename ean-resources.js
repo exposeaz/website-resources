@@ -5,9 +5,11 @@
   var root = document.getElementById("ean-resources-root");
   var state = { data: null, view: "categories", categoryId: null, search: "", activeTags: [], modalResourceId: null };
 
-  // Categories whose single-category view groups cards by year.
-  // Substacks is deliberately excluded (see renderCategoryResources).
-  var YEAR_SECTIONED_CATEGORIES = ["books", "scholarly-articles", "essays", "legal-commentary", "data-research"];
+  // Categories whose single-category view sorts newest-year-first, in one
+  // flat grid (no visual year sections/headers — same layout as every
+  // other category). Substacks is deliberately excluded (see
+  // renderCategoryResources) — it stays alphabetical instead.
+  var YEAR_SORTED_CATEGORIES = ["books", "scholarly-articles", "essays", "legal-commentary", "data-research"];
 
   function esc(s) {
     return (s || "").replace(/[&<>"']/g, function (c) {
@@ -42,8 +44,12 @@
   }
 
   function renderToolbar() {
+    var filtering = state.search.trim() !== "" || state.activeTags.length > 0;
     var html = '<div class="ean-toolbar">';
     html += '<input class="ean-search" type="text" placeholder="Search titles, descriptions, citations..." value="' + esc(state.search) + '" />';
+    if (filtering) {
+      html += '<button type="button" class="ean-clear-btn" data-clear-filters="1">Clear filters</button>';
+    }
     html += '</div>';
     html += '<div class="ean-tagbar">';
     state.data.tags.forEach(function (t) {
@@ -67,10 +73,21 @@
     "declarations": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v16M4 5h13l-2 3 2 3H4"/></svg>'
   };
 
+  // If a resource's image URL 404s, times out, or otherwise fails to load
+  // (these are all hotlinked third-party URLs), swap in the same category
+  // icon used when there's no image at all, instead of leaving a collapsed
+  // empty box.
+  window.__eanImgError = function (imgEl, category) {
+    var icon = CATEGORY_ICONS[category] || CATEGORY_ICONS["essays"];
+    var wrap = imgEl.parentElement;
+    wrap.classList.add("ean-res-image--fallback");
+    wrap.innerHTML = icon;
+  };
+
   function resourceImageHtml(r, extraClass) {
     var cls = "ean-res-image" + (extraClass ? " " + extraClass : "");
     if (r.image) {
-      return '<div class="' + cls + '"><img src="' + esc(r.image) + '" alt="" loading="lazy"></div>';
+      return '<div class="' + cls + '"><img src="' + esc(r.image) + '" alt="" loading="lazy" onerror="window.__eanImgError(this, \'' + esc(r.category) + '\')"></div>';
     }
     var icon = CATEGORY_ICONS[r.category] || CATEGORY_ICONS["essays"];
     return '<div class="' + cls + ' ean-res-image--fallback">' + icon + '</div>';
@@ -89,15 +106,22 @@
     if (r.author) {
       html += '<div class="ean-res-author">' + esc(r.author) + '</div>';
     }
+    if (r.tags && r.tags.length) {
+      html += '<div class="ean-res-tags">' + r.tags.map(function (t) {
+        var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
+        return '<span data-tag="' + esc(t) + '">' + esc(tagDef ? tagDef.label : t) + '</span>';
+      }).join('') + '</div>';
+    }
     html += '</div>';
     return html;
   }
 
+  // No image here deliberately — the modal is the reading view, so it
+  // leads with the description at a larger, friendlier size instead.
   function renderResourceModal(r) {
     var html = '<div class="ean-modal-overlay" data-modal-overlay="1">';
     html += '<div class="ean-modal" role="dialog" aria-modal="true">';
     html += '<button class="ean-modal-close" data-modal-close="1" aria-label="Close">&times;</button>';
-    html += resourceImageHtml(r, "ean-modal-image");
     html += '<div class="ean-modal-body">';
     html += '<div class="ean-res-header">';
     html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
@@ -114,54 +138,35 @@
     } else {
       html += '<p class="ean-res-desc empty">No description yet.</p>';
     }
-    if (r.tags && r.tags.length) {
-      html += '<div class="ean-res-tags">' + r.tags.map(function (t) {
-        var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
-        return '<span data-tag="' + esc(t) + '">' + esc(tagDef ? tagDef.label : t) + '</span>';
-      }).join('') + '</div>';
-    }
     if (r.reference) {
       html += '<p class="ean-res-reference">' + esc(r.reference) + '</p>';
     }
     if (r.url) {
-      html += '<a class="ean-res-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">Visit source &rarr;</a>';
+      html += '<a class="ean-res-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">Continue to source &rarr;</a>';
     }
     html += '</div></div></div>';
     return html;
   }
 
-  // Renders the resources for a single category view: year-sectioned
-  // for most categories, a flat alphabetical grid for Substacks.
+  // Renders the resources for a single category view: one flat grid,
+  // always — just sorted differently depending on the category. No visual
+  // year sections/headers anymore; year still shows on each card itself.
   function renderCategoryResources(categoryId, items) {
+    var sorted = items;
     if (categoryId === "substacks") {
-      var alpha = items.slice().sort(function (a, b) {
+      sorted = items.slice().sort(function (a, b) {
         return a.title.localeCompare(b.title);
       });
-      return '<div class="ean-res-grid">' + alpha.map(renderResourceCard).join('') + '</div>';
+    } else if (YEAR_SORTED_CATEGORIES.indexOf(categoryId) !== -1) {
+      // Newest year first; undated resources sink to the end.
+      sorted = items.slice().sort(function (a, b) {
+        if (a.year == null && b.year == null) return 0;
+        if (a.year == null) return 1;
+        if (b.year == null) return -1;
+        return b.year - a.year;
+      });
     }
-
-    if (YEAR_SECTIONED_CATEGORIES.indexOf(categoryId) === -1) {
-      return '<div class="ean-res-grid">' + items.map(renderResourceCard).join('') + '</div>';
-    }
-
-    var byYear = {};
-    var undated = [];
-    items.forEach(function (r) {
-      if (r.year == null) { undated.push(r); return; }
-      (byYear[r.year] = byYear[r.year] || []).push(r);
-    });
-    var years = Object.keys(byYear).sort(function (a, b) { return b - a; });
-
-    var html = "";
-    years.forEach(function (y) {
-      html += '<h3 class="ean-year-header">' + esc(y) + '</h3>';
-      html += '<div class="ean-res-grid">' + byYear[y].map(renderResourceCard).join('') + '</div>';
-    });
-    if (undated.length) {
-      html += '<h3 class="ean-year-header">Undated</h3>';
-      html += '<div class="ean-res-grid">' + undated.map(renderResourceCard).join('') + '</div>';
-    }
-    return html;
+    return '<div class="ean-res-grid">' + sorted.map(renderResourceCard).join('') + '</div>';
   }
 
   function render() {
@@ -225,6 +230,14 @@
         render();
       });
     });
+    var clearBtn = root.querySelector("[data-clear-filters]");
+    if (clearBtn) {
+      clearBtn.addEventListener("click", function () {
+        state.search = "";
+        state.activeTags = [];
+        render();
+      });
+    }
     root.querySelectorAll(".ean-cat-card").forEach(function (card) {
       card.addEventListener("click", function () {
         state.view = "category";

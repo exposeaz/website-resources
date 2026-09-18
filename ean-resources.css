@@ -45,6 +45,18 @@
     background: transparent;
   }
   .ean-search:focus { outline: 2px solid currentColor; outline-offset: 1px; }
+  .ean-clear-btn {
+    flex: 0 0 auto;
+    padding: 0.6em 1em;
+    border: 1px solid var(--ean-border);
+    border-radius: 6px;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    cursor: pointer;
+    transition: border-color .15s ease;
+  }
+  .ean-clear-btn:hover { border-color: var(--ean-border-strong); }
 
   .ean-tagbar {
     display: flex;
@@ -99,9 +111,8 @@
   .ean-cat-count { font-size: 0.8em; opacity: 0.6; }
 
   .ean-res-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px;
+    columns: 220px;
+    column-gap: 16px;
   }
   .ean-res-card {
     background: var(--ean-card-bg);
@@ -113,8 +124,15 @@
     gap: 8px;
     overflow: hidden;
     cursor: pointer;
+    break-inside: avoid;
+    margin-bottom: 16px;
     transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
+  /* transform + box-shadow on hover here is a known ghosting risk on
+     Chromium when the element is inside a CSS multicol container (this
+     grid uses `columns:` for the masonry effect) — seen locally, judged
+     acceptable on the live site. Revert to border-color-only (see git
+     history around this line) if it turns out to reproduce there too. */
   .ean-res-card:hover {
     border-color: var(--ean-border-strong);
     transform: translateY(-4px);
@@ -123,16 +141,20 @@
   .ean-res-card:active { transform: translateY(-1px); }
   .ean-res-image {
     margin: -16px -16px 12px -16px;
-    aspect-ratio: 3 / 2;
     background: var(--ean-card-image-bg);
+    min-height: 100px; /* keeps a visible placeholder while a real image is still loading */
   }
+  /* Real cover images keep their natural shape instead of being cropped
+     into a uniform box — this is what gives the grid its varied,
+     masonry-style rhythm. Only the no-image fallback (no natural shape
+     to go on) gets a fixed aspect ratio, right below. */
   .ean-res-image img {
     width: 100%;
-    height: 100%;
-    object-fit: contain;
+    height: auto;
     display: block;
   }
   .ean-res-image--fallback {
+    aspect-ratio: 3 / 2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,8 +191,6 @@
     padding: 2px 7px;
   }
   .ean-res-author { font-size: 0.85em; opacity: 0.7; margin: -4px 0 0; }
-  .ean-res-desc { font-size: 0.92em; line-height: 1.5; margin: 0; }
-  .ean-res-desc.empty { opacity: 0.6; font-style: italic; }
   .ean-res-tags {
     display: flex;
     flex-wrap: wrap;
@@ -184,16 +204,32 @@
     padding: 2px 7px;
     opacity: 0.75;
   }
+  /* Modal-only: the reading view leads with the description at a bigger,
+     roomier size than anything on the card face. */
+  .ean-res-desc { font-size: 1.15rem; line-height: 1.65; margin: 0; }
+  .ean-res-desc.empty { opacity: 0.6; font-style: italic; font-size: 1rem; }
   .ean-res-reference { font-size: 0.85em; opacity: 0.75; font-style: italic; margin: 0; }
-  .ean-res-link { font-size: 0.85em; }
-  .ean-empty { opacity: 0.6; padding: 40px 0; text-align: center; }
-
-  .ean-year-header {
-    margin: 28px 0 12px;
-    font-size: 1.1rem;
-    opacity: 0.8;
+  /* The one deliberately "branded" element in the modal — reuses the same
+     placeholder accent as the active tag pills so there's a single color
+     to swap when real brand assets land, rather than inventing a second. */
+  .ean-res-link {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: 4px;
+    padding: 0.65em 1.3em;
+    background: var(--ean-tag-active-bg);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 999px;
+    text-decoration: none;
+    transition: transform .15s ease, box-shadow .15s ease;
   }
-  .ean-year-header:first-of-type { margin-top: 0; }
+  .ean-res-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,.18);
+  }
+  .ean-empty { opacity: 0.6; padding: 40px 0; text-align: center; }
 
   /* ---- resource detail modal ---- */
   .ean-modal-overlay {
@@ -247,15 +283,16 @@
     z-index: 1;
   }
   .ean-modal-close:hover { background: rgba(127,127,127,.3); }
-  .ean-modal-image {
-    margin: 0;
-    aspect-ratio: 3 / 2;
-    border-radius: 8px 8px 0 0;
-    overflow: hidden;
-  }
   .ean-modal-body {
-    padding: 20px;
+    padding: 44px 24px 24px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 14px;
+  }
+  /* The card title stays capped small (see the card h4 rule above) because
+     card space is tight, but the modal has room to let the title lead. */
+  .ean-modal-body h4 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.3;
   }
