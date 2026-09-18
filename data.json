@@ -11,6 +11,11 @@
       "blurb": "Peer-reviewed and academic legal/historical research."
     },
     {
+      "id": "data-research",
+      "label": "Data & Research",
+      "blurb": "Original empirical and data-driven research into antizionist rhetoric, belief, and media coverage."
+    },
+    {
       "id": "essays",
       "label": "Essays & Commentary",
       "blurb": "Analysis and opinion writing on antizionism as ideology and political culture."
@@ -19,11 +24,6 @@
       "id": "legal-commentary",
       "label": "Legal & Public-Affairs Commentary",
       "blurb": "Legal analysis and public commentary on antizionism and discrimination."
-    },
-    {
-      "id": "organizations",
-      "label": "Organizations",
-      "blurb": "Advocacy and research organizations working on this topic."
     },
     {
       "id": "substacks",
@@ -102,7 +102,8 @@
       "tags": [
         "history"
       ],
-      "reference": "Am\u00e9ry, Jean. At the Mind's Limits. 1966.",
+      "reference": "Améry, Jean. At the Mind's Limits. 1966.",
+      "author": "Jean Améry",
       "url": null,
       "image": "https://covers.openlibrary.org/b/isbn/0805207619-M.jpg",
       "year": 1966
@@ -116,6 +117,7 @@
         "history"
       ],
       "reference": "Givet, Jacques. The Antizionist Complex. SBS Publishing, 1979.",
+      "author": "Jacques Givet",
       "url": "https://archive.org/details/antizionistcompl0000give",
       "image": "https://covers.openlibrary.org/b/isbn/0899610196-M.jpg",
       "year": 1979
@@ -128,7 +130,8 @@
       "tags": [
         "history"
       ],
-      "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1965\u20131977.",
+      "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1965–1977.",
+      "author": "Leon Poliakov",
       "url": null,
       "year": 1977
     },
@@ -141,7 +144,8 @@
         "history",
         "antizionism"
       ],
-      "reference": "Taguieff, Pierre-Andr\u00e9. The New Judeophobia. 2002.",
+      "reference": "Taguieff, Pierre-André. The New Judeophobia. 2002.",
+      "author": "Pierre-André Taguieff",
       "url": "https://www.ajc.org/news/meet-the-french-philosopher-who-forecast-durban-new-antisemitism",
       "year": 2002
     },
@@ -153,7 +157,8 @@
       "tags": [
         "history"
       ],
-      "reference": "Taguieff, Pierre-Andr\u00e9. Judeophobia: The Last Wave. 2018.",
+      "reference": "Taguieff, Pierre-André. Judeophobia: The Last Wave. 2018.",
+      "author": "Pierre-André Taguieff",
       "url": null,
       "year": 2018
     },
@@ -168,6 +173,7 @@
         "history"
       ],
       "reference": "Wistrich, Robert S. (ed.). The Left against Zion. Vallentine, Mitchell, 1979.",
+      "author": "Robert S. Wistrich (ed.)",
       "url": null,
       "year": 1979
     },
@@ -181,6 +187,7 @@
         "history"
       ],
       "reference": "Wistrich, Robert S. \"From Ambivalence to Betrayal: The Left, the Jews, and Israel.\" In Anti-Zionism and Antisemitism in the Contemporary World, 2009.",
+      "author": "Robert S. Wistrich",
       "url": null,
       "year": 2009
     },
@@ -195,6 +202,7 @@
         "antizionism"
       ],
       "reference": "Wistrich, Robert S. A Lethal Obsession. Random House, 2010.",
+      "author": "Robert S. Wistrich",
       "url": null,
       "image": "https://covers.openlibrary.org/b/isbn/1400060974-M.jpg",
       "year": 2010
@@ -209,6 +217,7 @@
         "history"
       ],
       "reference": "Levin, Nora. The Jews in the Soviet Union Since 1917: Paradox of Survival. NYU Press, 1988.",
+      "author": "Nora Levin",
       "url": null,
       "year": 1988
     },
@@ -223,6 +232,7 @@
         "campus"
       ],
       "reference": "Hirsh, David. Contemporary Left Antisemitism. Routledge, 2017.",
+      "author": "David Hirsh",
       "url": null,
       "image": "https://covers.openlibrary.org/b/isbn/9781138235311-M.jpg",
       "year": 2017
@@ -234,6 +244,7 @@
       "description": "",
       "tags": [],
       "reference": "Kirschbaum-Shirazki, Olga. From Antizionism to a New Middle East. 2026.",
+      "author": "Olga Kirschbaum-Shirazki",
       "url": null,
       "year": 2026
     },
@@ -246,6 +257,7 @@
         "legal-definition"
       ],
       "reference": "Marcus, Kenneth L. \"Accusation in a Mirror.\" 2012.",
+      "author": "Kenneth L. Marcus",
       "url": "https://lawecommons.luc.edu/cgi/viewcontent.cgi?article=1019&context=luclj",
       "year": 2012
     },
@@ -258,7 +270,8 @@
         "legal-definition",
         "campus"
       ],
-      "reference": "Marcus, Kenneth L. \"Anti-Zionism & Anti-Semitism.\" In The Definition of Anti-Semitism, 146\u2013190. Oxford University Press, 2015.",
+      "reference": "Marcus, Kenneth L. \"Anti-Zionism & Anti-Semitism.\" In The Definition of Anti-Semitism, 146–190. Oxford University Press, 2015.",
+      "author": "Kenneth L. Marcus",
       "url": null,
       "year": 2015
     },
@@ -266,13 +279,14 @@
       "id": "martin-ambiguity-to-accountability",
       "title": "From Ambiguity to Accountability: The Case for a Legal Definition of Antisemitism in Academia",
       "category": "scholarly-articles",
-      "description": "Argues, using post\u2013October 7 campus data, that universities should formally adopt the IHRA definition of antisemitism in their nondiscrimination policies to close the ambiguity around antizionism as a form of antisemitism and restore Title VI accountability.",
+      "description": "Argues, using post–October 7 campus data, that universities should formally adopt the IHRA definition of antisemitism in their nondiscrimination policies to close the ambiguity around antizionism as a form of antisemitism and restore Title VI accountability.",
       "tags": [
         "legal-definition",
         "campus",
         "post-oct-7"
       ],
       "reference": "Martin, Andrea J. \"From Ambiguity to Accountability: The Case for a Legal Definition of Antisemitism in Academia.\" Pepperdine Law Review, 2025.",
+      "author": "Andrea J. Martin",
       "url": "https://digitalcommons.pepperdine.edu/plr/vol2025/iss1/2",
       "year": 2025
     },
@@ -286,7 +300,8 @@
         "post-oct-7",
         "legal-definition"
       ],
-      "reference": "Shalev, Avraham Russell. \"Hamas' October 7th Genocide: Legal Analysis and the Weaponisation of Reverse Accusations\u2014A Study in Modern Genocide Recognition and Denial.\" Israel Law Review, Vol. 58, Special Issue 2\u20133, 2025.",
+      "reference": "Shalev, Avraham Russell. \"Hamas' October 7th Genocide: Legal Analysis and the Weaponisation of Reverse Accusations—A Study in Modern Genocide Recognition and Denial.\" Israel Law Review, Vol. 58, Special Issue 2–3, 2025.",
+      "author": "Avraham Russell Shalev",
       "url": "https://www.cambridge.org/core/journals/israel-law-review/article/hamas-october-7th-genocide-legal-analysis-and-the-weaponisation-of-reverse-accusations-a-study-in-modern-genocide-recognition-and-denial/322198E636341BE82F37ED7147FEB0F5",
       "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/article2.png",
       "year": 2025
@@ -302,6 +317,7 @@
         "history"
       ],
       "reference": "Goda, Norman J. W. \"The Genocide Libel: How the World Has Charged Israel with Genocide.\" ISCA Research Paper 2025-3, Institute for the Study of Contemporary Antisemitism, Indiana University, 2025.",
+      "author": "Norman J. W. Goda",
       "url": "https://isca.indiana.edu/publication-research/research-paper-series/norman-jw-goda-research-paper.html",
       "year": 2025
     },
@@ -314,6 +330,7 @@
         "definitional"
       ],
       "reference": "Mor, Shany. \"On Three Antizionisms.\" Israel Studies, Vol. 24, No. 2, 2019.",
+      "author": "Shany Mor",
       "url": "https://tikvah.org/collegiate-forum/shani-mor-on-three-anti-zionisms/",
       "year": 2019
     },
@@ -321,13 +338,14 @@
       "id": "tabarovsky-demonization-blueprints",
       "title": "Demonization Blueprints: Soviet Conspiracist Antizionism in Contemporary Left-Wing Discourse",
       "category": "scholarly-articles",
-      "description": "Traces how Soviet-era \"anti-Zionist\" propaganda campaigns (1967\u201388) built a conspiracist, demonizing template for talking about Israel that Tabarovsky argues has been absorbed largely intact into today's left-wing discourse.",
+      "description": "Traces how Soviet-era \"anti-Zionist\" propaganda campaigns (1967–88) built a conspiracist, demonizing template for talking about Israel that Tabarovsky argues has been absorbed largely intact into today's left-wing discourse.",
       "tags": [
         "soviet-origins",
         "antizionism",
         "conspiracy-theory"
       ],
       "reference": "Tabarovsky, Izabella. \"Demonization Blueprints: Soviet Conspiracist Antizionism in Contemporary Left-Wing Discourse.\" Journal of Contemporary Antisemitism, vol. 5, no. 1, 2022, pp. 1-20.",
+      "author": "Izabella Tabarovsky",
       "url": "https://doi.org/10.26613/jca/5.1.97",
       "year": 2022
     },
@@ -341,6 +359,7 @@
         "colonizer-narrative"
       ],
       "reference": "Wistrich, Robert S. \"The Anti-Zionist Mythology of the Left.\" Israel Journal of Foreign Affairs, 9:2, 2015.",
+      "author": "Robert S. Wistrich",
       "url": "https://www.tandfonline.com/doi/pdf/10.1080/23739770.2015.1037579",
       "year": 2015
     },
@@ -354,6 +373,7 @@
         "soviet-origins"
       ],
       "reference": "Kelner, Shaul. \"American Antizionism.\" Sources: A Journal of Jewish Ideas, Fall/Winter 2025.",
+      "author": "Shaul Kelner",
       "url": "https://www.sourcesjournal.org/articles/american-antizionism",
       "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/article.png",
       "year": 2025
@@ -368,8 +388,9 @@
         "definitional"
       ],
       "reference": "Hirsh, David. \"'Anti-Zionism' and 'Antizionism'.\" Australia/Israel & Jewish Affairs Council.",
+      "author": "David Hirsh",
       "url": "https://aijac.org.au/australia-israel-review/essay-anti-zionism-and-antizionism/",
-      "year": null
+      "year": 2023
     },
     {
       "id": "louis-klein-defeating-antizionism",
@@ -382,6 +403,7 @@
         "post-oct-7"
       ],
       "reference": "Louis-Klein, Adam. \"Defeating Antizionism.\" Sapir, Issue 12, 2026.",
+      "author": "Adam Louis-Klein",
       "url": "https://sapirjournal.org/aspiration-ii/2026/defeating-antizionism/",
       "year": 2026
     },
@@ -396,21 +418,23 @@
         "genocide-accusation"
       ],
       "reference": "Louis-Klein, Adam. \"What Antizionism Really Is.\" The Free Press.",
+      "author": "Adam Louis-Klein",
       "url": "https://www.thefp.com/p/what-anti-zionism-really-is",
-      "year": null
+      "year": 2025
     },
     {
       "id": "louis-klein-left-wing-case",
       "title": "The Left-Wing Case Against Anti-Zionism",
       "category": "essays",
-      "description": "Makes the case, aimed at a left-leaning audience, that opposing antizionism is consistent with \u2014 not opposed to \u2014 progressive values.",
+      "description": "Makes the case, aimed at a left-leaning audience, that opposing antizionism is consistent with — not opposed to — progressive values.",
       "tags": [
         "antizionism",
         "definitional"
       ],
       "reference": "Louis-Klein, Adam. \"The Left-Wing Case Against Anti-Zionism.\" The Atlantic.",
+      "author": "Adam Louis-Klein",
       "url": "https://www.theatlantic.com/ideas/2026/06/left-against-antizionism-israel/687616/",
-      "year": null
+      "year": 2026
     },
     {
       "id": "tabarovsky-cult-of-antizionism",
@@ -422,8 +446,9 @@
         "soviet-origins"
       ],
       "reference": "Tabarovsky, Izabella. \"The Cult of 'Antizionism.'\" Tablet Magazine.",
+      "author": "Izabella Tabarovsky",
       "url": "https://www.tabletmag.com/sections/arts-letters/articles/cult-of-antizionism-icsz",
-      "year": null
+      "year": 2023
     },
     {
       "id": "tabarovsky-zombie-antizionism",
@@ -435,8 +460,9 @@
         "antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Zombie Antizionism.\" Tablet Magazine.",
+      "author": "Izabella Tabarovsky",
       "url": "https://www.tabletmag.com/sections/arts-letters/articles/zombie-anti-zionism",
-      "year": null
+      "year": 2024
     },
     {
       "id": "tabarovsky-soviet-antizionism-fathom",
@@ -449,8 +475,9 @@
         "conspiracy-theory"
       ],
       "reference": "Tabarovsky, Izabella. \"Soviet Antizionism and Contemporary Left Antisemitism.\" Fathom Journal.",
+      "author": "Izabella Tabarovsky",
       "url": "https://fathomjournal.org/soviet-anti-zionism-and-contemporary-left-antisemitism/",
-      "year": null
+      "year": 2019
     },
     {
       "id": "kirschbaum-shirazki-projection-replacement",
@@ -459,8 +486,9 @@
       "description": "",
       "tags": [],
       "reference": "Kirschbaum-Shirazki, Olga. \"Antizionism: Projection and Replacement Theology.\"",
+      "author": "Olga Kirschbaum-Shirazki",
       "url": "https://olgakirschbaum.substack.com/p/antizionism-projection-and-replacement",
-      "year": null
+      "year": 2025
     },
     {
       "id": "boudry-they-dont-believe-it-either",
@@ -473,20 +501,9 @@
         "campus"
       ],
       "reference": "Boudry, Maarten. \"They Don't Believe It Either.\" Quillette, Oct. 19, 2025.",
+      "author": "Maarten Boudry",
       "url": "https://quillette.com/2025/10/19/they-dont-believe-it-either-israel-gaza-genocide/",
       "year": 2025
-    },
-    {
-      "id": "lekht-colonizer-libel",
-      "title": "The Colonizer Libel: Retracing the Assembly Line",
-      "category": "essays",
-      "description": "",
-      "tags": [
-        "colonizer-narrative"
-      ],
-      "reference": "Lekht, Naya. \"The Colonizer Libel: Retracing the Assembly Line.\" The Free Press.",
-      "url": "https://nayalekht.substack.com/p/the-colonizer-libel-retracing-the",
-      "year": null
     },
     {
       "id": "lekht-shadow-of-babi-yar",
@@ -498,8 +515,9 @@
         "history"
       ],
       "reference": "Lekht, Naya. \"The Shadow of Babi Yar: How the Soviets Taught the West to Erase the Jews.\" Jewish Journal.",
+      "author": "Naya Lekht",
       "url": "https://jewishjournal.com/commentary/opinion/383141/the-shadow-of-babi-yar-how-the-soviets-taught-the-west-to-erase-the-jews/",
-      "year": null
+      "year": 2025
     },
     {
       "id": "lekht-plots-libels-accusations",
@@ -510,8 +528,9 @@
         "history"
       ],
       "reference": "Lekht, Naya. \"Plots, Libels, Accusations: Fingers Pointed at Jews Go Back Centuries.\" JNS.",
+      "author": "Naya Lekht",
       "url": "https://www.jns.org/opinion/naya-lekht/plots-libels-accusations-fingers-pointed-at-jews-go-back-centuries",
-      "year": null
+      "year": 2025
     },
     {
       "id": "lekht-three-failed-strategies",
@@ -522,8 +541,9 @@
         "advocacy"
       ],
       "reference": "Lekht, Naya. \"Three Failed Strategies of Inward Advocacy.\" JNS.",
+      "author": "Naya Lekht",
       "url": "https://www.jns.org/opinion/naya-lekht/three-failed-strategies-of-inward-advocacy",
-      "year": null
+      "year": 2025
     },
     {
       "id": "lekht-scaffolding-antizionism",
@@ -532,6 +552,7 @@
       "description": "",
       "tags": [],
       "reference": "Lekht, Naya. \"Scaffolding Anti-Zionism: The Hate We Missed.\" Jewish Journal, 2025.",
+      "author": "Naya Lekht",
       "url": "https://jewishjournal.com/cover_story/384910/scaffolding-anti-zionism-the-hate-we-missed/",
       "year": 2025
     },
@@ -539,12 +560,13 @@
       "id": "wexler-eternal-settler",
       "title": "The Eternal Settler",
       "category": "essays",
-      "description": "Written after a wave of antisemitic attacks in Montreal, argues that even the Diaspora's oldest and largest Jewish communities (not just Israelis) are increasingly branded \"settlers\" in anti-Zionist rhetoric \u2014 a designation Wexler argues has no logical stopping point.",
+      "description": "Written after a wave of antisemitic attacks in Montreal, argues that even the Diaspora's oldest and largest Jewish communities (not just Israelis) are increasingly branded \"settlers\" in anti-Zionist rhetoric — a designation Wexler argues has no logical stopping point.",
       "tags": [
         "colonizer-narrative",
         "post-oct-7"
       ],
-      "reference": "Wexler, Benjamin. \"The Eternal Settler.\" K. (Les Juifs, l'Europe, le XXIe si\u00e8cle), June 20, 2024.",
+      "reference": "Wexler, Benjamin. \"The Eternal Settler.\" K. (Les Juifs, l'Europe, le XXIe siècle), June 20, 2024.",
+      "author": "Benjamin Wexler",
       "url": null,
       "year": 2024
     },
@@ -552,13 +574,14 @@
       "id": "szeftel-history-of-genocide-charge",
       "title": "The History of the Charge of Genocide Against Israel",
       "category": "essays",
-      "description": "A two-part historical investigation tracing the \"genocide\" accusation against Israel back through the revival of Arab nationalism (1920s\u201340s) and its absorption of European fascist and antisemitic ideas, then showing how those ideological roots fed the settler-colonialism framework used to level the charge today.",
+      "description": "A two-part historical investigation tracing the \"genocide\" accusation against Israel back through the revival of Arab nationalism (1920s–40s) and its absorption of European fascist and antisemitic ideas, then showing how those ideological roots fed the settler-colonialism framework used to level the charge today.",
       "tags": [
         "genocide-accusation",
         "colonizer-narrative",
         "history"
       ],
       "reference": "Szeftel, Daniel. \"The History of the Charge of Genocide Against Israel.\" K. (Part 1 and Part 2).",
+      "author": "Daniel Szeftel",
       "url": "https://k-larevue.com/en/2024/11/21/history-genocide/",
       "year": 2024
     },
@@ -572,6 +595,7 @@
         "media-commentary"
       ],
       "reference": "Dabelstein, Joshua. \"The Greatest Threat to Jewish Safety Has a New Name.\" Australian Financial Review.",
+      "author": "Joshua Dabelstein",
       "url": "https://www.afr.com/politics/federal/the-greatest-threat-to-jewish-safety-has-a-new-name-20260107-p5ns7w",
       "year": 2026
     },
@@ -579,28 +603,30 @@
       "id": "maccallum-poland-irony",
       "title": "A Deep Historical Irony of Anti-Zionism: Lessons from Poland",
       "category": "essays",
-      "description": "Draws on Poland's 1968 state-orchestrated \"anti-Zionist\" purge \u2014 in which the label \"Zionist\" functioned as a euphemism for \"Jew\" and drove out most of the country's remaining Jewish population \u2014 as a historical warning about where anti-Zionist campaigns can lead.",
+      "description": "Draws on Poland's 1968 state-orchestrated \"anti-Zionist\" purge — in which the label \"Zionist\" functioned as a euphemism for \"Jew\" and drove out most of the country's remaining Jewish population — as a historical warning about where anti-Zionist campaigns can lead.",
       "tags": [
         "poland-1968",
         "soviet-origins",
         "history"
       ],
-      "reference": "MacCallum, Alasdair. \"A Deep Historical Irony of Anti-Zionism: Lessons from Poland.\" The Jewish Independent.",
+      "reference": "McCallum, Alasdair. \"A Deep Historical Irony of Anti-Zionism: Lessons from Poland.\" The Jewish Independent.",
+      "author": "Alasdair McCallum",
       "url": "https://thejewishindependent.com.au/a-deep-historical-irony-of-anti-zionism-lessons-from-poland/",
-      "year": null
+      "year": 2025
     },
     {
       "id": "ive-seen-this-before",
       "title": "I've Seen This Before",
-      "category": "essays",
-      "description": "A data-driven project that uses text analysis to show close linguistic parallels between historical Soviet anti-Zionist propaganda and contemporary anti-Israel rhetoric.",
+      "category": "data-research",
+      "description": "Interactive data analysis on the overlap of Soviet anti-Zionist propaganda and today's antizionist speech.",
       "tags": [
         "soviet-origins",
         "data-analysis"
       ],
       "reference": "\"I've Seen This Before.\" Data analysis, mapping Soviet anti-Zionist propaganda to modern echoes using semantic similarity.",
+      "author": null,
       "url": "https://iveseenthisbefore.org/",
-      "year": null
+      "year": 2026
     },
     {
       "id": "heath-totalitarian-conspiracy-theory",
@@ -612,6 +638,7 @@
         "definitional"
       ],
       "reference": "Heath, Allister. \"Antizionism Is a Totalitarian Conspiracy Theory Rotting the West From Within.\" The Telegraph.",
+      "author": "Allister Heath",
       "url": "https://www.telegraph.co.uk/news/2026/05/06/antizionism-totalitarian-conspiracy-theory-rotting-west/",
       "year": 2026
     },
@@ -625,8 +652,9 @@
         "legal-definition"
       ],
       "reference": "Kaufman, Rona. \"Antizionism Is Not Antisemitism.\" The Times of Israel Blogs.",
+      "author": "Rona Kaufman",
       "url": "https://blogs.timesofisrael.com/antizionism-is-not-antisemitism/",
-      "year": null
+      "year": 2025
     },
     {
       "id": "kaufman-court-is-wrong",
@@ -638,19 +666,21 @@
         "campus"
       ],
       "reference": "Kaufman, Rona. \"The Court Is Wrong: Antizionism Is Discriminatory.\" The Times of Israel Blogs.",
+      "author": "Rona Kaufman",
       "url": "https://blogs.timesofisrael.com/the-court-is-wrong-antizionism-is-discriminatory/",
-      "year": null
+      "year": 2025
     },
     {
       "id": "martin-antizionist-movement-hate-movement",
       "title": "The Antizionist Movement Is a Hate Movement: It's Time to Say So",
       "category": "legal-commentary",
-      "description": "Written after the 2025 Bondi Beach Hanukkah attack in Australia, argues \u2014 using the Southern Poverty Law Center's own definition of an antisemitic hate group \u2014 that the antizionist movement now meets that standard.",
+      "description": "Written after the 2025 Bondi Beach Hanukkah attack in Australia, argues — using the Southern Poverty Law Center's own definition of an antisemitic hate group — that the antizionist movement now meets that standard.",
       "tags": [
         "post-oct-7",
         "definitional"
       ],
       "reference": "Martin, Andrea J. \"The Antizionist Movement Is a Hate Movement: It's Time to Say So.\" The Times of Israel Blogs.",
+      "author": "Andrea J. Martin",
       "url": "https://blogs.timesofisrael.com/the-antizionist-movement-is-a-hate-movement-its-time-to-say-so/",
       "year": 2025
     },
@@ -664,8 +694,9 @@
         "campus"
       ],
       "reference": "Martin, Andrea J. \"When Courts Minimize Terrorism, Jewish Students Pay the Price.\" The Times of Israel Blogs.",
+      "author": "Andrea J. Martin",
       "url": "https://blogs.timesofisrael.com/when-courts-minimize-terrorism-jewish-students-pay-the-price/",
-      "year": null
+      "year": 2026
     },
     {
       "id": "wilf-bds-pound-of-flesh",
@@ -677,68 +708,35 @@
         "campus"
       ],
       "reference": "Wilf, Einat. \"The BDS Pound of Flesh.\" Tablet Magazine.",
+      "author": "Einat Wilf",
       "url": "https://www.tabletmag.com/sections/news/articles/the-bds-pound-of-flesh",
-      "year": null
+      "year": 2022
     },
     {
       "id": "dulberg-moral-inversion",
       "title": "Moral Inversion and the Rise of Authoritarian Sympathy",
-      "category": "legal-commentary",
-      "description": "A data study finding that antizionist views correlate with a broader \"moral inversion\" \u2014 a systematic tendency to misjudge or invert the actual human-rights records of authoritarian versus democratic states.",
+      "category": "data-research",
+      "description": "A data study finding that antizionist views correlate with a broader \"moral inversion\" — a systematic tendency to misjudge or invert the actual human-rights records of authoritarian versus democratic states.",
       "tags": [
         "data-analysis",
         "post-oct-7"
       ],
       "reference": "Dulberg, Zack, et al. Moral Inversion and the Rise of Authoritarian Sympathy. Rutgers University Social Perception Lab / Network Contagion Research Institute.",
+      "author": "Zack Dulberg et al.",
       "url": "https://networkcontagion.us/wp-content/uploads/Moral-Inversion-and-the-Rise-of-Authoritarian-Sympathy.pdf",
-      "year": null
-    },
-    {
-      "id": "org-maaz",
-      "title": "Movement Against Antizionism (MAAZ)",
-      "category": "organizations",
-      "description": "An advocacy organization, founded by anthropologist Adam Louis-Klein, dedicated to naming and confronting antizionism as its own distinct hate movement.",
-      "tags": [
-        "advocacy"
-      ],
-      "reference": "Movement Against Antizionism (MAAZ).",
-      "url": "https://www.movementagainstantizionism.org/",
-      "year": null
-    },
-    {
-      "id": "org-icsa",
-      "title": "Institute for the Critical Study of Antizionism",
-      "category": "organizations",
-      "description": "",
-      "tags": [
-        "advocacy"
-      ],
-      "reference": "Institute for the Critical Study of Antizionism.",
-      "url": "https://icsa.substack.com/",
-      "year": null
-    },
-    {
-      "id": "org-stop-antizionism",
-      "title": "Stop Antizionism",
-      "category": "organizations",
-      "description": "An advocacy and education initiative, including a podcast series featuring scholar Dr. Naya Lekht.",
-      "tags": [
-        "advocacy"
-      ],
-      "reference": "Stop Antizionism.",
-      "url": "https://www.stopantizionism.org/",
-      "year": null
+      "year": 2026
     },
     {
       "id": "nirenberg-anti-judaism",
       "title": "Anti-Judaism: The Western Tradition",
       "category": "books",
-      "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself, tracing hostility to the idea of Judaism from antiquity through the Enlightenment and just past the Holocaust \u2014 distinct from antisemitism as persecution of actual Jews.",
+      "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself, tracing hostility to the idea of Judaism from antiquity through the Enlightenment and just past the Holocaust — distinct from antisemitism as persecution of actual Jews.",
       "tags": [
         "history",
         "foundational"
       ],
       "reference": "Nirenberg, David. Anti-Judaism: The Western Tradition. W.W. Norton & Co., 2013.",
+      "author": "David Nirenberg",
       "image": "https://covers.openlibrary.org/b/isbn/9780393058246-M.jpg",
       "url": null,
       "year": 2013
@@ -753,6 +751,7 @@
         "history"
       ],
       "reference": "Horn, Dara. The Final Solution to the Jewish Question: A Love Story for the Living. Simon & Schuster, 2026.",
+      "author": "Dara Horn",
       "image": "https://covers.openlibrary.org/b/isbn/9781668090169-M.jpg",
       "url": null,
       "year": 2026
@@ -761,13 +760,14 @@
       "id": "tabarovsky-be-a-refusenik",
       "title": "Be a Refusenik: A Jewish Student's Survival Guide",
       "category": "books",
-      "description": "Pairs the stories of Soviet-era refuseniks \u2014 Jews who defied a state doctrine equating Zionism with racism and genocide \u2014 with those of Jewish students facing similar antizionist pressure on American campuses today, drawing practical strategies from the earlier movement. Foreword by Natan Sharansky.",
+      "description": "Pairs the stories of Soviet-era refuseniks — Jews who defied a state doctrine equating Zionism with racism and genocide — with those of Jewish students facing similar antizionist pressure on American campuses today, drawing practical strategies from the earlier movement. Foreword by Natan Sharansky.",
       "tags": [
         "soviet-origins",
         "campus",
         "advocacy"
       ],
       "reference": "Tabarovsky, Izabella. Be a Refusenik: A Jewish Student's Survival Guide. Wicked Son, 2025.",
+      "author": "Izabella Tabarovsky",
       "image": "https://covers.openlibrary.org/b/isbn/9798888458921-M.jpg",
       "url": null,
       "year": 2025
@@ -781,6 +781,7 @@
         "advocacy"
       ],
       "reference": "Movement Against Antizionism. Movement Against Antizionism (Substack).",
+      "author": "Movement Against Antizionism",
       "image": "https://substackcdn.com/image/fetch/$s_!EnFy!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fmovementagainstantizionism.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1189330630%26version%3D9",
       "url": "https://movementagainstantizionism.substack.com",
       "year": null
@@ -794,6 +795,7 @@
         "advocacy"
       ],
       "reference": "Movement Against Antizionism Australia. Movement Against Antizionism AU (Substack).",
+      "author": "Movement Against Antizionism Australia",
       "image": null,
       "url": "https://maazaus.substack.com/",
       "year": null
@@ -807,6 +809,7 @@
         "campus"
       ],
       "reference": "Pessin, Andrew. Institute for the Critical Study of Antizionism (Substack).",
+      "author": "Andrew Pessin",
       "image": "https://substackcdn.com/image/fetch/$s_!fkLQ!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Ficsa.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D1575095050%26version%3D9",
       "url": "https://icsa.substack.com",
       "year": null
@@ -818,6 +821,7 @@
       "description": "",
       "tags": [],
       "reference": "Kogan, Jennifer. Jennifer Kogan (Substack).",
+      "author": "Jennifer Kogan",
       "image": null,
       "url": "https://jenniferkogan.substack.com",
       "year": null
@@ -831,6 +835,7 @@
         "advocacy"
       ],
       "reference": "Louis-Klein, Adam. Adam Louis-Klein (Substack).",
+      "author": "Adam Louis-Klein",
       "image": null,
       "url": "https://adamlouisklein.substack.com",
       "year": null
@@ -842,6 +847,7 @@
       "description": "Politics, education, history, antisemitism, and Jewish identity.",
       "tags": [],
       "reference": "Lekht, Naya. Naya's Newsletter (Substack).",
+      "author": "Naya Lekht",
       "image": "https://substackcdn.com/image/fetch/$s_!-Ii1!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fnayalekht.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-2008260948%26version%3D9",
       "url": "https://nayalekht.substack.com",
       "year": null
@@ -853,6 +859,7 @@
       "description": "Musings both non-fictional and fictional (it can sometimes be hard to tell the difference).",
       "tags": [],
       "reference": "Pessin, Andrew. Pariah (Substack).",
+      "author": "Andrew Pessin",
       "image": "https://substackcdn.com/image/fetch/$s_!ux2n!,w_88,h_88,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff0ae9468-f29e-4fd4-a36a-bc38a93a0e24_144x144.png",
       "url": "https://andrewpessin.substack.com",
       "year": null
@@ -866,6 +873,7 @@
         "soviet-origins"
       ],
       "reference": "Tabarovsky, Izabella. The New Refuseniks (Substack).",
+      "author": "Izabella Tabarovsky",
       "image": "https://substackcdn.com/image/fetch/$s_!5vQm!,w_88,h_88,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fe877149e-7470-4fd8-85da-ae390b4371ed_561x562.jpeg",
       "url": "https://newrefuseniks.substack.com",
       "year": null
@@ -877,6 +885,7 @@
       "description": "Speaker and writer.",
       "tags": [],
       "reference": "Wilf, Einat. Einat Wilf (Substack).",
+      "author": "Einat Wilf",
       "image": "https://substackcdn.com/image/fetch/$s_!38O_!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Feinatwilf.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1729408728%26version%3D9",
       "url": "https://einatwilf.substack.com",
       "year": null
@@ -888,6 +897,7 @@
       "description": "Israel, the Middle East, and the politics, philosophy, and history that still burn beneath them.",
       "tags": [],
       "reference": "Hyde, Samuel J. Beyond Belief (Substack).",
+      "author": "Samuel J. Hyde",
       "image": "https://substackcdn.com/image/fetch/$s_!fuGa!,w_88,h_88,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fae7e2511-371b-48c1-9371-a02670adeb5f_1080x1080.png",
       "url": "https://sjhyde.substack.com",
       "year": null
@@ -902,6 +912,7 @@
         "media-commentary"
       ],
       "reference": "Deutsch, Kevin. After October 7 (Substack).",
+      "author": "Kevin Deutsch",
       "image": null,
       "url": "https://kevindeutsch.substack.com",
       "year": null
@@ -913,6 +924,7 @@
       "description": "",
       "tags": [],
       "reference": "Kaufman, David Christopher. COUNTERINTUITIVE (Substack).",
+      "author": "David Christopher Kaufman",
       "image": "https://substackcdn.com/image/fetch/$s_!Vg_o!,w_1360,c_limit,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F23c54af3-c7e8-4d57-ac81-cb7b579095c1_1166x1280.png",
       "url": "https://davidkaufman.substack.com",
       "year": null
@@ -926,6 +938,7 @@
         "media-commentary"
       ],
       "reference": "Dabelstein, Joshua. For Normal People (Substack).",
+      "author": "Joshua Dabelstein",
       "image": null,
       "url": "https://fornormalpeople.substack.com",
       "year": null
@@ -937,6 +950,7 @@
       "description": "",
       "tags": [],
       "reference": "Platt, Jonah. Being Jewish with Jonah Platt (Substack).",
+      "author": "Jonah Platt",
       "image": "https://substackcdn.com/image/fetch/$s_!6mkz!,w_88,h_88,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F178e0be1-f741-46b6-989e-9d99d35fe9f1_712x712.png",
       "url": "https://jonahplatt.substack.com",
       "year": null
@@ -948,6 +962,7 @@
       "description": "",
       "tags": [],
       "reference": "Ettedgui, Sarah. Sarah Ettedgui (Substack).",
+      "author": "Sarah Ettedgui",
       "image": null,
       "url": "https://sarahettedgui.substack.com/",
       "year": null
@@ -956,15 +971,16 @@
       "id": "louis-klein-distinct-anti-jewish-bigotry",
       "title": "Antizionism as a Distinct Anti-Jewish Bigotry",
       "category": "scholarly-articles",
-      "description": "Argues antizionism is a coherent ideology with its own genealogy (Nazi-Islamist axis, Soviet propaganda, Western settler-colonial theory) and a recurring triad of libels (colonizer, apartheid, genocide) \u2014 and that it inverts classical antisemitism: where the old hatred cast Jews as alien outsiders, antizionism denies Jewish peoplehood and indigeneity outright.",
+      "description": "Argues antizionism is a coherent ideology with its own genealogy (Nazi-Islamist axis, Soviet propaganda, Western settler-colonial theory) and a recurring triad of libels (colonizer, apartheid, genocide) — and that it inverts classical antisemitism: where the old hatred cast Jews as alien outsiders, antizionism denies Jewish peoplehood and indigeneity outright.",
       "tags": [
         "definitional",
         "colonizer-narrative",
         "soviet-origins"
       ],
       "reference": "Louis-Klein, Adam. 'Antizionism as a Distinct Anti-Jewish Bigotry.' Journal of Contemporary Antisemitism, Vol. 9, No. 1, 2026.",
+      "author": "Adam Louis-Klein",
       "image": null,
-      "url": "https://www.degruyterbrill.com/document/doi/10.26613/jca/9.1.203/html",
+      "url": "https://doi.org/10.26613/jca/9.1.203",
       "year": 2026
     },
     {
@@ -977,9 +993,10 @@
         "definitional"
       ],
       "reference": "Bacharach, Barak. 'On Antizionism and Unlearning Arab Supremacy.' Haverford College Political Science Department, Alumni Corner.",
+      "author": "Barak Bacharach",
       "image": null,
       "url": "https://pols.sites.haverford.edu/alumni-corner/on-antizionism-and-unlearning-arab-supremacy/",
-      "year": null
+      "year": 2025
     },
     {
       "id": "polin-march-68-historical-facts",
@@ -992,6 +1009,7 @@
         "history"
       ],
       "reference": "POLIN Museum of the History of Polish Jews. 'March '68. Historical Facts.'",
+      "author": "POLIN Museum of the History of Polish Jews",
       "image": null,
       "url": "https://www.polin.pl/en/march-68",
       "year": null
@@ -1007,6 +1025,7 @@
         "history"
       ],
       "reference": "Bartov, Shira Li. '13,000 Jews Were Driven Out of Poland in 1968. Now, Some Are Returning to Tell Their Story.' SA Jewish Report (via JTA), June 15, 2026.",
+      "author": "Shira Li Bartov",
       "image": null,
       "url": "https://www.sajr.co.za/13-000-jews-were-driven-out-of-poland-in-1968-now-some-are-returning-to-tell-their-story/",
       "year": 2026
@@ -1015,15 +1034,32 @@
       "id": "shpolberg-1968-polish-jewry-film",
       "title": "The 1968 Forced Exodus of Polish Jewry on Film",
       "category": "essays",
-      "description": "Surveys how Polish filmmakers have documented and interpreted the 1968 'March emigration' on screen, from Marian Marzy\u0144ski's own exile documentary Skibet/Hatikvah through later films grappling with Polish-Jewish identity and the anti-Zionist purge that provoked it.",
+      "description": "Surveys how Polish filmmakers have documented and interpreted the 1968 'March emigration' on screen, from Marian Marzyński's own exile documentary Skibet/Hatikvah through later films grappling with Polish-Jewish identity and the anti-Zionist purge that provoked it.",
       "tags": [
         "poland-1968",
         "history"
       ],
       "reference": "Shpolberg, Masha. 'The 1968 Forced Exodus of Polish Jewry on Film.' Tablet Magazine, May 1, 2018.",
+      "author": "Masha Shpolberg",
       "image": null,
       "url": "https://www.tabletmag.com/sections/arts-letters/articles/1968-polish-jewry-film-skibet",
       "year": 2018
+    },
+    {
+      "id": "musighi-center-of-attention",
+      "title": "Center of Attention: Why One of the World's Tiniest Countries Gets the Biggest International Spotlight",
+      "category": "data-research",
+      "description": "Argues Israel receives 7 to 600 times more international news coverage per capita than comparable countries, regardless of active conflict, and traces that disparity to a deliberate, decades-long influence campaign rooted in Soviet-era intelligence operations and sustained by later institutional and funding networks; draws on the author's GDELT-based media-coverage dataset (see companion methodology piece).",
+      "tags": [
+        "data-analysis",
+        "soviet-origins",
+        "media-commentary"
+      ],
+      "reference": "Musighi, Jeremy. \"Center of Attention: Why One of the World's Tiniest Countries Gets the Biggest International Spotlight.\" profoundAF, Aug. 27, 2026.",
+      "author": "Jeremy Musighi",
+      "url": "https://profound.af/center-of-attention",
+      "image": null,
+      "year": 2026
     }
   ]
 }
