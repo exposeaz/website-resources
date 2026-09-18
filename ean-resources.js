@@ -3,7 +3,11 @@
   var DATA_URL = "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/data.json";
 
   var root = document.getElementById("ean-resources-root");
-  var state = { data: null, view: "categories", categoryId: null, search: "", activeTags: [] };
+  var state = { data: null, view: "categories", categoryId: null, search: "", activeTags: [], modalResourceId: null };
+
+  // Categories whose single-category view groups cards by year.
+  // Substacks is deliberately excluded (see renderCategoryResources).
+  var YEAR_SECTIONED_CATEGORIES = ["books", "scholarly-articles", "essays", "legal-commentary", "data-research"];
 
   function esc(s) {
     return (s || "").replace(/[&<>"']/g, function (c) {
@@ -63,14 +67,18 @@
     "declarations": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v16M4 5h13l-2 3 2 3H4"/></svg>'
   };
 
-  function renderResourceCard(r) {
-    var html = '<div class="ean-res-card">';
+  function resourceImageHtml(r, extraClass) {
+    var cls = "ean-res-image" + (extraClass ? " " + extraClass : "");
     if (r.image) {
-      html += '<div class="ean-res-image"><img src="' + esc(r.image) + '" alt="" loading="lazy"></div>';
-    } else {
-      var icon = CATEGORY_ICONS[r.category] || CATEGORY_ICONS["essays"];
-      html += '<div class="ean-res-image ean-res-image--fallback">' + icon + '</div>';
+      return '<div class="' + cls + '"><img src="' + esc(r.image) + '" alt="" loading="lazy"></div>';
     }
+    var icon = CATEGORY_ICONS[r.category] || CATEGORY_ICONS["essays"];
+    return '<div class="' + cls + ' ean-res-image--fallback">' + icon + '</div>';
+  }
+
+  function renderResourceCard(r) {
+    var html = '<div class="ean-res-card" data-res="' + esc(r.id) + '">';
+    html += resourceImageHtml(r);
     html += '<div class="ean-res-header">';
     html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
     if (r.year) {
@@ -78,6 +86,29 @@
     }
     html += '</div>';
     html += '<h4>' + esc(r.title) + '</h4>';
+    if (r.author) {
+      html += '<div class="ean-res-author">' + esc(r.author) + '</div>';
+    }
+    html += '</div>';
+    return html;
+  }
+
+  function renderResourceModal(r) {
+    var html = '<div class="ean-modal-overlay" data-modal-overlay="1">';
+    html += '<div class="ean-modal" role="dialog" aria-modal="true">';
+    html += '<button class="ean-modal-close" data-modal-close="1" aria-label="Close">&times;</button>';
+    html += resourceImageHtml(r, "ean-modal-image");
+    html += '<div class="ean-modal-body">';
+    html += '<div class="ean-res-header">';
+    html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
+    if (r.year) {
+      html += '<span class="ean-res-year">' + esc(String(r.year)) + '</span>';
+    }
+    html += '</div>';
+    html += '<h4>' + esc(r.title) + '</h4>';
+    if (r.author) {
+      html += '<div class="ean-res-author">' + esc(r.author) + '</div>';
+    }
     if (r.description) {
       html += '<p class="ean-res-desc">' + esc(r.description) + '</p>';
     } else {
@@ -86,13 +117,50 @@
     if (r.tags && r.tags.length) {
       html += '<div class="ean-res-tags">' + r.tags.map(function (t) {
         var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
-        return '<span>' + esc(tagDef ? tagDef.label : t) + '</span>';
+        return '<span data-tag="' + esc(t) + '">' + esc(tagDef ? tagDef.label : t) + '</span>';
       }).join('') + '</div>';
+    }
+    if (r.reference) {
+      html += '<p class="ean-res-reference">' + esc(r.reference) + '</p>';
     }
     if (r.url) {
       html += '<a class="ean-res-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">Visit source &rarr;</a>';
     }
-    html += '</div>';
+    html += '</div></div></div>';
+    return html;
+  }
+
+  // Renders the resources for a single category view: year-sectioned
+  // for most categories, a flat alphabetical grid for Substacks.
+  function renderCategoryResources(categoryId, items) {
+    if (categoryId === "substacks") {
+      var alpha = items.slice().sort(function (a, b) {
+        return a.title.localeCompare(b.title);
+      });
+      return '<div class="ean-res-grid">' + alpha.map(renderResourceCard).join('') + '</div>';
+    }
+
+    if (YEAR_SECTIONED_CATEGORIES.indexOf(categoryId) === -1) {
+      return '<div class="ean-res-grid">' + items.map(renderResourceCard).join('') + '</div>';
+    }
+
+    var byYear = {};
+    var undated = [];
+    items.forEach(function (r) {
+      if (r.year == null) { undated.push(r); return; }
+      (byYear[r.year] = byYear[r.year] || []).push(r);
+    });
+    var years = Object.keys(byYear).sort(function (a, b) { return b - a; });
+
+    var html = "";
+    years.forEach(function (y) {
+      html += '<h3 class="ean-year-header">' + esc(y) + '</h3>';
+      html += '<div class="ean-res-grid">' + byYear[y].map(renderResourceCard).join('') + '</div>';
+    });
+    if (undated.length) {
+      html += '<h3 class="ean-year-header">Undated</h3>';
+      html += '<div class="ean-res-grid">' + undated.map(renderResourceCard).join('') + '</div>';
+    }
     return html;
   }
 
@@ -101,6 +169,10 @@
     var html = renderToolbar();
 
     if (filtering) {
+      // Flat grid, not year-sectioned: this view spans multiple categories
+      // and is ranked by search/filter relevance, not chronology.
+      // NOTE: assumption made during planning, not a confirmed requirement —
+      // revisit with the user if year-sectioning turns out to be wanted here too.
       var results = state.data.resources.filter(matchesFilters);
       html += '<div class="ean-crumb">' + results.length + ' result' + (results.length === 1 ? '' : 's') + '</div>';
       html += results.length
@@ -121,8 +193,13 @@
       var items = state.data.resources.filter(function (r) { return r.category === state.categoryId; });
       html += '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All categories</a> / ' + esc(categoryLabel(state.categoryId)) + '</div>';
       html += items.length
-        ? '<div class="ean-res-grid">' + items.map(renderResourceCard).join('') + '</div>'
+        ? renderCategoryResources(state.categoryId, items)
         : '<div class="ean-empty">No resources in this category yet.</div>';
+    }
+
+    if (state.modalResourceId) {
+      var modalRes = state.data.resources.filter(function (r) { return r.id === state.modalResourceId; })[0];
+      if (modalRes) html += renderResourceModal(modalRes);
     }
 
     root.innerHTML = html;
@@ -164,7 +241,29 @@
         render();
       });
     }
+    root.querySelectorAll(".ean-res-card").forEach(function (card) {
+      card.addEventListener("click", function () {
+        state.modalResourceId = card.getAttribute("data-res");
+        render();
+      });
+    });
+    var overlay = root.querySelector("[data-modal-overlay]");
+    if (overlay) {
+      overlay.addEventListener("click", function (e) {
+        if (e.target === overlay) closeModal();
+      });
+      root.querySelector("[data-modal-close]").addEventListener("click", closeModal);
+    }
   }
+
+  function closeModal() {
+    state.modalResourceId = null;
+    render();
+  }
+
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && state.modalResourceId) closeModal();
+  });
 
   root.innerHTML = '<div class="ean-empty">Loading resources&hellip;</div>';
   fetch(DATA_URL)

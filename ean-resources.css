@@ -112,7 +112,15 @@
     flex-direction: column;
     gap: 8px;
     overflow: hidden;
+    cursor: pointer;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
+  .ean-res-card:hover {
+    border-color: var(--ean-border-strong);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.10);
+  }
+  .ean-res-card:active { transform: translateY(-1px); }
   .ean-res-image {
     margin: -16px -16px 12px -16px;
     aspect-ratio: 3 / 2;
@@ -160,6 +168,7 @@
     border-radius: 4px;
     padding: 2px 7px;
   }
+  .ean-res-author { font-size: 0.85em; opacity: 0.7; margin: -4px 0 0; }
   .ean-res-desc { font-size: 0.92em; line-height: 1.5; margin: 0; }
   .ean-res-desc.empty { opacity: 0.6; font-style: italic; }
   .ean-res-tags {
@@ -175,5 +184,78 @@
     padding: 2px 7px;
     opacity: 0.75;
   }
+  .ean-res-reference { font-size: 0.85em; opacity: 0.75; font-style: italic; margin: 0; }
   .ean-res-link { font-size: 0.85em; }
   .ean-empty { opacity: 0.6; padding: 40px 0; text-align: center; }
+
+  .ean-year-header {
+    margin: 28px 0 12px;
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+  .ean-year-header:first-of-type { margin-top: 0; }
+
+  /* ---- resource detail modal ---- */
+  .ean-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 100;
+    animation: ean-fade-in .15s ease;
+  }
+  @keyframes ean-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  /* The modal floats over a dimmed backdrop rather than sitting directly
+     on the page, so it can't rely on the low-opacity tint-over-page-bg
+     trick .ean-card-bg uses elsewhere (that reads as a muddy see-through
+     square here instead of a card). It uses the browser's actual page
+     canvas colors instead of `inherit`/a hardcoded value, so it stays
+     legible without guessing whether the live site is light- or
+     dark-themed. Flagging this as a deliberate departure from the
+     inherit-everything rule elsewhere in this file — revisit if it looks
+     wrong against the real site once brand assets land. */
+  .ean-modal {
+    position: relative;
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid var(--ean-border-strong);
+    border-radius: 8px;
+    max-width: 560px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+  .ean-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: rgba(127,127,127,.15);
+    color: inherit;
+    font-size: 1.3rem;
+    line-height: 1;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .ean-modal-close:hover { background: rgba(127,127,127,.3); }
+  .ean-modal-image {
+    margin: 0;
+    aspect-ratio: 3 / 2;
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+  }
+  .ean-modal-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
