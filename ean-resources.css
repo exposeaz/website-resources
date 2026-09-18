@@ -175,13 +175,5 @@
     padding: 2px 7px;
     opacity: 0.75;
   }
-  .ean-res-ref {
-    font-size: 0.78em;
-    opacity: 0.65;
-    border-top: 1px solid var(--ean-border);
-    padding-top: 8px;
-    margin-top: 4px;
-    line-height: 1.4;
-  }
   .ean-res-link { font-size: 0.85em; }
   .ean-empty { opacity: 0.6; padding: 40px 0; text-align: center; }

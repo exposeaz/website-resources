@@ -89,7 +89,6 @@
         return '<span>' + esc(tagDef ? tagDef.label : t) + '</span>';
       }).join('') + '</div>';
     }
-    html += '<div class="ean-res-ref">' + esc(r.reference) + '</div>';
     if (r.url) {
       html += '<a class="ean-res-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">Visit source &rarr;</a>';
     }
