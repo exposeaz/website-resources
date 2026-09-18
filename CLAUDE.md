@@ -2,6 +2,26 @@
 
 Context for Claude Code sessions working in this repo. Read this before making changes.
 
+
+## First and foremost, Coding rules and expectations. These are the most important.
+
+- ALWAYS assume we are having a design discussion UNLESS I explicitly give you permission to write code.
+- Do NOT run `git add`, `git commit`, `git push`, `git revert`, `git checkout` or any other git write commands. The human will handle all git operations unless you are explicitly given permission to do so on a case-by-case basis.
+- Do NOT create, read, or modify `.env` files or any file containing credentials, tokens, or secrets.
+- You MAY fetch public URLs (documentation, reference pages) using the WebFetch tool to help answer questions or research tools.
+- Do NOT make API calls that send credentials, tokens, or user data to external services.
+- Do NOT use `curl` or `wget` from the shell — use the WebFetch tool instead, which is sandboxed and auditable.
+- Do NOT install system-level packages or modify system configuration.
+- Do NOT rewrite, condense, or rephrase user-facing copy (help text, labels, instructions) during code cleanup or simplification — only change markup and structure.
+- When adding text to markdown files, write only one sentence per line to make diff review easier. 
+- Do NOT implement code changes without explicit permission.
+- NEVER DELETE OR MODIFY .env files
+- When the user asks a question about existing code or design ("why is X here?", "do we need Y?", "should this be Z?"), treat it as a discussion prompt — explain the reasoning and ask for direction before making any changes. Only modify code after the user has explicitly agreed on a course of action.   
+- When you have made changes, stop and describe what you changed and why so the human can review.
+- If you are unsure whether an action is allowed, ask rather than proceeding.
+- Keep changes small and incremental. Prefer multiple small steps over one large batch of changes.
+- When writing scripts that interact with a third party API, ensure that the code treats the API with respect with regard to rate limits. 
+
 ## What this repo is
 
 Source for a filterable, searchable resource-library widget embedded on a nonprofit's Squarespace site (an antizionism-education advocacy org). The widget lets visitors browse educational resources (books, scholarly articles, essays, legal commentary, organizations, letters, declarations) by category, filter by cross-cutting tags, and free-text search — all client-side, no backend.
@@ -68,22 +88,3 @@ All CSS classes and the root `<div>` id are prefixed `ean-` (Expose Antizionism 
 - **No budget for paid tools or plugins** beyond the Squarespace subscription itself — this ruled out paid Squarespace filter plugins (Spark Plugin, Elfsight paid tier) in favor of this free, custom, GitHub+jsDelivr approach.
 - Squarespace's Code Block only supports JavaScript/iframes on **Core plan tier or higher** (or during any trial, regardless of tier) — Basic/Personal-tier plans cannot run this widget at all.
 
-
-# Coding rules and expectations
-
-- ALWAYS assume we are having a design discussion UNLESS I explicitly give you permission to write code.
-- Do NOT run `git add`, `git commit`, `git push`, `git revert`, or any other git write commands. The human will handle all git operations unless you are explicitly given permission to do so on a case-by-case basis.
-- Do NOT create, read, or modify `.env` files or any file containing credentials, tokens, or secrets.
-- You MAY fetch public URLs (documentation, reference pages) using the WebFetch tool to help answer questions or research tools.
-- Do NOT make API calls that send credentials, tokens, or user data to external services.
-- Do NOT use `curl` or `wget` from the shell — use the WebFetch tool instead, which is sandboxed and auditable.
-- Do NOT install system-level packages or modify system configuration.
-- Do NOT rewrite, condense, or rephrase user-facing copy (help text, labels, instructions) during code cleanup or simplification — only change markup and structure.
-- When adding text to markdown files, write only one sentence per line to make diff review easier. 
-- Do NOT implement code changes without explicit permission.
-- NEVER DELETE OR MODIFY .env files
-- When the user asks a question about existing code or design ("why is X here?", "do we need Y?", "should this be Z?"), treat it as a discussion prompt — explain the reasoning and ask for direction before making any changes. Only modify code after the user has explicitly agreed on a course of action.   
-- When you have made changes, stop and describe what you changed and why so the human can review.
-- If you are unsure whether an action is allowed, ask rather than proceeding.
-- Keep changes small and incremental. Prefer multiple small steps over one large batch of changes.
-- When writing scripts that interact with a third party API, ensure that the code treats the API with respect with regard to rate limits. 
