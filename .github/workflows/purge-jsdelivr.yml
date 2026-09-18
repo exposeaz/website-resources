@@ -1,0 +1,26 @@
+name: Purge jsDelivr cache
+
+# Runs automatically whenever one of the widget's live files changes on
+# main, and can also be triggered manually from the Actions tab if you
+# ever want to force a purge without pushing a change.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ean-resources.css'
+      - 'ean-resources.js'
+      - 'data.json'
+  workflow_dispatch:
+
+jobs:
+  purge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Purge jsDelivr cache for widget files
+        run: |
+          for file in ean-resources.css ean-resources.js data.json; do
+            echo "Purging $file..."
+            curl -s "https://purge.jsdelivr.net/gh/${{ github.repository }}@main/$file"
+            echo ""
+          done
