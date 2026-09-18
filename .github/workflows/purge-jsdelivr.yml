@@ -11,7 +11,7 @@ on:
       - 'ean-resources.css'
       - 'ean-resources.js'
       - 'data.json'
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   purge:
