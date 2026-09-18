@@ -33,7 +33,12 @@
     top: 0;
     padding: 10px 0;
     z-index: 5;
-    background: inherit;
+    /* `background: inherit` was resolving to transparent (the actual page
+       background isn't inherited across untouched ancestors), so cards
+       scrolling underneath showed straight through the sticky bar instead
+       of being covered by it. Canvas is an opaque, theme-adaptive color —
+       same trick used for the modal — so it actually occludes content. */
+    background: Canvas;
   }
   .ean-search {
     flex: 1 1 240px;
@@ -126,19 +131,18 @@
     cursor: pointer;
     break-inside: avoid;
     margin-bottom: 16px;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    transition: border-color .18s ease;
   }
-  /* transform + box-shadow on hover here is a known ghosting risk on
-     Chromium when the element is inside a CSS multicol container (this
-     grid uses `columns:` for the masonry effect) — seen locally, judged
-     acceptable on the live site. Revert to border-color-only (see git
-     history around this line) if it turns out to reproduce there too. */
+  /* Border-color only, confirmed necessary — transform/box-shadow on
+     hover here triggers a real Chromium repaint bug (ghosted duplicate
+     column fragments) because this element sits inside a CSS multicol
+     container (.ean-res-grid uses `columns:` for the masonry effect).
+     Reproduced both locally and on the live Squarespace site, so this
+     isn't a local-only quirk — don't reintroduce transform/box-shadow
+     on this hover state. */
   .ean-res-card:hover {
     border-color: var(--ean-border-strong);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.10);
   }
-  .ean-res-card:active { transform: translateY(-1px); }
   .ean-res-image {
     margin: -16px -16px 12px -16px;
     background: var(--ean-card-image-bg);

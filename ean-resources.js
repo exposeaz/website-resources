@@ -44,12 +44,9 @@
   }
 
   function renderToolbar() {
-    var filtering = state.search.trim() !== "" || state.activeTags.length > 0;
     var html = '<div class="ean-toolbar">';
     html += '<input class="ean-search" type="text" placeholder="Search titles, descriptions, citations..." value="' + esc(state.search) + '" />';
-    if (filtering) {
-      html += '<button type="button" class="ean-clear-btn" data-clear-filters="1">Clear filters</button>';
-    }
+    html += '<button type="button" class="ean-clear-btn" data-clear-filters="1">Clear filters</button>';
     html += '</div>';
     html += '<div class="ean-tagbar">';
     state.data.tags.forEach(function (t) {
@@ -173,7 +170,19 @@
     var filtering = state.search.trim() !== "" || state.activeTags.length > 0;
     var html = renderToolbar();
 
-    if (filtering) {
+    if (state.view === "category") {
+      // A category is already selected, so search/tag filters narrow
+      // *within* it instead of jumping out to a cross-category search —
+      // only the top-level categories view searches everything at once.
+      var items = state.data.resources.filter(function (r) { return r.category === state.categoryId; });
+      if (filtering) items = items.filter(matchesFilters);
+      html += '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All categories</a> / ' + esc(categoryLabel(state.categoryId));
+      if (filtering) html += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
+      html += '</div>';
+      html += items.length
+        ? renderCategoryResources(state.categoryId, items)
+        : '<div class="ean-empty">' + (filtering ? 'No resources match your filters in this category.' : 'No resources in this category yet.') + '</div>';
+    } else if (filtering) {
       // Flat grid, not year-sectioned: this view spans multiple categories
       // and is ranked by search/filter relevance, not chronology.
       // NOTE: assumption made during planning, not a confirmed requirement —
@@ -183,7 +192,7 @@
       html += results.length
         ? '<div class="ean-res-grid">' + results.map(renderResourceCard).join('') + '</div>'
         : '<div class="ean-empty">No resources match your filters.</div>';
-    } else if (state.view === "categories") {
+    } else {
       html += '<div class="ean-cat-grid">';
       state.data.categories.forEach(function (c) {
         var count = state.data.resources.filter(function (r) { return r.category === c.id; }).length;
@@ -194,12 +203,6 @@
         html += '</div>';
       });
       html += '</div>';
-    } else if (state.view === "category") {
-      var items = state.data.resources.filter(function (r) { return r.category === state.categoryId; });
-      html += '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All categories</a> / ' + esc(categoryLabel(state.categoryId)) + '</div>';
-      html += items.length
-        ? renderCategoryResources(state.categoryId, items)
-        : '<div class="ean-empty">No resources in this category yet.</div>';
     }
 
     if (state.modalResourceId) {
