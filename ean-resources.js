@@ -61,13 +61,12 @@
   // Rendered on a colored field (--ean-card-image-bg) using currentColor,
   // so it automatically follows text color / brand accent.
   var CATEGORY_ICONS = {
-    "books": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 5c2-1 5-1 7 0v14c-2-1-5-1-7 0V5Z"/><path d="M20 5c-2-1-5-1-7 0v14c2-1 5-1 7 0V5Z"/></svg>',
-    "scholarly-articles": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3h9l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M9 12h6M9 16h6M9 8h3"/></svg>',
-    "essays": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 20l4.5-1.2L19 8.3a1.8 1.8 0 0 0 0-2.6l-.7-.7a1.8 1.8 0 0 0-2.6 0L5.2 15.5 4 20Z"/></svg>',
-    "legal-commentary": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3v3M12 6 5 9M12 6l7 3M5 9l-2.5 5A3 3 0 0 0 5 18a3 3 0 0 0 2.5-4L5 9ZM19 9l-2.5 5a3 3 0 0 0 2.5 4 3 3 0 0 0 2.5-4L19 9ZM7 21h10"/></svg>',
-    "organizations": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 21V8l8-5 8 5v13"/><path d="M9 21v-6h6v6M4 21h16"/></svg>',
-    "letters": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1.5"/><path d="m3 6 9 7 9-7"/></svg>',
-    "declarations": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4v16M4 5h13l-2 3 2 3H4"/></svg>'
+    "books": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5.5C10.2 4.4 7.7 4 5.5 4.2A1 1 0 0 0 4.6 5.2v13a1 1 0 0 0 1.1 1c2-.2 4.3.2 6.3 1.3" fill="currentColor" fill-opacity=".08"/><path d="M12 5.5C10.2 4.4 7.7 4 5.5 4.2A1 1 0 0 0 4.6 5.2v13a1 1 0 0 0 1.1 1c2-.2 4.3.2 6.3 1.3"/><path d="M12 5.5c1.8-1.1 4.3-1.5 6.5-1.3a1 1 0 0 1 .9 1v13a1 1 0 0 1-1.1 1c-2-.2-4.3.2-6.3 1.3" fill="currentColor" fill-opacity=".08"/><path d="M12 5.5c1.8-1.1 4.3-1.5 6.5-1.3a1 1 0 0 1 .9 1v13a1 1 0 0 1-1.1 1c-2-.2-4.3.2-6.3 1.3"/><path d="M12 5.5v14.8"/></svg>',
+    "scholarly-articles": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v11.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5V4.5A1.5 1.5 0 0 1 6 3Z" fill="currentColor" fill-opacity=".06"/><path d="M14 3v3.5A1.5 1.5 0 0 0 15.5 8H18"/><path d="M8 11h5M8 14h3.5"/></svg>',
+    "data-research": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="3.4" height="7" fill="currentColor" fill-opacity=".12" stroke="currentColor"/><rect x="10.3" y="7" width="3.4" height="12" fill="currentColor" fill-opacity=".12" stroke="currentColor"/><rect x="16.6" y="4" width="3.4" height="15" fill="currentColor" fill-opacity=".12" stroke="currentColor"/><path d="M2.5 20.5h19"/></svg>',
+    "essays": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4.5-1.2L19 8.3a1.8 1.8 0 0 0 0-2.6l-.7-.7a1.8 1.8 0 0 0-2.6 0L5.2 15.5 4 20Z" fill="currentColor" fill-opacity=".08"/><path d="M4 20l4.5-1.2L19 8.3a1.8 1.8 0 0 0 0-2.6l-.7-.7a1.8 1.8 0 0 0-2.6 0L5.2 15.5 4 20Z"/><path d="M14.5 6.5l3 3"/></svg>',
+    "legal-commentary": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 6 5 9M12 6l7 3M5 9l-2.5 5A3 3 0 0 0 5 18a3 3 0 0 0 2.5-4L5 9ZM19 9l-2.5 5a3 3 0 0 0 2.5 4 3 3 0 0 0 2.5-4L19 9ZM7 21h10"/></svg>',
+    "substacks": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" fill="currentColor" fill-opacity=".06"/><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6.5 8 6.2 8-6.2"/></svg>'
   };
 
   // If a resource's image URL 404s, times out, or otherwise fails to load
@@ -92,7 +91,12 @@
 
   function renderResourceCard(r) {
     var html = '<div class="ean-res-card" data-res="' + esc(r.id) + '">';
-    html += resourceImageHtml(r);
+    // Scholarly articles rarely have a real cover/thumbnail worth showing,
+    // and the fallback icon box added height without adding information —
+    // so this category skips the image block entirely.
+    if (r.category !== "scholarly-articles") {
+      html += resourceImageHtml(r);
+    }
     html += '<div class="ean-res-header">';
     html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
     if (r.year) {

@@ -18,6 +18,7 @@
     --ean-tag-border: var(--ean-border);        /* tag pill border, inactive */
     --ean-tag-active-bg: rgba(40,40,40,.85);    /* PLACEHOLDER — tag pill fill when selected */
     --ean-card-image-bg: rgba(127,127,127,.08); /* field behind fallback icon when no image is set */
+    --ean-toolbar-bg: rgba(127,127,127,.5);     /* sticky search bar fill (used with a blur, not a flat color guess) */
     width: 100%;
   }
   #ean-resources-root * { box-sizing: border-box; }
@@ -33,12 +34,15 @@
     top: 0;
     padding: 10px 0;
     z-index: 5;
-    /* `background: inherit` was resolving to transparent (the actual page
-       background isn't inherited across untouched ancestors), so cards
-       scrolling underneath showed straight through the sticky bar instead
-       of being covered by it. Canvas is an opaque, theme-adaptive color —
-       same trick used for the modal — so it actually occludes content. */
-    background: Canvas;
+    /* `background: inherit` resolved to transparent, and a flat guessed
+       color (even the theme-adaptive `Canvas` keyword) read as a mismatched
+       box pasted over your actual page background. A frosted-glass blur
+       sidesteps guessing a color entirely — it obscures whatever scrolls
+       underneath by blurring it, so it works regardless of your real
+       page background/texture. */
+    background: var(--ean-toolbar-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
   .ean-search {
     flex: 1 1 240px;
@@ -202,7 +206,7 @@
     margin-top: 2px;
   }
   .ean-res-tags span {
-    font-size: 0.72em;
+    font-size: 0.85em;
     border: 1px solid var(--ean-border);
     border-radius: 4px;
     padding: 2px 7px;
