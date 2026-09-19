@@ -91,12 +91,12 @@
 
   function renderResourceCard(r) {
     var html = '<div class="ean-res-card" data-res="' + esc(r.id) + '">';
-    // Scholarly articles rarely have a real cover/thumbnail worth showing,
-    // and the fallback icon box added height without adding information —
-    // so this category skips the image block entirely.
-    if (r.category !== "scholarly-articles") {
-      html += resourceImageHtml(r);
-    }
+    // Image block disabled sitewide (Sept 2026): only ~30% of resources
+    // have a real image, so most cards were just showing a repeated
+    // generic category icon instead of adding anything. `data.json` still
+    // carries the `image` field and resourceImageHtml()/CATEGORY_ICONS/the
+    // onerror fallback are all still intact below — to bring images back,
+    // just re-add: html += resourceImageHtml(r);
     html += '<div class="ean-res-header">';
     html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
     if (r.year) {

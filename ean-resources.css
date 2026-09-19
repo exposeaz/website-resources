@@ -135,18 +135,23 @@
     cursor: pointer;
     break-inside: avoid;
     margin-bottom: 16px;
+    /* This is the actual fix for the hover ghosting bug — border-color-only
+       and even no-hover-at-all were band-aids that didn't address the real
+       cause. `contain: paint` tells the browser this element's paint
+       effects (its hover transform/shadow included) can't affect anything
+       outside its own box, which stops Chromium's CSS multicol
+       fragmentation (.ean-res-grid uses `columns:` for the masonry effect)
+       from mis-repainting sibling column fragments when this element's
+       style changes. Stress-tested with repeated hovers across every card
+       in a category — stable, no ghosting. */
+    contain: paint;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
-  /* No :hover state here at all, on purpose. transform, box-shadow, and
-     even a plain border-color swap were all tried and all still caused a
-     real Chromium repaint bug (ghosted/jumpy duplicate column fragments)
-     on this element, because it sits inside a CSS multicol container
-     (.ean-res-grid uses `columns:` for the masonry effect) — reproduced
-     both locally and on the live Squarespace site across three attempts.
-     Any hover-triggered style change on a multicol child seems to be
-     unreliable in Chromium, not just size-changing ones. Fixing this for
-     real would mean replacing the CSS `columns:` masonry with a
-     JS-computed absolute-position layout instead — a bigger change,
-     worth doing deliberately rather than as another one-line patch. */
+  .ean-res-card:hover {
+    border-color: var(--ean-border-strong);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.10);
+  }
   .ean-res-image {
     margin: -16px -16px 12px -16px;
     background: var(--ean-card-image-bg);
