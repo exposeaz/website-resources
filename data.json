@@ -33,52 +33,48 @@
   ],
   "tags": [
     {
-      "id": "soviet-origins",
-      "label": "Soviet origins"
+      "id": "soviet-antizionism",
+      "label": "Soviet antizionism"
     },
     {
       "id": "post-oct-7",
       "label": "Post-October 7"
     },
     {
-      "id": "genocide-accusation",
-      "label": "Genocide accusation"
+      "id": "genocide-libel",
+      "label": "Genocide libel"
     },
     {
       "id": "campus",
-      "label": "Campus"
+      "label": "Campuses"
     },
     {
-      "id": "legal-definition",
-      "label": "Legal/IHRA definition"
+      "id": "islamism",
+      "label": "Islamism"
     },
     {
-      "id": "history",
-      "label": "History"
+      "id": "arab-supremacy",
+      "label": "Arab supremacy"
     },
     {
       "id": "poland-1968",
-      "label": "Poland 1968"
+      "label": "Poland 1968 purges"
     },
     {
-      "id": "colonizer-narrative",
-      "label": "Colonizer narrative"
+      "id": "colonizer-libel",
+      "label": "Colonizer libel"
+    },
+    {
+      "id": "apartheid-libel",
+      "label": "Apartheid libel"
     },
     {
       "id": "bds",
       "label": "BDS"
     },
     {
-      "id": "conspiracy-theory",
-      "label": "Conspiracy theory"
-    },
-    {
       "id": "antizionism",
       "label": "Antizionism"
-    },
-    {
-      "id": "data-analysis",
-      "label": "Data analysis"
     },
     {
       "id": "advocacy",
@@ -86,7 +82,7 @@
     },
     {
       "id": "media-commentary",
-      "label": "Media commentary"
+      "label": "Media bias"
     }
   ],
   "resources": [
@@ -95,9 +91,7 @@
       "title": "At the Mind's Limits: Contemplations by a Survivor on Auschwitz and its Realities",
       "category": "books",
       "description": "A Holocaust survivor's autobiographical account, which also includes a reckoning with postwar antizionism.",
-      "tags": [
-        "history"
-      ],
+      "tags": [],
       "reference": "Améry, Jean. At the Mind's Limits. 1966.",
       "author": "Jean Améry",
       "url": null,
@@ -108,9 +102,8 @@
       "id": "amery-essays-antisemitism-antizionism-left",
       "title": "Essays on Antisemitism, Anti-Zionism, and the Left",
       "category": "books",
-      "description": "A posthumous English-language collection gathering Jean Améry's essays confronting antisemitism and anti-Zionism, including his writings on the political currents of the postwar European left.",
+      "description": "A posthumous English-language collection gathering Jean Améry's essays confronting antisemitism and antizionism, including his writings on the political currents of the postwar European left.",
       "tags": [
-        "history",
         "antizionism"
       ],
       "reference": "Améry, Jean. Essays on Antisemitism, Anti-Zionism, and the Left. Edited by Marlene Gallner. Translated by Louise Fischer. Indiana University Press, 2021.",
@@ -124,9 +117,7 @@
       "title": "The Antizionist Complex",
       "category": "books",
       "description": "One of the first book-length arguments that postwar hostility to Israel is a continuation of Judeophobia in a new guise; argues that opposition to Jewish national existence, however framed, ultimately derives from a refusal to accept a Jewish nation.",
-      "tags": [
-        "history"
-      ],
+      "tags": [],
       "reference": "Givet, Jacques. The Antizionist Complex. SBS Publishing, 1979.",
       "author": "Jacques Givet",
       "url": "https://archive.org/details/antizionistcompl0000give",
@@ -138,9 +129,7 @@
       "title": "The History of Anti-Semitism",
       "category": "books",
       "description": "A landmark four-volume history tracing Jew-hatred from antiquity through the rise of Nazism; the final volumes (\"From Voltaire to Wagner,\" \"Suicidal Europe\") trace the emergence of racial antisemitism and end with Poliakov's own prescient warning that hatred of Jews might take on a new \"anti-Zionist\" guise.",
-      "tags": [
-        "history"
-      ],
+      "tags": [],
       "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1965–1977.",
       "author": "Leon Poliakov",
       "url": null,
@@ -152,7 +141,6 @@
       "category": "books",
       "description": "Argues that a \"new Judeophobia\" emerged around the 2001 Durban conference, distinct from older racial antisemitism: it diabolizes Israel and Zionism (and by extension Jews) using antiracist and anti-imperialist language rather than racial theory.",
       "tags": [
-        "history",
         "antizionism"
       ],
       "reference": "Taguieff, Pierre-André. The New Judeophobia. 2002.",
@@ -164,13 +152,15 @@
       "id": "taguieff-judeophobia-last-wave",
       "title": "Judeophobia: The Last Wave",
       "category": "books",
-      "description": "Continues Taguieff's study of the mutations of Judeophobia, extending his analysis of anti-Zionist antisemitism into its most recent, post-2000s forms.",
+      "description": "Continues Taguieff's study of the mutations of Judeophobia, extending his analysis of 'anti-Zionist antisemitism' into its most recent, post-2000s forms.",
       "tags": [
-        "history"
+        "antizionism",
+        "genocide-libel",
+        "colonizer-libel"
       ],
       "reference": "Taguieff, Pierre-André. Judeophobia: The Last Wave. 2018.",
       "author": "Pierre-André Taguieff",
-      "url": null,
+      "url": "https://perditions-ideologiques.com/2021/04/11/judeophobie-la-derniere-vague-by-pierre-andre-taguieff-paris-fayard-2018-293-pages/",
       "year": 2018
     },
     {
@@ -179,9 +169,8 @@
       "category": "books",
       "description": "An edited volume examining the Soviet bloc's turn against Israel after 1967 and the antisemitic character much of that \"anti-Zionist\" campaign took on.",
       "tags": [
-        "soviet-origins",
-        "antizionism",
-        "history"
+        "soviet-antizionism",
+        "antizionism"
       ],
       "reference": "Wistrich, Robert S. (ed.). The Left against Zion. Vallentine, Mitchell, 1979.",
       "author": "Robert S. Wistrich (ed.)",
@@ -194,8 +183,7 @@
       "category": "books",
       "description": "Traces the European left's shift from ambivalence toward, to eventual hostility against, Jewish nationalism, foreshadowing Wistrich's larger 2012 book of a similar title.",
       "tags": [
-        "antizionism",
-        "history"
+        "antizionism"
       ],
       "reference": "Wistrich, Robert S. \"From Ambivalence to Betrayal: The Left, the Jews, and Israel.\" In Anti-Zionism and Antisemitism in the Contemporary World, 2009.",
       "author": "Robert S. Wistrich",
@@ -208,8 +196,7 @@
       "category": "books",
       "description": "A sweeping single-volume history of antisemitism \"from antiquity to the global jihad,\" ending with chapters connecting the Soviet war on Zionism and contemporary jihadist and left-wing antisemitism to older Judeophobic traditions.",
       "tags": [
-        "history",
-        "soviet-origins",
+        "soviet-antizionism",
         "antizionism"
       ],
       "reference": "Wistrich, Robert S. A Lethal Obsession. Random House, 2010.",
@@ -224,8 +211,7 @@
       "category": "books",
       "description": "A detailed two-volume history of Soviet Jewry, including the state's campaigns against Zionism and Hebrew culture from the 1920s onward.",
       "tags": [
-        "soviet-origins",
-        "history"
+        "soviet-antizionism"
       ],
       "reference": "Levin, Nora. The Jews in the Soviet Union Since 1917: Paradox of Survival. NYU Press, 1988.",
       "author": "Nora Levin",
@@ -252,8 +238,10 @@
       "id": "kirschbaum-shirazki-new-middle-east",
       "title": "From Antizionism to a New Middle East",
       "category": "books",
-      "description": "",
-      "tags": [],
+      "description": "A collection of nine essays offering historical analysis, contemporary commentary, and practical solutions for a path to a multi-national and multi-religious Middle East, free of the mendacious and destructive force of antizionism.",
+      "tags": [
+        "islamism"
+      ],
       "reference": "Kirschbaum-Shirazki, Olga. From Antizionism to a New Middle East. 2026.",
       "author": "Olga Kirschbaum-Shirazki",
       "url": null,
@@ -265,7 +253,7 @@
       "category": "scholarly-articles",
       "description": "",
       "tags": [
-        "legal-definition"
+        "genocide-libel"
       ],
       "reference": "Marcus, Kenneth L. \"Accusation in a Mirror.\" 2012.",
       "author": "Kenneth L. Marcus",
@@ -278,7 +266,7 @@
       "category": "scholarly-articles",
       "description": "From the book examining how the U.S. civil-rights framework (Title VI) can and should apply to campus antisemitism, including where anti-Israel activism shades into discrimination against Jewish students.",
       "tags": [
-        "legal-definition",
+        "antizionism",
         "campus"
       ],
       "reference": "Marcus, Kenneth L. \"Anti-Zionism & Anti-Semitism.\" In The Definition of Anti-Semitism, 146–190. Oxford University Press, 2015.",
@@ -292,9 +280,7 @@
       "category": "scholarly-articles",
       "description": "Argues, using post–October 7 campus data, that universities should formally adopt the IHRA definition of antisemitism in their nondiscrimination policies to close the ambiguity around antizionism as a form of antisemitism and restore Title VI accountability.",
       "tags": [
-        "legal-definition",
-        "campus",
-        "post-oct-7"
+        "campus"
       ],
       "reference": "Martin, Andrea J. \"From Ambiguity to Accountability: The Case for a Legal Definition of Antisemitism in Academia.\" Pepperdine Law Review, 2025.",
       "author": "Andrea J. Martin",
@@ -307,9 +293,7 @@
       "category": "scholarly-articles",
       "description": "Argues under the Genocide Convention that Hamas's October 7 attack itself meets the legal definition of genocide, and examines how the reverse \"genocide\" accusation against Israel functions to deflect that recognition.",
       "tags": [
-        "genocide-accusation",
-        "post-oct-7",
-        "legal-definition"
+        "genocide-libel"
       ],
       "reference": "Shalev, Avraham Russell. \"Hamas' October 7th Genocide: Legal Analysis and the Weaponisation of Reverse Accusations—A Study in Modern Genocide Recognition and Denial.\" Israel Law Review, Vol. 58, Special Issue 2–3, 2025.",
       "author": "Avraham Russell Shalev",
@@ -323,9 +307,8 @@
       "category": "scholarly-articles",
       "description": "A Holocaust historian traces how genocide accusations against Israel, unlike those leveled at other states, have persisted throughout its existence, and argues the post-October 7 version deploys classic antisemitic tropes (blood libel, Nazi inversion, collective Jewish guilt).",
       "tags": [
-        "genocide-accusation",
-        "post-oct-7",
-        "history"
+        "genocide-libel",
+        "colonizer-libel"
       ],
       "reference": "Goda, Norman J. W. \"The Genocide Libel: How the World Has Charged Israel with Genocide.\" ISCA Research Paper 2025-3, Institute for the Study of Contemporary Antisemitism, Indiana University, 2025.",
       "author": "Norman J. W. Goda",
@@ -348,9 +331,8 @@
       "category": "scholarly-articles",
       "description": "Traces how Soviet-era \"anti-Zionist\" propaganda campaigns (1967–88) built a conspiracist, demonizing template for talking about Israel that Tabarovsky argues has been absorbed largely intact into today's left-wing discourse.",
       "tags": [
-        "soviet-origins",
-        "antizionism",
-        "conspiracy-theory"
+        "soviet-antizionism",
+        "antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Demonization Blueprints: Soviet Conspiracist Antizionism in Contemporary Left-Wing Discourse.\" Journal of Contemporary Antisemitism, vol. 5, no. 1, 2022, pp. 1-20.",
       "author": "Izabella Tabarovsky",
@@ -364,7 +346,8 @@
       "description": "A shorter companion piece to Wistrich's From Ambivalence to Betrayal, dissecting the intellectual myths (Zionism as racism, colonialism, imperialism) that underpin the contemporary left's hostility to Israel.",
       "tags": [
         "antizionism",
-        "colonizer-narrative"
+        "colonizer-libel",
+        "apartheid-libel"
       ],
       "reference": "Wistrich, Robert S. \"The Anti-Zionist Mythology of the Left.\" Israel Journal of Foreign Affairs, 9:2, 2015.",
       "author": "Robert S. Wistrich",
@@ -377,8 +360,8 @@
       "category": "essays",
       "description": "A sociologist argues that post-October 7 antizionism in the U.S. is best understood not as an intellectual critique of Zionism but as a mass political and social movement, with roots traced back through Poliakov's own 1969 prediction of a coming \"anti-Zionist\" mutation of antisemitism.",
       "tags": [
-        "post-oct-7",
-        "soviet-origins"
+        "soviet-antizionism",
+        "antizionism"
       ],
       "reference": "Kelner, Shaul. \"American Antizionism.\" Sources: A Journal of Jewish Ideas, Fall/Winter 2025.",
       "author": "Shaul Kelner",
@@ -405,8 +388,7 @@
       "category": "essays",
       "description": "By an anthropologist and founder of the Movement Against Antizionism (MAAZ), arguing antizionism should be named and fought as its own distinct hate ideology rather than folded into debates over \"antisemitism.\"",
       "tags": [
-                "advocacy",
-        "post-oct-7"
+        "antizionism"
       ],
       "reference": "Louis-Klein, Adam. \"Defeating Antizionism.\" Sapir, Issue 12, 2026.",
       "author": "Adam Louis-Klein",
@@ -419,8 +401,8 @@
       "category": "essays",
       "description": "Continues Louis-Klein's argument that antizionism is a structured ideology with its own libels (colonizer, apartheid, genocide) rather than simply a political stance on Israeli policy.",
       "tags": [
-                "colonizer-narrative",
-        "genocide-accusation"
+        "colonizer-libel",
+        "genocide-libel"
       ],
       "reference": "Louis-Klein, Adam. \"What Antizionism Really Is.\" The Free Press.",
       "author": "Adam Louis-Klein",
@@ -433,8 +415,7 @@
       "category": "essays",
       "description": "Argues that today's genocide accusations against Israel by defenders of Hamas follow the same rhetorical playbook Hutu extremists used against Tutsis in Rwanda in 1993 — inverting the language of genocide to accuse the actual targets of it.",
       "tags": [
-        "genocide-accusation",
-        "post-oct-7"
+        "genocide-libel"
       ],
       "reference": "Louis-Klein, Adam. \"Rwanda, Israel and the Inversion of 'Genocide.'\" The Wall Street Journal, July 22, 2026.",
       "author": "Adam Louis-Klein",
@@ -461,7 +442,7 @@
       "description": "Examines the founding of an academic \"Institute for the Critical Study of Zionism\" as an attempt to revive the Soviet-era discipline of \"scientific antizionism\" within American universities.",
       "tags": [
         "campus",
-        "soviet-origins"
+        "soviet-antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"The Cult of 'Antizionism.'\" Tablet Magazine.",
       "author": "Izabella Tabarovsky",
@@ -472,9 +453,9 @@
       "id": "tabarovsky-zombie-antizionism",
       "title": "Zombie Antizionism",
       "category": "essays",
-      "description": "Part of Tabarovsky's ongoing argument that Soviet-origin anti-Zionist tropes, long assumed dead, keep resurfacing largely unchanged in Western left-wing discourse.",
+      "description": "Discussion of how Soviet-origin antizionist tropes, long assumed dead, keep resurfacing largely unchanged in Western left-wing discourse.",
       "tags": [
-        "soviet-origins",
+        "soviet-antizionism",
         "antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Zombie Antizionism.\" Tablet Magazine.",
@@ -486,11 +467,10 @@
       "id": "tabarovsky-soviet-antizionism-fathom",
       "title": "Soviet Antizionism and Contemporary Left Antisemitism",
       "category": "essays",
-      "description": "Lays out how the USSR's Cold War-era anti-Zionist propaganda apparatus supplied the conspiratorial vocabulary and imagery still used against Israel and Zionism today.",
+      "description": "Lays out how the USSR's Cold War-era antizionist propaganda apparatus supplied the conspiratorial vocabulary and imagery still used against Israel and Zionism today.",
       "tags": [
-        "soviet-origins",
-        "antizionism",
-        "conspiracy-theory"
+        "soviet-antizionism",
+        "antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Soviet Antizionism and Contemporary Left Antisemitism.\" Fathom Journal.",
       "author": "Izabella Tabarovsky",
@@ -514,9 +494,7 @@
       "category": "essays",
       "description": "A philosopher of science (known for work on belief, ideology and pseudoscience) argues that much of the post-October 7 \"genocide\" rhetoric aimed at Israel functions less as a sincerely held factual belief than as a performative, tribal signal.",
       "tags": [
-        "genocide-accusation",
-        "post-oct-7",
-        "campus"
+        "genocide-libel"
       ],
       "reference": "Boudry, Maarten. \"They Don't Believe It Either.\" Quillette, Oct. 19, 2025.",
       "author": "Maarten Boudry",
@@ -527,10 +505,9 @@
       "id": "lekht-shadow-of-babi-yar",
       "title": "The Shadow of Babi Yar: How the Soviets Taught the West to Erase the Jews",
       "category": "essays",
-      "description": "Uses the Soviet-era suppression of the memory of the Babi Yar massacre as a case study for how erasing Jewish victimhood became a template later adopted by Western anti-Zionist discourse.",
+      "description": "Uses the Soviet-era suppression of the memory of the Babi Yar massacre as a case study for how erasing Jewish victimhood became a template later adopted by Western antizionist discourse.",
       "tags": [
-        "soviet-origins",
-        "history"
+        "soviet-antizionism"
       ],
       "reference": "Lekht, Naya. \"The Shadow of Babi Yar: How the Soviets Taught the West to Erase the Jews.\" Jewish Journal.",
       "author": "Naya Lekht",
@@ -542,9 +519,7 @@
       "title": "Plots, Libels, Accusations: Fingers Pointed at Jews Go Back Centuries",
       "category": "essays",
       "description": "",
-      "tags": [
-        "history"
-      ],
+      "tags": [],
       "reference": "Lekht, Naya. \"Plots, Libels, Accusations: Fingers Pointed at Jews Go Back Centuries.\" JNS.",
       "author": "Naya Lekht",
       "url": "https://www.jns.org/opinion/naya-lekht/plots-libels-accusations-fingers-pointed-at-jews-go-back-centuries",
@@ -578,14 +553,13 @@
       "id": "wexler-eternal-settler",
       "title": "The Eternal Settler",
       "category": "essays",
-      "description": "Written after a wave of antisemitic attacks in Montreal, argues that even the Diaspora's oldest and largest Jewish communities (not just Israelis) are increasingly branded \"settlers\" in anti-Zionist rhetoric — a designation Wexler argues has no logical stopping point.",
+      "description": "Written after a wave of antisemitic attacks in Montreal, argues that even the Diaspora's oldest and largest Jewish communities (not just Israelis) are increasingly branded \"settlers\" in antizionist rhetoric — a designation Wexler argues has no logical stopping point.",
       "tags": [
-        "colonizer-narrative",
-        "post-oct-7"
+        "colonizer-libel"
       ],
       "reference": "Wexler, Benjamin. \"The Eternal Settler.\" K. (Les Juifs, l'Europe, le XXIe siècle), June 20, 2024.",
       "author": "Benjamin Wexler",
-      "url": null,
+      "url": "https://k-larevue.com/en/2024/06/20/the-eternal-settler/",
       "year": 2024
     },
     {
@@ -594,9 +568,11 @@
       "category": "essays",
       "description": "A two-part historical investigation tracing the \"genocide\" accusation against Israel back through the revival of Arab nationalism (1920s–40s) and its absorption of European fascist and antisemitic ideas, then showing how those ideological roots fed the settler-colonialism framework used to level the charge today.",
       "tags": [
-        "genocide-accusation",
-        "colonizer-narrative",
-        "history"
+        "genocide-libel",
+        "colonizer-libel",
+        "apartheid-libel",
+        "arab-supremacy",
+        "islamism"
       ],
       "reference": "Szeftel, Daniel. \"The History of the Charge of Genocide Against Israel.\" K. (Part 1 and Part 2).",
       "author": "Daniel Szeftel",
@@ -610,7 +586,7 @@
       "description": "An Australian writer on politics and Jewish affairs argues that antizionism, rather than traditional far-right antisemitism, has become the primary vector of anti-Jewish hostility today.",
       "tags": [
         "post-oct-7",
-        "media-commentary"
+        "antizionism"
       ],
       "reference": "Dabelstein, Joshua. \"The Greatest Threat to Jewish Safety Has a New Name.\" Australian Financial Review.",
       "author": "Joshua Dabelstein",
@@ -621,11 +597,10 @@
       "id": "maccallum-poland-irony",
       "title": "A Deep Historical Irony of Anti-Zionism: Lessons from Poland",
       "category": "essays",
-      "description": "Draws on Poland's 1968 state-orchestrated \"anti-Zionist\" purge — in which the label \"Zionist\" functioned as a euphemism for \"Jew\" and drove out most of the country's remaining Jewish population — as a historical warning about where anti-Zionist campaigns can lead.",
+      "description": "Draws on Poland's 1968 state-orchestrated \"anti-Zionist\" purge, in which the label \"Zionist\" functioned as a euphemism for \"Jew\" and drove out most of the country's remaining Jewish population all while antisemitism was illegal.",
       "tags": [
         "poland-1968",
-        "soviet-origins",
-        "history"
+        "soviet-antizionism"
       ],
       "reference": "McCallum, Alasdair. \"A Deep Historical Irony of Anti-Zionism: Lessons from Poland.\" The Jewish Independent.",
       "author": "Alasdair McCallum",
@@ -638,8 +613,7 @@
       "category": "data-research",
       "description": "Interactive data analysis on the overlap of Soviet anti-Zionist propaganda and today's antizionist speech.",
       "tags": [
-        "soviet-origins",
-        "data-analysis"
+        "soviet-antizionism"
       ],
       "reference": "\"I've Seen This Before.\" Data analysis, mapping Soviet anti-Zionist propaganda to modern echoes using semantic similarity.",
       "author": null,
@@ -653,7 +627,7 @@
       "category": "essays",
       "description": "Argues antizionism is not ordinary criticism of Israeli policy but a modernized, eliminationist hate ideology with its own closed analytical framework, comparable to other totalizing conspiracy theories.",
       "tags": [
-        "conspiracy-theory"
+        "antizionism"
       ],
       "reference": "Heath, Allister. \"Antizionism Is a Totalitarian Conspiracy Theory Rotting the West From Within.\" The Telegraph.",
       "author": "Allister Heath",
@@ -664,9 +638,9 @@
       "id": "kaufman-antizionism-not-antisemitism",
       "title": "Antizionism Is Not Antisemitism",
       "category": "legal-commentary",
-      "description": "By a law professor who studies antisemitism, antizionism and Jewish peoplehood; despite the title, argues (consistent with her broader work) that treating antizionism as simply one species of \"antisemitism\" undersells it as its own freestanding ideology of Jew-hatred.",
+      "description": "Argues that treating antizionism as one species of \"antisemitism\" undersells it as its own freestanding ideology of Jew-hatred.",
       "tags": [
-                "legal-definition"
+        "antizionism"
       ],
       "reference": "Kaufman, Rona. \"Antizionism Is Not Antisemitism.\" The Times of Israel Blogs.",
       "author": "Rona Kaufman",
@@ -679,7 +653,7 @@
       "category": "legal-commentary",
       "description": "Argues that a specific court ruling wrongly treated antizionist conduct as protected political speech rather than as discriminatory conduct against Jewish people.",
       "tags": [
-        "legal-definition",
+        "antizionism",
         "campus"
       ],
       "reference": "Kaufman, Rona. \"The Court Is Wrong: Antizionism Is Discriminatory.\" The Times of Israel Blogs.",
@@ -693,7 +667,7 @@
       "category": "legal-commentary",
       "description": "Written after the 2025 Bondi Beach Hanukkah attack in Australia, argues — using the Southern Poverty Law Center's own definition of an antisemitic hate group — that the antizionist movement now meets that standard.",
       "tags": [
-        "post-oct-7"
+        "antizionism"
       ],
       "reference": "Martin, Andrea J. \"The Antizionist Movement Is a Hate Movement: It's Time to Say So.\" The Times of Israel Blogs.",
       "author": "Andrea J. Martin",
@@ -706,7 +680,7 @@
       "category": "legal-commentary",
       "description": "Argues that courts downplaying pro-terror conduct on campus leaves Jewish students unprotected under civil-rights law.",
       "tags": [
-        "legal-definition",
+        "antizionism",
         "campus"
       ],
       "reference": "Martin, Andrea J. \"When Courts Minimize Terrorism, Jewish Students Pay the Price.\" The Times of Israel Blogs.",
@@ -734,7 +708,6 @@
       "category": "data-research",
       "description": "A data study finding that antizionist views correlate with a broader \"moral inversion\" — a systematic tendency to misjudge or invert the actual human-rights records of authoritarian versus democratic states.",
       "tags": [
-        "data-analysis",
         "post-oct-7"
       ],
       "reference": "Dulberg, Zack, et al. Moral Inversion and the Rise of Authoritarian Sympathy. Rutgers University Social Perception Lab / Network Contagion Research Institute.",
@@ -747,10 +720,7 @@
       "title": "Anti-Judaism: The Western Tradition",
       "category": "books",
       "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself. Nirenberg shows that Jews have represented what societies tend to to define themselves against. He traces this paradigm from antiquity through the Enlightenment and just past the Holocaust.",
-      "tags": [
-        "history",
-        "foundational"
-      ],
+      "tags": [],
       "reference": "Nirenberg, David. Anti-Judaism: The Western Tradition. W.W. Norton & Co., 2013.",
       "author": "David Nirenberg",
       "image": "https://covers.openlibrary.org/b/isbn/9780393058246-M.jpg",
@@ -763,8 +733,7 @@
       "category": "books",
       "description": "A follow-up to Horn's People Love Dead Jews, drawing on her post-October 7 work advising Harvard, the White House, and Congress; diagnoses failures of Holocaust education and the long history of antizionism, and proposes a path forward.",
       "tags": [
-        "post-oct-7",
-        "history"
+        "post-oct-7"
       ],
       "reference": "Horn, Dara. The Final Solution to the Jewish Question: A Love Story for the Living. Simon & Schuster, 2026.",
       "author": "Dara Horn",
@@ -778,7 +747,7 @@
       "category": "books",
       "description": "Pairs the stories of Soviet-era refuseniks — Jews who defied a state doctrine equating Zionism with racism and genocide — with those of Jewish students facing similar antizionist pressure on American campuses today, drawing practical strategies from the earlier movement. Foreword by Natan Sharansky.",
       "tags": [
-        "soviet-origins",
+        "soviet-antizionism",
         "campus",
         "advocacy"
       ],
@@ -886,7 +855,7 @@
       "category": "substacks",
       "description": "Exploring themes from Tabarovsky's research and writing on Soviet and contemporary antizionism, Jewish identity, freedom, courage, and resistance.",
       "tags": [
-        "soviet-origins"
+        "soviet-antizionism"
       ],
       "reference": "Tabarovsky, Izabella. The New Refuseniks (Substack).",
       "author": "Izabella Tabarovsky",
@@ -989,8 +958,8 @@
       "category": "scholarly-articles",
       "description": "Argues antizionism is a coherent ideology with its own genealogy (Nazi-Islamist axis, Soviet propaganda, Western settler-colonial theory) and a recurring triad of libels (colonizer, apartheid, genocide) — and that it inverts classical antisemitism: where the old hatred cast Jews as alien outsiders, antizionism denies Jewish peoplehood and indigeneity outright.",
       "tags": [
-        "colonizer-narrative",
-        "soviet-origins"
+        "colonizer-libel",
+        "soviet-antizionism"
       ],
       "reference": "Louis-Klein, Adam. 'Antizionism as a Distinct Anti-Jewish Bigotry.' Journal of Contemporary Antisemitism, Vol. 9, No. 1, 2026.",
       "author": "Adam Louis-Klein",
@@ -1004,7 +973,9 @@
       "category": "essays",
       "description": "Argues that much contemporary antizionism rests on unexamined assumptions of Arab political and cultural primacy in the Middle East, denying Jewish indigeneity and minimizing the historic persecution and displacement of Middle Eastern Jews. Calls for 'unlearning Arab supremacy' the same way other forms of ethnic or colonial privilege get critically examined.",
       "tags": [
-        "colonizer-narrative"
+        "colonizer-libel",
+        "arab-supremacy",
+        "islamism"
       ],
       "reference": "Bacharach, Barak. 'On Antizionism and Unlearning Arab Supremacy.' Haverford College Political Science Department, Alumni Corner.",
       "author": "Barak Bacharach",
@@ -1019,8 +990,7 @@
       "description": "The POLIN Museum's own historical account of the March 1968 crisis: a suppressed student rally that the Polish communist authorities turned into a state-run antisemitic campaign, forcing roughly 13,000 Polish Jews out of the country and ending organized Jewish life in Poland.",
       "tags": [
         "poland-1968",
-        "soviet-origins",
-        "history"
+        "soviet-antizionism"
       ],
       "reference": "POLIN Museum of the History of Polish Jews. 'March '68. Historical Facts.'",
       "author": "POLIN Museum of the History of Polish Jews",
@@ -1035,8 +1005,7 @@
       "description": "Follows Polish-Jewish emigrants of the 1968 antisemitic purge who returned to Poland decades later on an Engaged Memory Consortium trip, revisiting the state-run 'anti-Zionist' campaign that stripped them of jobs, schools, and citizenship, and reckoning with how little-known this history remains today.",
       "tags": [
         "poland-1968",
-        "soviet-origins",
-        "history"
+        "soviet-antizionism"
       ],
       "reference": "Bartov, Shira Li. '13,000 Jews Were Driven Out of Poland in 1968. Now, Some Are Returning to Tell Their Story.' SA Jewish Report (via JTA), June 15, 2026.",
       "author": "Shira Li Bartov",
@@ -1050,8 +1019,7 @@
       "category": "essays",
       "description": "Surveys how Polish filmmakers have documented and interpreted the 1968 'March emigration' on screen, from Marian Marzyński's own exile documentary Skibet/Hatikvah through later films grappling with Polish-Jewish identity and the anti-Zionist purge that provoked it.",
       "tags": [
-        "poland-1968",
-        "history"
+        "poland-1968"
       ],
       "reference": "Shpolberg, Masha. 'The 1968 Forced Exodus of Polish Jewry on Film.' Tablet Magazine, May 1, 2018.",
       "author": "Masha Shpolberg",
@@ -1065,8 +1033,7 @@
       "category": "data-research",
       "description": "Argues Israel receives 7 to 600 times more international news coverage per capita than comparable countries, regardless of active conflict, and traces that disparity to a deliberate, decades-long influence campaign rooted in Soviet-era intelligence operations and sustained by later institutional and funding networks; draws on the author's GDELT-based media-coverage dataset (see companion methodology piece).",
       "tags": [
-        "data-analysis",
-        "soviet-origins",
+        "soviet-antizionism",
         "media-commentary"
       ],
       "reference": "Musighi, Jeremy. \"Center of Attention: Why One of the World's Tiniest Countries Gets the Biggest International Spotlight.\" profoundAF, Aug. 27, 2026.",
