@@ -18,7 +18,6 @@
     --ean-tag-border: var(--ean-border);        /* tag pill border, inactive */
     --ean-tag-active-bg: rgba(40,40,40,.85);    /* PLACEHOLDER — tag pill fill when selected */
     --ean-card-image-bg: rgba(127,127,127,.08); /* field behind fallback icon when no image is set */
-    --ean-toolbar-bg: rgba(127,127,127,.5);     /* sticky search bar fill (used with a blur, not a flat color guess) */
     width: 100%;
   }
   #ean-resources-root * { box-sizing: border-box; }
@@ -34,13 +33,11 @@
     top: 0;
     padding: 10px 0;
     z-index: 5;
-    /* `background: inherit` resolved to transparent, and a flat guessed
-       color (even the theme-adaptive `Canvas` keyword) read as a mismatched
-       box pasted over your actual page background. A frosted-glass blur
-       sidesteps guessing a color entirely — it obscures whatever scrolls
-       underneath by blurring it, so it works regardless of your real
-       page background/texture. */
-    background: var(--ean-toolbar-bg);
+    /* No background fill, on purpose — `background: inherit` resolved to
+       transparent, and every flat color guess (even the theme-adaptive
+       `Canvas` keyword) read as a mismatched box pasted over the real page
+       background. The blur alone still obscures cards scrolling underneath
+       without needing any color at all. */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }
@@ -119,9 +116,16 @@
   .ean-cat-card p { margin: 0 0 10px; opacity: 0.75; font-size: 0.9em; }
   .ean-cat-count { font-size: 0.8em; opacity: 0.6; }
 
+  /* Masonry positioning here is computed in JS (see layoutMasonry in
+     ean-resources.js), not CSS `columns:`. CSS multicol was tried first and
+     went through three separate hover-related fixes (border-color-only, no
+     hover at all, `contain: paint`) — all mitigated but never fully killed
+     a real Chromium repaint bug where a card's hover style change could
+     corrupt sibling column fragments. Plain absolute positioning has no
+     fragmentation step for the browser to get wrong, so this removes the
+     bug's root cause instead of working around it. */
   .ean-res-grid {
-    columns: 220px;
-    column-gap: 16px;
+    position: relative;
   }
   .ean-res-card {
     background: var(--ean-card-bg);
@@ -133,18 +137,7 @@
     gap: 8px;
     overflow: hidden;
     cursor: pointer;
-    break-inside: avoid;
-    margin-bottom: 16px;
-    /* This is the actual fix for the hover ghosting bug — border-color-only
-       and even no-hover-at-all were band-aids that didn't address the real
-       cause. `contain: paint` tells the browser this element's paint
-       effects (its hover transform/shadow included) can't affect anything
-       outside its own box, which stops Chromium's CSS multicol
-       fragmentation (.ean-res-grid uses `columns:` for the masonry effect)
-       from mis-repainting sibling column fragments when this element's
-       style changes. Stress-tested with repeated hovers across every card
-       in a category — stable, no ghosting. */
-    contain: paint;
+    position: absolute;
     transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
   .ean-res-card:hover {

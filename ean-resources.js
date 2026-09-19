@@ -216,7 +216,49 @@
 
     root.innerHTML = html;
     attachEvents();
+    layoutMasonry();
   }
+
+  // Computes the masonry layout by hand instead of using CSS `columns:` —
+  // see the comment on .ean-res-grid in the CSS for why. Places each card
+  // in whichever column is currently shortest, left-to-right by column,
+  // matching the reading order the resources are already sorted in.
+  var MASONRY_COLUMN_WIDTH = 220;
+  var MASONRY_GAP = 16;
+
+  function layoutMasonry() {
+    var grid = root.querySelector(".ean-res-grid");
+    if (!grid) return;
+
+    var cards = grid.querySelectorAll(".ean-res-card");
+    if (!cards.length) { grid.style.height = "0px"; return; }
+
+    var containerWidth = grid.clientWidth;
+    var columnCount = Math.max(1, Math.floor((containerWidth + MASONRY_GAP) / (MASONRY_COLUMN_WIDTH + MASONRY_GAP)));
+    var columnWidth = (containerWidth - MASONRY_GAP * (columnCount - 1)) / columnCount;
+    var columnHeights = new Array(columnCount).fill(0);
+
+    cards.forEach(function (card) {
+      card.style.width = columnWidth + "px";
+      // Height depends on the width just set (text wrapping), so measure
+      // after applying it and before positioning.
+      var shortest = 0;
+      for (var i = 1; i < columnCount; i++) {
+        if (columnHeights[i] < columnHeights[shortest]) shortest = i;
+      }
+      card.style.left = shortest * (columnWidth + MASONRY_GAP) + "px";
+      card.style.top = columnHeights[shortest] + "px";
+      columnHeights[shortest] += card.offsetHeight + MASONRY_GAP;
+    });
+
+    grid.style.height = Math.max.apply(null, columnHeights) - MASONRY_GAP + "px";
+  }
+
+  var masonryResizeTimer = null;
+  window.addEventListener("resize", function () {
+    clearTimeout(masonryResizeTimer);
+    masonryResizeTimer = setTimeout(layoutMasonry, 150);
+  });
 
   function attachEvents() {
     var searchEl = root.querySelector(".ean-search");
