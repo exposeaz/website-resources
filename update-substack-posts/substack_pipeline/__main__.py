@@ -9,7 +9,7 @@ from datetime import date, datetime, timezone
 
 from config import settings
 from substack_pipeline import fetch, state
-from substack_pipeline.classify import Classifier, ClassifyError
+from substack_pipeline.classify import Classifier, ClassifyAuthError, ClassifyError
 
 log = logging.getLogger("substack_pipeline")
 
@@ -282,7 +282,10 @@ def main(argv=None):
     log.info("%d posts to classify", len(candidates))
     # Errors aren't recorded, so those posts are retried next run
     recorder = None if args.dry_run else StateRecorder(processed)
-    records, skipped = process(candidates, Classifier(state.load_tags()), errors, on_done=recorder)
+    try:
+        records, skipped = process(candidates, Classifier(state.load_tags()), errors, on_done=recorder)
+    except ClassifyAuthError as exc:
+        sys.exit(f"Stopped: {exc}. Posts finished before this point are saved; re-run once fixed.")
     if recorder:
         log.info("Recorded %d processed URLs; added %d articles", len(records) + len(skipped), recorder.added)
 

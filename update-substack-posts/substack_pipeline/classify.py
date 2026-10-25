@@ -16,6 +16,10 @@ class ClassifyError(Exception):
     pass
 
 
+class ClassifyAuthError(Exception):
+    """Missing or rejected credentials; fails every post the same way, so the run should stop."""
+
+
 def _system_prompt(tags):
     vocab = "\n".join(f"- {t['id']}: {t['label']}" for t in tags)
     return f"""You review Substack posts for a nonprofit's resource library on antizionism.
@@ -105,6 +109,13 @@ class Classifier:
                 betas=[settings.FALLBACK_BETA],
                 fallbacks="default",
             )
+        except (anthropic.AuthenticationError, anthropic.PermissionDeniedError) as exc:
+            raise ClassifyAuthError(f"Claude rejected the credentials ({exc.status_code}): {exc.message}") from exc
+        except TypeError as exc:
+            # The SDK raises TypeError when it finds no credentials at all
+            if "authentication method" not in str(exc):
+                raise
+            raise ClassifyAuthError("No Claude credentials found; set ANTHROPIC_API_KEY") from exc
         except anthropic.APIStatusError as exc:
             raise ClassifyError(f"API error {exc.status_code}: {exc.message}") from exc
         except anthropic.APIConnectionError as exc:
