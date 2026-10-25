@@ -21,6 +21,32 @@ def load_processed():
     return set(json.loads(settings.PROCESSED_FILE.read_text()))
 
 
+def _write_json(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+
+
+def save_processed(urls):
+    _write_json(settings.PROCESSED_FILE, sorted(urls))
+
+
+def load_articles():
+    if not settings.ARTICLES_FILE.exists():
+        return []
+    return json.loads(settings.ARTICLES_FILE.read_text())
+
+
+def save_articles(articles):
+    _write_json(settings.ARTICLES_FILE, articles)
+
+
+def merge_articles(existing, new):
+    """Append new records; a record for a URL already present (--force) replaces it in place."""
+    by_url = {r["url"]: r for r in new}
+    merged = [by_url.pop(r["url"], r) for r in existing]
+    return merged + [r for r in new if r["url"] in by_url]
+
+
 def load_tags():
     return json.loads(settings.TAGS_FILE.read_text())
 

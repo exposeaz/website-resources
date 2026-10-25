@@ -207,11 +207,11 @@ def process(candidates, classifier, errors):
     return records, skipped
 
 
-def dry_run_report(records, skipped, errors):
+def run_report(title, records, skipped, errors):
     groups = {"relevant": [], "unsure": [], "not_relevant": []}
     for r in records:
         groups[r["relevance"]].append(r)
-    lines = ["# Dry run", "",
+    lines = [f"# {title}", "",
              f"Classified {len(records)} posts: " + ", ".join(f"{k} {len(v)}" for k, v in groups.items()),
              ""]
     for label, items in groups.items():
@@ -251,20 +251,28 @@ def main(argv=None):
         sys.exit("--force only applies with --post-url")
     if args.no_limit and not args.all_posts:
         sys.exit("--no-limit only applies with --all-posts")
-    if not args.dry_run:
-        sys.exit("Only --dry-run is implemented so far (build step 1).")
 
     errors = []
-    candidates = gather_candidates(args, state.load_processed(), errors)
+    processed = state.load_processed()
+    candidates = gather_candidates(args, processed, errors)
     log.info("%d posts to classify", len(candidates))
     records, skipped = process(candidates, Classifier(state.load_tags()), errors)
 
-    settings.DRY_RUN_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    if not args.dry_run:
+        # Errors aren't recorded, so those posts are retried next run
+        processed |= {r["url"] for r in records} | {s["url"] for s in skipped}
+        kept = [r for r in records if r["relevance"] != "not_relevant" or r["forced"]]
+        state.save_processed(processed)
+        state.save_articles(state.merge_articles(state.load_articles(), kept))
+        log.info("Recorded %d processed URLs; added %d articles", len(records) + len(skipped), len(kept))
+
+    settings.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    json_path = settings.DRY_RUN_OUTPUT_DIR / f"dry-run-{stamp}.json"
-    md_path = settings.DRY_RUN_OUTPUT_DIR / f"dry-run-{stamp}.md"
+    prefix = "dry-run" if args.dry_run else "run"
+    json_path = settings.OUTPUT_DIR / f"{prefix}-{stamp}.json"
+    md_path = settings.OUTPUT_DIR / f"{prefix}-{stamp}.md"
     json_path.write_text(json.dumps({"records": records, "skipped": skipped, "errors": errors}, indent=2, ensure_ascii=False) + "\n")
-    md_path.write_text(dry_run_report(records, skipped, errors))
+    md_path.write_text(run_report("Dry run" if args.dry_run else "Run", records, skipped, errors))
     log.info("Wrote %s and %s", json_path, md_path)
 
 
