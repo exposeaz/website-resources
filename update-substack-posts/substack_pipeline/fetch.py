@@ -36,6 +36,14 @@ class Post:
 
 
 @dataclass
+class Feed:
+    title: str
+    description: str
+    image: str | None
+    entries: list  # (url, published date), newest first
+
+
+@dataclass
 class Publication:
     name: str
     url: str
@@ -113,7 +121,7 @@ _feed_results = {}
 
 
 def read_feed(pub_url):
-    """Channel title, channel description and (url, published date) items, newest first.
+    """The publication's feed (a Feed).
 
     Results and failures are cached so a feed is requested at most once per run.
     """
@@ -140,8 +148,12 @@ def _read_feed(pub_url):
         published = item.get("published_parsed")
         if link:
             entries.append((link, date(*published[:3]) if published else None))
-    title = " ".join((feed.feed.get("title") or "").split())
-    return title, " ".join((feed.feed.get("description") or "").split()), entries
+    return Feed(
+        title=" ".join((feed.feed.get("title") or "").split()),
+        description=" ".join((feed.feed.get("description") or "").split()),
+        image=(feed.feed.get("image") or {}).get("href"),
+        entries=entries,
+    )
 
 
 def archive_entries(pub_url, since=None, limit=None):

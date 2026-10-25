@@ -64,7 +64,8 @@ def _resolve_publication(url_or_name, configured):
         if pub.url == key:
             return pub
     try:
-        title, description, _ = fetch.read_feed(key)
+        feed = fetch.read_feed(key)
+        title, description = feed.title, feed.description
     except fetch.FetchError as exc:
         log.warning("%s; using %s as the publication name", exc, key)
         title, description = "", ""
@@ -79,7 +80,8 @@ def _publication_entries(pub, args):
     An unreadable feed falls back to the JSON archive in every mode.
     """
     try:
-        _, description, entries = fetch.read_feed(pub.url)
+        feed = fetch.read_feed(pub.url)
+        description, entries = feed.description, feed.entries
     except fetch.NotPublicError:
         raise
     except fetch.FetchError as exc:

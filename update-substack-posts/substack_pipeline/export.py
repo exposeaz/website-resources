@@ -1,7 +1,8 @@
 """Appends articles from data/articles.json to the site's data.json.
 
 Each article is added once (exported_resources), so an interrupted run exports on the next one
-and entries a reviewer deletes stay deleted.
+and entries a reviewer deletes stay deleted. A publication without a Substack card gets one,
+drafted from its own feed for a reviewer to check.
 Run from update-substack-posts/: python -m substack_pipeline.export
 """
 
@@ -10,7 +11,7 @@ import logging
 from datetime import date
 
 from config import settings
-from substack_pipeline import state
+from substack_pipeline import fetch, state
 
 log = logging.getLogger(__name__)
 
@@ -22,8 +23,7 @@ def format_date(iso):
     return f"{_MONTHS[d.month - 1]} {d.day}, {d.year}"
 
 
-def _resource_id(url, taken):
-    base = "substack-" + url.rstrip("/").rsplit("/", 1)[-1]
+def _unique_id(base, taken):
     rid, n = base, 2
     while rid in taken:
         rid, n = f"{base}-{n}", n + 1
@@ -32,9 +32,9 @@ def _resource_id(url, taken):
 
 
 def _resource(article, taken):
-    # Key order matches the existing entries in data.json
+    # Key order matches the existing entries in data.json, plus date
     return {
-        "id": _resource_id(article["url"], taken),
+        "id": _unique_id("substack-" + article["url"].rstrip("/").rsplit("/", 1)[-1], taken),
         "title": article["title"],
         "category": settings.RESOURCE_CATEGORY_ID,
         "description": article["summary"],
@@ -43,6 +43,32 @@ def _resource(article, taken):
         "author": article["publication"],
         "url": article["url"],
         "year": int(article["date"][:4]),
+        "date": article["date"],  # full date, so the site can sort a Substack's articles newest first
+    }
+
+
+def _substack_card(host, publications, taken):
+    """Card for a publication with none yet: title, description and logo from its feed; author from the config."""
+    pub = next((p for p in publications if p.url == host), None)
+    try:
+        feed = fetch.read_feed(host)
+    except fetch.FetchError as exc:
+        log.warning("%s; drafting its Substack card from the config only", exc)
+        feed = None
+    title = (feed and feed.title) or (pub and pub.name) or host
+    author = (pub and pub.name) or title
+    slug = host.split("://", 1)[-1].removesuffix(".substack.com").replace(".", "-")
+    return {
+        "id": _unique_id(f"substack-{slug}", taken),
+        "title": title,
+        "category": settings.SUBSTACK_CATEGORY_ID,
+        "description": (feed and feed.description) or (pub and pub.description) or "",
+        "tags": [],
+        "reference": f"{author}. {title} (Substack).",
+        "author": author,
+        "image": feed.image if feed else None,
+        "url": host,
+        "year": None,
     }
 
 
@@ -58,7 +84,16 @@ def export_resources(articles, vocab):
     labels = {t["id"]: t["label"] for t in vocab}
     taken_ids = {r["id"] for r in data["resources"]}
     urls = {r.get("url") for r in data["resources"]}
+    card_hosts = {fetch.base_url(r["url"]) for r in data["resources"]
+                  if r["category"] == settings.SUBSTACK_CATEGORY_ID and r.get("url")}
+    publications = state.load_publications()
     for article in pending:
+        host = fetch.base_url(article["url"])
+        if host not in card_hosts:
+            card = _substack_card(host, publications, taken_ids)
+            data["resources"].append(card)
+            card_hosts.add(host)
+            log.info("Drafted Substack card %r for %s", card["title"], host)
         for tag in article["tags"]:
             if tag not in known_tags:
                 data["tags"].append({"id": tag, "label": labels.get(tag, tag)})

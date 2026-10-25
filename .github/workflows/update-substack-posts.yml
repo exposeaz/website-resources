@@ -78,7 +78,8 @@ jobs:
         run: |
           base="$RUNNER_TEMP/base-articles.json"
           git show origin/main:update-substack-posts/data/articles.json > "$base" 2>/dev/null || echo '[]' > "$base"
-          pixi run pr-body --base "$base"
+          git show origin/main:data.json > "$RUNNER_TEMP/base-data.json"
+          pixi run pr-body --base "$base" --base-resources "$RUNNER_TEMP/base-data.json"
 
       - name: Upload run report
         if: always()

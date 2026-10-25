@@ -21,13 +21,18 @@ def _entry(a, with_reason):
     return lines
 
 
-def build_body(new):
+def build_body(new, new_cards=()):
     forced = [a for a in new if a["forced"]]
     unsure = [a for a in new if not a["forced"] and a["relevance"] == "unsure"]
     relevant = [a for a in new if not a["forced"] and a["relevance"] == "relevant"]
     lines = ["Automated update from `update-substack-posts`.", "",
              f"{len(new)} new articles: {len(relevant)} relevant, {len(unsure)} unsure, {len(forced)} added by URL.",
              "Before merging, remove any entry you don't want from `data.json`; removed entries are not re-added.", ""]
+    if new_cards:
+        lines += [f"### New Substack cards ({len(new_cards)}): please check the wording", ""]
+        for c in new_cards:
+            lines += [f"- [{c['title']}]({c['url']}) by {c['author']}", f"  - Description: {c['description'] or '(none)'}"]
+        lines.append("")
     if any(a["relevance"] == "not_relevant" for a in forced):
         lines += ["**Warning:** some articles added by URL were judged not relevant; see their reasons below.", ""]
     # Reasons only where a human needs to judge
@@ -52,12 +57,18 @@ def build_body(new):
 def main(argv=None):
     p = argparse.ArgumentParser(prog="substack_pipeline.pr_body")
     p.add_argument("--base", type=Path, help="articles.json from the base branch; omit to list every article")
+    p.add_argument("--base-resources", type=Path, help="data.json from the base branch, to list new Substack cards")
     args = p.parse_args(argv)
     base = json.loads(args.base.read_text()) if args.base and args.base.exists() else []
     base_urls = {a["url"] for a in base}
     new = [a for a in state.load_articles() if a["url"] not in base_urls]
+    new_cards = []
+    if args.base_resources and args.base_resources.exists():
+        base_ids = {r["id"] for r in json.loads(args.base_resources.read_text())["resources"]}
+        new_cards = [r for r in json.loads(settings.RESOURCES_FILE.read_text())["resources"]
+                     if r["category"] == settings.SUBSTACK_CATEGORY_ID and r["id"] not in base_ids]
     settings.PR_BODY_FILE.parent.mkdir(parents=True, exist_ok=True)
-    settings.PR_BODY_FILE.write_text(build_body(new))
+    settings.PR_BODY_FILE.write_text(build_body(new, new_cards))
     print(f"Wrote {settings.PR_BODY_FILE} ({len(new)} new articles)")
 
 

@@ -61,3 +61,5 @@ PR_BODY_MAX_CHARS = _env("PR_BODY_MAX_CHARS", 60000, int)
 # --- Output content ---
 RESOURCE_CATEGORY_ID = "substack-articles"
 RESOURCE_CATEGORY_LABEL = "Substack articles"
+# Category of the per-publication Substack cards; articles are shown under their publication's card
+SUBSTACK_CATEGORY_ID = "substacks"
