@@ -31,6 +31,9 @@ USER_AGENT = _env(
 # --- Classification ---
 MODEL = _env("MODEL", "claude-sonnet-5-5")
 MAX_OUTPUT_TOKENS = _env("MAX_OUTPUT_TOKENS", 600, int)
+RETAG_MAX_OUTPUT_TOKENS = _env("RETAG_MAX_OUTPUT_TOKENS", 100, int)
+RELEVANCE_SCORE_MIN = _env("RELEVANCE_SCORE_MIN", 1, int)
+RELEVANCE_SCORE_MAX = _env("RELEVANCE_SCORE_MAX", 5, int)
 MIN_TAGS = _env("MIN_TAGS", 1, int)
 MAX_TAGS = _env("MAX_TAGS", 5, int)
 MAX_SUGGESTED_TAGS = _env("MAX_SUGGESTED_TAGS", 5, int)
@@ -51,13 +54,10 @@ PROCESSED_FILE = PIPELINE_DIR / "data" / "processed.json"
 ARTICLES_FILE = PIPELINE_DIR / "data" / "articles.json"
 OUTPUT_DIR = PIPELINE_DIR / "output"
 RESOURCES_FILE = REPO_ROOT / "data.json"
-AZARYAH_DIR = Path(_env("AZARYAH_DIR", str(REPO_ROOT / "azaryah")))
-AZARYAH_PROMPT_FILE = AZARYAH_DIR / "lambda" / "azaryah-ws-default" / "prompts" / "substack-posts.md"
 PR_BODY_FILE = PIPELINE_DIR / "output" / "pr-body.md"
+# GitHub rejects PR bodies over 65,536 characters
+PR_BODY_MAX_CHARS = _env("PR_BODY_MAX_CHARS", 60000, int)
 
 # --- Output content ---
 RESOURCE_CATEGORY_ID = "substack-articles"
 RESOURCE_CATEGORY_LABEL = "Substack articles"
-AZARYAH_HEADER = (
-    "These are specific Substack articles on relevant topics that can be recommended to users:"
-)
