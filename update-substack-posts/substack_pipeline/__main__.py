@@ -8,7 +8,7 @@ from dataclasses import dataclass
 from datetime import date, datetime, timezone
 
 from config import settings
-from substack_pipeline import fetch, state
+from substack_pipeline import export, fetch, state
 from substack_pipeline.classify import Classifier, ClassifyAuthError, ClassifyError
 
 log = logging.getLogger("substack_pipeline")
@@ -217,6 +217,7 @@ def process(candidates, classifier, errors, on_done=None):
             "word_count": post.word_count,
             "relevance": result["relevance"],
             "relevance_reason": result["relevance_reason"],
+            "relevance_score": result["relevance_score"],
             "too_thin": result["too_thin"],
             "roundup": result["roundup"],
             "forced": cand.forced,
@@ -280,6 +281,7 @@ def main(argv=None):
         sys.exit(f"Stopped: {exc}. Posts finished before this point are saved; re-run once fixed.")
     if recorder:
         log.info("Recorded %d processed URLs; added %d articles", len(records) + len(skipped), recorder.added)
+        export.run_export()
 
     settings.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     # One file per day and kind; a later run the same day overwrites it
