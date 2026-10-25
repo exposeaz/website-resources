@@ -1,0 +1,21 @@
+[
+  {"id": "antizionism", "label": "Antizionism"},
+  {"id": "soviet-antizionism", "label": "Soviet antizionism"},
+  {"id": "antizionism-academy", "label": "Antizionism in the academy"},
+  {"id": "antizionism-medicine", "label": "Antizionism in medicine"},
+  {"id": "antizionism-arts", "label": "Antizionism in the arts"},
+  {"id": "antizionism-progressive", "label": "Antizionism in progressive spaces"},
+  {"id": "oct7", "label": "October 7th"},
+  {"id": "genocide-libel", "label": "Genocide libel"},
+  {"id": "campus", "label": "Campuses"},
+  {"id": "islamism", "label": "Islamism"},
+  {"id": "arab-supremacy", "label": "Arab supremacy"},
+  {"id": "poland-1968", "label": "Poland 1968 purges"},
+  {"id": "colonizer-libel", "label": "Colonizer libel"},
+  {"id": "apartheid-libel", "label": "Apartheid libel"},
+  {"id": "bds", "label": "BDS and Boycotts"},
+  {"id": "advocacy", "label": "Advocacy"},
+  {"id": "media-commentary", "label": "Media bias"},
+  {"id": "legal-public-affairs", "label": "Legal & Public-Affairs Commentary"},
+  {"id": "data-research", "label": "Data & Research"}
+]

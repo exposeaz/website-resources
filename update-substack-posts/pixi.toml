@@ -1,0 +1,20 @@
+[workspace]
+authors = ["Stephanie J. Spielman <stephanie.spielman@gmail.com>"]
+channels = ["conda-forge"]
+name = "update-substack-posts"
+# linux-64 for the GitHub Actions runner
+platforms = ["osx-arm64", "linux-64"]
+version = "0.1.0"
+
+[tasks]
+dry-run = "python -m substack_pipeline --dry-run"
+pipeline = "python -m substack_pipeline"
+
+[dependencies]
+python = "3.13.*"
+
+[pypi-dependencies]
+anthropic = ">=2.3.0,<3"
+beautifulsoup4 = ">=4.15.0,<5"
+pyyaml = ">=6.0.3,<7"
+requests = ">=2.34.2,<3"
