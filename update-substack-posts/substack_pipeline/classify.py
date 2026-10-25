@@ -39,7 +39,7 @@ roundup: true if the post is mainly a newsletter digest, link roundup, event lis
 tags: {settings.MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most applicable first. Be generous: include every tag that plausibly applies.
 {vocab}
 
-suggested_tags: up to {settings.MAX_SUGGESTED_TAGS} broad themes the vocabulary above does not cover, that could apply to many posts and would be useful as a filter in a resource library. Be generous; a human curates them. Not details specific to this post (people, events, documents, or one-off arguments). Never repeat a vocabulary tag.
+suggested_tags: up to {settings.MAX_SUGGESTED_TAGS} broad themes the vocabulary above does not cover, that could apply to many posts and would be useful as a filter in a resource library. Be generous; a human curates them. Each must be a subject the post is about (e.g. a movement, institution, region, historical period, or field). Not tone, genre, or format (e.g. satire, polemic, interview), and not details specific to this post (people, events, documents, or one-off arguments). Never repeat a vocabulary tag.
 
 stance: a short phrase describing the author's position, e.g. "critical of X" or "news report, no clear position".
 
