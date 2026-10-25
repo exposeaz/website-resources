@@ -49,6 +49,13 @@ def parse_args(argv):
     return p.parse_args(argv)
 
 
+def _record_error(errors, label, url, exc):
+    """Not-public sources are an expected skip (warning); anything else is an error."""
+    not_public = isinstance(exc, fetch.NotPublicError)
+    (log.warning if not_public else log.error)("%s: %s", label, exc)
+    errors.append({"url": url, "error": str(exc), "kind": "not_public" if not_public else "error"})
+
+
 def _resolve_publication(url_or_name, configured):
     """Configured publication matching this name or host, else name/description from its feed.
 
@@ -57,10 +64,7 @@ def _resolve_publication(url_or_name, configured):
     for pub in configured:
         if pub.name.lower() == url_or_name.strip().lower():
             return pub
-    full = url_or_name if "://" in url_or_name else f"https://{url_or_name}"
-    key = fetch.base_url(full)
-    if full.rstrip("/") != key:
-        log.info("Using publication %s (only the host of %s is used)", key, url_or_name)
+    key = fetch.base_url(url_or_name if "://" in url_or_name else f"https://{url_or_name}")
     for pub in configured:
         if pub.url == key:
             return pub
@@ -81,6 +85,8 @@ def _publication_entries(pub, args):
     """
     try:
         _, description, entries = fetch.read_feed(pub.url)
+    except fetch.NotPublicError:
+        raise
     except fetch.FetchError as exc:
         log.warning("%s: %s; using the JSON archive instead", pub.name, exc)
         description, entries = "", None
@@ -113,10 +119,11 @@ def gather_candidates(args, processed, errors):
         try:
             candidates.append(Candidate(url, None, _resolve_publication(url, configured), forced=True))
         except fetch.FetchError as exc:
-            errors.append({"url": url, "error": str(exc)})
+            _record_error(errors, url, url, exc)
 
     if args.publication_url:
         pubs = [_resolve_publication(args.publication_url, configured)]
+        log.info("Publication: %s (%s)", pubs[0].name, pubs[0].url)
     elif post_urls:
         pubs = []
     else:
@@ -127,8 +134,7 @@ def gather_candidates(args, processed, errors):
         try:
             entries = _publication_entries(pub, args)
         except (fetch.FetchError, ValueError) as exc:
-            log.error("%s: %s", pub.name, exc)
-            errors.append({"url": pub.url, "error": str(exc)})
+            _record_error(errors, pub.name, pub.url, exc)
             continue
         for url, published in entries:
             key = state.normalize_url(url)
@@ -172,8 +178,7 @@ def process(candidates, classifier, errors):
                 continue
             result = classifier.classify(post)
         except (fetch.FetchError, ClassifyError, ValueError) as exc:
-            log.error("%s: %s", cand.url, exc)
-            errors.append({"url": cand.url, "error": str(exc)})
+            _record_error(errors, cand.url, cand.url, exc)
             continue
         if result["roundup"] and not cand.forced:
             log.info("Skipping, roundup or announcement")
@@ -224,8 +229,10 @@ def dry_run_report(records, skipped, errors):
     if skipped:
         lines += [f"## Skipped ({len(skipped)})", ""]
         lines += [f"- {s['title']} ({s['publication']}): {s['reason']} · {s['url']}" for s in skipped] + [""]
-    if errors:
-        lines += [f"## Errors ({len(errors)})", ""] + [f"- {e['url']}: {e['error']}" for e in errors] + [""]
+    for kind, heading in (("not_public", "Not publicly readable"), ("error", "Errors")):
+        items = [e for e in errors if e["kind"] == kind]
+        if items:
+            lines += [f"## {heading} ({len(items)})", ""] + [f"- {e['url']}: {e['error']}" for e in items] + [""]
     return "\n".join(lines)
 
 

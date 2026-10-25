@@ -3,7 +3,6 @@
 Paywalled posts only ever use the preview Substack serves publicly.
 """
 
-import functools
 import logging
 import re
 import time
@@ -47,6 +46,10 @@ class FetchError(Exception):
     pass
 
 
+class NotPublicError(FetchError):
+    """Publication or post has no public content, e.g. a subscriber-only Substack."""
+
+
 _session = requests.Session()
 _session.headers["User-Agent"] = settings.USER_AGENT
 
@@ -61,6 +64,11 @@ def _get(url, params=None):
             err = str(exc)
         else:
             if resp.ok:
+                final = urlsplit(resp.url)
+                # Subdomains without a publication redirect to the author's profile page
+                if final.netloc == "substack.com" and final.path.startswith("/@"):
+                    raise NotPublicError(f"not publicly readable ({url} redirects to profile {resp.url}; "
+                                         "likely subscriber-only)")
                 return resp
             if resp.status_code not in _RETRY_STATUSES:
                 raise FetchError(f"{url}: HTTP {resp.status_code}")
@@ -101,12 +109,26 @@ def _parse_date(value):
         return parsedate_to_datetime(value).date()
 
 
-@functools.cache
+_feed_results = {}
+
+
 def read_feed(pub_url):
     """Channel title, channel description and (url, published date) items, newest first.
 
-    Cached so a publication resolved from its feed isn't fetched twice in one run.
+    Results and failures are cached so a feed is requested at most once per run.
     """
+    if pub_url not in _feed_results:
+        try:
+            _feed_results[pub_url] = (_read_feed(pub_url), None)
+        except FetchError as exc:
+            _feed_results[pub_url] = (None, exc)
+    result, exc = _feed_results[pub_url]
+    if exc:
+        raise exc
+    return result
+
+
+def _read_feed(pub_url):
     url = f"{base_url(pub_url)}/feed"
     # Control characters are invalid in XML and break parsing; feedparser tolerates other malformed XML
     feed = feedparser.parse(_XML_INVALID_CHARS.sub(b"", _get(url).content))
