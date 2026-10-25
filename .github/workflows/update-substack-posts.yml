@@ -1,0 +1,104 @@
+name: Update Substack articles
+
+# Weekly: classify new posts from the publications in update-substack-posts/config/substacks.yaml,
+# then open (or update) a PR here adding the new articles to data.json.
+# Can also be run manually from the Actions tab, with optional inputs.
+
+on:
+  schedule:
+    - cron: "23 13 * * 1" # Mondays 13:23 UTC
+  workflow_dispatch:
+    inputs:
+      post_urls:
+        description: "Specific post URL(s) to force-include, comma-separated (optional)"
+        required: false
+        type: string
+      publication_url:
+        description: "Run only this publication, e.g. name.substack.com (optional)"
+        required: false
+        type: string
+      force:
+        description: "Reclassify the post URLs above even if already processed"
+        required: false
+        type: boolean
+        default: false
+
+# Two runs never overlap; a second one waits for the first
+concurrency:
+  group: update-substack-posts
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  PR_BRANCH: bot/substack-articles
+  PIXI_VERSION: v0.66.0
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+
+      # Continue an open pipeline PR instead of opening a second one; its state isn't on main yet
+      - name: Continue open PR branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "$(gh pr list --head "$PR_BRANCH" --state open --json number --jq '.[].number')" ]; then
+            git fetch origin "$PR_BRANCH"
+            git checkout -B "$PR_BRANCH" FETCH_HEAD
+          fi
+
+      - uses: prefix-dev/setup-pixi@v0.11.2
+        with:
+          pixi-version: ${{ env.PIXI_VERSION }}
+          locked: true
+
+      - name: Run pipeline
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Inputs pass through env, never interpolated into the script
+          POST_URLS: ${{ inputs.post_urls }}
+          PUBLICATION_URL: ${{ inputs.publication_url }}
+          FORCE: ${{ inputs.force }}
+        run: |
+          args=()
+          if [ -n "$POST_URLS" ]; then args+=(--post-url "$POST_URLS"); fi
+          if [ -n "$PUBLICATION_URL" ]; then args+=(--publication-url "$PUBLICATION_URL"); fi
+          if [ "$FORCE" = "true" ]; then args+=(--force); fi
+          pixi run pipeline "${args[@]}"
+
+      - name: Write PR description
+        run: |
+          base="$RUNNER_TEMP/base-articles.json"
+          git show origin/main:update-substack-posts/data/articles.json > "$base" 2>/dev/null || echo '[]' > "$base"
+          git show origin/main:data.json > "$RUNNER_TEMP/base-data.json"
+          pixi run pr-body --base "$base" --base-resources "$RUNNER_TEMP/base-data.json"
+
+      - name: Upload run report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: substack-run-report
+          path: update-substack-posts/output/
+          if-no-files-found: ignore
+
+      # No changes means no commit and no PR
+      - name: Open or update PR
+        uses: peter-evans/create-pull-request@v8.1.1
+        with:
+          branch: ${{ env.PR_BRANCH }}
+          base: main
+          add-paths: |
+            data.json
+            update-substack-posts/data/*.json
+          commit-message: Add Substack articles
+          title: Add Substack articles
+          body-path: update-substack-posts/output/pr-body.md
+          delete-branch: true

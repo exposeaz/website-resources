@@ -1,0 +1,92 @@
+# Publications checked on every scheduled run.
+# The description is passed to Claude as context when classifying that publication's posts.
+# An empty description falls back to the publication's own feed description.
+# A publication not listed here can still be run once with --publication-url; its name and description come from its feed.
+
+- name: Movement Against Antizionism
+  url: https://movementagainstantizionism.substack.com
+  description: Founded by Adam Louis-Klein; non-partisan emergency-response initiative on antizionism as a hate movement endangering Jewish communities.
+
+- name: Institute for Critical Study of Antizionism (ICSA)
+  url: https://icsa.substack.com
+  description: Scholarly institute founded by Andrew Pessin; research, journal, and courses on antizionism's history and ideology.
+
+- name: Andrew Pessin
+  url: https://andrewpessin.substack.com
+  description: Philosophy professor, ICSA founder; weekly commentary on campus antisemitism/antizionism.
+
+# Adam Louis-Klein (adamlouisklein.substack.com) is subscriber-only, so nothing is publicly readable.
+# His public writing is covered by Movement Against Antizionism above.
+
+- name: Naya Lekht
+  url: https://nayalekht.substack.com
+  description: PhD in Russian literature (Soviet antizionism), co-founder of Stop Antizionism; politics, education, history.
+
+- name: Joshua Dabelstein
+  url: https://fornormalpeople.substack.com
+  description: Sydney-based, heads Movement Against Antizionism AU; "For Normal People," exclusively about antizionism.
+
+- name: Samuel J. Hyde
+  url: https://sjhyde.substack.com
+  description: South Africa-born Israeli cultural analyst; argues antizionism should be studied as its own field.
+
+- name: Jonah Platt
+  url: https://jonahplatt.substack.com
+  description: '"Being Jewish with Jonah Platt"; interviews on Jewish identity and antizionism, mainstream/entertainment-adjacent.'
+
+- name: Izabella Tabarovsky
+  url: https://newrefuseniks.substack.com
+  description: Scholar of Soviet antizionism, author of Be a Refusenik; links Soviet Jewish dissent to today's campus antizionism.
+
+- name: Kevin Deutsch
+  url: https://kevindeutsch.substack.com
+  description: Journalist, founder of "After October 7" media watchdog; tracks antizionist activity in politics and media.
+
+- name: Jennifer Kogan / Levari
+  url: https://jenniferkogan.substack.com
+  description: Clinical social worker; "Jewish Fierce Compassion" analyzes antizionism through a psychological-abuse framework. Levari (trauma-informed education on antizionism) publishes through this same Substack.
+
+- name: Kile B. Jones
+  url: https://kilejones.substack.com
+  description: Former antizionist; "Inverted World" deconstructs antizionist language and lexicon.
+
+- name: ESK
+  url: https://thegoldenpill.substack.com
+  description: '"The Golden Pill"; pushing back on antisemitism/antizionism as an information war; Jewish identity, antizionist rhetoric, media narratives about Israel.'
+
+- name: Einat Wilf
+  url: https://einatwilf.substack.com
+  description: Former Israeli MK; antizionism and Palestinianism.
+
+- name: David Christopher Kaufman
+  url: https://davidkaufman.substack.com
+  description: '"COUNTERINTUITIVE"; antizionism.'
+
+- name: Sarah Ettedgui
+  url: https://sarahettedgui.substack.com
+  description: Mizrahi/Sephardic lawyer; antizionism in society.
+
+- name: Whole Story Institute
+  url: https://ghrosenb.substack.com
+  description: '"Combating Anti-Zionism Through Education in History, Politics and Law"; regional history.'
+
+- name: Moral Clarity
+  url: https://moralclaritynewsletter.substack.com
+  description: '"Truths in Politics and Culture"; critical essays on politics and culture with a focus on Israel and the Middle East.'
+
+- name: Melissa Brodsky
+  url: https://melissabrodsky.substack.com
+  description: ""
+
+# TODO: confirm names; descriptions fall back to each feed's own until filled in
+- name: bflayton
+  url: https://bflayton.substack.com
+  description: ""
+
+- name: Marcia Kupfer
+  url: https://marciakupfer.substack.com
+  description: ""
+
+- name: pat604johnson
+  url: https://pat604johnson.substack.com
+  description: ""
