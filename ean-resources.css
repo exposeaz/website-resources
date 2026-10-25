@@ -331,6 +331,27 @@
   }
   .ean-empty { opacity: 0.6; padding: 40px 0; text-align: center; }
 
+  /* "Show more" under a long list of results */
+  .ean-show-more-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+  }
+  .ean-show-more {
+    padding: 0.6em 1.4em;
+    border: 1px solid var(--ean-accent);
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 600;
+    color: var(--ean-accent);
+    background: var(--ean-card-bg);
+    cursor: pointer;
+  }
+  .ean-show-more:hover { background: var(--ean-accent); color: var(--ean-accent-text); }
+  .ean-show-more-wrap span { font-size: 0.85em; opacity: 0.7; }
+
   /* ---- resource detail modal ---- */
   .ean-modal-overlay {
     position: fixed;
