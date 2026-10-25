@@ -219,7 +219,11 @@ def dry_run_report(records, skipped, errors):
                 f"### {r['title']}" + (f" [{', '.join(flags)}]" if flags else ""),
                 f"{r['publication']} · {r['date']} · {r['url']}",
                 "",
-                f"- Reason: {r['relevance_reason']}",
+            ]
+            # Reason only where a human needs to judge: unsure, or forced despite a not-relevant verdict
+            if r["relevance"] == "unsure" or (r["forced"] and r["relevance"] == "not_relevant"):
+                lines.append(f"- Reason: {r['relevance_reason']}")
+            lines += [
                 f"- Summary: {r['summary']}",
                 f"- Stance: {r['stance']}",
                 f"- Tags: {', '.join(r['tags']) or '(none)'}",
