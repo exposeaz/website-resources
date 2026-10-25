@@ -11,13 +11,19 @@
      No need to touch anything else if you do that.
      ================================================================ */
   #ean-resources-root {
-    --ean-card-bg: rgba(127,127,127,.06);      /* card fill color */
-    --ean-border: rgba(127,127,127,.3);         /* card/input border, default */
-    --ean-border-strong: rgba(127,127,127,.7);  /* card border on hover */
+    /* Brand palette: Armadillo #3B352D, Parchment #F7F5F0, Cobalt #2D61AF, Tangerine #FF8642 */
+    --ean-accent: #2D61AF;                      /* Cobalt — selected tag pills, "Continue to source" button */
+    --ean-accent-text: #FFFFFF;                 /* text on --ean-accent (Armadillo if the accent is Tangerine) */
+    --ean-highlight: #FF8642;                   /* Tangerine — card top edge, hover border, search focus ring */
+    --ean-card-bg: #FFFFFF;                     /* card fill color, on the Parchment page */
+    --ean-border: rgba(59,53,45,.18);           /* card/input border, default (Armadillo, faint) */
+    --ean-border-strong: rgba(59,53,45,.45);    /* fallback icon color */
     --ean-tag-bg: transparent;                  /* tag pill fill, inactive */
     --ean-tag-border: var(--ean-border);        /* tag pill border, inactive */
-    --ean-tag-active-bg: rgba(40,40,40,.85);    /* PLACEHOLDER — tag pill fill when selected */
-    --ean-card-image-bg: rgba(127,127,127,.08); /* field behind fallback icon when no image is set */
+    --ean-tag-active-bg: var(--ean-accent);     /* tag pill fill when selected */
+    --ean-card-image-bg: rgba(59,53,45,.05);    /* field behind fallback icon when no image is set */
+    --ean-modal-bg: #F7F5F0;                    /* Parchment — detail popup background */
+    --ean-modal-text: #3B352D;                  /* Armadillo — detail popup text */
     width: 100%;
   }
   #ean-resources-root * { box-sizing: border-box; }
@@ -50,7 +56,7 @@
     color: inherit;
     background: transparent;
   }
-  .ean-search:focus { outline: 2px solid currentColor; outline-offset: 1px; }
+  .ean-search:focus { outline: 2px solid var(--ean-highlight); outline-offset: 1px; }
   .ean-clear-btn {
     flex: 0 0 auto;
     padding: 0.6em 1em;
@@ -63,6 +69,44 @@
     transition: border-color .15s ease;
   }
   .ean-clear-btn:hover { border-color: var(--ean-border-strong); }
+
+  /* Settings switches (Cards/List, Match any/all): a joined button pair,
+     styled apart from the round tag pills so they read as settings */
+  .ean-segmented {
+    flex: 0 0 auto;
+    display: inline-flex;
+    border: 1px solid var(--ean-border-strong);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--ean-card-bg);
+  }
+  .ean-segmented button {
+    padding: 0.6em 0.9em;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    cursor: pointer;
+  }
+  .ean-segmented button + button { border-left: 1px solid var(--ean-border-strong); }
+  .ean-segmented button[aria-pressed="true"] {
+    background: var(--ean-accent);
+    color: var(--ean-accent-text);
+  }
+
+  /* Shown under the tag pills once 2+ are selected */
+  .ean-tagmode {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: -10px 0 20px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--ean-border);
+    font-size: 0.85em;
+  }
+  .ean-tagmode-label { font-weight: 600; }
+  .ean-tagmode .ean-segmented button { padding: 0.35em 0.9em; }
 
   .ean-tagbar {
     display: flex;
@@ -81,7 +125,7 @@
   .ean-tag[data-active="true"] {
     background: var(--ean-tag-active-bg) !important;
     border-color: var(--ean-tag-active-bg) !important;
-    color: #fff !important;
+    color: var(--ean-accent-text) !important;
   }
 
   .ean-crumb {
@@ -101,13 +145,14 @@
   .ean-cat-card {
     background: var(--ean-card-bg);
     border: 1px solid var(--ean-border);
+    border-top: 4px solid var(--ean-highlight);
     border-radius: 8px;
     padding: 20px;
     cursor: pointer;
     transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
   .ean-cat-card:hover {
-    border-color: var(--ean-border-strong);
+    border-color: var(--ean-highlight);
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(0,0,0,.10);
   }
@@ -141,7 +186,7 @@
     transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
   .ean-res-card:hover {
-    border-color: var(--ean-border-strong);
+    border-color: var(--ean-highlight);
     transform: translateY(-4px);
     box-shadow: 0 10px 20px rgba(0,0,0,.10);
   }
@@ -171,7 +216,7 @@
     height: 34%;
     opacity: 0.7;
   }
-  .ean-res-card h4 { margin: 0; font-size: 1.05rem; line-height: 1.3; }
+  .ean-res-card h4 { margin: 0; font-size: 0.92rem; font-weight: 600; line-height: 1.3; }
   .ean-res-header {
     display: flex;
     justify-content: space-between;
@@ -210,21 +255,70 @@
     padding: 2px 7px;
     opacity: 0.75;
   }
+  /* A card's tag that matches a selected filter pill */
+  .ean-res-tags span[data-match="true"] {
+    border-color: var(--ean-accent);
+    color: var(--ean-accent);
+    font-weight: 600;
+    opacity: 1;
+  }
+  .ean-res-count { font-size: 0.85em; opacity: 0.7; }
+
+  /* List layout: one compact row per resource */
+  .ean-res-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--ean-border);
+    border-radius: 8px;
+    background: var(--ean-card-bg);
+    overflow: hidden;
+  }
+  .ean-res-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 6px 16px;
+    padding: 12px 16px;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease;
+  }
+  .ean-res-row + .ean-res-row { border-top: 1px solid var(--ean-border); }
+  .ean-res-row:hover { border-left-color: var(--ean-highlight); background: rgba(59,53,45,.03); }
+  .ean-res-row-main { flex: 1 1 320px; min-width: 0; }
+  .ean-res-row h4 { margin: 0; font-size: 0.92rem; font-weight: 600; line-height: 1.35; }
+  .ean-res-row-meta { font-size: 0.85em; opacity: 0.7; margin-top: 2px; }
+  .ean-res-row .ean-res-tags { flex: 0 1 auto; justify-content: flex-end; margin-top: 0; }
+
+  /* Header above one Substack's curated articles */
+  .ean-substack-head {
+    background: var(--ean-card-bg);
+    border: 1px solid var(--ean-border);
+    border-top: 4px solid var(--ean-highlight);
+    border-radius: 8px;
+    padding: 18px 20px;
+    margin-bottom: 16px;
+  }
+  .ean-substack-head h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.25; }
+  .ean-substack-head p { margin: 0 0 6px; }
+  .ean-substack-note { font-size: 0.9em; opacity: 0.8; }
+  .ean-substack-note a { color: var(--ean-accent); font-weight: 600; }
+
   /* Modal-only: the reading view leads with the description at a bigger,
      roomier size than anything on the card face. */
   .ean-res-desc { font-size: 1.15rem; line-height: 1.65; margin: 0; }
   .ean-res-desc.empty { opacity: 0.6; font-style: italic; font-size: 1rem; }
   .ean-res-reference { font-size: 0.85em; opacity: 0.75; font-style: italic; margin: 0; }
-  /* The one deliberately "branded" element in the modal — reuses the same
-     placeholder accent as the active tag pills so there's a single color
-     to swap when real brand assets land, rather than inventing a second. */
+  /* The one deliberately "branded" element in the modal — same accent as
+     the selected tag pills. */
   .ean-res-link {
     display: inline-block;
     align-self: flex-start;
     margin-top: 4px;
     padding: 0.65em 1.3em;
-    background: var(--ean-tag-active-bg);
-    color: #fff;
+    background: var(--ean-accent);
+    color: var(--ean-accent-text);
     font-weight: 600;
     font-size: 0.95rem;
     border-radius: 999px;
@@ -253,19 +347,13 @@
     from { opacity: 0; }
     to { opacity: 1; }
   }
-  /* The modal floats over a dimmed backdrop rather than sitting directly
-     on the page, so it can't rely on the low-opacity tint-over-page-bg
-     trick .ean-card-bg uses elsewhere (that reads as a muddy see-through
-     square here instead of a card). It uses the browser's actual page
-     canvas colors instead of `inherit`/a hardcoded value, so it stays
-     legible without guessing whether the live site is light- or
-     dark-themed. Flagging this as a deliberate departure from the
-     inherit-everything rule elsewhere in this file — revisit if it looks
-     wrong against the real site once brand assets land. */
+  /* The modal floats over a dimmed backdrop, so it can't use the
+     tint-over-page trick the cards rely on; it sets its own brand
+     background and text color instead (see CUSTOM VALUES). */
   .ean-modal {
     position: relative;
-    background: Canvas;
-    color: CanvasText;
+    background: var(--ean-modal-bg);
+    color: var(--ean-modal-text);
     border: 1px solid var(--ean-border-strong);
     border-radius: 8px;
     max-width: 560px;

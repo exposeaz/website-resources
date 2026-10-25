@@ -2,8 +2,61 @@
   // ---- CONFIGURE THIS ----
   var DATA_URL = "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/data.json";
 
+  // Wording shown above a single Substack's articles. {title} and {link} are filled in.
+  var SUBSTACK_NOTE = "This is an automatically curated set of articles from {title} related to antizionism. " +
+    "See the full Substack: {link}";
+
+  // Substack articles aren't a top-level category; each one appears under its
+  // publication's card in the Substacks category, matched by web address.
+  var SUBSTACK_CATEGORY = "substacks";
+  var ARTICLE_CATEGORY = "substack-articles";
+  var LAYOUT_KEY = "ean-layout";
+
   var root = document.getElementById("ean-resources-root");
-  var state = { data: null, view: "categories", categoryId: null, search: "", activeTags: [], modalResourceId: null };
+  var state = {
+    data: null, view: "categories", categoryId: null, substackId: null,
+    search: "", activeTags: [], tagMode: "any", modalResourceId: null, layout: loadLayout()
+  };
+
+  // Card/list choice is remembered per visitor; storage can be unavailable
+  // (private windows, blocked site data), so it falls back to cards.
+  function loadLayout() {
+    try { return localStorage.getItem(LAYOUT_KEY) === "list" ? "list" : "cards"; } catch (e) { return "cards"; }
+  }
+  function saveLayout() {
+    try { localStorage.setItem(LAYOUT_KEY, state.layout); } catch (e) { /* not remembered */ }
+  }
+
+  function hostOf(url) {
+    try { return new URL(url).host.toLowerCase(); } catch (e) { return null; }
+  }
+  function resourceById(id) {
+    return state.data.resources.filter(function (r) { return r.id === id; })[0];
+  }
+  function substackFor(article) {
+    var host = hostOf(article.url);
+    return state.data.resources.filter(function (r) {
+      return r.category === SUBSTACK_CATEGORY && hostOf(r.url) === host;
+    })[0];
+  }
+  function articlesFor(substack) {
+    var host = hostOf(substack.url);
+    return state.data.resources.filter(function (r) {
+      return r.category === ARTICLE_CATEGORY && hostOf(r.url) === host;
+    });
+  }
+  // Newest first by full date when present, else by year; undated sink to the end
+  function byNewest(a, b) {
+    var da = a.date || (a.year ? String(a.year) : ""), db = b.date || (b.year ? String(b.year) : "");
+    return db.localeCompare(da);
+  }
+  function bylineFor(r) {
+    if (r.category === ARTICLE_CATEGORY) {
+      var sub = substackFor(r);
+      return "via " + (sub ? sub.title : r.author);
+    }
+    return r.author;
+  }
 
   // Categories whose single-category view sorts newest-year-first, in one
   // flat grid (no visual year sections/headers — same layout as every
@@ -24,11 +77,23 @@
       if (hay.indexOf(q) === -1) return false;
     }
     if (state.activeTags.length) {
-      var tags = r.tags || [];
-      var ok = state.activeTags.every(function (t) { return tags.indexOf(t) !== -1; });
-      if (!ok) return false;
+      var n = tagMatches(r);
+      if (state.tagMode === "all" ? n < state.activeTags.length : n === 0) return false;
     }
     return true;
+  }
+
+  function tagMatches(r) {
+    var tags = r.tags || [];
+    return state.activeTags.filter(function (t) { return tags.indexOf(t) !== -1; }).length;
+  }
+
+  // "Any" mode: resources matching more of the selected tags come first (stable otherwise)
+  function rankByTagMatches(items) {
+    if (state.tagMode !== "any" || state.activeTags.length < 2) return items;
+    return items.map(function (r, i) { return { r: r, i: i, n: tagMatches(r) }; })
+      .sort(function (a, b) { return b.n - a.n || a.i - b.i; })
+      .map(function (x) { return x.r; });
   }
 
   function categoryLabel(id) {
@@ -47,6 +112,12 @@
     var html = '<div class="ean-toolbar">';
     html += '<input class="ean-search" type="text" placeholder="Search titles, descriptions, citations..." value="' + esc(state.search) + '" />';
     html += '<button type="button" class="ean-clear-btn" data-clear-filters="1">Clear filters</button>';
+    html += '<div class="ean-segmented ean-layout-toggle" role="group" aria-label="Layout">';
+    ["cards", "list"].forEach(function (l) {
+      html += '<button type="button" data-layout="' + l + '" aria-pressed="' + (state.layout === l) + '">' +
+        (l === "cards" ? "Cards" : "List") + '</button>';
+    });
+    html += '</div>';
     html += '</div>';
     html += '<div class="ean-tagbar">';
     state.data.tags.forEach(function (t) {
@@ -54,6 +125,15 @@
       html += '<button class="' + tagBtnClasses(active) + '" data-tag="' + t.id + '" data-active="' + active + '">' + esc(t.label) + '</button>';
     });
     html += '</div>';
+    // Only meaningful once two or more tags are selected
+    if (state.activeTags.length > 1) {
+      html += '<div class="ean-tagmode"><span class="ean-tagmode-label">Selected tags:</span>';
+      html += '<div class="ean-segmented" role="group" aria-label="Tag matching">';
+      [["any", "Match any"], ["all", "Match all"]].forEach(function (m) {
+        html += '<button type="button" data-tagmode="' + m[0] + '" aria-pressed="' + (state.tagMode === m[0]) + '">' + m[1] + '</button>';
+      });
+      html += '</div></div>';
+    }
     return html;
   }
 
@@ -104,17 +184,49 @@
     }
     html += '</div>';
     html += '<h4>' + esc(r.title) + '</h4>';
-    if (r.author) {
-      html += '<div class="ean-res-author">' + esc(r.author) + '</div>';
+    if (bylineFor(r)) {
+      html += '<div class="ean-res-author">' + esc(bylineFor(r)) + '</div>';
     }
-    if (r.tags && r.tags.length) {
-      html += '<div class="ean-res-tags">' + r.tags.map(function (t) {
-        var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
-        return '<span data-tag="' + esc(t) + '">' + esc(tagDef ? tagDef.label : t) + '</span>';
-      }).join('') + '</div>';
-    }
+    html += substackCountHtml(r);
+    html += tagsHtml(r);
     html += '</div>';
     return html;
+  }
+
+  function tagsHtml(r) {
+    if (!r.tags || !r.tags.length) return "";
+    return '<div class="ean-res-tags">' + r.tags.map(function (t) {
+      var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
+      var match = state.activeTags.indexOf(t) !== -1;
+      return '<span data-tag="' + esc(t) + '" data-match="' + match + '">' + esc(tagDef ? tagDef.label : t) + '</span>';
+    }).join('') + '</div>';
+  }
+
+  // On a Substack card: how many curated articles it holds, or that it opens on Substack
+  function substackCountHtml(r) {
+    if (r.category !== SUBSTACK_CATEGORY) return "";
+    var n = articlesFor(r).length;
+    return '<div class="ean-res-count">' + (n ? n + ' article' + (n === 1 ? '' : 's') : 'Opens on Substack &#8599;') + '</div>';
+  }
+
+  function renderResourceRow(r) {
+    var meta = [bylineFor(r), r.year ? String(r.year) : "", categoryLabel(r.category)].filter(Boolean);
+    var html = '<div class="ean-res-row" data-res="' + esc(r.id) + '">';
+    html += '<div class="ean-res-row-main"><h4>' + esc(r.title) + '</h4>';
+    html += '<div class="ean-res-row-meta">' + meta.map(esc).join(' &middot; ') + '</div>';
+    html += substackCountHtml(r) + '</div>';
+    html += tagsHtml(r);
+    html += '</div>';
+    return html;
+  }
+
+  // Cards (masonry grid) or list, per the visitor's layout choice
+  function renderItems(items) {
+    items = rankByTagMatches(items);
+    if (state.layout === "list") {
+      return '<div class="ean-res-list">' + items.map(renderResourceRow).join('') + '</div>';
+    }
+    return '<div class="ean-res-grid">' + items.map(renderResourceCard).join('') + '</div>';
   }
 
   // No image here deliberately — the modal is the reading view, so it
@@ -131,8 +243,8 @@
     }
     html += '</div>';
     html += '<h4>' + esc(r.title) + '</h4>';
-    if (r.author) {
-      html += '<div class="ean-res-author">' + esc(r.author) + '</div>';
+    if (bylineFor(r)) {
+      html += '<div class="ean-res-author">' + esc(bylineFor(r)) + '</div>';
     }
     if (r.description) {
       html += '<p class="ean-res-desc">' + esc(r.description) + '</p>';
@@ -167,14 +279,36 @@
         return b.year - a.year;
       });
     }
-    return '<div class="ean-res-grid">' + sorted.map(renderResourceCard).join('') + '</div>';
+    return renderItems(sorted);
+  }
+
+  // One Substack's curated articles, under a header linking to the full Substack
+  function renderSubstackView(filtering) {
+    var sub = resourceById(state.substackId);
+    var items = articlesFor(sub).sort(byNewest);
+    if (filtering) items = items.filter(matchesFilters);
+    var link = '<a href="' + esc(sub.url) + '" target="_blank" rel="noopener">' + esc(sub.title) + ' &#8599;</a>';
+    var html = '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All categories</a> / ' +
+      '<a href="#" class="ean-crumb-link" data-back-substacks="1">' + esc(categoryLabel(SUBSTACK_CATEGORY)) + '</a> / ' + esc(sub.title);
+    if (filtering) html += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
+    html += '</div>';
+    html += '<div class="ean-substack-head"><h3>' + esc(sub.title) + '</h3>';
+    if (sub.description) html += '<p>' + esc(sub.description) + '</p>';
+    html += '<p class="ean-substack-note">' +
+      esc(SUBSTACK_NOTE).replace("{title}", esc(sub.title)).replace("{link}", link) + '</p></div>';
+    html += items.length
+      ? renderItems(items)
+      : '<div class="ean-empty">No articles match your filters.</div>';
+    return html;
   }
 
   function render() {
     var filtering = state.search.trim() !== "" || state.activeTags.length > 0;
     var html = renderToolbar();
 
-    if (state.view === "category") {
+    if (state.view === "substack") {
+      html += renderSubstackView(filtering);
+    } else if (state.view === "category") {
       // A category is already selected, so search/tag filters narrow
       // *within* it instead of jumping out to a cross-category search —
       // only the top-level categories view searches everything at once.
@@ -194,11 +328,12 @@
       var results = state.data.resources.filter(matchesFilters);
       html += '<div class="ean-crumb">' + results.length + ' result' + (results.length === 1 ? '' : 's') + '</div>';
       html += results.length
-        ? '<div class="ean-res-grid">' + results.map(renderResourceCard).join('') + '</div>'
+        ? renderItems(results)
         : '<div class="ean-empty">No resources match your filters.</div>';
     } else {
       html += '<div class="ean-cat-grid">';
       state.data.categories.forEach(function (c) {
+        if (c.id === ARTICLE_CATEGORY) return;
         var count = state.data.resources.filter(function (r) { return r.category === c.id; }).length;
         html += '<div class="ean-cat-card" data-cat="' + c.id + '">';
         html += '<h3>' + esc(c.label) + '</h3>';
@@ -294,18 +429,55 @@
         render();
       });
     });
+    root.querySelectorAll("[data-tagmode]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        state.tagMode = btn.getAttribute("data-tagmode");
+        render();
+      });
+    });
+    root.querySelectorAll("[data-layout]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        state.layout = btn.getAttribute("data-layout");
+        saveLayout();
+        render();
+      });
+    });
+    var backSubstacks = root.querySelector("[data-back-substacks]");
+    if (backSubstacks) {
+      backSubstacks.addEventListener("click", function (e) {
+        e.preventDefault();
+        state.view = "category";
+        state.categoryId = SUBSTACK_CATEGORY;
+        state.substackId = null;
+        render();
+      });
+    }
     var back = root.querySelector("[data-back]");
     if (back) {
       back.addEventListener("click", function (e) {
         e.preventDefault();
         state.view = "categories";
         state.categoryId = null;
+        state.substackId = null;
         render();
       });
     }
-    root.querySelectorAll(".ean-res-card").forEach(function (card) {
+    // A Substack card opens its curated articles, or the Substack itself when it has none
+    root.querySelectorAll(".ean-res-card, .ean-res-row").forEach(function (card) {
       card.addEventListener("click", function () {
-        state.modalResourceId = card.getAttribute("data-res");
+        var r = resourceById(card.getAttribute("data-res"));
+        if (r.category === SUBSTACK_CATEGORY) {
+          if (articlesFor(r).length) {
+            state.view = "substack";
+            state.substackId = r.id;
+            render();
+            root.scrollIntoView();
+          } else if (r.url) {
+            window.open(r.url, "_blank", "noopener");
+          }
+          return;
+        }
+        state.modalResourceId = r.id;
         render();
       });
     });
