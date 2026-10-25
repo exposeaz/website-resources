@@ -16,5 +16,6 @@ python = "3.13.*"
 [pypi-dependencies]
 anthropic = ">=2.3.0,<3"
 beautifulsoup4 = ">=4.15.0,<5"
+feedparser = ">=6.0.14,<7"
 pyyaml = ">=6.0.3,<7"
 requests = ">=2.34.2,<3"

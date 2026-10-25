@@ -6,12 +6,12 @@ Paywalled posts only ever use the preview Substack serves publicly.
 import functools
 import logging
 import time
-import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from datetime import date, datetime
 from email.utils import parsedate_to_datetime
 from urllib.parse import urlsplit
 
+import feedparser
 import requests
 from bs4 import BeautifulSoup
 
@@ -104,14 +104,19 @@ def read_feed(pub_url):
 
     Cached so a publication resolved from its feed isn't fetched twice in one run.
     """
-    channel = ET.fromstring(_get(f"{base_url(pub_url)}/feed").content).find("channel")
+    url = f"{base_url(pub_url)}/feed"
+    # feedparser tolerates the malformed XML some feeds contain
+    feed = feedparser.parse(_get(url).content)
+    if not feed.version or (feed.bozo and not feed.entries):
+        raise FetchError(f"{url}: not a readable feed ({feed.get('bozo_exception', 'unrecognized format')})")
     entries = []
-    for item in channel.findall("item"):
-        link = item.findtext("link", "").strip()
+    for item in feed.entries:
+        link = (item.get("link") or "").strip()
+        published = item.get("published_parsed")
         if link:
-            entries.append((link, _parse_date(item.findtext("pubDate"))))
-    title = channel.findtext("title", "").strip()
-    return title, channel.findtext("description", "").strip(), entries
+            entries.append((link, date(*published[:3]) if published else None))
+    title = " ".join((feed.feed.get("title") or "").split())
+    return title, " ".join((feed.feed.get("description") or "").split()), entries
 
 
 def archive_entries(pub_url, since=None, limit=None):
