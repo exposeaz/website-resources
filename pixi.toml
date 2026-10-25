@@ -17,5 +17,7 @@ python = "3.13.*"
 anthropic = ">=2.3.0,<3"
 beautifulsoup4 = ">=4.15.0,<5"
 feedparser = ">=6.0.14,<7"
+# feedparser falls back to this lenient parser for malformed feeds; not always installed with it
+sgmllib3k = ">=1.0.0,<2"
 pyyaml = ">=6.0.3,<7"
 requests = ">=2.34.2,<3"
