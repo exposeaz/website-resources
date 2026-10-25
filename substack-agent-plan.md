@@ -6,7 +6,7 @@ Build a Python pipeline that lives in **https://github.com/exposeaz/website-reso
 2. Uses Claude to decide whether each post is relevant, even loosely, to antizionism. Only relevant posts are kept. If it is unsure, it should be kept for manual review. For each kept post, it generates a short summary, tags from a controlled vocabulary, suggested new tags, and a stance phrase.
 3. Opens PRs with the new items to two repos:
    - **website-resources** (this same repo): append entries to the `data.json` under the category "Substack articles" (which should be created if it doesn't exist)
-   - **https://github.com/exposeaz/azaryah**: update the AI prompt markdown file that the chatbot uses (details below). Find the right prompt file, confirm the path with me, and keep the edit to that one section.
+   - **https://github.com/exposeaz/azaryah**: update the AI prompt markdown file that the chatbot uses (details below). The prompt file to write is present in `lambda/azaryah-ws-default/prompts/substack-posts.md`. Keep the edit to only new additions
 
 
 ## No hardcoded parameters
