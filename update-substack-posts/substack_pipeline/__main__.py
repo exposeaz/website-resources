@@ -132,16 +132,38 @@ def gather_candidates(args, processed, errors):
     return candidates
 
 
+def _skipped(post, reason):
+    return {
+        "publication": post.publication,
+        "title": post.title,
+        "url": state.normalize_url(post.url),
+        "word_count": post.word_count,
+        "reason": reason,
+    }
+
+
 def process(candidates, classifier, errors):
-    records = []
+    """Classified records, plus posts skipped as too short or as roundups/announcements.
+
+    --post-url posts are never skipped.
+    """
+    records, skipped = [], []
     for i, cand in enumerate(candidates, 1):
         log.info("[%d/%d] %s", i, len(candidates), cand.url)
         try:
             post = fetch.fetch_post(cand.url, cand.publication)
+            if not cand.forced and post.word_count is not None and post.word_count < settings.MIN_WORD_COUNT:
+                log.info("Skipping, %d words < MIN_WORD_COUNT", post.word_count)
+                skipped.append(_skipped(post, f"under {settings.MIN_WORD_COUNT} words ({post.word_count})"))
+                continue
             result = classifier.classify(post)
         except (fetch.FetchError, ClassifyError, ValueError) as exc:
             log.error("%s: %s", cand.url, exc)
             errors.append({"url": cand.url, "error": str(exc)})
+            continue
+        if result["roundup"] and not cand.forced:
+            log.info("Skipping, roundup or announcement")
+            skipped.append(_skipped(post, "roundup or announcement"))
             continue
         records.append({
             "publication": post.publication,
@@ -153,14 +175,16 @@ def process(candidates, classifier, errors):
             "suggested_tags": result["suggested_tags"],
             "stance": result["stance"],
             "paywalled": post.paywalled,
+            "word_count": post.word_count,
             "relevance": result["relevance"],
             "relevance_reason": result["relevance_reason"],
+            "roundup": result["roundup"],
             "forced": cand.forced,
         })
-    return records
+    return records, skipped
 
 
-def dry_run_report(records, errors):
+def dry_run_report(records, skipped, errors):
     groups = {"relevant": [], "unsure": [], "not_relevant": []}
     for r in records:
         groups[r["relevance"]].append(r)
@@ -170,7 +194,8 @@ def dry_run_report(records, errors):
     for label, items in groups.items():
         lines += [f"## {label} ({len(items)})", ""]
         for r in items:
-            flags = [f for f, on in (("paywalled", r["paywalled"]), ("forced", r["forced"])) if on]
+            flags = [f for f, on in (("paywalled", r["paywalled"]), ("roundup", r["roundup"]),
+                                     ("forced", r["forced"])) if on]
             lines += [
                 f"### {r['title']}" + (f" [{', '.join(flags)}]" if flags else ""),
                 f"{r['publication']} · {r['date']} · {r['url']}",
@@ -182,6 +207,9 @@ def dry_run_report(records, errors):
                 f"- Suggested tags: {', '.join(r['suggested_tags']) or '(none)'}",
                 "",
             ]
+    if skipped:
+        lines += [f"## Skipped ({len(skipped)})", ""]
+        lines += [f"- {s['title']} ({s['publication']}): {s['reason']} · {s['url']}" for s in skipped] + [""]
     if errors:
         lines += [f"## Errors ({len(errors)})", ""] + [f"- {e['url']}: {e['error']}" for e in errors] + [""]
     return "\n".join(lines)
@@ -200,14 +228,14 @@ def main(argv=None):
     errors = []
     candidates = gather_candidates(args, state.load_processed(), errors)
     log.info("%d posts to classify", len(candidates))
-    records = process(candidates, Classifier(state.load_tags()), errors)
+    records, skipped = process(candidates, Classifier(state.load_tags()), errors)
 
     settings.DRY_RUN_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     json_path = settings.DRY_RUN_OUTPUT_DIR / f"dry-run-{stamp}.json"
     md_path = settings.DRY_RUN_OUTPUT_DIR / f"dry-run-{stamp}.md"
-    json_path.write_text(json.dumps({"records": records, "errors": errors}, indent=2, ensure_ascii=False) + "\n")
-    md_path.write_text(dry_run_report(records, errors))
+    json_path.write_text(json.dumps({"records": records, "skipped": skipped, "errors": errors}, indent=2, ensure_ascii=False) + "\n")
+    md_path.write_text(dry_run_report(records, skipped, errors))
     log.info("Wrote %s and %s", json_path, md_path)
 
 

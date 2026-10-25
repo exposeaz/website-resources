@@ -5,6 +5,7 @@ Paywalled posts only ever use the preview Substack serves publicly.
 
 import functools
 import logging
+import re
 import time
 from dataclasses import dataclass
 from datetime import date, datetime
@@ -20,6 +21,7 @@ from config import settings
 log = logging.getLogger(__name__)
 
 _RETRY_STATUSES = {429, 500, 502, 503, 504}
+_XML_INVALID_CHARS = re.compile(rb"[\x00-\x08\x0b\x0c\x0e-\x1f]")
 
 
 @dataclass
@@ -31,6 +33,7 @@ class Post:
     published: date
     text: str
     paywalled: bool
+    word_count: int | None = None  # full post; None if unknown (paywalled, no API count)
 
 
 @dataclass
@@ -86,7 +89,7 @@ def slug_from_url(url):
 def html_to_text(html):
     text = BeautifulSoup(html or "", "html.parser").get_text("\n")
     lines = (" ".join(line.split()) for line in text.splitlines())
-    return "\n".join(line for line in lines if line)[: settings.MAX_TEXT_CHARS]
+    return "\n".join(line for line in lines if line)
 
 
 def _parse_date(value):
@@ -105,8 +108,8 @@ def read_feed(pub_url):
     Cached so a publication resolved from its feed isn't fetched twice in one run.
     """
     url = f"{base_url(pub_url)}/feed"
-    # feedparser tolerates the malformed XML some feeds contain
-    feed = feedparser.parse(_get(url).content)
+    # Control characters are invalid in XML and break parsing; feedparser tolerates other malformed XML
+    feed = feedparser.parse(_XML_INVALID_CHARS.sub(b"", _get(url).content))
     if not feed.version or (feed.bozo and not feed.entries):
         raise FetchError(f"{url}: not a readable feed ({feed.get('bozo_exception', 'unrecognized format')})")
     entries = []
@@ -151,12 +154,16 @@ def fetch_post(url, publication):
     paywalled = data.get("audience") not in (None, "everyone")
     html = data.get("body_html") or data.get("truncated_body_text") or ""
     text = html_to_text(html) or html_to_text(data.get("description") or data.get("subtitle"))
+    word_count = data.get("wordcount")
+    if word_count is None and not paywalled:
+        word_count = len(text.split())
     return Post(
         publication=publication.name,
         publication_description=publication.description,
         title=(data.get("title") or "").strip(),
         url=data.get("canonical_url") or url,
         published=_parse_date(data.get("post_date")),
-        text=text,
+        text=text[: settings.MAX_TEXT_CHARS],
         paywalled=paywalled,
+        word_count=word_count,
     )

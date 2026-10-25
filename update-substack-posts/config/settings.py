@@ -23,6 +23,8 @@ ALL_POSTS_LIMIT = _env("ALL_POSTS_LIMIT", 30, int)
 MAX_RETRIES = _env("MAX_RETRIES", 3, int)
 RETRY_BACKOFF_SECONDS = _env("RETRY_BACKOFF_SECONDS", 5.0, float)
 MAX_TEXT_CHARS = _env("MAX_TEXT_CHARS", 20000, int)
+# Shorter posts are skipped without classification, except --post-url posts
+MIN_WORD_COUNT = _env("MIN_WORD_COUNT", 750, int)
 USER_AGENT = _env(
     "USER_AGENT",
     "exposeaz-resource-pipeline (+https://github.com/exposeaz/website-resources)",

@@ -28,10 +28,12 @@ When in doubt between "not_relevant" and anything else, do not choose "not_relev
 
 relevance_reason: one sentence explaining the relevance judgment.
 
+roundup: true if the post is mainly a newsletter digest, link roundup, event listing, fundraising appeal, or organizational announcement; false if it is an article, essay, interview, or report with its own substantive content.
+
 tags: {settings.MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most applicable first:
 {vocab}
 
-suggested_tags: up to {settings.MAX_SUGGESTED_TAGS} short themes the vocabulary above does not cover. Empty if none. Never repeat a vocabulary tag.
+suggested_tags: up to {settings.MAX_SUGGESTED_TAGS} broad themes the vocabulary above does not cover, that could apply to many posts and would be useful as a filter in a resource library. Not details specific to this post (people, events, documents, or one-off arguments). Empty if none. Never repeat a vocabulary tag.
 
 stance: a short phrase describing the author's position, e.g. "critical of X" or "news report, no clear position".
 
@@ -47,12 +49,13 @@ def _output_schema(tags):
         "properties": {
             "relevance": {"type": "string", "enum": RELEVANCE_VALUES},
             "relevance_reason": {"type": "string"},
+            "roundup": {"type": "boolean"},
             "tags": {"type": "array", "items": {"type": "string", "enum": [t["id"] for t in tags]}},
             "suggested_tags": {"type": "array", "items": {"type": "string"}},
             "stance": {"type": "string"},
             "summary": {"type": "string"},
         },
-        "required": ["relevance", "relevance_reason", "tags", "suggested_tags", "stance", "summary"],
+        "required": ["relevance", "relevance_reason", "roundup", "tags", "suggested_tags", "stance", "summary"],
         "additionalProperties": False,
     }
 
