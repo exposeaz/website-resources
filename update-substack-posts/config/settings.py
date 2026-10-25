@@ -58,6 +58,14 @@ PR_BODY_FILE = PIPELINE_DIR / "output" / "pr-body.md"
 # GitHub rejects PR bodies over 65,536 characters
 PR_BODY_MAX_CHARS = _env("PR_BODY_MAX_CHARS", 60000, int)
 
+# --- Publishing ---
+# Articles reach the website's data.json only if relevance is one of these and the score is at least
+# PUBLISH_MIN_SCORE (articles added by --post-url always do). The rest stay in articles.json and are
+# published automatically on a later run if these are loosened.
+PUBLISH_RELEVANCE = tuple(_env("PUBLISH_RELEVANCE", "relevant").split(","))
+PUBLISH_MIN_SCORE = _env("PUBLISH_MIN_SCORE", 5, int)
+TAG_REVIEW_MAX_OUTPUT_TOKENS = _env("TAG_REVIEW_MAX_OUTPUT_TOKENS", 100, int)
+
 # --- Output content ---
 RESOURCE_CATEGORY_ID = "substack-articles"
 RESOURCE_CATEGORY_LABEL = "Substack articles"

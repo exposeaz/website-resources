@@ -220,6 +220,7 @@ def process(candidates, classifier, errors, on_done=None):
             "relevance": result["relevance"],
             "relevance_reason": result["relevance_reason"],
             "relevance_score": result["relevance_score"],
+            "scoped_tags_reviewed": classifier.scoped_signature,
             "too_thin": result["too_thin"],
             "roundup": result["roundup"],
             "forced": cand.forced,

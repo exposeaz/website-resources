@@ -1,5 +1,6 @@
 """One Claude call per post: relevance, summary, tags, suggested tags, stance."""
 
+import hashlib
 import json
 import logging
 
@@ -11,6 +12,21 @@ log = logging.getLogger(__name__)
 
 RELEVANCE_VALUES = ["relevant", "unsure", "not_relevant"]
 NEWS_TAG = "news"
+
+
+def _vocab_line(t):
+    line = f"- {t['id']}: {t['label']}"
+    return f"{line} (only when {t['scope']})" if t.get("scope") else line
+
+
+def scoped_tags(tags):
+    """Tags with a narrow, explicit scope; tag_review re-checks these on stored articles."""
+    return [t for t in tags if t.get("scope")]
+
+
+def scoped_signature(tags):
+    """Changes whenever any scope's wording changes, so tag_review knows what to re-check."""
+    return hashlib.sha1(json.dumps(scoped_tags(tags), sort_keys=True).encode()).hexdigest()[:12]
 
 
 def _score_rubric():
@@ -33,7 +49,7 @@ class ClassifyAuthError(Exception):
 
 
 def _system_prompt(tags):
-    vocab = "\n".join(f"- {t['id']}: {t['label']}" for t in tags)
+    vocab = "\n".join(_vocab_line(t) for t in tags)
     return f"""You review Substack posts for a nonprofit's resource library on antizionism.
 
 Relevance:
@@ -50,7 +66,7 @@ too_thin: true if the post is too brief or slight to stand alone as a library re
 
 roundup: true if the post is mainly a newsletter digest, link roundup, event listing, fundraising appeal, or organizational announcement; false if it is an article, essay, interview, or report with its own substantive content.
 
-tags: {settings.MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most applicable first. Be generous: include every tag that plausibly applies. Use "{NEWS_TAG}" when the post mainly reports events rather than arguing or analyzing.
+tags: {settings.MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most applicable first. Be generous: include every tag that plausibly applies, except that a tag with an "only when" note applies only when that note is true. Use "{NEWS_TAG}" when the post mainly reports events rather than arguing or analyzing.
 {vocab}
 
 suggested_tags: up to {settings.MAX_SUGGESTED_TAGS} broad themes the vocabulary above does not cover, that could apply to many posts and would be useful as a filter in a resource library. Be generous; a human curates them. Each must be a subject the post is about (e.g. a movement, institution, region, historical period, or field). Not tone, genre, or format (e.g. satire, polemic, interview), and not details specific to this post (people, events, documents, or one-off arguments). Never repeat a vocabulary tag.
@@ -110,9 +126,19 @@ class Classifier:
         self.client = anthropic.Anthropic(max_retries=settings.MAX_RETRIES)
         self.system = _system_prompt(tags)
         self.schema = _output_schema(tags)
+        self.scoped_signature = scoped_signature(tags)
 
     def classify(self, post):
         return _clean(self._call(self.system, _user_message(post), self.schema, settings.MAX_OUTPUT_TOKENS), self.tags)
+
+    def review_scoped_tags(self, article, scoped):
+        """{tag id: bool} for each scoped tag, judged from the stored article record."""
+        system = ("You review short records of Substack posts for a nonprofit's resource library on antizionism. "
+                  "Judge only from the record given. For each tag, answer true only if its condition holds:\n"
+                  + "\n".join(f"- {t['id']}: {t['scope']}" for t in scoped))
+        schema = {"type": "object", "properties": {t["id"]: {"type": "boolean"} for t in scoped},
+                  "required": [t["id"] for t in scoped], "additionalProperties": False}
+        return self._call(system, _retag_message(article), schema, settings.TAG_REVIEW_MAX_OUTPUT_TOKENS)
 
     def retag(self, article):
         """relevance_score and news (bool) for a stored article, judged from its title, summary and stance."""

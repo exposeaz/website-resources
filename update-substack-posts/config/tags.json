@@ -1,5 +1,8 @@
 [
-  {"id": "antizionism", "label": "Antizionism"},
+  {"id": "antizionism", "label": "Antizionism",
+   "scope": "the post is about antizionism as a concept: defining it, naming it as a distinct ideology or hatred, distinguishing it from antisemitism or from criticism of Israel, offering a framework for recognizing it, or debating the terminology. Not for posts that merely involve antizionism"},
+  {"id": "jewish-antizionism", "label": "Jewish antizionism",
+   "scope": "the post focuses on Jews or Jewish organizations promoting antizionism (e.g. Jewish Voice for Peace, IfNotNow, individual anti-Zionist Jewish figures): their arguments, influence, history, or responses to them"},
   {"id": "soviet-antizionism", "label": "Soviet antizionism"},
   {"id": "antizionism-academy", "label": "Antizionism in the academy"},
   {"id": "antizionism-medicine", "label": "Antizionism in medicine"},

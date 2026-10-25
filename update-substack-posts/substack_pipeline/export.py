@@ -72,9 +72,18 @@ def _substack_card(host, publications, taken):
     }
 
 
+def publishable(a):
+    """Clears the website bar (PUBLISH_RELEVANCE and PUBLISH_MIN_SCORE), or was added by URL."""
+    return a["forced"] or (a["relevance"] in settings.PUBLISH_RELEVANCE
+                           and a.get("relevance_score", 0) >= settings.PUBLISH_MIN_SCORE)
+
+
 def export_resources(articles, vocab):
-    """Append pending articles to data.json, adding the category and any missing tags. Returns the count."""
-    pending = [a for a in articles if not a.get("exported_resources")]
+    """Append pending, publishable articles to data.json, adding the category and any missing tags.
+
+    Articles below the bar stay unexported, so loosening the bar later publishes them. Returns the count.
+    """
+    pending = [a for a in articles if not a.get("exported_resources") and publishable(a)]
     if not pending:
         return 0
     data = json.loads(settings.RESOURCES_FILE.read_text())
@@ -110,7 +119,8 @@ def run_export():
     articles = state.load_articles()
     added = export_resources(articles, state.load_tags())
     state.save_articles(articles)
-    log.info("Exported %d articles to data.json", added)
+    held = sum(not a.get("exported_resources") for a in articles)
+    log.info("Exported %d articles to data.json; %d held back below the publishing bar", added, held)
 
 
 if __name__ == "__main__":

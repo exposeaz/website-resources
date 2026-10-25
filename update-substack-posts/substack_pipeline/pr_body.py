@@ -22,11 +22,17 @@ def _entry(a, with_reason):
 
 
 def build_body(new, new_cards=()):
+    held = [a for a in new if not a.get("exported_resources")]
+    new = [a for a in new if a.get("exported_resources")]
     forced = [a for a in new if a["forced"]]
     unsure = [a for a in new if not a["forced"] and a["relevance"] == "unsure"]
     relevant = [a for a in new if not a["forced"] and a["relevance"] == "relevant"]
     lines = ["Automated update from `update-substack-posts`.", "",
-             f"{len(new)} new articles: {len(relevant)} relevant, {len(unsure)} unsure, {len(forced)} added by URL.",
+             f"{len(new)} new articles published to `data.json`: {len(relevant)} relevant, {len(unsure)} unsure, "
+             f"{len(forced)} added by URL.",
+             f"{len(held)} more were classified but held back below the publishing bar "
+             f"(relevance {' or '.join(settings.PUBLISH_RELEVANCE)}, score {settings.PUBLISH_MIN_SCORE}+). "
+             "They stay in `articles.json`; loosening the bar in settings publishes them on a later run.",
              "Before merging, remove any entry you don't want from `data.json`; removed entries are not re-added.", ""]
     if new_cards:
         lines += [f"### New Substack cards ({len(new_cards)}): please check the wording", ""]
