@@ -1,14 +1,14 @@
 [workspace]
 authors = ["Stephanie J. Spielman <stephanie.spielman@gmail.com>"]
 channels = ["conda-forge"]
-name = "update-substack-posts"
+name = "website-resources"
 # linux-64 for the GitHub Actions runner
 platforms = ["osx-arm64", "linux-64"]
 version = "0.1.0"
 
 [tasks]
-dry-run = "python -m substack_pipeline --dry-run"
-pipeline = "python -m substack_pipeline"
+dry-run = { cmd = "python -m substack_pipeline --dry-run", cwd = "update-substack-posts" }
+pipeline = { cmd = "python -m substack_pipeline", cwd = "update-substack-posts" }
 
 [dependencies]
 python = "3.13.*"
