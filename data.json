@@ -83,6 +83,14 @@
     {
       "id": "media-commentary",
       "label": "Media bias"
+    },
+    {
+      "id": "antizionism-progressive",
+      "label": "Antizionism in progressive spaces"
+    },
+    {
+      "id": "antizionism-academy",
+      "label": "Antizionism in the academy"
     }
   ],
   "resources": [
@@ -1029,6 +1037,22 @@
       "author": "Jeremy Musighi",
       "url": "https://profound.af/center-of-attention",
       "image": null,
+      "year": 2026
+    },
+    {
+      "id": "lekht-where-the-soviets-won",
+      "title": "Where the Soviets Won",
+      "category": "essays",
+      "description": "Argues that Soviet state antizionism collapsed with the USSR because the Soviet intelligentsia recognized it as official propaganda, while in the West the same educated class embraced it voluntarily after it arrived in the 1960s–70s attached to the language of antiracism. Calls for reforming American education so that antisemitism is no longer taught only as a form of racial hatred.",
+      "tags": [
+        "soviet-antizionism",
+        "antizionism",
+        "antizionism-progressive",
+        "antizionism-academy"
+      ],
+      "reference": "Lekht, Naya. \"Where the Soviets Won.\" Sapir, Volume 22, Summer 2026.",
+      "author": "Naya Lekht",
+      "url": "https://sapirjournal.org/influence/2026/where-the-soviets-won/",
       "year": 2026
     }
   ]
