@@ -28,6 +28,8 @@ When in doubt between "not_relevant" and anything else, do not choose "not_relev
 
 relevance_reason: one sentence explaining the relevance judgment.
 
+too_thin: true if the post is too brief or slight to stand alone as a library resource, e.g. a teaser, a short note pointing elsewhere, or a few lines reacting to a link; false for a short but complete argument or report.
+
 roundup: true if the post is mainly a newsletter digest, link roundup, event listing, fundraising appeal, or organizational announcement; false if it is an article, essay, interview, or report with its own substantive content.
 
 tags: {settings.MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most applicable first:
@@ -49,13 +51,14 @@ def _output_schema(tags):
         "properties": {
             "relevance": {"type": "string", "enum": RELEVANCE_VALUES},
             "relevance_reason": {"type": "string"},
+            "too_thin": {"type": "boolean"},
             "roundup": {"type": "boolean"},
             "tags": {"type": "array", "items": {"type": "string", "enum": [t["id"] for t in tags]}},
             "suggested_tags": {"type": "array", "items": {"type": "string"}},
             "stance": {"type": "string"},
             "summary": {"type": "string"},
         },
-        "required": ["relevance", "relevance_reason", "roundup", "tags", "suggested_tags", "stance", "summary"],
+        "required": ["relevance", "relevance_reason", "too_thin", "roundup", "tags", "suggested_tags", "stance", "summary"],
         "additionalProperties": False,
     }
 

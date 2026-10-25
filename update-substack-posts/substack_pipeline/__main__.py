@@ -163,7 +163,7 @@ def _skipped(post, reason):
 
 
 def process(candidates, classifier, errors):
-    """Classified records, plus posts skipped as too short or as roundups/announcements.
+    """Classified records, plus posts skipped as too short, too thin, or roundups/announcements.
 
     --post-url posts are never skipped.
     """
@@ -180,10 +180,13 @@ def process(candidates, classifier, errors):
         except (fetch.FetchError, ClassifyError, ValueError) as exc:
             _record_error(errors, cand.url, cand.url, exc)
             continue
-        if result["roundup"] and not cand.forced:
-            log.info("Skipping, roundup or announcement")
-            skipped.append(_skipped(post, "roundup or announcement"))
-            continue
+        if not cand.forced:
+            reason = ("too thin to be a resource" if result["too_thin"]
+                      else "roundup or announcement" if result["roundup"] else None)
+            if reason:
+                log.info("Skipping, %s", reason)
+                skipped.append(_skipped(post, reason))
+                continue
         records.append({
             "publication": post.publication,
             "title": post.title,
@@ -197,6 +200,7 @@ def process(candidates, classifier, errors):
             "word_count": post.word_count,
             "relevance": result["relevance"],
             "relevance_reason": result["relevance_reason"],
+            "too_thin": result["too_thin"],
             "roundup": result["roundup"],
             "forced": cand.forced,
         })
@@ -213,7 +217,7 @@ def dry_run_report(records, skipped, errors):
     for label, items in groups.items():
         lines += [f"## {label} ({len(items)})", ""]
         for r in items:
-            flags = [f for f, on in (("paywalled", r["paywalled"]), ("roundup", r["roundup"]),
+            flags = [f for f, on in (("paywalled", r["paywalled"]), ("too thin", r["too_thin"]), ("roundup", r["roundup"]),
                                      ("forced", r["forced"])) if on]
             lines += [
                 f"### {r['title']}" + (f" [{', '.join(flags)}]" if flags else ""),
