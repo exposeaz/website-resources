@@ -33,11 +33,6 @@ def parse_args(argv):
                         "(ignoring START_DATE) and write local output only.")
     p.add_argument("--sample", type=int, default=None,
                    help="Override the dry-run sample size.")
-    p.add_argument("--all-posts", action="store_true",
-                   help=f"Ignore START_DATE and read each publication's {settings.ALL_POSTS_LIMIT} most recent "
-                        "posts (ALL_POSTS_LIMIT).")
-    p.add_argument("--no-limit", action="store_true",
-                   help="With --all-posts: read each publication's entire archive.")
     p.add_argument("--post-url", action="append",
                    help="Specific post(s) to force-include; repeatable or comma-separated.")
     p.add_argument("--publication-url",
@@ -79,7 +74,7 @@ def _resolve_publication(url_or_name, configured):
 def _publication_entries(pub, args):
     """(url, date) entries for one publication.
 
-    Dry run: every feed item. --all-posts: archive, capped by ALL_POSTS_LIMIT unless --no-limit.
+    Dry run: every feed item.
     Otherwise: posts on or after START_DATE.
     An unreadable feed falls back to the JSON archive in every mode.
     """
@@ -93,9 +88,6 @@ def _publication_entries(pub, args):
     if not pub.description and description:
         pub.description = description
         log.info("%s: using feed description: %s", pub.name, description)
-    if args.all_posts:
-        limit = None if args.no_limit or settings.ALL_POSTS_LIMIT <= 0 else settings.ALL_POSTS_LIMIT
-        return fetch.archive_entries(pub.url, limit=limit)
     if args.dry_run:
         if entries is None:
             entries = fetch.archive_entries(pub.url, limit=args.sample or settings.DRY_RUN_SAMPLE_SIZE)
@@ -275,8 +267,6 @@ def main(argv=None):
     args = parse_args(argv)
     if args.force and not args.post_url:
         sys.exit("--force only applies with --post-url")
-    if args.no_limit and not args.all_posts:
-        sys.exit("--no-limit only applies with --all-posts")
 
     errors = []
     processed = state.load_processed()

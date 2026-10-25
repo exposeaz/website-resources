@@ -14,12 +14,10 @@ def _env(name, default, cast=str):
 
 
 # --- Fetching ---
-START_DATE = _env("START_DATE", date(2026, 10, 11), date.fromisoformat)
+START_DATE = _env("START_DATE", date(2023, 10, 7), date.fromisoformat)
 REQUEST_DELAY_SECONDS = _env("REQUEST_DELAY_SECONDS", 1.0, float)
 REQUEST_TIMEOUT_SECONDS = _env("REQUEST_TIMEOUT_SECONDS", 30.0, float)
 ARCHIVE_PAGE_SIZE = _env("ARCHIVE_PAGE_SIZE", 50, int)
-# Most recent posts per publication read by --all-posts; 0 = whole archive
-ALL_POSTS_LIMIT = _env("ALL_POSTS_LIMIT", 30, int)
 MAX_RETRIES = _env("MAX_RETRIES", 3, int)
 RETRY_BACKOFF_SECONDS = _env("RETRY_BACKOFF_SECONDS", 5.0, float)
 MAX_TEXT_CHARS = _env("MAX_TEXT_CHARS", 20000, int)
