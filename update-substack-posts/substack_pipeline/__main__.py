@@ -162,12 +162,33 @@ def _skipped(post, reason):
     }
 
 
-def process(candidates, classifier, errors):
+class StateRecorder:
+    """Saves processed.json and articles.json after every post, so an interrupted run resumes."""
+
+    def __init__(self, processed):
+        self.processed = processed
+        self.articles = state.load_articles()
+        self.added = 0
+
+    def __call__(self, record=None, skipped=None):
+        if skipped:
+            self.processed.add(skipped["url"])
+        if record:
+            self.processed.add(record["url"])
+            if record["relevance"] != "not_relevant" or record["forced"]:
+                self.articles = state.merge_articles(self.articles, [record])
+                self.added += 1
+            state.save_articles(self.articles)
+        state.save_processed(self.processed)
+
+
+def process(candidates, classifier, errors, on_done=None):
     """Classified records, plus posts skipped as too short, too thin, or roundups/announcements.
 
-    --post-url posts are never skipped.
+    --post-url posts are never skipped. on_done(record=..., skipped=...) runs after each post.
     """
     records, skipped = [], []
+    on_done = on_done or (lambda **_: None)
     for i, cand in enumerate(candidates, 1):
         log.info("[%d/%d] %s", i, len(candidates), cand.url)
         try:
@@ -175,6 +196,7 @@ def process(candidates, classifier, errors):
             if not cand.forced and post.word_count is not None and post.word_count < settings.MIN_WORD_COUNT:
                 log.info("Skipping, %d words < MIN_WORD_COUNT", post.word_count)
                 skipped.append(_skipped(post, f"under {settings.MIN_WORD_COUNT} words ({post.word_count})"))
+                on_done(skipped=skipped[-1])
                 continue
             result = classifier.classify(post)
         except (fetch.FetchError, ClassifyError, ValueError) as exc:
@@ -186,6 +208,7 @@ def process(candidates, classifier, errors):
             if reason:
                 log.info("Skipping, %s", reason)
                 skipped.append(_skipped(post, reason))
+                on_done(skipped=skipped[-1])
                 continue
         records.append({
             "publication": post.publication,
@@ -204,6 +227,7 @@ def process(candidates, classifier, errors):
             "roundup": result["roundup"],
             "forced": cand.forced,
         })
+        on_done(record=records[-1])
     return records, skipped
 
 
@@ -256,15 +280,11 @@ def main(argv=None):
     processed = state.load_processed()
     candidates = gather_candidates(args, processed, errors)
     log.info("%d posts to classify", len(candidates))
-    records, skipped = process(candidates, Classifier(state.load_tags()), errors)
-
-    if not args.dry_run:
-        # Errors aren't recorded, so those posts are retried next run
-        processed |= {r["url"] for r in records} | {s["url"] for s in skipped}
-        kept = [r for r in records if r["relevance"] != "not_relevant" or r["forced"]]
-        state.save_processed(processed)
-        state.save_articles(state.merge_articles(state.load_articles(), kept))
-        log.info("Recorded %d processed URLs; added %d articles", len(records) + len(skipped), len(kept))
+    # Errors aren't recorded, so those posts are retried next run
+    recorder = None if args.dry_run else StateRecorder(processed)
+    records, skipped = process(candidates, Classifier(state.load_tags()), errors, on_done=recorder)
+    if recorder:
+        log.info("Recorded %d processed URLs; added %d articles", len(records) + len(skipped), recorder.added)
 
     settings.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")

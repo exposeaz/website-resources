@@ -22,8 +22,11 @@ def load_processed():
 
 
 def _write_json(path, data):
+    """Write via a temp file and rename, so an interrupted write never leaves a corrupt file."""
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    tmp.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    tmp.replace(path)
 
 
 def save_processed(urls):
