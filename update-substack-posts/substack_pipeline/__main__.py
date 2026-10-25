@@ -50,15 +50,25 @@ def parse_args(argv):
 
 
 def _resolve_publication(url_or_name, configured):
-    """Configured publication matching this name or host, else name/description from its feed."""
+    """Configured publication matching this name or host, else name/description from its feed.
+
+    An unreadable feed falls back to the host as the name, with no description.
+    """
     for pub in configured:
         if pub.name.lower() == url_or_name.strip().lower():
             return pub
-    key = fetch.base_url(url_or_name if "://" in url_or_name else f"https://{url_or_name}")
+    full = url_or_name if "://" in url_or_name else f"https://{url_or_name}"
+    key = fetch.base_url(full)
+    if full.rstrip("/") != key:
+        log.info("Using publication %s (only the host of %s is used)", key, url_or_name)
     for pub in configured:
         if pub.url == key:
             return pub
-    title, description, _ = fetch.read_feed(key)
+    try:
+        title, description, _ = fetch.read_feed(key)
+    except fetch.FetchError as exc:
+        log.warning("%s; using %s as the publication name", exc, key)
+        title, description = "", ""
     return fetch.Publication(name=title or key, url=key, description=description)
 
 
@@ -67,19 +77,26 @@ def _publication_entries(pub, args):
 
     Dry run: every feed item. --all-posts: archive, capped by ALL_POSTS_LIMIT unless --no-limit.
     Otherwise: posts on or after START_DATE.
+    An unreadable feed falls back to the JSON archive in every mode.
     """
-    _, description, entries = fetch.read_feed(pub.url)
-    if not pub.description:
+    try:
+        _, description, entries = fetch.read_feed(pub.url)
+    except fetch.FetchError as exc:
+        log.warning("%s: %s; using the JSON archive instead", pub.name, exc)
+        description, entries = "", None
+    if not pub.description and description:
         pub.description = description
         log.info("%s: using feed description: %s", pub.name, description)
-    if args.dry_run and not args.all_posts:
-        return entries
     if args.all_posts:
         limit = None if args.no_limit or settings.ALL_POSTS_LIMIT <= 0 else settings.ALL_POSTS_LIMIT
         return fetch.archive_entries(pub.url, limit=limit)
+    if args.dry_run:
+        if entries is None:
+            entries = fetch.archive_entries(pub.url, limit=args.sample or settings.DRY_RUN_SAMPLE_SIZE)
+        return entries
     # The feed holds only recent items; page the archive when it may not reach START_DATE
-    oldest = min((d for _, d in entries if d), default=None)
-    if entries and oldest and oldest >= settings.START_DATE:
+    oldest = min((d for _, d in entries or [] if d), default=None)
+    if entries is None or (entries and oldest and oldest >= settings.START_DATE):
         entries = fetch.archive_entries(pub.url, since=settings.START_DATE)
     return [(u, d) for u, d in entries if d and d >= settings.START_DATE]
 
@@ -99,10 +116,7 @@ def gather_candidates(args, processed, errors):
             errors.append({"url": url, "error": str(exc)})
 
     if args.publication_url:
-        try:
-            pubs = [_resolve_publication(args.publication_url, configured)]
-        except fetch.FetchError as exc:
-            sys.exit(f"Unknown publication {args.publication_url!r}: {exc}")
+        pubs = [_resolve_publication(args.publication_url, configured)]
     elif post_urls:
         pubs = []
     else:
