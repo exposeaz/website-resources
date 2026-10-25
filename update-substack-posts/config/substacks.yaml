@@ -77,3 +77,16 @@
 - name: Melissa Brodsky
   url: https://melissabrodsky.substack.com
   description: ""
+
+# TODO: confirm names; descriptions fall back to each feed's own until filled in
+- name: bflayton
+  url: https://bflayton.substack.com
+  description: ""
+
+- name: Marcia Kupfer
+  url: https://marciakupfer.substack.com
+  description: ""
+
+- name: pat604johnson
+  url: https://pat604johnson.substack.com
+  description: ""
