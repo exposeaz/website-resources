@@ -37,8 +37,8 @@
       "label": "Soviet antizionism"
     },
     {
-      "id": "post-oct-7",
-      "label": "Post-October 7"
+      "id": "oct7",
+      "label": "October 7th"
     },
     {
       "id": "genocide-libel",
@@ -574,7 +574,7 @@
       "category": "essays",
       "description": "An Australian writer on politics and Jewish affairs argues that antizionism, rather than traditional far-right antisemitism, has become the primary vector of anti-Jewish hostility today.",
       "tags": [
-        "post-oct-7",
+        "oct7",
         "antizionism"
       ],
       "reference": "Dabelstein, Joshua. \"The Greatest Threat to Jewish Safety Has a New Name.\" Australian Financial Review.",
@@ -697,7 +697,7 @@
       "category": "data-research",
       "description": "A data study finding that antizionist views correlate with a broader \"moral inversion\" — a systematic tendency to misjudge or invert the actual human-rights records of authoritarian versus democratic states.",
       "tags": [
-        "post-oct-7"
+        "oct7"
       ],
       "reference": "Dulberg, Zack, et al. Moral Inversion and the Rise of Authoritarian Sympathy. Rutgers University Social Perception Lab / Network Contagion Research Institute.",
       "author": "Zack Dulberg et al.",
@@ -722,7 +722,7 @@
       "category": "books",
       "description": "A follow-up to Horn's People Love Dead Jews, drawing on her post-October 7 work advising Harvard, the White House, and Congress; diagnoses failures of Holocaust education and the long history of antizionism, and proposes a path forward.",
       "tags": [
-        "post-oct-7"
+        "oct7"
       ],
       "reference": "Horn, Dara. The Final Solution to the Jewish Question: A Love Story for the Living. Simon & Schuster, 2026.",
       "author": "Dara Horn",
@@ -882,7 +882,7 @@
       "category": "substacks",
       "description": "Original watchdog reporting on Jewish issues, helping readers make sense of the post-October 7 world.",
       "tags": [
-        "post-oct-7",
+        "oct7",
         "media-commentary"
       ],
       "reference": "Deutsch, Kevin. After October 7 (Substack).",
