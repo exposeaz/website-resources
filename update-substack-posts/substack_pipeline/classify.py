@@ -25,10 +25,10 @@ def _system_prompt(tags):
     return f"""You review Substack posts for a nonprofit's resource library on antizionism.
 
 Relevance:
-- "relevant": antizionism (its ideology, rhetoric, history, institutions, or responses to it) is a topic of the post, even loosely or in passing.
-- "unsure": you cannot tell whether the post touches on antizionism.
+- "relevant": antizionism (its ideology, rhetoric, history, institutions, or responses to it) is a substantial topic of the post.
+- "unsure": antizionism comes up only in passing or as background to another subject (e.g. Israeli politics or security, antisemitism generally, Jewish identity), or you cannot tell. A human will review these.
 - "not_relevant": the post has no connection to antizionism at all.
-When in doubt between "not_relevant" and anything else, do not choose "not_relevant".
+When in doubt, choose "unsure".
 
 relevance_reason: one sentence explaining the relevance judgment.
 
@@ -36,14 +36,14 @@ too_thin: true if the post is too brief or slight to stand alone as a library re
 
 roundup: true if the post is mainly a newsletter digest, link roundup, event listing, fundraising appeal, or organizational announcement; false if it is an article, essay, interview, or report with its own substantive content.
 
-tags: {settings.MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most applicable first:
+tags: {settings.MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most applicable first. Be generous: include every tag that plausibly applies.
 {vocab}
 
-suggested_tags: up to {settings.MAX_SUGGESTED_TAGS} broad themes the vocabulary above does not cover, that could apply to many posts and would be useful as a filter in a resource library. Not details specific to this post (people, events, documents, or one-off arguments). Empty if none. Never repeat a vocabulary tag.
+suggested_tags: up to {settings.MAX_SUGGESTED_TAGS} broad themes the vocabulary above does not cover, that could apply to many posts and would be useful as a filter in a resource library. Be generous; a human curates them. Not details specific to this post (people, events, documents, or one-off arguments). Never repeat a vocabulary tag.
 
 stance: a short phrase describing the author's position, e.g. "critical of X" or "news report, no clear position".
 
-summary: {settings.SUMMARY_MIN_SENTENCES} to {settings.SUMMARY_MAX_SENTENCES} sentences on what the author argues or reports, attributed to the author ("The author argues..."). Neutral wording; do not evaluate the argument.
+summary: {settings.SUMMARY_MIN_SENTENCES} to {settings.SUMMARY_MAX_SENTENCES} sentences on what the author argues or reports, attributed to the author ("The author argues..."). Neutral wording; do not evaluate the argument. Do not mention paywalls, previews, or missing text; the summary is published as is.
 
 If the text is only a paywalled preview, judge from what is available."""
 

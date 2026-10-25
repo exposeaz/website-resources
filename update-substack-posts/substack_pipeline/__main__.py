@@ -158,6 +158,7 @@ def _skipped(post, reason):
         "title": post.title,
         "url": state.normalize_url(post.url),
         "word_count": post.word_count,
+        "paywalled": post.paywalled,
         "reason": reason,
     }
 
@@ -203,7 +204,8 @@ def process(candidates, classifier, errors, on_done=None):
             _record_error(errors, cand.url, cand.url, exc)
             continue
         if not cand.forced:
-            reason = ("too thin to be a resource" if result["too_thin"]
+            # A paywalled preview always looks thin; its word count (full post) already passed the floor
+            reason = ("too thin to be a resource" if result["too_thin"] and not post.paywalled
                       else "roundup or announcement" if result["roundup"] else None)
             if reason:
                 log.info("Skipping, %s", reason)
@@ -290,10 +292,10 @@ def main(argv=None):
         log.info("Recorded %d processed URLs; added %d articles", len(records) + len(skipped), recorder.added)
 
     settings.OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
-    prefix = "dry-run" if args.dry_run else "run"
-    json_path = settings.OUTPUT_DIR / f"{prefix}-{stamp}.json"
-    md_path = settings.OUTPUT_DIR / f"{prefix}-{stamp}.md"
+    # One file per day and kind; a later run the same day overwrites it
+    stem = f"{datetime.now(timezone.utc):%Y-%m-%d}-{'dry-run' if args.dry_run else 'run'}"
+    json_path = settings.OUTPUT_DIR / f"{stem}.json"
+    md_path = settings.OUTPUT_DIR / f"{stem}.md"
     json_path.write_text(json.dumps({"records": records, "skipped": skipped, "errors": errors}, indent=2, ensure_ascii=False) + "\n")
     md_path.write_text(run_report("Dry run" if args.dry_run else "Run", records, skipped, errors))
     log.info("Wrote %s and %s", json_path, md_path)
