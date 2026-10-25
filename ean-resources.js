@@ -11,11 +11,14 @@
   var SUBSTACK_CATEGORY = "substacks";
   var ARTICLE_CATEGORY = "substack-articles";
   var LAYOUT_KEY = "ean-layout";
+  // Results are shown this many at a time, with a "Show more" button for the next batch
+  var PAGE_SIZE = 20;
 
   var root = document.getElementById("ean-resources-root");
   var state = {
     data: null, view: "categories", categoryId: null, substackId: null,
-    search: "", activeTags: [], tagMode: "any", modalResourceId: null, layout: loadLayout()
+    search: "", activeTags: [], tagMode: "any", modalResourceId: null, layout: loadLayout(),
+    shown: PAGE_SIZE, pageKey: null
   };
 
   // Card/list choice is remembered per visitor; storage can be unavailable
@@ -57,12 +60,6 @@
     }
     return r.author;
   }
-
-  // Categories whose single-category view sorts newest-year-first, in one
-  // flat grid (no visual year sections/headers — same layout as every
-  // other category). Substacks is deliberately excluded (see
-  // renderCategoryResources) — it stays alphabetical instead.
-  var YEAR_SORTED_CATEGORIES = ["books", "scholarly-articles", "essays", "legal-commentary", "data-research"];
 
   function esc(s) {
     return (s || "").replace(/[&<>"']/g, function (c) {
@@ -222,11 +219,16 @@
 
   // Cards (masonry grid) or list, per the visitor's layout choice
   function renderItems(items) {
-    items = rankByTagMatches(items);
-    if (state.layout === "list") {
-      return '<div class="ean-res-list">' + items.map(renderResourceRow).join('') + '</div>';
+    var total = items.length;
+    items = rankByTagMatches(items).slice(0, state.shown);
+    var html = state.layout === "list"
+      ? '<div class="ean-res-list">' + items.map(renderResourceRow).join('') + '</div>'
+      : '<div class="ean-res-grid">' + items.map(renderResourceCard).join('') + '</div>';
+    if (total > items.length) {
+      html += '<div class="ean-show-more-wrap"><button type="button" class="ean-show-more" data-show-more="1">' +
+        'Show more</button><span>Showing ' + items.length + ' of ' + total + '</span></div>';
     }
-    return '<div class="ean-res-grid">' + items.map(renderResourceCard).join('') + '</div>';
+    return html;
   }
 
   // No image here deliberately — the modal is the reading view, so it
@@ -261,24 +263,12 @@
     return html;
   }
 
-  // Renders the resources for a single category view: one flat grid,
-  // always — just sorted differently depending on the category. No visual
-  // year sections/headers anymore; year still shows on each card itself.
+  // A single category: Substack cards alphabetical (they're publications,
+  // not dated pieces); everything else newest first.
   function renderCategoryResources(categoryId, items) {
-    var sorted = items;
-    if (categoryId === "substacks") {
-      sorted = items.slice().sort(function (a, b) {
-        return a.title.localeCompare(b.title);
-      });
-    } else if (YEAR_SORTED_CATEGORIES.indexOf(categoryId) !== -1) {
-      // Newest year first; undated resources sink to the end.
-      sorted = items.slice().sort(function (a, b) {
-        if (a.year == null && b.year == null) return 0;
-        if (a.year == null) return 1;
-        if (b.year == null) return -1;
-        return b.year - a.year;
-      });
-    }
+    var sorted = items.slice().sort(categoryId === SUBSTACK_CATEGORY
+      ? function (a, b) { return a.title.localeCompare(b.title); }
+      : byNewest);
     return renderItems(sorted);
   }
 
@@ -303,6 +293,12 @@
   }
 
   function render() {
+    // A new listing (view, search or tags changed) starts again from the first page
+    var pageKey = JSON.stringify([state.view, state.categoryId, state.substackId, state.search, state.activeTags, state.tagMode]);
+    if (pageKey !== state.pageKey) {
+      state.pageKey = pageKey;
+      state.shown = PAGE_SIZE;
+    }
     var filtering = state.search.trim() !== "" || state.activeTags.length > 0;
     var html = renderToolbar();
 
@@ -321,11 +317,8 @@
         ? renderCategoryResources(state.categoryId, items)
         : '<div class="ean-empty">' + (filtering ? 'No resources match your filters in this category.' : 'No resources in this category yet.') + '</div>';
     } else if (filtering) {
-      // Flat grid, not year-sectioned: this view spans multiple categories
-      // and is ranked by search/filter relevance, not chronology.
-      // NOTE: assumption made during planning, not a confirmed requirement —
-      // revisit with the user if year-sectioning turns out to be wanted here too.
-      var results = state.data.resources.filter(matchesFilters);
+      // Newest first; in "match any" mode, more matching tags still come first
+      var results = state.data.resources.filter(matchesFilters).sort(byNewest);
       html += '<div class="ean-crumb">' + results.length + ' result' + (results.length === 1 ? '' : 's') + '</div>';
       html += results.length
         ? renderItems(results)
@@ -429,6 +422,13 @@
         render();
       });
     });
+    var more = root.querySelector("[data-show-more]");
+    if (more) {
+      more.addEventListener("click", function () {
+        state.shown += PAGE_SIZE;
+        render();
+      });
+    }
     root.querySelectorAll("[data-tagmode]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         state.tagMode = btn.getAttribute("data-tagmode");
