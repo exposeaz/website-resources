@@ -117,7 +117,7 @@
       "tags": [],
       "reference": "Améry, Jean. At the Mind's Limits. 1966.",
       "author": "Jean Améry",
-      "url": null,
+      "url": "https://yale.imodules.com/s/1667/images/gid6/editor_documents/yacolf22/hiding_god/wk5_jean_amery__torture_.pdf",
       "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/1966-amery.png",
       "year": 1966
     },
@@ -155,7 +155,7 @@
       "tags": [],
       "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1965–1977.",
       "author": "Leon Poliakov",
-      "url": null,
+      "url": "https://www.pennpress.org/9780812218633/the-history-of-anti-semitism-volume-1",
       "year": 1977
     },
     {
@@ -196,21 +196,21 @@
       ],
       "reference": "Wistrich, Robert S. (ed.). The Left against Zion. Vallentine, Mitchell, 1979.",
       "author": "Robert S. Wistrich (ed.)",
-      "url": null,
+      "url": "https://www.pen-and-sword.co.uk/The-Left-Against-Zion-Hardback/p/55936",
       "year": 1979
     },
     {
       "id": "wistrich-ambivalence-to-betrayal-chapter",
-      "title": "From Ambivalence to Betrayal: The Left, the Jews, and Israel (essay)",
+      "title": "From Ambivalence to Betrayal: The Left, the Jews, and Israel",
       "category": "books",
       "description": "Traces the European left's shift from ambivalence toward, to eventual hostility against, Jewish nationalism, foreshadowing Wistrich's larger 2012 book of a similar title.",
       "tags": [
         "antizionism-progressive"
       ],
-      "reference": "Wistrich, Robert S. \"From Ambivalence to Betrayal: The Left, the Jews, and Israel.\" In Anti-Zionism and Antisemitism in the Contemporary World, 2009.",
+      "reference": "Wistrich, Robert S. From Ambivalence to Betrayal: The Left, the Jews, and Israel. University of Nebraska Press, 2012.",
       "author": "Robert S. Wistrich",
-      "url": null,
-      "year": 2009
+      "url": "https://www.nebraskapress.unl.edu/nebraska/9780803240766/from-ambivalence-to-betrayal/",
+      "year": 2012
     },
     {
       "id": "wistrich-lethal-obsession",
@@ -223,7 +223,7 @@
       ],
       "reference": "Wistrich, Robert S. A Lethal Obsession. Random House, 2010.",
       "author": "Robert S. Wistrich",
-      "url": null,
+      "url": "https://www.penguinrandomhouse.com/books/192601/a-lethal-obsession-by-robert-s-wistrich",
       "image": "https://covers.openlibrary.org/b/isbn/1400060974-M.jpg",
       "year": 2010
     },
@@ -237,7 +237,7 @@
       ],
       "reference": "Levin, Nora. The Jews in the Soviet Union Since 1917: Paradox of Survival. NYU Press, 1988.",
       "author": "Nora Levin",
-      "url": null,
+      "url": "https://archive.org/details/jewsinsovietunio0000levi",
       "year": 1988
     },
     {
@@ -252,7 +252,7 @@
       ],
       "reference": "Hirsh, David. Contemporary Left Antisemitism. Routledge, 2017.",
       "author": "David Hirsh",
-      "url": null,
+      "url": "https://www.routledge.com/Contemporary-Left-Antisemitism/Hirsh/p/book/9781138235311",
       "image": "https://covers.openlibrary.org/b/isbn/9781138235311-M.jpg",
       "year": 2017
     },
@@ -266,7 +266,7 @@
       ],
       "reference": "Kirschbaum-Shirazki, Olga. From Antizionism to a New Middle East. 2026.",
       "author": "Olga Kirschbaum-Shirazki",
-      "url": null,
+      "url": "https://www.amazon.com/dp/B0GPH35CZB",
       "year": 2026
     },
     {
@@ -294,7 +294,7 @@
       ],
       "reference": "Marcus, Kenneth L. \"Anti-Zionism & Anti-Semitism.\" In The Definition of Anti-Semitism, 146–190. Oxford University Press, 2015.",
       "author": "Kenneth L. Marcus",
-      "url": null,
+      "url": "https://academic.oup.com/book/6002/chapter/149389717",
       "year": 2015
     },
     {
@@ -747,7 +747,7 @@
       "reference": "Nirenberg, David. Anti-Judaism: The Western Tradition. W.W. Norton & Co., 2013.",
       "author": "David Nirenberg",
       "image": "https://covers.openlibrary.org/b/isbn/9780393058246-M.jpg",
-      "url": null,
+      "url": "https://www.amazon.com/dp/0393058247",
       "year": 2013
     },
     {
@@ -761,7 +761,7 @@
       "reference": "Horn, Dara. The Final Solution to the Jewish Question: A Love Story for the Living. Simon & Schuster, 2026.",
       "author": "Dara Horn",
       "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/final-solution-dara-horn.png",
-      "url": null,
+      "url": "https://www.simonandschuster.net/books/The-Final-Solution-to-the-Jewish-Question/Dara-Horn/9781668090169",
       "year": 2026
     },
     {
@@ -776,7 +776,7 @@
       "reference": "Tabarovsky, Izabella. Be a Refusenik: A Jewish Student's Survival Guide. Wicked Son, 2025.",
       "author": "Izabella Tabarovsky",
       "image": "https://covers.openlibrary.org/b/isbn/9798888458921-M.jpg",
-      "url": null,
+      "url": "https://www.jewishbookcouncil.org/book/be-a-refusenik-a-jewish-students-survival-guide",
       "year": 2025
     },
     {
