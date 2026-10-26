@@ -19,7 +19,7 @@
   {"id": "bds", "label": "BDS and Boycotts"},
   {"id": "advocacy", "label": "Advocacy"},
   {"id": "media-commentary", "label": "Media bias"},
-  {"id": "legal-public-affairs", "label": "Legal & Public-Affairs Commentary"},
+  {"id": "legal-public-affairs", "label": "Legal & public affairs"},
   {"id": "data-research", "label": "Data & Research"},
   {"id": "news", "label": "News"}
 ]

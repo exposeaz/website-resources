@@ -21,11 +21,6 @@
       "blurb": "Analysis and opinion writing on antizionism as ideology and political culture."
     },
     {
-      "id": "legal-commentary",
-      "label": "Legal & Public-Affairs Commentary",
-      "blurb": "Legal analysis and public commentary on antizionism and discrimination."
-    },
-    {
       "id": "substacks",
       "label": "Substacks",
       "blurb": "Independent newsletters covering antizionism, antisemitism, and Jewish identity."
@@ -106,7 +101,7 @@
     },
     {
       "id": "legal-public-affairs",
-      "label": "Legal & Public-Affairs Commentary"
+      "label": "Legal & public affairs"
     },
     {
       "id": "antizionism-arts",
@@ -136,7 +131,7 @@
       "category": "books",
       "description": "A posthumous English-language collection gathering Jean Améry's essays confronting antisemitism and antizionism, including his writings on the political currents of the postwar European left.",
       "tags": [
-        "antizionism"
+        "antizionism-progressive"
       ],
       "reference": "Améry, Jean. Essays on Antisemitism, Anti-Zionism, and the Left. Edited by Marlene Gallner. Translated by Louise Fischer. Indiana University Press, 2021.",
       "author": "Jean Améry",
@@ -201,8 +196,7 @@
       "category": "books",
       "description": "An edited volume examining the Soviet bloc's turn against Israel after 1967 and the antisemitic character much of that \"anti-Zionist\" campaign took on.",
       "tags": [
-        "soviet-antizionism",
-        "antizionism"
+        "soviet-antizionism"
       ],
       "reference": "Wistrich, Robert S. (ed.). The Left against Zion. Vallentine, Mitchell, 1979.",
       "author": "Robert S. Wistrich (ed.)",
@@ -215,7 +209,7 @@
       "category": "books",
       "description": "Traces the European left's shift from ambivalence toward, to eventual hostility against, Jewish nationalism, foreshadowing Wistrich's larger 2012 book of a similar title.",
       "tags": [
-        "antizionism"
+        "antizionism-progressive"
       ],
       "reference": "Wistrich, Robert S. \"From Ambivalence to Betrayal: The Left, the Jews, and Israel.\" In Anti-Zionism and Antisemitism in the Contemporary World, 2009.",
       "author": "Robert S. Wistrich",
@@ -229,7 +223,7 @@
       "description": "A sweeping single-volume history of antisemitism \"from antiquity to the global jihad,\" ending with chapters connecting the Soviet war on Zionism and contemporary jihadist and left-wing antisemitism to older Judeophobic traditions.",
       "tags": [
         "soviet-antizionism",
-        "antizionism"
+        "antizionism-progressive"
       ],
       "reference": "Wistrich, Robert S. A Lethal Obsession. Random House, 2010.",
       "author": "Robert S. Wistrich",
@@ -298,8 +292,8 @@
       "category": "scholarly-articles",
       "description": "From the book examining how the U.S. civil-rights framework (Title VI) can and should apply to campus antisemitism, including where anti-Israel activism shades into discrimination against Jewish students.",
       "tags": [
-        "antizionism",
-        "campus"
+        "campus",
+        "legal-public-affairs"
       ],
       "reference": "Marcus, Kenneth L. \"Anti-Zionism & Anti-Semitism.\" In The Definition of Anti-Semitism, 146–190. Oxford University Press, 2015.",
       "author": "Kenneth L. Marcus",
@@ -363,8 +357,7 @@
       "category": "scholarly-articles",
       "description": "Traces how Soviet-era \"anti-Zionist\" propaganda campaigns (1967–88) built a conspiracist, demonizing template for talking about Israel that Tabarovsky argues has been absorbed largely intact into today's left-wing discourse.",
       "tags": [
-        "soviet-antizionism",
-        "antizionism"
+        "soviet-antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Demonization Blueprints: Soviet Conspiracist Antizionism in Contemporary Left-Wing Discourse.\" Journal of Contemporary Antisemitism, vol. 5, no. 1, 2022, pp. 1-20.",
       "author": "Izabella Tabarovsky",
@@ -377,7 +370,6 @@
       "category": "scholarly-articles",
       "description": "A shorter companion piece to Wistrich's From Ambivalence to Betrayal, dissecting the intellectual myths (Zionism as racism, colonialism, imperialism) that underpin the contemporary left's hostility to Israel.",
       "tags": [
-        "antizionism",
         "colonizer-libel",
         "apartheid-libel"
       ],
@@ -460,7 +452,8 @@
       "category": "essays",
       "description": "Makes the case, aimed at a left-leaning audience, that opposing antizionism is consistent with — not opposed to — progressive values.",
       "tags": [
-        "antizionism"
+        "antizionism-progressive",
+        "advocacy"
       ],
       "reference": "Louis-Klein, Adam. \"The Left-Wing Case Against Anti-Zionism.\" The Atlantic.",
       "author": "Adam Louis-Klein",
@@ -487,8 +480,7 @@
       "category": "essays",
       "description": "Discussion of how Soviet-origin antizionist tropes, long assumed dead, keep resurfacing largely unchanged in Western left-wing discourse.",
       "tags": [
-        "soviet-antizionism",
-        "antizionism"
+        "soviet-antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Zombie Antizionism.\" Tablet Magazine.",
       "author": "Izabella Tabarovsky",
@@ -501,8 +493,7 @@
       "category": "essays",
       "description": "Lays out how the USSR's Cold War-era antizionist propaganda apparatus supplied the conspiratorial vocabulary and imagery still used against Israel and Zionism today.",
       "tags": [
-        "soviet-antizionism",
-        "antizionism"
+        "soviet-antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Soviet Antizionism and Contemporary Left Antisemitism.\" Fathom Journal.",
       "author": "Izabella Tabarovsky",
@@ -658,10 +649,11 @@
     {
       "id": "kaufman-antizionism-not-antisemitism",
       "title": "Antizionism Is Not Antisemitism",
-      "category": "legal-commentary",
+      "category": "essays",
       "description": "Argues that treating antizionism as one species of \"antisemitism\" undersells it as its own freestanding ideology of Jew-hatred.",
       "tags": [
-        "antizionism"
+        "antizionism",
+        "legal-public-affairs"
       ],
       "reference": "Kaufman, Rona. \"Antizionism Is Not Antisemitism.\" The Times of Israel Blogs.",
       "author": "Rona Kaufman",
@@ -671,11 +663,11 @@
     {
       "id": "kaufman-court-is-wrong",
       "title": "The Court Is Wrong: Antizionism Is Discriminatory",
-      "category": "legal-commentary",
+      "category": "essays",
       "description": "Argues that a specific court ruling wrongly treated antizionist conduct as protected political speech rather than as discriminatory conduct against Jewish people.",
       "tags": [
-        "antizionism",
-        "campus"
+        "campus",
+        "legal-public-affairs"
       ],
       "reference": "Kaufman, Rona. \"The Court Is Wrong: Antizionism Is Discriminatory.\" The Times of Israel Blogs.",
       "author": "Rona Kaufman",
@@ -685,10 +677,11 @@
     {
       "id": "martin-antizionist-movement-hate-movement",
       "title": "The Antizionist Movement Is a Hate Movement: It's Time to Say So",
-      "category": "legal-commentary",
+      "category": "essays",
       "description": "Written after the 2025 Bondi Beach Hanukkah attack in Australia, argues — using the Southern Poverty Law Center's own definition of an antisemitic hate group — that the antizionist movement now meets that standard.",
       "tags": [
-        "antizionism"
+        "antizionism",
+        "legal-public-affairs"
       ],
       "reference": "Martin, Andrea J. \"The Antizionist Movement Is a Hate Movement: It's Time to Say So.\" The Times of Israel Blogs.",
       "author": "Andrea J. Martin",
@@ -698,11 +691,11 @@
     {
       "id": "martin-when-courts-minimize-terrorism",
       "title": "When Courts Minimize Terrorism, Jewish Students Pay the Price",
-      "category": "legal-commentary",
+      "category": "essays",
       "description": "Argues that courts downplaying pro-terror conduct on campus leaves Jewish students unprotected under civil-rights law.",
       "tags": [
-        "antizionism",
-        "campus"
+        "campus",
+        "legal-public-affairs"
       ],
       "reference": "Martin, Andrea J. \"When Courts Minimize Terrorism, Jewish Students Pay the Price.\" The Times of Israel Blogs.",
       "author": "Andrea J. Martin",
@@ -712,11 +705,12 @@
     {
       "id": "wilf-bds-pound-of-flesh",
       "title": "The BDS Pound of Flesh",
-      "category": "legal-commentary",
+      "category": "essays",
       "description": "A former Israeli MK argues that BDS-style campaigns to publicly shame students into disavowing Israel are a deliberate strategy to raise the \"psychic and professional cost\" of being Jewish.",
       "tags": [
         "bds",
-        "campus"
+        "campus",
+        "legal-public-affairs"
       ],
       "reference": "Wilf, Einat. \"The BDS Pound of Flesh.\" Tablet Magazine.",
       "author": "Einat Wilf",
@@ -1070,7 +1064,6 @@
       "description": "Argues that Soviet state antizionism collapsed with the USSR because the Soviet intelligentsia recognized it as official propaganda, while in the West the same educated class embraced it voluntarily after it arrived in the 1960s–70s attached to the language of antiracism. Calls for reforming American education so that antisemitism is no longer taught only as a form of racial hatred.",
       "tags": [
         "soviet-antizionism",
-        "antizionism",
         "antizionism-progressive",
         "antizionism-academy"
       ],
