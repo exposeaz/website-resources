@@ -323,15 +323,23 @@
         ? renderItems(results)
         : '<div class="ean-empty">No resources match your filters.</div>';
     } else {
-      html += '<div class="ean-cat-grid">';
+      var asList = state.layout === "list";
+      html += asList ? '<div class="ean-res-list">' : '<div class="ean-cat-grid">';
       state.data.categories.forEach(function (c) {
         if (c.id === ARTICLE_CATEGORY) return;
         var count = state.data.resources.filter(function (r) { return r.category === c.id; }).length;
-        html += '<div class="ean-cat-card" data-cat="' + c.id + '">';
-        html += '<h3>' + esc(c.label) + '</h3>';
-        html += '<p>' + esc(c.blurb || '') + '</p>';
-        html += '<div class="ean-cat-count">' + count + ' resource' + (count === 1 ? '' : 's') + '</div>';
-        html += '</div>';
+        var countHtml = '<div class="ean-cat-count">' + count + ' resource' + (count === 1 ? '' : 's') + '</div>';
+        if (asList) {
+          html += '<div class="ean-res-row ean-cat-row" data-cat="' + c.id + '">';
+          html += '<div class="ean-res-row-main"><h4>' + esc(c.label) + '</h4>';
+          if (c.blurb) html += '<div class="ean-res-row-meta">' + esc(c.blurb) + '</div>';
+          html += '</div>' + countHtml + '</div>';
+        } else {
+          html += '<div class="ean-cat-card" data-cat="' + c.id + '">';
+          html += '<h3>' + esc(c.label) + '</h3>';
+          html += '<p>' + esc(c.blurb || '') + '</p>';
+          html += countHtml + '</div>';
+        }
       });
       html += '</div>';
     }
@@ -414,7 +422,7 @@
         render();
       });
     }
-    root.querySelectorAll(".ean-cat-card").forEach(function (card) {
+    root.querySelectorAll("[data-cat]").forEach(function (card) {
       card.addEventListener("click", function () {
         state.view = "category";
         state.categoryId = card.getAttribute("data-cat");
@@ -462,7 +470,7 @@
       });
     }
     // A Substack card opens its curated articles, or the Substack itself when it has none
-    root.querySelectorAll(".ean-res-card, .ean-res-row").forEach(function (card) {
+    root.querySelectorAll(".ean-res-card, .ean-res-row:not(.ean-cat-row)").forEach(function (card) {
       card.addEventListener("click", function () {
         var r = resourceById(card.getAttribute("data-res"));
         if (r.category === SUBSTACK_CATEGORY) {

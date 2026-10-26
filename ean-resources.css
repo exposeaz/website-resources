@@ -24,6 +24,7 @@
     --ean-card-image-bg: rgba(59,53,45,.05);    /* field behind fallback icon when no image is set */
     --ean-modal-bg: #F7F5F0;                    /* Parchment — detail popup background */
     --ean-modal-text: #3B352D;                  /* Armadillo — detail popup text */
+    --ean-input-text: #3B352D;                  /* Armadillo — search box text and placeholder */
     width: 100%;
   }
   #ean-resources-root * { box-sizing: border-box; }
@@ -50,25 +51,26 @@
   .ean-search {
     flex: 1 1 240px;
     padding: 0.6em 0.9em;
-    border: 1px solid var(--ean-border);
+    border: 1px solid var(--ean-border-strong);
     border-radius: 6px;
     font: inherit;
-    color: inherit;
+    color: var(--ean-input-text);
     background: transparent;
   }
+  .ean-search::placeholder { color: var(--ean-input-text); opacity: 0.7; }
   .ean-search:focus { outline: 2px solid var(--ean-highlight); outline-offset: 1px; }
   .ean-clear-btn {
     flex: 0 0 auto;
     padding: 0.6em 1em;
-    border: 1px solid var(--ean-border);
+    border: 1px solid var(--ean-border-strong);
     border-radius: 6px;
     font: inherit;
-    color: inherit;
+    color: var(--ean-input-text);
     background: transparent;
     cursor: pointer;
     transition: border-color .15s ease;
   }
-  .ean-clear-btn:hover { border-color: var(--ean-border-strong); }
+  .ean-clear-btn:hover { border-color: var(--ean-input-text); }
 
   /* Settings switches (Cards/List, Match any/all): a joined button pair,
      styled apart from the round tag pills so they read as settings */
@@ -129,8 +131,8 @@
   }
 
   .ean-crumb {
-    font-size: 0.9em;
-    opacity: 0.75;
+    font-size: 1.05em;
+    font-weight: 600;
     margin-bottom: 16px;
   }
   .ean-crumb-link {
@@ -149,14 +151,12 @@
     border-radius: 8px;
     padding: 20px;
     cursor: pointer;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    transition: box-shadow .18s ease, border-color .18s ease;
   }
   .ean-cat-card:hover {
     border-color: var(--ean-highlight);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.10);
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
   }
-  .ean-cat-card:active { transform: translateY(-1px); }
   .ean-cat-card h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.25; }
   .ean-cat-card p { margin: 0 0 10px; opacity: 0.75; font-size: 0.9em; }
   .ean-cat-count { font-size: 0.8em; opacity: 0.6; }
@@ -183,12 +183,11 @@
     overflow: hidden;
     cursor: pointer;
     position: absolute;
-    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    transition: box-shadow .18s ease, border-color .18s ease;
   }
   .ean-res-card:hover {
     border-color: var(--ean-highlight);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(0,0,0,.10);
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
   }
   .ean-res-image {
     margin: -16px -16px 12px -16px;
@@ -290,6 +289,8 @@
   .ean-res-row h4 { margin: 0; font-size: 0.92rem; font-weight: 600; line-height: 1.35; }
   .ean-res-row-meta { font-size: 0.85em; opacity: 0.7; margin-top: 2px; }
   .ean-res-row .ean-res-tags { flex: 0 1 auto; justify-content: flex-end; margin-top: 0; }
+  .ean-cat-row h4 { font-size: 1rem; }
+  .ean-cat-row .ean-cat-count { flex: 0 0 auto; }
 
   /* Header above one Substack's curated articles */
   .ean-substack-head {
