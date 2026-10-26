@@ -31,16 +31,14 @@ Source for a filterable, searchable resource-library widget embedded on a nonpro
 
 This repo is **not** deployed via GitHub Pages, a build step, or any framework. It's served as-is, directly from GitHub, via **jsDelivr's free CDN** (`cdn.jsdelivr.net/gh/exposeaz/website-resources@main/<file>`), which mirrors any public GitHub repo automatically with zero configuration.
 
-A tiny, permanent snippet is pasted once into a Squarespace Code Block on the live site:
-
-```html
-<div id="ean-resources-root"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/ean-resources.css">
-<script src="https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/ean-resources.js"></script>
-```
+A small, permanent snippet (`squarespace-stub.html`) is pasted once into a Squarespace Code Block on the live site.
+It asks the GitHub API for the latest commit on `main` and loads `ean-resources.css`, `ean-resources.js`, and `data.json` from jsDelivr pinned to that commit (`@<sha>`), passing the base URL to the JS as `window.EAN_RESOURCES_BASE`.
+If the API call fails, it falls back to `@main`.
 
 That stub should **never need to change**. Every content or styling change happens by editing files in this repo and pushing — Squarespace is never touched again for routine updates.
 
-**Caching caveat:** jsDelivr caches files, so a push doesn't show up instantly. A GitHub Action (`.github/workflows/purge-jsdelivr.yml`) auto-purges the cache on every push to `main` that touches the three live files. It can also be triggered manually from the Actions tab. Even after a successful purge, the *browser* may still show a stale cached copy — a hard reload or incognito window is the reliable way to verify a change actually landed.
+**Caching caveat:** jsDelivr's `@main` URLs can stay hours behind GitHub even after a successful purge, which is why the stub pins to a commit instead.
+Each visitor re-checks for a new commit at most every 5 minutes (cached in `sessionStorage`).
+A GitHub Action (`.github/workflows/purge-jsdelivr.yml`) still purges the `@main` URLs on every push to `main` that touches the three live files, for the fallback path.
 
 

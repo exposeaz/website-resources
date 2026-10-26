@@ -1,6 +1,9 @@
 (function () {
   // ---- CONFIGURE THIS ----
-  var DATA_URL = "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/data.json";
+  // The Squarespace stub sets EAN_RESOURCES_BASE to a commit-pinned jsDelivr URL;
+  // @main is only the fallback.
+  var DATA_URL = window.EAN_RESOURCES_BASE ? window.EAN_RESOURCES_BASE + "/data.json"
+    : "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/data.json";
 
   // Wording shown above a single Substack's articles. {title} and {link} are filled in.
   var SUBSTACK_NOTE = "This is an automatically curated set of articles from {title} related to antizionism. " +

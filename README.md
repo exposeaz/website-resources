@@ -14,6 +14,7 @@ This means updating a file here updates the live site automatically, with no fur
 - **`ean-resources.css`** / **`ean-resources.js`** — the widget itself (layout, search, tag filtering, category browsing). Deliberately avoids hardcoding fonts or text colors so it inherits the Squarespace template's look; see "Editing appearance" below for the few values that *are* customizable.
 - **`data.json`** — all resource content: titles, descriptions, tags, citations, links. Edit this to add or change resources. No code changes needed.
 - **`squarespace-stub.html`** — the exact snippet pasted once into the Squarespace Code Block on the Resources page. Should never need to change again unless this repo is renamed, moved, or its default branch changes.
+  It asks GitHub for the latest commit on `main` and loads the widget files pinned to that commit (see "Making a change live").
 
 All three working files live at the repo root (no subfolders) — the URLs baked into the stub and into `ean-resources.js` assume that. If you ever move a file into a folder, the corresponding URL needs updating to match.
 
@@ -48,7 +49,10 @@ If different tags ever need different colors (not just one shared color), each t
 
 1. Edit the relevant file directly on GitHub (or push from a local clone).
 2. The Squarespace page picks it up automatically on next load — nothing to do in Squarespace itself.
-3. **Caching note:** jsDelivr caches files for a while, so a change may take up to ~12 hours to show up for visitors (browser hard-refreshes don't bypass this — it's server-side caching). For an urgent fix, jsDelivr also supports purging its cache manually via [purge.jsdelivr.net](https://www.jsdelivr.com/tools/purge).
+3. **Caching note:** jsDelivr's `@main` URLs can lag hours behind GitHub, even after a purge.
+   The stub avoids this by loading files from a commit-pinned URL (`@<commit>`), which jsDelivr never serves stale.
+   A change should show up within a few minutes; each visitor re-checks for a new commit at most every 5 minutes.
+   If GitHub's API doesn't answer, the stub falls back to `@main`, and the purge workflow (`.github/workflows/purge-jsdelivr.yml`) keeps that fallback as fresh as jsDelivr allows.
 
 ## Naming
 

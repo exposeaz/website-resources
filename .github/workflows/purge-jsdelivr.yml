@@ -3,6 +3,8 @@ name: Purge jsDelivr cache
 # Runs automatically whenever one of the widget's live files changes on
 # main, and can also be triggered manually from the Actions tab if you
 # ever want to force a purge without pushing a change.
+# The stub normally loads commit-pinned URLs; this keeps its @main
+# fallback as fresh as jsDelivr allows.
 
 on:
   push:

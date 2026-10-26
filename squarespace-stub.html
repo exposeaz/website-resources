@@ -1,11 +1,48 @@
 <!-- ============================================================
   PERMANENT STUB — paste this once into a Squarespace Code Block.
-  Do NOT paste widget code here directly anymore. The actual
-  widget (CSS + JS) now lives in the GitHub repo and loads itself
-  automatically on every page view. To change the widget's look
-  or behavior going forward, edit the files in the repo and push
-  -- this stub never needs to change again.
+  Do NOT paste widget code here directly. The actual widget
+  (CSS + JS + data) lives in the GitHub repo and loads itself on
+  every page view. To change the widget's look or behavior, edit
+  the files in the repo and push -- this stub never needs to change.
+
+  Why the script: jsDelivr's @main can lag hours behind GitHub, even
+  after a purge. So this asks GitHub for main's latest commit and
+  loads the files pinned to that commit, which jsDelivr never serves
+  stale. If GitHub doesn't answer, it falls back to @main.
 ============================================================ -->
 <div id="ean-resources-root"></div>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/ean-resources.css">
-<script src="https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/ean-resources.js"></script>
+<script>
+(function () {
+  var REPO = "exposeaz/website-resources";
+  var KEY = "ean-resources-sha";
+  var MAX_AGE = 5 * 60 * 1000; // re-check GitHub at most every 5 minutes per visitor
+
+  function load(ref) {
+    var base = "https://cdn.jsdelivr.net/gh/" + REPO + "@" + ref;
+    window.EAN_RESOURCES_BASE = base;
+    var css = document.createElement("link");
+    css.rel = "stylesheet";
+    css.href = base + "/ean-resources.css";
+    document.head.appendChild(css);
+    var js = document.createElement("script");
+    js.src = base + "/ean-resources.js";
+    document.body.appendChild(js);
+  }
+
+  try {
+    var saved = JSON.parse(sessionStorage.getItem(KEY));
+    if (saved && Date.now() - saved.at < MAX_AGE) return load(saved.sha);
+  } catch (e) {}
+
+  fetch("https://api.github.com/repos/" + REPO + "/commits/main", {
+    headers: { Accept: "application/vnd.github.sha" }
+  })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); })
+    .then(function (sha) {
+      if (!/^[0-9a-f]{40}$/.test(sha)) throw new Error("bad sha");
+      try { sessionStorage.setItem(KEY, JSON.stringify({ sha: sha, at: Date.now() })); } catch (e) {}
+      load(sha);
+    })
+    .catch(function () { load("main"); });
+})();
+</script>
