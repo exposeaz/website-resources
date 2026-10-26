@@ -6,8 +6,15 @@
     : "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/data.json";
 
   // Wording shown above a single Substack's articles. {title} and {link} are filled in.
-  var SUBSTACK_NOTE = "This is an automatically curated set of articles from {title} related to antizionism. " +
+  var SUBSTACK_NOTE = "This is a set of articles from {title} related to antizionism, automatically curated by AI. " +
     "See the full Substack for all posts: {link}";
+
+  // Hint shown above the tag pills.
+  var TAG_HINT = "Select tags to filter resources by topic. Choose more than one to show resources matching any or all of them.";
+
+  // Wording shown above the Substack cards in the Substacks category.
+  var SUBSTACKS_INTRO = "Each Substack below links to a set of its articles related to antizionism, automatically curated by AI. " +
+    "Select a Substack to browse its articles, or visit the full Substack for everything it publishes.";
 
   // Substack articles aren't a top-level category; each one appears under its
   // publication's card in the Substacks category, matched by web address.
@@ -71,10 +78,15 @@
   }
 
   function matchesFilters(r) {
-    var q = state.search.trim().toLowerCase();
-    if (q) {
-      var hay = (r.title + " " + r.description + " " + r.reference).toLowerCase();
-      if (hay.indexOf(q) === -1) return false;
+    // Every word must appear somewhere (text or tag labels), in any order, so "Adam Louis-Klein" matches "Louis-Klein, Adam"
+    var words = state.search.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    if (words.length) {
+      var tagLabels = (r.tags || []).map(function (t) {
+        var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
+        return tagDef ? tagDef.label : t;
+      });
+      var hay = [r.title, r.author, r.description, r.reference].concat(tagLabels).join(" ").toLowerCase();
+      if (!words.every(function (w) { return hay.indexOf(w) !== -1; })) return false;
     }
     if (state.activeTags.length) {
       var n = tagMatches(r);
@@ -119,6 +131,7 @@
     });
     html += '</div>';
     html += '</div>';
+    html += '<p class="ean-tag-hint">' + esc(TAG_HINT) + '</p>';
     html += '<div class="ean-tagbar">';
     state.data.tags.forEach(function (t) {
       var active = state.activeTags.indexOf(t.id) !== -1;
@@ -315,6 +328,7 @@
       html += '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All categories</a> / ' + esc(categoryLabel(state.categoryId));
       if (filtering) html += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
       html += '</div>';
+      if (state.categoryId === SUBSTACK_CATEGORY) html += '<p class="ean-substack-note ean-substacks-intro">' + esc(SUBSTACKS_INTRO) + '</p>';
       html += items.length
         ? renderCategoryResources(state.categoryId, items)
         : '<div class="ean-empty">' + (filtering ? 'No resources match your filters in this category.' : 'No resources in this category yet.') + '</div>';

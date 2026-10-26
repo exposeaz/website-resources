@@ -110,6 +110,7 @@
   .ean-tagmode-label { font-weight: 600; }
   .ean-tagmode .ean-segmented button { padding: 0.35em 0.9em; }
 
+  .ean-tag-hint { margin: 0 0 8px; font-size: 0.85em; opacity: 0.8; }
   .ean-tagbar {
     display: flex;
     flex-wrap: wrap;
@@ -305,6 +306,7 @@
   .ean-substack-head p { margin: 0 0 6px; }
   .ean-substack-note { font-size: 0.9em; opacity: 0.8; }
   .ean-substack-note a { color: var(--ean-accent); font-weight: 600; }
+  .ean-substacks-intro { margin: 0 0 16px; }
 
   /* Modal-only: the reading view leads with the description at a bigger,
      roomier size than anything on the card face. */
