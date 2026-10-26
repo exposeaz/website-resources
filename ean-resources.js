@@ -4,7 +4,7 @@
 
   // Wording shown above a single Substack's articles. {title} and {link} are filled in.
   var SUBSTACK_NOTE = "This is an automatically curated set of articles from {title} related to antizionism. " +
-    "See the full Substack: {link}";
+    "See the full Substack for all posts: {link}";
 
   // Substack articles aren't a top-level category; each one appears under its
   // publication's card in the Substacks category, matched by web address.
@@ -142,7 +142,6 @@
     "scholarly-articles": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v11.5a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5V4.5A1.5 1.5 0 0 1 6 3Z" fill="currentColor" fill-opacity=".06"/><path d="M14 3v3.5A1.5 1.5 0 0 0 15.5 8H18"/><path d="M8 11h5M8 14h3.5"/></svg>',
     "data-research": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="12" width="3.4" height="7" fill="currentColor" fill-opacity=".12" stroke="currentColor"/><rect x="10.3" y="7" width="3.4" height="12" fill="currentColor" fill-opacity=".12" stroke="currentColor"/><rect x="16.6" y="4" width="3.4" height="15" fill="currentColor" fill-opacity=".12" stroke="currentColor"/><path d="M2.5 20.5h19"/></svg>',
     "essays": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4.5-1.2L19 8.3a1.8 1.8 0 0 0 0-2.6l-.7-.7a1.8 1.8 0 0 0-2.6 0L5.2 15.5 4 20Z" fill="currentColor" fill-opacity=".08"/><path d="M4 20l4.5-1.2L19 8.3a1.8 1.8 0 0 0 0-2.6l-.7-.7a1.8 1.8 0 0 0-2.6 0L5.2 15.5 4 20Z"/><path d="M14.5 6.5l3 3"/></svg>',
-    "legal-commentary": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 6 5 9M12 6l7 3M5 9l-2.5 5A3 3 0 0 0 5 18a3 3 0 0 0 2.5-4L5 9ZM19 9l-2.5 5a3 3 0 0 0 2.5 4 3 3 0 0 0 2.5-4L19 9ZM7 21h10"/></svg>',
     "substacks": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2" fill="currentColor" fill-opacity=".06"/><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6.5 8 6.2 8-6.2"/></svg>'
   };
 
