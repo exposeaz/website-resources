@@ -110,6 +110,7 @@
   .ean-tagmode-label { font-weight: 600; }
   .ean-tagmode .ean-segmented button { padding: 0.35em 0.9em; }
 
+  .ean-tag-hint { margin: 0 0 8px; font-size: 0.85em; opacity: 0.8; }
   .ean-tagbar {
     display: flex;
     flex-wrap: wrap;

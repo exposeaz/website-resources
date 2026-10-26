@@ -9,6 +9,9 @@
   var SUBSTACK_NOTE = "This is a set of articles from {title} related to antizionism, automatically curated by AI. " +
     "See the full Substack for all posts: {link}";
 
+  // Hint shown above the tag pills.
+  var TAG_HINT = "Select tags to filter resources by topic. Choose more than one to show resources matching any or all of them.";
+
   // Wording shown above the Substack cards in the Substacks category.
   var SUBSTACKS_INTRO = "Each Substack below links to a set of its articles related to antizionism, automatically curated by AI. " +
     "Select a Substack to browse its articles, or visit the full Substack for everything it publishes.";
@@ -75,10 +78,14 @@
   }
 
   function matchesFilters(r) {
-    // Every word must appear somewhere, in any order, so "Adam Louis-Klein" matches "Louis-Klein, Adam"
+    // Every word must appear somewhere (text or tag labels), in any order, so "Adam Louis-Klein" matches "Louis-Klein, Adam"
     var words = state.search.trim().toLowerCase().split(/\s+/).filter(Boolean);
     if (words.length) {
-      var hay = [r.title, r.author, r.description, r.reference].join(" ").toLowerCase();
+      var tagLabels = (r.tags || []).map(function (t) {
+        var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
+        return tagDef ? tagDef.label : t;
+      });
+      var hay = [r.title, r.author, r.description, r.reference].concat(tagLabels).join(" ").toLowerCase();
       if (!words.every(function (w) { return hay.indexOf(w) !== -1; })) return false;
     }
     if (state.activeTags.length) {
@@ -124,6 +131,7 @@
     });
     html += '</div>';
     html += '</div>';
+    html += '<p class="ean-tag-hint">' + esc(TAG_HINT) + '</p>';
     html += '<div class="ean-tagbar">';
     state.data.tags.forEach(function (t) {
       var active = state.activeTags.indexOf(t.id) !== -1;
