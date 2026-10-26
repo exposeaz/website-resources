@@ -277,11 +277,12 @@
       "id": "marcus-accusation-in-a-mirror",
       "title": "Accusation in a Mirror",
       "category": "scholarly-articles",
-      "description": "",
+      "description": "Examines \"accusation in a mirror,\" the propaganda technique documented before the Rwandan genocide of accusing one's intended victims of the very crimes one plans to commit, and traces it through Holocaust inversion and Iranian rhetoric that accuses Israel of genocidal intent while calling for its destruction. Argues that courts should treat it as strong evidence of the \"directness\" required to prosecute incitement to genocide.",
       "tags": [
-        "genocide-libel"
+        "genocide-libel",
+        "legal-public-affairs"
       ],
-      "reference": "Marcus, Kenneth L. \"Accusation in a Mirror.\" 2012.",
+      "reference": "Marcus, Kenneth L. \"Accusation in a Mirror.\" Loyola University Chicago Law Journal, Vol. 43, No. 2, 2012.",
       "author": "Kenneth L. Marcus",
       "url": "https://lawecommons.luc.edu/cgi/viewcontent.cgi?article=1019&context=luclj",
       "year": 2012
@@ -346,6 +347,9 @@
       "title": "On Three Antizionisms",
       "category": "scholarly-articles",
       "description": "Argues that \"antizionism\" is not one coherent ideology but three distinct ideological clusters that happen to share a label, and that treating them as one obscures more than it clarifies.",
+      "tags": [
+        "antizionism"
+      ],
       "reference": "Mor, Shany. \"On Three Antizionisms.\" Israel Studies, Vol. 24, No. 2, 2019.",
       "author": "Shany Mor",
       "url": "https://tikvah.org/wp-content/uploads/2026/05/Mor-On-Three-Anti-Zionisms.pdf",
@@ -504,8 +508,13 @@
       "id": "kirschbaum-shirazki-projection-replacement",
       "title": "Antizionism: Projection and Replacement Theology",
       "category": "essays",
-      "description": "",
-      "tags": [],
+      "description": "Argues that antizionism in its Soviet, progressive, Islamist, Nazi, Christian, and Enlightenment-liberal forms shares two structures: a projection onto Israel of whatever each group considers evil, and a \"replacement theology\" in which one culture or ideology claims to supersede Judaism and so sees no need to understand Jews on their own terms. Calls for exposing replacement theology in education alongside antizionist libels.",
+      "tags": [
+        "antizionism",
+        "soviet-antizionism",
+        "islamism",
+        "antizionism-progressive"
+      ],
       "reference": "Kirschbaum-Shirazki, Olga. \"Antizionism: Projection and Replacement Theology.\"",
       "author": "Olga Kirschbaum-Shirazki",
       "url": "https://olgakirschbaum.substack.com/p/antizionism-projection-and-replacement",
@@ -541,9 +550,11 @@
       "id": "lekht-three-failed-strategies",
       "title": "Three Failed Strategies of Inward Advocacy",
       "category": "essays",
-      "description": "",
+      "description": "Argues that Jewish communal advocacy has relied on three failed strategies of \"inward advocacy\" (self-promotion, aligning Israel with fashionable values, and correcting facts) that treat antizionist libels as misinformation and keep Jews in the defendant's seat. Calls for turning the lens on the accuser by exposing antizionism's Soviet origins and teaching ideological literacy.",
       "tags": [
-        "advocacy"
+        "advocacy",
+        "soviet-antizionism",
+        "colonizer-libel"
       ],
       "reference": "Lekht, Naya. \"Three Failed Strategies of Inward Advocacy.\" JNS.",
       "author": "Naya Lekht",
@@ -554,8 +565,11 @@
       "id": "lekht-scaffolding-antizionism",
       "title": "Scaffolding Anti-Zionism: The Hate We Missed",
       "category": "essays",
-      "description": "",
-      "tags": [],
+      "description": "Argues that teaching antisemitism as generic intolerance and scapegoating has left people unable to recognize antizionism as the third, mutated form of Jew-hatred after anti-Judaism and antisemitism, one that constructs Jews as villains through libels such as \"Zionism is racism.\" Calls for education that exposes antizionist libels as earlier generations exposed antisemitic ones.",
+      "tags": [
+        "antizionism",
+        "soviet-antizionism"
+      ],
       "reference": "Lekht, Naya. \"Scaffolding Anti-Zionism: The Hate We Missed.\" Jewish Journal, 2025.",
       "author": "Naya Lekht",
       "url": "https://jewishjournal.com/cover_story/384910/scaffolding-anti-zionism-the-hate-we-missed/",
@@ -790,7 +804,7 @@
       "id": "substack-maaz-au",
       "title": "Movement Against Antizionism AU",
       "category": "substacks",
-      "description": "",
+      "description": "Australian affiliate of the Movement Against Antizionism, headed by Joshua Dabelstein; grassroots training and education on antizionism.",
       "tags": [
         "advocacy"
       ],
@@ -818,7 +832,7 @@
       "id": "substack-jennifer-kogan",
       "title": "Jennifer Kogan",
       "category": "substacks",
-      "description": "",
+      "description": "\"Jewish Fierce Compassion\": a clinical social worker analyzes antizionism through a psychological-abuse framework. Levari, offering trauma-informed education on antizionism, publishes here too.",
       "tags": [],
       "reference": "Kogan, Jennifer. Jennifer Kogan (Substack).",
       "author": "Jennifer Kogan",
@@ -921,7 +935,7 @@
       "id": "substack-david-kaufman",
       "title": "COUNTERINTUITIVE",
       "category": "substacks",
-      "description": "",
+      "description": "Commentary by writer David Christopher Kaufman on antizionism, Jewish identity, and politics.",
       "tags": [],
       "reference": "Kaufman, David Christopher. COUNTERINTUITIVE (Substack).",
       "author": "David Christopher Kaufman",
@@ -947,7 +961,7 @@
       "id": "substack-jonah-platt",
       "title": "Being Jewish with Jonah Platt",
       "category": "substacks",
-      "description": "",
+      "description": "Interviews on Jewish identity and antizionism from a mainstream, entertainment-adjacent angle.",
       "tags": [],
       "reference": "Platt, Jonah. Being Jewish with Jonah Platt (Substack).",
       "author": "Jonah Platt",
@@ -959,7 +973,7 @@
       "id": "substack-sarah-ettedgui",
       "title": "Sarah Ettedgui",
       "category": "substacks",
-      "description": "",
+      "description": "A Mizrahi/Sephardic lawyer writing on antizionism in society.",
       "tags": [],
       "reference": "Ettedgui, Sarah. Sarah Ettedgui (Substack).",
       "author": "Sarah Ettedgui",
