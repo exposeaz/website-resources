@@ -110,18 +110,6 @@
   ],
   "resources": [
     {
-      "id": "amery-at-the-minds-limits",
-      "title": "At the Mind's Limits: Contemplations by a Survivor on Auschwitz and its Realities",
-      "category": "books",
-      "description": "A Holocaust survivor's autobiographical account, which also includes a reckoning with postwar antizionism.",
-      "tags": [],
-      "reference": "Améry, Jean. At the Mind's Limits. 1966.",
-      "author": "Jean Améry",
-      "url": "https://yale.imodules.com/s/1667/images/gid6/editor_documents/yacolf22/hiding_god/wk5_jean_amery__torture_.pdf",
-      "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/1966-amery.png",
-      "year": 1966
-    },
-    {
       "id": "amery-essays-antisemitism-antizionism-left",
       "title": "Essays on Antisemitism, Anti-Zionism, and the Left",
       "category": "books",
@@ -129,7 +117,7 @@
       "tags": [
         "antizionism-progressive"
       ],
-      "reference": "Améry, Jean. Essays on Antisemitism, Anti-Zionism, and the Left. Edited by Marlene Gallner. Translated by Louise Fischer. Indiana University Press, 2021.",
+      "reference": "Améry, Jean. Essays on Antisemitism, Anti-Zionism, and the Left. Edited by Marlene Gallner. Translated by Lars Fischer. Indiana University Press, 2021.",
       "author": "Jean Améry",
       "url": "https://www.amazon.com/dp/0253058767",
       "image": "https://covers.openlibrary.org/b/isbn/0253058767-M.jpg",
@@ -151,9 +139,9 @@
       "id": "poliakov-history-of-antisemitism",
       "title": "The History of Anti-Semitism",
       "category": "books",
-      "description": "A landmark four-volume history tracing Jew-hatred from antiquity through the rise of Nazism; the final volumes (\"From Voltaire to Wagner,\" \"Suicidal Europe\") trace the emergence of racial antisemitism and end with Poliakov's own prescient warning that hatred of Jews might take on a new \"anti-Zionist\" guise.",
+      "description": "A landmark four-volume history tracing Jew-hatred from antiquity through the rise of Nazism; the final volumes (\"From Voltaire to Wagner,\" \"Suicidal Europe\") trace the emergence of racial antisemitism; Poliakov separately warned, in a 1969 book, that hatred of Jews might take on a new \"anti-Zionist\" guise.",
       "tags": [],
-      "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1965–1977.",
+      "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1955–1977.",
       "author": "Leon Poliakov",
       "url": "https://www.pennpress.org/9780812218633/the-history-of-anti-semitism-volume-1",
       "year": 1977
@@ -162,7 +150,7 @@
       "id": "taguieff-new-judeophobia",
       "title": "The New Judeophobia",
       "category": "books",
-      "description": "Argues that a \"new Judeophobia\" emerged around the 2001 Durban conference, distinct from older racial antisemitism: it diabolizes Israel and Zionism (and by extension Jews) using antiracist and anti-imperialist language rather than racial theory.",
+      "description": "Written in the wake of the 2001 Durban conference, argues that a \"new Judeophobia,\" distinct from older racial antisemitism, diabolizes Israel and Zionism (and by extension Jews) using antiracist and anti-imperialist language rather than racial theory.",
       "tags": [
         "antizionism"
       ],
@@ -244,7 +232,7 @@
       "id": "hirsh-contemporary-left-antisemitism",
       "title": "Contemporary Left Antisemitism",
       "category": "books",
-      "description": "Analyzes how antisemitism that goes unacknowledged in left-wing and liberal spaces (unions, academia, campaigns to boycott Israel) can hide behind the language of anti-imperialism and human rights; introduces Hirsh's concept of the \"Livingstone Formulation,\" in which raising antisemitism is dismissed as a bad-faith attempt to silence criticism of Israel.",
+      "description": "Analyzes how antisemitism that goes unacknowledged in left-wing and liberal spaces (unions, academia, campaigns to boycott Israel) can hide behind the language of anti-imperialism and human rights; develops Hirsh's concept of the \"Livingstone Formulation,\" in which raising antisemitism is dismissed as a bad-faith attempt to silence criticism of Israel.",
       "tags": [
         "antizionism",
         "bds",
@@ -273,7 +261,7 @@
       "id": "marcus-accusation-in-a-mirror",
       "title": "Accusation in a Mirror",
       "category": "scholarly-articles",
-      "description": "Examines \"accusation in a mirror,\" the propaganda technique documented before the Rwandan genocide of accusing one's intended victims of the very crimes one plans to commit, and traces it through Holocaust inversion and Iranian rhetoric that accuses Israel of genocidal intent while calling for its destruction. Argues that courts should treat it as strong evidence of the \"directness\" required to prosecute incitement to genocide.",
+      "description": "Examines \"accusation in a mirror,\" the propaganda technique documented before the Rwandan genocide of accusing one's intended victims of the very crimes one plans to commit, and traces it through Holocaust inversion and Iranian rhetoric that accuses Israel of genocidal intent while calling for its destruction. Argues that its use should satisfy the \"directness\" required to prosecute incitement to genocide.",
       "tags": [
         "genocide-libel",
         "legal-public-affairs"
@@ -287,7 +275,7 @@
       "id": "marcus-antizionism-antisemitism-chapter",
       "title": "Anti-Zionism & Anti-Semitism",
       "category": "scholarly-articles",
-      "description": "From the book examining how the U.S. civil-rights framework (Title VI) can and should apply to campus antisemitism, including where anti-Israel activism shades into discrimination against Jewish students.",
+      "description": "From the book examining how anti-Semitism should be defined; this chapter addresses where anti-Israel animus shades into anti-Semitism.",
       "tags": [
         "campus",
         "legal-public-affairs"
@@ -437,7 +425,7 @@
       "id": "louis-klein-rwanda-inversion-of-genocide",
       "title": "Rwanda, Israel and the Inversion of 'Genocide'",
       "category": "essays",
-      "description": "Argues that today's genocide accusations against Israel by defenders of Hamas follow the same rhetorical playbook Hutu extremists used against Tutsis in Rwanda in 1993 — inverting the language of genocide to accuse the actual targets of it.",
+      "description": "Argues that today's genocide accusations against Israel by defenders of Hamas follow the same rhetorical playbook Hutu extremists used against Tutsis in Rwanda in the early 1990s — inverting the language of genocide to accuse the actual targets of it.",
       "tags": [
         "genocide-libel"
       ],
@@ -573,7 +561,7 @@
       "id": "wexler-eternal-settler",
       "title": "The Eternal Settler",
       "category": "essays",
-      "description": "Written after a wave of antisemitic attacks in Montreal, argues that even the Diaspora's oldest and largest Jewish communities (not just Israelis) are increasingly branded \"settlers\" in antizionist rhetoric — a designation Wexler argues has no logical stopping point.",
+      "description": "Written after a wave of antisemitic attacks in Montreal, argues that even long-established Diaspora communities such as Canada's (not just Israelis) are increasingly branded \"settlers\" in antizionist rhetoric — a designation Wexler argues has no logical stopping point.",
       "tags": [
         "colonizer-libel"
       ],
@@ -700,7 +688,7 @@
       "id": "martin-when-courts-minimize-terrorism",
       "title": "When Courts Minimize Terrorism, Jewish Students Pay the Price",
       "category": "essays",
-      "description": "Argues that courts downplaying pro-terror conduct on campus leaves Jewish students unprotected under civil-rights law.",
+      "description": "Argues that a federal appeals court's minimizing description of the October 7 terror attack, in a ruling on Jewish students' claims against MIT, leaves Jewish students unprotected under civil-rights law.",
       "tags": [
         "campus",
         "legal-public-affairs"
@@ -742,7 +730,7 @@
       "id": "nirenberg-anti-judaism",
       "title": "Anti-Judaism: The Western Tradition",
       "category": "books",
-      "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself. Nirenberg shows that Jews have represented what societies tend to to define themselves against. He traces this paradigm from antiquity through the Enlightenment and just past the Holocaust.",
+      "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself. Nirenberg shows that Jews have represented what societies tend to define themselves against. He traces this paradigm from antiquity through the Enlightenment and just past the Holocaust.",
       "tags": [],
       "reference": "Nirenberg, David. Anti-Judaism: The Western Tradition. W.W. Norton & Co., 2013.",
       "author": "David Nirenberg",
@@ -754,7 +742,7 @@
       "id": "horn-final-solution",
       "title": "The Final Solution to the Jewish Question: A Love Story for the Living",
       "category": "books",
-      "description": "A follow-up to Horn's People Love Dead Jews, drawing on her post-October 7 work advising Harvard, the White House, and Congress; diagnoses failures of Holocaust education and the long history of antizionism, and proposes a path forward.",
+      "description": "A follow-up to Horn's People Love Dead Jews, drawing on her post-October 7 work with university presidents and the U.S. government; diagnoses failures of Holocaust education and the long history of antizionism, and proposes a path forward.",
       "tags": [
         "oct7"
       ],
@@ -795,7 +783,7 @@
       "id": "substack-maaz-au",
       "title": "Movement Against Antizionism AU",
       "category": "substacks",
-      "description": "Australian affiliate of the Movement Against Antizionism, headed by Joshua Dabelstein; grassroots training and education on antizionism.",
+      "description": "Australian affiliate of the Movement Against Antizionism, led by Joshua Dabelstein; grassroots training and education on antizionism.",
       "tags": [],
       "reference": "Movement Against Antizionism Australia. Movement Against Antizionism AU (Substack).",
       "author": "Movement Against Antizionism Australia",
@@ -1003,7 +991,7 @@
       "id": "polin-march-68-historical-facts",
       "title": "March '68. Historical Facts",
       "category": "essays",
-      "description": "The POLIN Museum's own historical account of the March 1968 crisis: a suppressed student rally that the Polish communist authorities turned into a state-run antisemitic campaign, forcing roughly 13,000 Polish Jews out of the country and ending organized Jewish life in Poland.",
+      "description": "The POLIN Museum's own historical account of the March 1968 crisis: a suppressed student rally that the Polish communist authorities turned into a state-run antisemitic campaign, forcing roughly 13,000 Polish Jews out of the country and effectively ending organized Jewish life in Poland.",
       "tags": [
         "poland-1968",
         "soviet-antizionism"
@@ -1047,7 +1035,7 @@
       "id": "musighi-center-of-attention",
       "title": "Center of Attention: Why One of the World's Tiniest Countries Gets the Biggest International Spotlight",
       "category": "data-research",
-      "description": "Argues Israel receives 7 to 600 times more international news coverage per capita than comparable countries, regardless of active conflict, and traces that disparity to a deliberate, decades-long influence campaign rooted in Soviet-era intelligence operations and sustained by later institutional and funding networks; draws on the author's GDELT-based media-coverage dataset (see companion methodology piece).",
+      "description": "Argues Israel receives 7 to 600 times more international news coverage per capita than countries such as Canada, Brazil, and India, regardless of active conflict, and traces that disparity to a deliberate, decades-long influence campaign rooted in Soviet-era intelligence operations and sustained by later institutional and funding networks; draws on the author's GDELT-based media-coverage dataset (see companion methodology piece).",
       "tags": [
         "soviet-antizionism",
         "media-commentary"
