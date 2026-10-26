@@ -76,10 +76,6 @@
       "label": "What is antizionism"
     },
     {
-      "id": "advocacy",
-      "label": "Advocacy"
-    },
-    {
       "id": "media-commentary",
       "label": "Media bias"
     },
@@ -114,18 +110,6 @@
   ],
   "resources": [
     {
-      "id": "amery-at-the-minds-limits",
-      "title": "At the Mind's Limits: Contemplations by a Survivor on Auschwitz and its Realities",
-      "category": "books",
-      "description": "A Holocaust survivor's autobiographical account, which also includes a reckoning with postwar antizionism.",
-      "tags": [],
-      "reference": "Améry, Jean. At the Mind's Limits. 1966.",
-      "author": "Jean Améry",
-      "url": null,
-      "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/1966-amery.png",
-      "year": 1966
-    },
-    {
       "id": "amery-essays-antisemitism-antizionism-left",
       "title": "Essays on Antisemitism, Anti-Zionism, and the Left",
       "category": "books",
@@ -133,7 +117,7 @@
       "tags": [
         "antizionism-progressive"
       ],
-      "reference": "Améry, Jean. Essays on Antisemitism, Anti-Zionism, and the Left. Edited by Marlene Gallner. Translated by Louise Fischer. Indiana University Press, 2021.",
+      "reference": "Améry, Jean. Essays on Antisemitism, Anti-Zionism, and the Left. Edited by Marlene Gallner. Translated by Lars Fischer. Indiana University Press, 2021.",
       "author": "Jean Améry",
       "url": "https://www.amazon.com/dp/0253058767",
       "image": "https://covers.openlibrary.org/b/isbn/0253058767-M.jpg",
@@ -155,18 +139,18 @@
       "id": "poliakov-history-of-antisemitism",
       "title": "The History of Anti-Semitism",
       "category": "books",
-      "description": "A landmark four-volume history tracing Jew-hatred from antiquity through the rise of Nazism; the final volumes (\"From Voltaire to Wagner,\" \"Suicidal Europe\") trace the emergence of racial antisemitism and end with Poliakov's own prescient warning that hatred of Jews might take on a new \"anti-Zionist\" guise.",
+      "description": "A landmark four-volume history tracing Jew-hatred from antiquity through the rise of Nazism; the final volumes (\"From Voltaire to Wagner,\" \"Suicidal Europe\") trace the emergence of racial antisemitism; Poliakov separately warned, in a 1969 book, that hatred of Jews might take on a new \"anti-Zionist\" guise.",
       "tags": [],
-      "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1965–1977.",
+      "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1955–1977.",
       "author": "Leon Poliakov",
-      "url": null,
+      "url": "https://www.pennpress.org/9780812218633/the-history-of-anti-semitism-volume-1",
       "year": 1977
     },
     {
       "id": "taguieff-new-judeophobia",
       "title": "The New Judeophobia",
       "category": "books",
-      "description": "Argues that a \"new Judeophobia\" emerged around the 2001 Durban conference, distinct from older racial antisemitism: it diabolizes Israel and Zionism (and by extension Jews) using antiracist and anti-imperialist language rather than racial theory.",
+      "description": "Written in the wake of the 2001 Durban conference, argues that a \"new Judeophobia,\" distinct from older racial antisemitism, diabolizes Israel and Zionism (and by extension Jews) using antiracist and anti-imperialist language rather than racial theory.",
       "tags": [
         "antizionism"
       ],
@@ -200,21 +184,21 @@
       ],
       "reference": "Wistrich, Robert S. (ed.). The Left against Zion. Vallentine, Mitchell, 1979.",
       "author": "Robert S. Wistrich (ed.)",
-      "url": null,
+      "url": "https://www.pen-and-sword.co.uk/The-Left-Against-Zion-Hardback/p/55936",
       "year": 1979
     },
     {
       "id": "wistrich-ambivalence-to-betrayal-chapter",
-      "title": "From Ambivalence to Betrayal: The Left, the Jews, and Israel (essay)",
+      "title": "From Ambivalence to Betrayal: The Left, the Jews, and Israel",
       "category": "books",
-      "description": "Traces the European left's shift from ambivalence toward, to eventual hostility against, Jewish nationalism, foreshadowing Wistrich's larger 2012 book of a similar title.",
+      "description": "Traces the European left's shift from ambivalence toward, to eventual hostility against, Jews, Zionism, and Israel, from the origins of socialism in the 1840s to the present.",
       "tags": [
         "antizionism-progressive"
       ],
-      "reference": "Wistrich, Robert S. \"From Ambivalence to Betrayal: The Left, the Jews, and Israel.\" In Anti-Zionism and Antisemitism in the Contemporary World, 2009.",
+      "reference": "Wistrich, Robert S. From Ambivalence to Betrayal: The Left, the Jews, and Israel. University of Nebraska Press, 2012.",
       "author": "Robert S. Wistrich",
-      "url": null,
-      "year": 2009
+      "url": "https://www.nebraskapress.unl.edu/nebraska/9780803240766/from-ambivalence-to-betrayal/",
+      "year": 2012
     },
     {
       "id": "wistrich-lethal-obsession",
@@ -227,7 +211,7 @@
       ],
       "reference": "Wistrich, Robert S. A Lethal Obsession. Random House, 2010.",
       "author": "Robert S. Wistrich",
-      "url": null,
+      "url": "https://www.penguinrandomhouse.com/books/192601/a-lethal-obsession-by-robert-s-wistrich",
       "image": "https://covers.openlibrary.org/b/isbn/1400060974-M.jpg",
       "year": 2010
     },
@@ -241,14 +225,14 @@
       ],
       "reference": "Levin, Nora. The Jews in the Soviet Union Since 1917: Paradox of Survival. NYU Press, 1988.",
       "author": "Nora Levin",
-      "url": null,
+      "url": "https://archive.org/details/jewsinsovietunio0000levi",
       "year": 1988
     },
     {
       "id": "hirsh-contemporary-left-antisemitism",
       "title": "Contemporary Left Antisemitism",
       "category": "books",
-      "description": "Analyzes how antisemitism that goes unacknowledged in left-wing and liberal spaces (unions, academia, campaigns to boycott Israel) can hide behind the language of anti-imperialism and human rights; introduces Hirsh's concept of the \"Livingstone Formulation,\" in which raising antisemitism is dismissed as a bad-faith attempt to silence criticism of Israel.",
+      "description": "Analyzes how antisemitism that goes unacknowledged in left-wing and liberal spaces (unions, academia, campaigns to boycott Israel) can hide behind the language of anti-imperialism and human rights; develops Hirsh's concept of the \"Livingstone Formulation,\" in which raising antisemitism is dismissed as a bad-faith attempt to silence criticism of Israel.",
       "tags": [
         "antizionism",
         "bds",
@@ -256,7 +240,7 @@
       ],
       "reference": "Hirsh, David. Contemporary Left Antisemitism. Routledge, 2017.",
       "author": "David Hirsh",
-      "url": null,
+      "url": "https://www.routledge.com/Contemporary-Left-Antisemitism/Hirsh/p/book/9781138235311",
       "image": "https://covers.openlibrary.org/b/isbn/9781138235311-M.jpg",
       "year": 2017
     },
@@ -270,14 +254,14 @@
       ],
       "reference": "Kirschbaum-Shirazki, Olga. From Antizionism to a New Middle East. 2026.",
       "author": "Olga Kirschbaum-Shirazki",
-      "url": null,
+      "url": "https://www.amazon.com/dp/B0GPH35CZB",
       "year": 2026
     },
     {
       "id": "marcus-accusation-in-a-mirror",
       "title": "Accusation in a Mirror",
       "category": "scholarly-articles",
-      "description": "Examines \"accusation in a mirror,\" the propaganda technique documented before the Rwandan genocide of accusing one's intended victims of the very crimes one plans to commit, and traces it through Holocaust inversion and Iranian rhetoric that accuses Israel of genocidal intent while calling for its destruction. Argues that courts should treat it as strong evidence of the \"directness\" required to prosecute incitement to genocide.",
+      "description": "Examines \"accusation in a mirror,\" the propaganda technique documented before the Rwandan genocide of accusing one's intended victims of the very crimes one plans to commit, and traces it through Holocaust inversion and Iranian rhetoric that accuses Israel of genocidal intent while calling for its destruction. Argues that its use should satisfy the \"directness\" required to prosecute incitement to genocide.",
       "tags": [
         "genocide-libel",
         "legal-public-affairs"
@@ -291,14 +275,14 @@
       "id": "marcus-antizionism-antisemitism-chapter",
       "title": "Anti-Zionism & Anti-Semitism",
       "category": "scholarly-articles",
-      "description": "From the book examining how the U.S. civil-rights framework (Title VI) can and should apply to campus antisemitism, including where anti-Israel activism shades into discrimination against Jewish students.",
+      "description": "From the book examining how anti-Semitism should be defined; this chapter addresses where anti-Israel animus shades into anti-Semitism.",
       "tags": [
         "campus",
         "legal-public-affairs"
       ],
       "reference": "Marcus, Kenneth L. \"Anti-Zionism & Anti-Semitism.\" In The Definition of Anti-Semitism, 146–190. Oxford University Press, 2015.",
       "author": "Kenneth L. Marcus",
-      "url": null,
+      "url": "https://academic.oup.com/book/6002/chapter/149389717",
       "year": 2015
     },
     {
@@ -441,7 +425,7 @@
       "id": "louis-klein-rwanda-inversion-of-genocide",
       "title": "Rwanda, Israel and the Inversion of 'Genocide'",
       "category": "essays",
-      "description": "Argues that today's genocide accusations against Israel by defenders of Hamas follow the same rhetorical playbook Hutu extremists used against Tutsis in Rwanda in 1993 — inverting the language of genocide to accuse the actual targets of it.",
+      "description": "Argues that today's genocide accusations against Israel by defenders of Hamas follow the same rhetorical playbook Hutu extremists used against Tutsis in Rwanda in the early 1990s — inverting the language of genocide to accuse the actual targets of it.",
       "tags": [
         "genocide-libel"
       ],
@@ -456,8 +440,7 @@
       "category": "essays",
       "description": "Makes the case, aimed at a left-leaning audience, that opposing antizionism is consistent with — not opposed to — progressive values.",
       "tags": [
-        "antizionism-progressive",
-        "advocacy"
+        "antizionism-progressive"
       ],
       "reference": "Louis-Klein, Adam. \"The Left-Wing Case Against Anti-Zionism.\" The Atlantic.",
       "author": "Adam Louis-Klein",
@@ -552,7 +535,6 @@
       "category": "essays",
       "description": "Argues that Jewish communal advocacy has relied on three failed strategies of \"inward advocacy\" (self-promotion, aligning Israel with fashionable values, and correcting facts) that treat antizionist libels as misinformation and keep Jews in the defendant's seat. Calls for turning the lens on the accuser by exposing antizionism's Soviet origins and teaching ideological literacy.",
       "tags": [
-        "advocacy",
         "soviet-antizionism",
         "colonizer-libel"
       ],
@@ -579,7 +561,7 @@
       "id": "wexler-eternal-settler",
       "title": "The Eternal Settler",
       "category": "essays",
-      "description": "Written after a wave of antisemitic attacks in Montreal, argues that even the Diaspora's oldest and largest Jewish communities (not just Israelis) are increasingly branded \"settlers\" in antizionist rhetoric — a designation Wexler argues has no logical stopping point.",
+      "description": "Written after a wave of antisemitic attacks in Montreal, argues that even long-established Diaspora communities such as Canada's (not just Israelis) are increasingly branded \"settlers\" in antizionist rhetoric — a designation Wexler argues has no logical stopping point.",
       "tags": [
         "colonizer-libel"
       ],
@@ -706,7 +688,7 @@
       "id": "martin-when-courts-minimize-terrorism",
       "title": "When Courts Minimize Terrorism, Jewish Students Pay the Price",
       "category": "essays",
-      "description": "Argues that courts downplaying pro-terror conduct on campus leaves Jewish students unprotected under civil-rights law.",
+      "description": "Argues that a federal appeals court's minimizing description of the October 7 terror attack, in a ruling on Jewish students' claims against MIT, leaves Jewish students unprotected under civil-rights law.",
       "tags": [
         "campus",
         "legal-public-affairs"
@@ -748,26 +730,26 @@
       "id": "nirenberg-anti-judaism",
       "title": "Anti-Judaism: The Western Tradition",
       "category": "books",
-      "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself. Nirenberg shows that Jews have represented what societies tend to to define themselves against. He traces this paradigm from antiquity through the Enlightenment and just past the Holocaust.",
+      "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself. Nirenberg shows that Jews have represented what societies tend to define themselves against. He traces this paradigm from antiquity through the Enlightenment and just past the Holocaust.",
       "tags": [],
       "reference": "Nirenberg, David. Anti-Judaism: The Western Tradition. W.W. Norton & Co., 2013.",
       "author": "David Nirenberg",
       "image": "https://covers.openlibrary.org/b/isbn/9780393058246-M.jpg",
-      "url": null,
+      "url": "https://www.amazon.com/dp/0393058247",
       "year": 2013
     },
     {
       "id": "horn-final-solution",
       "title": "The Final Solution to the Jewish Question: A Love Story for the Living",
       "category": "books",
-      "description": "A follow-up to Horn's People Love Dead Jews, drawing on her post-October 7 work advising Harvard, the White House, and Congress; diagnoses failures of Holocaust education and the long history of antizionism, and proposes a path forward.",
+      "description": "A follow-up to Horn's People Love Dead Jews, drawing on her post-October 7 work with university presidents and the U.S. government; diagnoses failures of Holocaust education and the long history of antizionism, and proposes a path forward.",
       "tags": [
         "oct7"
       ],
       "reference": "Horn, Dara. The Final Solution to the Jewish Question: A Love Story for the Living. Simon & Schuster, 2026.",
       "author": "Dara Horn",
       "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/final-solution-dara-horn.png",
-      "url": null,
+      "url": "https://www.simonandschuster.net/books/The-Final-Solution-to-the-Jewish-Question/Dara-Horn/9781668090169",
       "year": 2026
     },
     {
@@ -777,13 +759,12 @@
       "description": "Pairs the stories of Soviet-era refuseniks — Jews who defied a state doctrine equating Zionism with racism and genocide — with those of Jewish students facing similar antizionist pressure on American campuses today, drawing practical strategies from the earlier movement. Foreword by Natan Sharansky.",
       "tags": [
         "soviet-antizionism",
-        "campus",
-        "advocacy"
+        "campus"
       ],
       "reference": "Tabarovsky, Izabella. Be a Refusenik: A Jewish Student's Survival Guide. Wicked Son, 2025.",
       "author": "Izabella Tabarovsky",
       "image": "https://covers.openlibrary.org/b/isbn/9798888458921-M.jpg",
-      "url": null,
+      "url": "https://www.jewishbookcouncil.org/book/be-a-refusenik-a-jewish-students-survival-guide",
       "year": 2025
     },
     {
@@ -791,9 +772,7 @@
       "title": "Movement Against Antizionism",
       "category": "substacks",
       "description": "A non-partisan, emergency-response initiative confronting a rapidly escalating antizionist hate movement that is actively endangering Jewish communities worldwide.",
-      "tags": [
-        "advocacy"
-      ],
+      "tags": [],
       "reference": "Movement Against Antizionism. Movement Against Antizionism (Substack).",
       "author": "Movement Against Antizionism",
       "image": "https://substackcdn.com/image/fetch/$s_!EnFy!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fmovementagainstantizionism.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1189330630%26version%3D9",
@@ -804,10 +783,8 @@
       "id": "substack-maaz-au",
       "title": "Movement Against Antizionism AU",
       "category": "substacks",
-      "description": "Australian affiliate of the Movement Against Antizionism, headed by Joshua Dabelstein; grassroots training and education on antizionism.",
-      "tags": [
-        "advocacy"
-      ],
+      "description": "Australian affiliate of the Movement Against Antizionism, led by Joshua Dabelstein; grassroots training and education on antizionism.",
+      "tags": [],
       "reference": "Movement Against Antizionism Australia. Movement Against Antizionism AU (Substack).",
       "author": "Movement Against Antizionism Australia",
       "image": null,
@@ -845,9 +822,7 @@
       "title": "Adam Louis-Klein",
       "category": "substacks",
       "description": "Newsletter by the anthropologist and founder of the Movement Against Antizionism (MAAZ).",
-      "tags": [
-        "advocacy"
-      ],
+      "tags": [],
       "reference": "Louis-Klein, Adam. Adam Louis-Klein (Substack).",
       "author": "Adam Louis-Klein",
       "image": null,
@@ -1016,7 +991,7 @@
       "id": "polin-march-68-historical-facts",
       "title": "March '68. Historical Facts",
       "category": "essays",
-      "description": "The POLIN Museum's own historical account of the March 1968 crisis: a suppressed student rally that the Polish communist authorities turned into a state-run antisemitic campaign, forcing roughly 13,000 Polish Jews out of the country and ending organized Jewish life in Poland.",
+      "description": "The POLIN Museum's own historical account of the March 1968 crisis: a suppressed student rally that the Polish communist authorities turned into a state-run antisemitic campaign, forcing roughly 13,000 Polish Jews out of the country and effectively ending organized Jewish life in Poland.",
       "tags": [
         "poland-1968",
         "soviet-antizionism"
@@ -1060,7 +1035,7 @@
       "id": "musighi-center-of-attention",
       "title": "Center of Attention: Why One of the World's Tiniest Countries Gets the Biggest International Spotlight",
       "category": "data-research",
-      "description": "Argues Israel receives 7 to 600 times more international news coverage per capita than comparable countries, regardless of active conflict, and traces that disparity to a deliberate, decades-long influence campaign rooted in Soviet-era intelligence operations and sustained by later institutional and funding networks; draws on the author's GDELT-based media-coverage dataset (see companion methodology piece).",
+      "description": "Argues Israel receives 7 to 600 times more international news coverage per capita than countries such as Canada, Brazil, and India, regardless of active conflict, and traces that disparity to a deliberate, decades-long influence campaign rooted in Soviet-era intelligence operations and sustained by later institutional and funding networks; draws on the author's GDELT-based media-coverage dataset (see companion methodology piece).",
       "tags": [
         "soviet-antizionism",
         "media-commentary"
@@ -1149,8 +1124,7 @@
         "antizionism",
         "antizionism-progressive",
         "islamism",
-        "genocide-libel",
-        "advocacy"
+        "genocide-libel"
       ],
       "reference": "Movement Against Antizionism. \"End Antizionism Denial Now (Dispatch #14).\" Substack, March 22, 2026.",
       "author": "Movement Against Antizionism",
@@ -1186,7 +1160,6 @@
         "antizionism-progressive",
         "soviet-antizionism",
         "colonizer-libel",
-        "advocacy",
         "jewish-antizionism"
       ],
       "reference": "Movement Against Antizionism. \"Antizionism Is Not Jewish Anti-Zionism (Dispatch #12).\" Substack, March 13, 2026.",
@@ -1204,8 +1177,7 @@
         "apartheid-libel",
         "bds",
         "antizionism",
-        "soviet-antizionism",
-        "advocacy"
+        "soviet-antizionism"
       ],
       "reference": "Movement Against Antizionism. \"Dispatch #11: Apartheid Week Is Coming. Are We Ready?.\" Substack, Feb. 12, 2026.",
       "author": "Movement Against Antizionism",
@@ -1220,7 +1192,6 @@
       "description": "The author argues that Jewish discourse repeatedly misdiagnoses antizionism through seven rhetorical habits, including 'cross the line' framing, the 'mask' metaphor, hyphenating 'anti-Zionism,' and claiming 'it's not about Israel.' He contends these habits fold antizionism into older forms of antisemitism rather than treating it as a distinct ideology aimed at eliminating Israel and purging those labeled 'Zionists,' and he proposes clearer language instead.",
       "tags": [
         "antizionism",
-        "advocacy",
         "colonizer-libel",
         "apartheid-libel",
         "genocide-libel"
@@ -1239,7 +1210,6 @@
       "tags": [
         "antizionism",
         "antizionism-progressive",
-        "advocacy",
         "genocide-libel",
         "colonizer-libel"
       ],
@@ -1258,8 +1228,7 @@
         "antizionism",
         "soviet-antizionism",
         "poland-1968",
-        "colonizer-libel",
-        "advocacy"
+        "colonizer-libel"
       ],
       "reference": "Movement Against Antizionism. \"Dispatch #8: Why Physical Self-Defense Is Not a Politics.\" Substack, Dec. 22, 2025.",
       "author": "Movement Against Antizionism",
@@ -1274,7 +1243,6 @@
       "description": "The author argues that the ADL's 2024 messaging guidelines, which discourage using the word antizionism and emphasize Jewish relatability and ally messengers, undermine Jewish self-defense. He proposes the MAAZ framework of principles for speaking plainly, starting with naming antizionism as a distinct ideology separate from classical antisemitism and religious antijudaism.",
       "tags": [
         "antizionism",
-        "advocacy",
         "colonizer-libel",
         "apartheid-libel",
         "genocide-libel"
@@ -1348,7 +1316,6 @@
         "antizionism",
         "soviet-antizionism",
         "poland-1968",
-        "advocacy",
         "antizionism-academy"
       ],
       "reference": "Movement Against Antizionism. \"Welcome to the Movement Against Antizionism (MAAZ).\" Substack, Nov. 7, 2025.",
@@ -1522,7 +1489,6 @@
       "description": "The author argues that 'antisemitism' has been diluted by overuse, while antizionism, which he says advocates dismantling Israel, has been sanitized as academic critique. He proposes a 'hierarchy of harm' that separates tropes and legitimate policy critique from eliminationist Jew-hatred and antizionism, and urges reserving the strongest condemnation for the latter.",
       "tags": [
         "antizionism",
-        "advocacy",
         "antizionism-academy",
         "antizionism-progressive",
         "genocide-libel"
@@ -1578,7 +1544,6 @@
         "antizionism",
         "antizionism-progressive",
         "antizionism-academy",
-        "advocacy",
         "jewish-antizionism"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Robert Goldberg, \"Amalek: The Archetypal Anti-Zionist Jew\".\" Substack, March 23, 2026.",
@@ -1595,7 +1560,6 @@
       "tags": [
         "antizionism-progressive",
         "campus",
-        "advocacy",
         "jewish-antizionism"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Kenneth Levin, \"Varieties of Jewish Antizionism\".\" Substack, March 22, 2026.",
@@ -1700,7 +1664,6 @@
       "tags": [
         "antizionism",
         "antizionism-academy",
-        "advocacy",
         "campus",
         "colonizer-libel"
       ],
@@ -1719,7 +1682,6 @@
         "antizionism",
         "antizionism-academy",
         "soviet-antizionism",
-        "advocacy",
         "islamism"
       ],
       "reference": "Andrew Pessin. \"Protocols of the Elders of Anti-Zionism.\" Substack, June 16, 2025.",
@@ -1825,7 +1787,6 @@
       "tags": [
         "antizionism",
         "antizionism-progressive",
-        "advocacy",
         "media-commentary",
         "campus",
         "jewish-antizionism"
@@ -1898,7 +1859,6 @@
       "tags": [
         "antizionism",
         "antizionism-progressive",
-        "advocacy",
         "jewish-antizionism"
       ],
       "reference": "Andrew Pessin. \"The Indelible Stain of Antisemitism: The Failure of ‘Jew-Washing’.\" Substack, May 28, 2024.",
@@ -1950,7 +1910,6 @@
       "description": "The author argues that Mayor Mamdani is the product of decades of Jewish institutional failure to confront antizionism, using a broken-windows metaphor to trace it from SJP's 1993 founding through BDS, Israel Apartheid Week, faculty activism and the encampments. She contends that groups like the ADL and Hillel conflated antizionism with policy criticism and never named it as an ideology targeting Jewish collective identity.",
       "tags": [
         "antizionism",
-        "advocacy",
         "campus",
         "antizionism-academy",
         "bds"
@@ -1970,8 +1929,7 @@
         "antizionism",
         "genocide-libel",
         "apartheid-libel",
-        "colonizer-libel",
-        "advocacy"
+        "colonizer-libel"
       ],
       "reference": "Naya Lekht. \"Demonizing black people can become racist when....\" Substack, July 10, 2026.",
       "author": "Naya Lekht",
@@ -1988,8 +1946,7 @@
         "antizionism",
         "media-commentary",
         "genocide-libel",
-        "soviet-antizionism",
-        "advocacy"
+        "soviet-antizionism"
       ],
       "reference": "Naya Lekht. \"New Yorkers said \"enough\" in front of Der Sturmer, aka The New York Times.\" Substack, May 15, 2026.",
       "author": "Naya Lekht",
@@ -2077,8 +2034,7 @@
         "antizionism",
         "colonizer-libel",
         "genocide-libel",
-        "apartheid-libel",
-        "advocacy"
+        "apartheid-libel"
       ],
       "reference": "Naya Lekht. \"Decoding Antizionism as the Third Era of Jew-Hatred.\" Substack, Nov. 10, 2025.",
       "author": "Naya Lekht",
@@ -2095,8 +2051,7 @@
         "antizionism",
         "genocide-libel",
         "colonizer-libel",
-        "soviet-antizionism",
-        "advocacy"
+        "soviet-antizionism"
       ],
       "reference": "Naya Lekht. \"What Is Antizionism?.\" Substack, Sept. 28, 2025.",
       "author": "Naya Lekht",
@@ -2113,8 +2068,7 @@
         "antizionism",
         "apartheid-libel",
         "colonizer-libel",
-        "soviet-antizionism",
-        "advocacy"
+        "soviet-antizionism"
       ],
       "reference": "Naya Lekht. \"A Lethal Hatred: Teacher's Guide on Antisemitism.\" Substack, June 10, 2024.",
       "author": "Naya Lekht",
@@ -2183,7 +2137,6 @@
       "description": "The author responds to Eitan Chitayat's 'Two Arguments. One Battle.' by arguing that Zionism education and antizionism education are complementary but not equal in sequence. He contends that antizionism has built institutional systems and libels that make Zionism explanations unhearable, so dismantling that system must come first.",
       "tags": [
         "antizionism",
-        "advocacy",
         "antizionism-academy",
         "genocide-libel",
         "apartheid-libel"
@@ -2201,7 +2154,6 @@
       "description": "The author traces how anti-Jewish hatred has repeatedly shifted its justifying story (theological, racial, and now antizionist) and argues that responses focused only on 'antisemitism' misdiagnose the current form. He contends that antizionism functions as a moral permission structure and must be named and confronted directly, and appeals for funding for his organisation's training work.",
       "tags": [
         "antizionism",
-        "advocacy",
         "antizionism-arts",
         "poland-1968",
         "colonizer-libel"
@@ -2221,8 +2173,7 @@
         "antizionism",
         "legal-public-affairs",
         "oct7",
-        "antizionism-progressive",
-        "advocacy"
+        "antizionism-progressive"
       ],
       "reference": "Joshua Dabelstein. \"Submission to the Royal Commission..\" Substack, June 14, 2026.",
       "author": "Joshua Dabelstein",
@@ -2276,8 +2227,7 @@
         "antizionism",
         "legal-public-affairs",
         "genocide-libel",
-        "colonizer-libel",
-        "advocacy"
+        "colonizer-libel"
       ],
       "reference": "Joshua Dabelstein. \"Submission to the Royal Commission into Antisemitism and Social Cohesion.\" Substack, May 11, 2026.",
       "author": "Joshua Dabelstein",
@@ -2312,8 +2262,7 @@
         "antizionism",
         "genocide-libel",
         "apartheid-libel",
-        "colonizer-libel",
-        "advocacy"
+        "colonizer-libel"
       ],
       "reference": "Joshua Dabelstein. \"Part 3: An Arsenal Against Antizionism - Taking Control..\" Substack, April 17, 2026.",
       "author": "Joshua Dabelstein",
@@ -2330,8 +2279,7 @@
         "antizionism",
         "genocide-libel",
         "colonizer-libel",
-        "apartheid-libel",
-        "advocacy"
+        "apartheid-libel"
       ],
       "reference": "Joshua Dabelstein. \"Part 2: Hostility as a Virtue - The Moral Logic of Antizionism.\" Substack, April 16, 2026.",
       "author": "Joshua Dabelstein",
@@ -2346,7 +2294,6 @@
       "description": "The author argues that antizionism is a distinct moral justification for anti-Jewish vilification, separate from antijudaism and antisemitism, and that folding it into 'antisemitism' leaves Jews unprotected. He contends that definitions and laws like the IHRA definition and Australian vilification law fail when they treat antizionism as political critique that only sometimes crosses a line.",
       "tags": [
         "antizionism",
-        "advocacy",
         "poland-1968",
         "legal-public-affairs",
         "oct7"
@@ -2364,7 +2311,6 @@
       "description": "The author argues that antizionists should not be called \"pro-Palestinian\", claiming antizionism is eliminationist and has harmed Palestinians. He also holds that antizionism is distinct from political criticism of Israel and from historical hyphenated anti-Zionism, and urges analysing what antizionism does rather than debating definitions.",
       "tags": [
         "antizionism",
-        "advocacy",
         "soviet-antizionism",
         "islamism",
         "antizionism-academy"
@@ -2455,7 +2401,6 @@
       "description": "The author argues that Australian advocates, media, and courts weaken protection of Jews by describing Jews as a faith group and by labeling antizionists 'pro-Palestine' or 'anti-Israel.' He contends antizionism is an eliminationist ideology built on libels about a phantom 'Zionist' rather than legitimate political criticism, and that precise language is essential to combating it.",
       "tags": [
         "antizionism",
-        "advocacy",
         "media-commentary",
         "genocide-libel",
         "apartheid-libel"
@@ -2545,7 +2490,6 @@
       "description": "The author introduces an interview with Adam Louis-Klein, founder of the Movement Against Antizionism, and argues that antizionism is a bigoted, libellous, violence-inspiring mechanism for harming Jews in its own right, not merely a variant of antisemitism. He cites the Bondi massacre, synagogue attacks and 'globalise the intifada' rhetoric as evidence, and promotes MAAZ as vital to Jewish advocacy.",
       "tags": [
         "antizionism",
-        "advocacy",
         "antizionism-progressive",
         "oct7"
       ],
@@ -2670,7 +2614,6 @@
       "tags": [
         "antizionism",
         "antizionism-progressive",
-        "advocacy",
         "jewish-antizionism"
       ],
       "reference": "Samuel J. Hyde. \"The Tragedy of Jewish Anti-Zionism.\" Substack, Nov. 23, 2025.",
@@ -2720,7 +2663,6 @@
         "antizionism",
         "antizionism-academy",
         "media-commentary",
-        "advocacy",
         "antizionism-progressive"
       ],
       "reference": "Jonah Platt. \"Why \"Zionist\" Became a Slur — And What Thousands of Hate Messages Taught Me.\" Substack, Aug. 2, 2026.",
@@ -2915,7 +2857,6 @@
         "antizionism",
         "genocide-libel",
         "soviet-antizionism",
-        "advocacy",
         "legal-public-affairs"
       ],
       "reference": "Jennifer Kogan / Levari. \"Old Pattern, New Era: How to Break the Cycle of Jew Hatred.\" Substack, Aug. 31, 2026.",
@@ -2985,7 +2926,6 @@
       "description": "The author argues that antizionism follows the recurring cycle of libel, stigma, violence and denial seen across eras of Jew hatred. She proposes protecting Jews through education, Jewish communal unity, legal action against institutions such as the American Psychological Association, scholarship, allies, and individual advocacy.",
       "tags": [
         "antizionism",
-        "advocacy",
         "antizionism-medicine",
         "legal-public-affairs",
         "antizionism-academy"
@@ -3004,8 +2944,7 @@
       "tags": [
         "antizionism",
         "antizionism-progressive",
-        "campus",
-        "advocacy"
+        "campus"
       ],
       "reference": "Jennifer Kogan / Levari. \"Young People and the Cult of Antizionism: What Parents Can Do About It.\" Substack, March 24, 2026.",
       "author": "Jennifer Kogan / Levari",
@@ -3056,8 +2995,7 @@
       "tags": [
         "antizionism",
         "antizionism-medicine",
-        "soviet-antizionism",
-        "advocacy"
+        "soviet-antizionism"
       ],
       "reference": "Jennifer Kogan / Levari. \"Why I joined the Movement Against Antizionism and why you should too.\" Substack, Dec. 3, 2025.",
       "author": "Jennifer Kogan / Levari",
@@ -3074,8 +3012,7 @@
         "antizionism",
         "antizionism-progressive",
         "colonizer-libel",
-        "genocide-libel",
-        "advocacy"
+        "genocide-libel"
       ],
       "reference": "Jennifer Kogan / Levari. \"Naming Hate: Antizionism in Social Work.\" Substack, Nov. 16, 2025.",
       "author": "Jennifer Kogan / Levari",
@@ -3157,7 +3094,6 @@
       "tags": [
         "antizionism",
         "antizionism-progressive",
-        "advocacy",
         "data-research",
         "campus"
       ],
@@ -3193,7 +3129,6 @@
       "tags": [
         "antizionism",
         "antizionism-progressive",
-        "advocacy",
         "jewish-antizionism"
       ],
       "reference": "Kile B. Jones. \"The Good Ones.\" Substack, June 30, 2026.",
@@ -3209,8 +3144,7 @@
       "description": "The author argues that antizionist protests at synagogues, Jewish schools, and Hillels, as opposed to government sites, show the movement is not merely criticizing a state's policy. He frames such movements as cult-like, giving belonging by teaching members whom to hate.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
-        "advocacy"
+        "antizionism-progressive"
       ],
       "reference": "Kile B. Jones. \"Debate Societies Don't Excommunicate: faiths do..\" Substack, June 26, 2026.",
       "author": "Kile B. Jones",
@@ -3573,8 +3507,7 @@
       "tags": [
         "antizionism",
         "colonizer-libel",
-        "genocide-libel",
-        "advocacy"
+        "genocide-libel"
       ],
       "reference": "Whole Story Institute. \"How Antizionism Erases Jews (And Prevents Peace).\" Substack, July 7, 2026.",
       "author": "Whole Story Institute",
@@ -3860,7 +3793,6 @@
       "description": "The author argues that Judaism uniquely fuses faith, nationhood and homeland, so denying Israel's right to exist amounts to denying Jews the right to be Jewish. On this basis he contends that anti-Zionism is Jew hatred dressed up as a political cause.",
       "tags": [
         "antizionism",
-        "advocacy",
         "colonizer-libel"
       ],
       "reference": "Moral Clarity. \"Judaism is different from other religions and why this matters for peace.\" Substack, June 24, 2025.",
