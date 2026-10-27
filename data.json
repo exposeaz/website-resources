@@ -80,10 +80,6 @@
       "label": "Media bias"
     },
     {
-      "id": "antizionism-progressive",
-      "label": "Antizionism in progressive spaces"
-    },
-    {
       "id": "antizionism-academy",
       "label": "Antizionism in the academy"
     },
@@ -106,6 +102,10 @@
     {
       "id": "data-research",
       "label": "Data & Research"
+    },
+    {
+      "id": "jew-hatred",
+      "label": "Jew-hatred"
     }
   ],
   "resources": [
@@ -114,9 +114,7 @@
       "title": "Essays on Antisemitism, Anti-Zionism, and the Left",
       "category": "books",
       "description": "A posthumous English-language collection gathering Jean Améry's essays confronting antisemitism and antizionism, including his writings on the political currents of the postwar European left.",
-      "tags": [
-        "antizionism-progressive"
-      ],
+      "tags": [],
       "reference": "Améry, Jean. Essays on Antisemitism, Anti-Zionism, and the Left. Edited by Marlene Gallner. Translated by Lars Fischer. Indiana University Press, 2021.",
       "author": "Jean Améry",
       "url": "https://www.amazon.com/dp/0253058767",
@@ -128,7 +126,9 @@
       "title": "The Antizionist Complex",
       "category": "books",
       "description": "One of the first book-length arguments that postwar hostility to Israel is a continuation of Judeophobia in a new guise; argues that opposition to Jewish national existence, however framed, ultimately derives from a refusal to accept a Jewish nation.",
-      "tags": [],
+      "tags": [
+        "jew-hatred"
+      ],
       "reference": "Givet, Jacques. The Antizionist Complex. SBS Publishing, 1979.",
       "author": "Jacques Givet",
       "url": "https://archive.org/details/antizionistcompl0000give",
@@ -140,7 +140,9 @@
       "title": "The History of Anti-Semitism",
       "category": "books",
       "description": "A landmark four-volume history tracing Jew-hatred from antiquity through the rise of Nazism; the final volumes (\"From Voltaire to Wagner,\" \"Suicidal Europe\") trace the emergence of racial antisemitism; Poliakov separately warned, in a 1969 book, that hatred of Jews might take on a new \"anti-Zionist\" guise.",
-      "tags": [],
+      "tags": [
+        "jew-hatred"
+      ],
       "reference": "Poliakov, Leon. The History of Anti-Semitism (multiple vols.). 1955–1977.",
       "author": "Leon Poliakov",
       "url": "https://www.pennpress.org/9780812218633/the-history-of-anti-semitism-volume-1",
@@ -192,9 +194,7 @@
       "title": "From Ambivalence to Betrayal: The Left, the Jews, and Israel",
       "category": "books",
       "description": "Traces the European left's shift from ambivalence toward, to eventual hostility against, Jews, Zionism, and Israel, from the origins of socialism in the 1840s to the present.",
-      "tags": [
-        "antizionism-progressive"
-      ],
+      "tags": [],
       "reference": "Wistrich, Robert S. From Ambivalence to Betrayal: The Left, the Jews, and Israel. University of Nebraska Press, 2012.",
       "author": "Robert S. Wistrich",
       "url": "https://www.nebraskapress.unl.edu/nebraska/9780803240766/from-ambivalence-to-betrayal/",
@@ -206,8 +206,7 @@
       "category": "books",
       "description": "A sweeping single-volume history of antisemitism \"from antiquity to the global jihad,\" ending with chapters connecting the Soviet war on Zionism and contemporary jihadist and left-wing antisemitism to older Judeophobic traditions.",
       "tags": [
-        "soviet-antizionism",
-        "antizionism-progressive"
+        "soviet-antizionism"
       ],
       "reference": "Wistrich, Robert S. A Lethal Obsession. Random House, 2010.",
       "author": "Robert S. Wistrich",
@@ -439,9 +438,7 @@
       "title": "The Left-Wing Case Against Anti-Zionism",
       "category": "essays",
       "description": "Makes the case, aimed at a left-leaning audience, that opposing antizionism is consistent with — not opposed to — progressive values.",
-      "tags": [
-        "antizionism-progressive"
-      ],
+      "tags": [],
       "reference": "Louis-Klein, Adam. \"The Left-Wing Case Against Anti-Zionism.\" The Atlantic.",
       "author": "Adam Louis-Klein",
       "url": "https://www.theatlantic.com/ideas/2026/06/left-against-antizionism-israel/687616/",
@@ -495,8 +492,7 @@
       "tags": [
         "antizionism",
         "soviet-antizionism",
-        "islamism",
-        "antizionism-progressive"
+        "islamism"
       ],
       "reference": "Kirschbaum-Shirazki, Olga. \"Antizionism: Projection and Replacement Theology.\"",
       "author": "Olga Kirschbaum-Shirazki",
@@ -731,7 +727,9 @@
       "title": "Anti-Judaism: The Western Tradition",
       "category": "books",
       "description": "Argues that anti-Judaism is not a fringe extremism but a foundational conceptual tool of Western thought itself. Nirenberg shows that Jews have represented what societies tend to define themselves against. Traces this paradigm from antiquity through the Enlightenment and just past the Holocaust.",
-      "tags": [],
+      "tags": [
+        "jew-hatred"
+      ],
       "reference": "Nirenberg, David. Anti-Judaism: The Western Tradition. W.W. Norton & Co., 2013.",
       "author": "David Nirenberg",
       "image": "https://covers.openlibrary.org/b/isbn/9780393058246-M.jpg",
@@ -1044,7 +1042,6 @@
       "description": "Argues that Soviet state antizionism collapsed with the USSR because the Soviet intelligentsia recognized it as official propaganda, while in the West the same educated class embraced it voluntarily after it arrived in the 1960s–70s attached to the language of antiracism. Calls for reforming American education so that antisemitism is no longer taught only as a form of racial hatred.",
       "tags": [
         "soviet-antizionism",
-        "antizionism-progressive",
         "antizionism-academy"
       ],
       "reference": "Lekht, Naya. \"Where the Soviets Won.\" Sapir, Volume 22, Summer 2026.",
@@ -1095,7 +1092,6 @@
       "description": "Presents a lyrical, literary essay tracing antizionism as the latest form of ancient Jew-hatred, in which society projects its guilt onto Jews through libels like colonizer, genocide, and baby-killer. Citing recent attacks and figures from politics, media, and entertainment, the author argues that Jews must stop turning their gaze inward and instead name and confront antizionism directly.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "genocide-libel",
         "colonizer-libel",
         "oct7"
@@ -1113,7 +1109,6 @@
       "description": "Argues that antizionism is a coherent, eliminationist hate movement and that widespread denial of this, from Jewish anti-Zionists, mainstream Jewish institutions, and political figures, enables it. Cites Iranian attacks and plots, the Beinart and Sanders statements, and examples of campus and cultural antizionism, and calls for naming antizionism plainly and confronting it.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "islamism",
         "genocide-libel"
       ],
@@ -1148,7 +1143,6 @@
       "description": "Argues that conflating pre-1948 Jewish anti-Zionism, a set of intra-Jewish debates, with contemporary antizionism, which he characterizes as a hate ideology denying Jews the right to political self-determination, gives the latter cover and endangers Jewish communities. Urges hyphenation-based terminological precision, naming antizionism as hate, and asking non-Jews for help in interrupting it.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "soviet-antizionism",
         "colonizer-libel",
         "jewish-antizionism"
@@ -1200,7 +1194,6 @@
       "description": "Argues that antizionism is mainstreaming across the American left and increasingly the right, comparing current purges of Jews labeled \"Zionists\" to earlier MENA, Soviet, and Polish campaigns. Contends that antizionism remains invisible to the public and urges Jewish organizations to educate about it and press political candidates with a provided question list before the midterms.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "genocide-libel",
         "colonizer-libel"
       ],
@@ -1269,7 +1262,6 @@
       "description": "Argues that Jewish responses to antizionism are stuck in defensive self-scrutiny and vague 'meteorological' language that hides perpetrators. Calls for a Jewish civil-rights consciousness with a precise vocabulary naming antizionist slurs, libels, conspiracies, exclusion, harassment and violence, and he examines why Jews resist naming antizionism.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "colonizer-libel",
         "apartheid-libel",
         "genocide-libel"
@@ -1321,7 +1313,6 @@
       "category": "substack-articles",
       "description": "Argues that Benjamin Moser's 'Anti-Zionism: A Jewish History' is riddled with hyperbole, misinformation, and disingenuous use of evidence, including profiles of subjects who are not clearly Jewish or who held contradictory views. Also contends that the New York Public Library, which hosted Moser as a Cullman Fellow, has urgent questions to answer about the book.",
       "tags": [
-        "antizionism-progressive",
         "colonizer-libel",
         "apartheid-libel",
         "media-commentary",
@@ -1359,7 +1350,6 @@
       "tags": [
         "antizionism-academy",
         "campus",
-        "antizionism-progressive",
         "colonizer-libel",
         "oct7"
       ],
@@ -1378,8 +1368,7 @@
         "antizionism",
         "colonizer-libel",
         "apartheid-libel",
-        "genocide-libel",
-        "antizionism-progressive"
+        "genocide-libel"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Jones and Gisle: \"The Antizionist Script: How Two Strangers Reached the Same Conclusion\".\" Substack, July 15, 2026.",
       "author": "Institute for Critical Study of Antizionism (ICSA)",
@@ -1393,7 +1382,6 @@
       "category": "substack-articles",
       "description": "Reviews Molly Crabapple's book, which holds up the anti-Zionist Bund as a model for leftist Jews today, and argues she ignores Labor Zionism's critique of Bundism and the Bund's historical failures. Traces the socialist movement's indifference to Jewish survival and contends that both the Bund and Labor Zionists offered serious but competing programs for Jewish national survival.",
       "tags": [
-        "antizionism-progressive",
         "soviet-antizionism",
         "media-commentary",
         "jewish-antizionism"
@@ -1411,7 +1399,6 @@
       "description": "Argues that claims of dog-rape and organ harvesting against Israel, such as Nicholas Kristof's reliance on Euro-Med Human Rights Monitor, are modern blood libels, and shows the organ-theft claim is medically implausible. Contends that progressive humanitarianism now plays the role that race pseudoscience played in earlier antisemitism, serving as a respectable vehicle for demonizing Zionists.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "media-commentary",
         "genocide-libel",
         "islamism"
@@ -1464,7 +1451,6 @@
       "description": "Drawing on Jonathan Sacks, argues that antisemitism persists by adapting to the dominant moral language of each era (religious, national, racial, and now liberal discourse centered on power and justice). In the contemporary liberal age, he contends, it often takes the form of antizionism, in which Israel is classed as 'powerful' and judged asymmetrically.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "colonizer-libel"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Allen Zeesman: How Antisemitism Adapts to the Moral Language of Each Age.\" Substack, May 2, 2026.",
@@ -1481,7 +1467,6 @@
       "tags": [
         "antizionism",
         "antizionism-academy",
-        "antizionism-progressive",
         "genocide-libel"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Erez Levin, \"The Linguistic Shell Game\".\" Substack, April 26, 2026.",
@@ -1498,7 +1483,6 @@
       "tags": [
         "antizionism",
         "oct7",
-        "antizionism-progressive",
         "antizionism-arts",
         "campus"
       ],
@@ -1533,7 +1517,6 @@
       "description": "Argues that Amalek functions as a transhistorical archetype for the antizionist Jew, with the Haggadah's Wicked Son as his internal form and modern Jewish antizionists as contemporary incarnations. Contends such positions threaten Jewish continuity and calls for an unapologetic affirmation of Zionism as integral to Jewish destiny.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "antizionism-academy",
         "jewish-antizionism"
       ],
@@ -1549,7 +1532,6 @@
       "category": "substack-articles",
       "description": "Kenneth Levin argues that Jewish antizionism, from JVP and 'as-a-Jew' critics to institutions embracing BLM and DEI, is a recurring maladaptive response of besieged minorities seeking acceptance by adopting their haters' indictments. Traces this pattern from Enlightenment-era reform through the Pittsburgh Platform and Warburg and Magnes to today, and contends that blaming Israeli policy for antisemitism misdiagnoses the threat to American Jews.",
       "tags": [
-        "antizionism-progressive",
         "campus",
         "jewish-antizionism"
       ],
@@ -1568,7 +1550,6 @@
         "antizionism",
         "soviet-antizionism",
         "antizionism-academy",
-        "antizionism-progressive",
         "islamism"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"The Foundational Book Project Launches!.\" Substack, March 19, 2026.",
@@ -1599,7 +1580,6 @@
       "category": "substack-articles",
       "description": "Shares Daniel Burston's review of Kara Jesella's forthcoming book on feminist antisemitism, which traces how feminism's identity-based theories came to cast Jews and Israel as oppressors, plus the abstract and opening of his essay on antizionism, authoritarianism, and denial of October 7 sexual violence on the Left. Burston argues that settler-colonial framings of Israel ignore historical facts and that Left authoritarianism shares dogmatism, conspiracy thinking, and antisemitism with its Right-wing counterpart.",
       "tags": [
-        "antizionism-progressive",
         "oct7",
         "colonizer-libel",
         "antizionism-academy",
@@ -1619,7 +1599,6 @@
       "tags": [
         "antizionism",
         "genocide-libel",
-        "antizionism-progressive",
         "soviet-antizionism",
         "arab-supremacy"
       ],
@@ -1726,7 +1705,6 @@
         "antizionism",
         "campus",
         "antizionism-academy",
-        "antizionism-progressive",
         "colonizer-libel"
       ],
       "reference": "Andrew Pessin. \"“Anti-Zionism is Antisemitism,” on Campus.\" Substack, Feb. 21, 2025.",
@@ -1761,8 +1739,7 @@
         "antizionism",
         "campus",
         "genocide-libel",
-        "bds",
-        "antizionism-progressive"
+        "bds"
       ],
       "reference": "Andrew Pessin. \"\"Anti-Zionism is Antisemitism,\" On Campus, Fourth (Final) Installment.\" Substack, Jan. 26, 2025.",
       "author": "Andrew Pessin",
@@ -1777,7 +1754,6 @@
       "description": "Rebuts three arguments Mehdi Hasan made in a Munk debate against the resolution that anti-Zionism is antisemitism, contending that Zionism is deeply embedded in Jewish identity and history. Argues that Jewish anti-Zionists, including Satmar and Neturei Karta, do not refute the claim, citing historical examples of Jews who served antisemitic movements and distinguishing antisemitism in intent from antisemitism in effect.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "media-commentary",
         "campus",
         "jewish-antizionism"
@@ -1814,7 +1790,6 @@
       "tags": [
         "antizionism",
         "campus",
-        "antizionism-progressive",
         "antizionism-academy",
         "colonizer-libel"
       ],
@@ -1833,8 +1808,7 @@
         "antizionism",
         "oct7",
         "campus",
-        "colonizer-libel",
-        "antizionism-progressive"
+        "colonizer-libel"
       ],
       "reference": "Andrew Pessin. \"Even If (Most Of) What Detractors Say About The Founding Of Israel Were True ….\" Substack, Sept. 6, 2024.",
       "author": "Andrew Pessin",
@@ -1849,7 +1823,6 @@
       "description": "Argues that anti-Israel positions meeting the '3-D' test cannot be exonerated by pointing to 'Social Justice Jews' who ground their anti-Israelism in universal Jewish ethics, since they sidestep the particularist side of Judaism and reject for Jews the rights granted to other peoples. Concludes that targeting Zionist Jews amounts to a 'new antisemitism' that Judea Pearl has called 'Zionophobia.'",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "jewish-antizionism"
       ],
       "reference": "Andrew Pessin. \"The Indelible Stain of Antisemitism: The Failure of ‘Jew-Washing’.\" Substack, May 28, 2024.",
@@ -1885,8 +1858,7 @@
         "antizionism",
         "campus",
         "oct7",
-        "colonizer-libel",
-        "antizionism-progressive"
+        "colonizer-libel"
       ],
       "reference": "Andrew Pessin. \"Even If (Most Of) What Detractors Say About The Founding Of Israel Were True ... (Part 1 of 2).\" Substack, Dec. 25, 2023.",
       "author": "Andrew Pessin",
@@ -1970,7 +1942,6 @@
       "description": "Building on Shulamit Volkov's idea of antisemitism as a 'cultural code,' argues that societies in each era define their moral order by casting Jews as its inverse, moving from anti-Judaism to racial antisemitism to antizionism. Contends that antizionism now signals progressive decolonial commitments, and that only a reckoning with it will lead the West to abandon this oppressor/oppressed moral framework.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "colonizer-libel",
         "oct7"
       ],
@@ -2007,7 +1978,6 @@
         "antizionism",
         "soviet-antizionism",
         "genocide-libel",
-        "antizionism-progressive",
         "campus"
       ],
       "reference": "Naya Lekht. \"Beware Those Who Denounce Antisemitism.\" Substack, Nov. 22, 2025.",
@@ -2163,8 +2133,7 @@
       "tags": [
         "antizionism",
         "legal-public-affairs",
-        "oct7",
-        "antizionism-progressive"
+        "oct7"
       ],
       "reference": "Joshua Dabelstein. \"Submission to the Royal Commission..\" Substack, June 14, 2026.",
       "author": "Joshua Dabelstein",
@@ -2179,7 +2148,6 @@
       "description": "Responds to Nomi Kaltmann's op-ed on the Limmud controversy, arguing that modern antizionism is a distinct hate movement rather than a continuation of historical Jewish anti-Zionism. Contends that calling Jewish objections a 'purity test' inverts the real purity tests antizionism imposes on Jews, while stressing he is critiquing systems and ideas, not individuals.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "genocide-libel",
         "apartheid-libel",
         "colonizer-libel",
@@ -2198,7 +2166,6 @@
       "description": "Argues that Victorian Labor's conference motions on apartheid claims and support for Marwan Barghouti reflect antizionism, an ideology distinct from political criticism that institutions fail to name. Contends that antizionism is the latest form of anti-Jewish hatred, following antijudaism and antisemitism, and that Australian institutions and the Royal Commission must identify it explicitly to protect Jews.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "apartheid-libel",
         "genocide-libel",
         "colonizer-libel"
@@ -2320,7 +2287,6 @@
       "tags": [
         "antizionism",
         "legal-public-affairs",
-        "antizionism-progressive",
         "poland-1968"
       ],
       "reference": "Joshua Dabelstein. \"Vorchheimer v Tayeh.\" Substack, March 9, 2026.",
@@ -2336,7 +2302,6 @@
       "description": "Argues that the \"Journeys & Destinations\" report on young Jewish antizionists blurs the distinction between historical \"anti-Zionism\" (a pre-Holocaust debate) and contemporary antizionism, which he describes as an eliminationist ideology. Contends the report's participants' views rely on fallacious reasoning and libels such as settler colonialism and genocide, and that the hyphen masks bigotry.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "genocide-libel",
         "colonizer-libel",
         "legal-public-affairs",
@@ -2373,7 +2338,6 @@
       "description": "Argues that Jews who invoke their Jewishness to advance antizionist positions (\"asajews\") serve as validators for bigotry, driven either by adolescent rebellion or opportunism, and are platformed by media like the ABC to give cover to antizionist libels. Draws parallels to court Jews, conversos, and Soviet-era \"anti-Zionist Jews,\" and argues antizionism must be addressed as a distinct pathway of anti-Jewish harm rather than conflated with antisemitism.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "soviet-antizionism",
         "media-commentary",
         "genocide-libel",
@@ -2409,7 +2373,6 @@
       "description": "Argues that Randa Abdel-Fattah's Mondoweiss essay replaces historically real Zionism with a libellous 'phantom' abstraction, structurally analogous to classical antisemitic constructions of 'the Jew'. Contends this abstraction withdraws safety and legitimacy from Jews labelled Zionists and frames elimination of the Jewish state as morally necessary.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "antizionism-arts",
         "genocide-libel",
         "media-commentary"
@@ -2429,8 +2392,7 @@
         "antizionism",
         "genocide-libel",
         "apartheid-libel",
-        "bds",
-        "antizionism-progressive"
+        "bds"
       ],
       "reference": "Joshua Dabelstein. \"Candles, again..\" Substack, Jan. 12, 2026.",
       "author": "Joshua Dabelstein",
@@ -2481,7 +2443,6 @@
       "description": "Introduces an interview with Adam Louis-Klein, founder of the Movement Against Antizionism, and argues that antizionism is a bigoted, libellous, violence-inspiring mechanism for harming Jews in its own right, not merely a variant of antisemitism. Cites the Bondi massacre, synagogue attacks and 'globalise the intifada' rhetoric as evidence, and promotes MAAZ as vital to Jewish advocacy.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "oct7"
       ],
       "reference": "Joshua Dabelstein. \"Adam Louis-Klein | Antizionism • Hasbara.\" Substack, Jan. 1, 2026.",
@@ -2533,7 +2494,6 @@
       "description": "Argues that antizionism is driven by subconscious emotional needs, especially Western colonial shame and a desire for atonement, which are moralised into a witch hunt against Israel. Offers 15 points contending that antizionism uniquely demands a state's elimination irrespective of its actions, and that Israel serves as a scapegoat for the West's historical guilt.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "oct7",
         "colonizer-libel"
       ],
@@ -2586,7 +2546,6 @@
       "description": "Argues that Western liberal antizionism is driven by a collective 'shame-body' over colonial history, Soviet propaganda, and ignorance of history, rather than by facts. Contends that Arab antisemitism and rejection of Israel's existence, not Israel's creation, underlie the conflict and the Palestinian refugee crisis.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "soviet-antizionism",
         "colonizer-libel",
         "arab-supremacy"
@@ -2604,7 +2563,6 @@
       "description": "Argues that historical Jewish anti-Zionism, such as that of the Bund, should not be conflated with the antizionist movement filling the streets today, even though anti-Zionist Jews now work within that formation.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "jewish-antizionism"
       ],
       "reference": "Samuel J. Hyde. \"The Tragedy of Jewish Anti-Zionism.\" Substack, Nov. 23, 2025.",
@@ -2653,8 +2611,7 @@
       "tags": [
         "antizionism",
         "antizionism-academy",
-        "media-commentary",
-        "antizionism-progressive"
+        "media-commentary"
       ],
       "reference": "Jonah Platt. \"Why \"Zionist\" Became a Slur — And What Thousands of Hate Messages Taught Me.\" Substack, Aug. 2, 2026.",
       "author": "Jonah Platt",
@@ -2725,8 +2682,7 @@
         "antizionism",
         "genocide-libel",
         "colonizer-libel",
-        "apartheid-libel",
-        "antizionism-progressive"
+        "apartheid-libel"
       ],
       "reference": "Jonah Platt. \"Antizionism: The Intellectual Veneer on an Ancient Hatred.\" Substack, May 29, 2026.",
       "author": "Jonah Platt",
@@ -2759,7 +2715,6 @@
       "description": "Argues that an Islamist-socialist-leftist 'Red-Green alliance' now dominates US academia, media and big-city politics, citing New York's antizionist candidates as proof that anti-Jewish politics have gone mainstream. Contends that the same antizionist conspiracy framework about Jewish power and money was already in use after 9/11.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "islamism",
         "antizionism-academy",
         "media-commentary"
@@ -2779,7 +2734,6 @@
         "antizionism",
         "islamism",
         "oct7",
-        "antizionism-progressive",
         "media-commentary"
       ],
       "reference": "Kevin Deutsch. \"Islamophoria: The Emotional High Behind the West’s Antizionist Frenzy.\" Substack, May 31, 2026.",
@@ -2794,7 +2748,6 @@
       "category": "substack-articles",
       "description": "Reports on a review of public statements, social media, public records, and watchdog reports that, he says, reveals a well-funded antizionist organizing ecosystem in Georgia spanning mosques, campuses, coffeehouses, and far-left candidate networks. Argues it normalizes demonization of \"Zionists\" and pairs anti-Israel advocacy with broader hostility toward America and the West.",
       "tags": [
-        "antizionism-progressive",
         "campus",
         "islamism",
         "media-commentary"
@@ -2811,7 +2764,6 @@
       "category": "substack-articles",
       "description": "Argues that the firing of sex educator Dr. Logan Levkoff by a Manhattan private school fits a historical pattern, originating in Moscow, of recasting Zionism as malevolent and purging Jews who refuse to denounce it.",
       "tags": [
-        "antizionism-progressive",
         "soviet-antizionism",
         "antizionism"
       ],
@@ -2828,7 +2780,6 @@
       "description": "Argues that decolonial theory, exemplified by Mahmood Mamdani and carried into politics by his son Zohran Mamdani, casts Israel as an irredeemable imperial villain. Contends this vocabulary now unites socialist, Islamist, and far-right nationalist actors in a 'Red-Green-Brown' alliance opposed to Jewish sovereignty.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "antizionism-academy",
         "colonizer-libel",
         "islamism"
@@ -2883,7 +2834,6 @@
         "antizionism",
         "antizionism-academy",
         "campus",
-        "antizionism-progressive",
         "colonizer-libel"
       ],
       "reference": "Jennifer Kogan / Levari. \"How Young Antizionists Change Their Minds.\" Substack, July 21, 2026.",
@@ -2901,8 +2851,7 @@
         "antizionism",
         "genocide-libel",
         "apartheid-libel",
-        "colonizer-libel",
-        "antizionism-progressive"
+        "colonizer-libel"
       ],
       "reference": "Jennifer Kogan / Levari. \"What Do We Mean When We Say Antizionism?.\" Substack, July 14, 2026.",
       "author": "Jennifer Kogan / Levari",
@@ -2934,7 +2883,6 @@
       "description": "Argues that young people are susceptible to ideological capture by antizionism through developmental needs for certainty and belonging, and through constrained, binary language. Advises parents against arguing and instead to model flexible thinking and keep a steady, open relationship so a child can return when doubt arises.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "campus"
       ],
       "reference": "Jennifer Kogan / Levari. \"Young People and the Cult of Antizionism: What Parents Can Do About It.\" Substack, March 24, 2026.",
@@ -3001,7 +2949,6 @@
       "description": "Argues that antizionism is a dehumanizing hate movement derived from Soviet propaganda that has infiltrated social work and mental health institutions, with NASW ignoring Jewish members' complaints. Presents the Jewish Social Work Consortium's mission to confront it through advocacy, education, and support for affected practitioners.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "colonizer-libel",
         "genocide-libel"
       ],
@@ -3084,7 +3031,6 @@
       "description": "Argues that antizionism is its own source of Jew-hatred that need not resemble classic antisemitism, citing recent attacks, the ADL audit and the J7 report. Urges dropping the 'criticism of Israel is not antisemitic' caveat and screening more aggressively for antizionism, even at the cost of false positives.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "data-research",
         "campus"
       ],
@@ -3119,7 +3065,6 @@
       "description": "Argues that antizionism is a form of Jew-hatred that relies on Jewish figures like Chomsky and Butler to vouch that it is not. Describes how these Jewish teachers presented a minority position as the authentic voice of Jews.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "jewish-antizionism"
       ],
       "reference": "Kile B. Jones. \"The Good Ones.\" Substack, June 30, 2026.",
@@ -3134,8 +3079,7 @@
       "category": "substack-articles",
       "description": "Argues that antizionist protests at synagogues, Jewish schools, and Hillels, as opposed to government sites, show the movement is not merely criticizing a state's policy. Frames such movements as cult-like, giving belonging by teaching members whom to hate.",
       "tags": [
-        "antizionism",
-        "antizionism-progressive"
+        "antizionism"
       ],
       "reference": "Kile B. Jones. \"Debate Societies Don't Excommunicate: faiths do..\" Substack, June 26, 2026.",
       "author": "Kile B. Jones",
@@ -3152,7 +3096,6 @@
         "antizionism",
         "campus",
         "antizionism-academy",
-        "antizionism-progressive",
         "legal-public-affairs"
       ],
       "reference": "Kile B. Jones. \"How Everyone Becomes a Target.\" Substack, June 17, 2026.",
@@ -3170,8 +3113,7 @@
         "antizionism",
         "genocide-libel",
         "colonizer-libel",
-        "apartheid-libel",
-        "antizionism-progressive"
+        "apartheid-libel"
       ],
       "reference": "Kile B. Jones. \"WORDS THAT DO THE HATING FOR YOU: A GLOSSARY.\" Substack, June 14, 2026.",
       "author": "Kile B. Jones",
@@ -3204,7 +3146,6 @@
       "description": "Recounts how, after October 7th, he began questioning his leftist and post-colonial framework and became aware of how pervasive antisemitism is. Describes how his algorithm, fed by Jacobin and Al Jazeera, kept repeating the narrative of Israel as an apartheid, colonial, and genocidal state.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "apartheid-libel",
         "colonizer-libel",
         "genocide-libel"
@@ -3223,8 +3164,7 @@
       "tags": [
         "antizionism",
         "colonizer-libel",
-        "antizionism-academy",
-        "antizionism-progressive"
+        "antizionism-academy"
       ],
       "reference": "Kile B. Jones. \"Anti-Zionism and the Inverted World: Recasting Jews as Colonial Villains.\" Substack, Jan. 9, 2026.",
       "author": "Kile B. Jones",
@@ -3268,7 +3208,6 @@
       "category": "substack-articles",
       "description": "Argues that antizionist activists captured the DSA, using the Gaza war and the October 7 response to radicalize and recruit. Claims they are now attempting to take over the Democratic Party in a way that serves Muslim Brotherhood and Iranian regime goals of isolating Israel from the US.",
       "tags": [
-        "antizionism-progressive",
         "islamism",
         "bds",
         "oct7"
@@ -3303,7 +3242,6 @@
       "category": "substack-articles",
       "description": "Argues that Jews who position themselves as morally superior by embracing 'free Palestine' and antizionism, such as Sarah Sherman, Matt Bernstein, Peter Beinart, and groups like JVP and IfNotNow, repeat an ancient pattern of a minority of Jews collaborating against their own for personal gain. Frames this as the modern 'Erev Rav,' traces how antizionist tenets were seeded in leftist and academic spheres before October 7, and argues that Israel's creation saved Jews that diaspora countries turned away.",
       "tags": [
-        "antizionism-progressive",
         "genocide-libel",
         "colonizer-libel",
         "apartheid-libel",
@@ -3339,7 +3277,6 @@
       "category": "substack-articles",
       "description": "Argues that Western leftist movements aligning with Hamas and other jihadist groups after October 7 should be named 'Neo-Jihadism,' drawing a parallel with Neo-Nazism. Contends this movement adopts jihadist symbols, rhetoric, and violence, with roots in Soviet-Arab antizionism and postcolonial theory, and is mainstreaming in Western institutions.",
       "tags": [
-        "antizionism-progressive",
         "islamism",
         "oct7",
         "colonizer-libel",
@@ -3547,7 +3484,6 @@
       "description": "Argues that 'Palestine' functions as a wound-symbol that converts suffering into value, while 'Israel' functions as a chase-object that unites incompatible anti-Israel coalitions. Together these form a self-reinforcing symbolic economy that perpetuates the conflict and rewards Palestinian grievance over governance, and the author calls for separating the symbols from the real peoples and states.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "genocide-libel",
         "apartheid-libel",
         "colonizer-libel"
@@ -3565,7 +3501,6 @@
       "description": "Argues that in the current era of Jew-hatred Israel serves as a 'MacGuffin', an empty object that lets incompatible groups (Islamists, leftists, academics, activists) feel part of one moral drama, so factual correction hardly matters. Traces the function to the 1920s Arab elite's redirection of peasant grievances onto Zionism and contends 'liberationist' Western elites are blind to the supremacist aims of the movements they back.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "arab-supremacy",
         "islamism",
         "colonizer-libel"
@@ -3603,8 +3538,7 @@
         "antizionism",
         "soviet-antizionism",
         "antizionism-academy",
-        "colonizer-libel",
-        "antizionism-progressive"
+        "colonizer-libel"
       ],
       "reference": "Whole Story Institute. \"Antizionism Is Not Just Politics. It Is A Product..\" Substack, May 21, 2026.",
       "author": "Whole Story Institute",
@@ -3717,7 +3651,6 @@
       "category": "substack-articles",
       "description": "Satirically lays out a step-by-step progressive 'test' for separating acceptable Jews from Zionists, arguing that Jewish identity is welcomed only while it stays cultural or religious and becomes suspect once it involves peoplehood, ancestral land, or support for Israel. The piece builds toward the claim that historical attachment is treated as legitimate for other peoples but not once Jews act on it.",
       "tags": [
-        "antizionism-progressive",
         "antizionism",
         "colonizer-libel",
         "media-commentary"
@@ -3768,7 +3701,6 @@
       "description": "Argues that Israel serves as a test of Enlightenment sincerity: the West embraced Jews as individuals and victims but recoils at Jewish national sovereignty. Traces this from the French Revolution's conditional emancipation through the Holocaust to modern moral prejudice against the Jewish state.",
       "tags": [
         "antizionism",
-        "antizionism-progressive",
         "media-commentary"
       ],
       "reference": "Moral Clarity. \"Israel as a test of the Enlightenment.\" Substack, March 30, 2026.",
@@ -3801,7 +3733,6 @@
         "antizionism",
         "oct7",
         "campus",
-        "antizionism-progressive",
         "colonizer-libel"
       ],
       "reference": "Moral Clarity. \"Anti-Zionism is the new anti-Semitism.\" Substack, Dec. 11, 2023.",

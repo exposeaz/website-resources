@@ -1,6 +1,8 @@
-"""Adds relevance_score and the news tag to stored articles that lack a score, from their title, summary and stance.
+"""Re-judges relevance, relevance_score and tags on stored articles, from their title, summary and stance.
 
-For articles classified before scoring existed. Saves after each article, so it resumes if interrupted.
+Re-judges every article not yet judged under the current rules and vocabulary, so re-run it after changing
+either. Saves after each article, so it resumes if interrupted.
+Run export --sync afterwards to carry the changes into data.json.
 Don't run it while the pipeline is running: both write data/articles.json.
 Run from update-substack-posts/: python -m substack_pipeline.retag
 """
@@ -9,7 +11,7 @@ import logging
 import sys
 
 from substack_pipeline import state
-from substack_pipeline.classify import NEWS_TAG, Classifier, ClassifyAuthError, ClassifyError
+from substack_pipeline.classify import Classifier, ClassifyAuthError, ClassifyError
 
 log = logging.getLogger(__name__)
 
@@ -17,9 +19,9 @@ log = logging.getLogger(__name__)
 def main():
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
     articles = state.load_articles()
-    pending = [a for a in articles if "relevance_score" not in a]
-    log.info("%d of %d articles need a score", len(pending), len(articles))
     classifier = Classifier(state.load_tags())
+    pending = [a for a in articles if a.get("retagged") != classifier.retag_signature]
+    log.info("%d of %d articles to re-judge", len(pending), len(articles))
     failed = 0
     for i, article in enumerate(pending, 1):
         try:
@@ -30,13 +32,16 @@ def main():
             log.error("%s: %s", article["url"], exc)
             failed += 1
             continue
+        old = (article["relevance"], article.get("relevance_score"))
+        article["relevance"] = result["relevance"]
         article["relevance_score"] = result["relevance_score"]
-        # news is a format tag, so it may go past MAX_TAGS
-        if result["news"] and NEWS_TAG not in article["tags"]:
-            article["tags"].append(NEWS_TAG)
+        article["tags"] = result["tags"]
+        article["retagged"] = classifier.retag_signature
+        # Scoped tags were judged in the same call
+        article["scoped_tags_reviewed"] = classifier.scoped_signature
         state.save_articles(articles)
-        log.info("[%d/%d] score %d%s %s", i, len(pending), result["relevance_score"],
-                 " +news" if result["news"] else "", article["title"])
+        log.info("[%d/%d] %s %s -> %s %d [%s] %s", i, len(pending), *old, result["relevance"],
+                 result["relevance_score"], ", ".join(result["tags"]), article["title"])
     log.info("Done; %d failed (re-run to retry them)", failed)
 
 
