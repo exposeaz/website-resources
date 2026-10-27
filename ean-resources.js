@@ -42,7 +42,7 @@
   var state = {
     data: null, view: "categories", categoryId: null, substackId: null,
     search: "", activeTags: [], tagMode: "any", modalResourceId: null, layout: loadLayout(),
-    shown: PAGE_SIZE, pageKey: null, showNews: false
+    shown: PAGE_SIZE, pageKey: null, showNews: false, sortKey: null, sortDir: 1
   };
 
   // Card/list choice is remembered per visitor; storage can be unavailable
@@ -261,11 +261,51 @@
   }
 
   // Cards (masonry grid) or list, per the visitor's layout choice
+  // List view only: a chosen sort replaces the default order (and tag-match ranking); missing values go last
+  var SORTS = [["title", "Title"], ["author", "Author"], ["year", "Year"], ["type", "Type"]];
+  // Surname of the first author ("Robert S. Wistrich (ed.)" -> "wistrich"); organisations sort by full name
+  var ORG_WORDS = /\b(institute|museum|movement|clarity|center|centre|journal|foundation|society|committee|network|project|council)\b/i;
+  function authorSortKey(author) {
+    var name = (author || "").replace(/\(.*?\)|\bet al\.?/gi, "").split(/\s+and\s+|\s*\/\s*|,/)[0].trim();
+    if (!name) return "";
+    var words = name.split(/\s+/);
+    if (ORG_WORDS.test(name) || words.length === 1) return name.toLowerCase();
+    return (words[words.length - 1] + " " + name).toLowerCase();
+  }
+  function sortValue(r, key) {
+    if (key === "title") return (r.title || "").toLowerCase();
+    if (key === "author") return authorSortKey(r.author);
+    if (key === "type") return categoryLabel(r.category).toLowerCase();
+    return r.date || (r.year ? String(r.year) : "");
+  }
+  function sortItems(items) {
+    var key = state.sortKey, dir = state.sortDir;
+    return items.slice().sort(function (a, b) {
+      var va = sortValue(a, key), vb = sortValue(b, key);
+      if (!va || !vb) return va ? -1 : vb ? 1 : 0;
+      // Within one type, newest first
+      return dir * va.localeCompare(vb) || (key === "type" ? byNewest(a, b) : 0);
+    });
+  }
+  // Type is offered only when the listing mixes resource types
+  function sortBarHtml(items) {
+    var mixed = items.some(function (r) { return r.category !== items[0].category; });
+    return '<div class="ean-sortbar"><span class="ean-sortbar-label">Sort by</span>' + SORTS.filter(function (s) {
+      return s[0] !== "type" || mixed;
+    }).map(function (s) {
+      var on = state.sortKey === s[0];
+      return '<button type="button" data-sort="' + s[0] + '" aria-pressed="' + on + '">' + s[1] +
+        (on ? (state.sortDir === 1 ? ' &uarr;' : ' &darr;') : '') + '</button>';
+    }).join('') + '</div>';
+  }
+
   function renderItems(items) {
     var total = items.length;
-    items = rankByTagMatches(items).slice(0, state.shown);
-    var html = state.layout === "list"
-      ? '<div class="ean-res-list">' + items.map(renderResourceRow).join('') + '</div>'
+    var asList = state.layout === "list";
+    var bar = asList ? sortBarHtml(items) : "";
+    items = (asList && state.sortKey ? sortItems(items) : rankByTagMatches(items)).slice(0, state.shown);
+    var html = asList
+      ? bar + '<div class="ean-res-list">' + items.map(renderResourceRow).join('') + '</div>'
       : '<div class="ean-res-grid">' + items.map(renderResourceCard).join('') + '</div>';
     if (total > items.length) {
       html += '<div class="ean-show-more-wrap"><button type="button" class="ean-show-more" data-show-more="1">' +
@@ -322,7 +362,7 @@
     var items = articlesFor(sub).sort(byNewest);
     if (filtering) items = items.filter(matchesFilters);
     var link = '<a href="' + esc(sub.url) + '" target="_blank" rel="noopener">' + esc(sub.title) + ' &#8599;</a>';
-    var html = '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All categories</a> / ' +
+    var html = '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All resource types</a> / ' +
       '<a href="#" class="ean-crumb-link" data-back-substacks="1">' + esc(categoryLabel(SUBSTACK_CATEGORY)) + '</a> / ' + esc(sub.title);
     if (filtering) html += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
     html += '</div>';
@@ -338,7 +378,7 @@
 
   function render() {
     // A new listing (view, search or tags changed) starts again from the first page
-    var pageKey = JSON.stringify([state.view, state.categoryId, state.substackId, state.search, state.activeTags, state.tagMode, state.showNews]);
+    var pageKey = JSON.stringify([state.view, state.categoryId, state.substackId, state.search, state.activeTags, state.tagMode, state.showNews, state.sortKey, state.sortDir]);
     if (pageKey !== state.pageKey) {
       state.pageKey = pageKey;
       state.shown = PAGE_SIZE;
@@ -354,13 +394,13 @@
       // only the top-level categories view searches everything at once.
       var items = state.data.resources.filter(function (r) { return r.category === state.categoryId; });
       if (filtering) items = items.filter(matchesFilters);
-      html += '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All categories</a> / ' + esc(categoryLabel(state.categoryId));
+      html += '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All resource types</a> / ' + esc(categoryLabel(state.categoryId));
       if (filtering) html += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
       html += '</div>';
       if (state.categoryId === SUBSTACK_CATEGORY) html += '<p class="ean-substack-note ean-substacks-intro">' + esc(SUBSTACKS_INTRO) + '</p>';
       html += items.length
         ? renderCategoryResources(state.categoryId, items)
-        : '<div class="ean-empty">' + (filtering ? 'No resources match your filters in this category.' : 'No resources in this category yet.') + '</div>';
+        : '<div class="ean-empty">' + (filtering ? 'No resources of this type match your filters.' : 'No resources of this type yet.') + '</div>';
     } else if (filtering) {
       // Newest first; in "match any" mode, more matching tags still come first
       var matched = state.data.resources.filter(matchesFilters).sort(byNewest);
@@ -477,6 +517,15 @@
         render();
       });
     }
+    // First click sorts A–Z (Year: newest first); clicking again reverses
+    root.querySelectorAll("[data-sort]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var key = btn.getAttribute("data-sort");
+        if (state.sortKey === key) state.sortDir = -state.sortDir;
+        else { state.sortKey = key; state.sortDir = key === "year" ? -1 : 1; }
+        render();
+      });
+    });
     var clearBtn = root.querySelector("[data-clear-filters]");
     if (clearBtn) {
       clearBtn.addEventListener("click", function () {
