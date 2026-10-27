@@ -273,6 +273,16 @@
   .ean-res-count { font-size: 0.85em; opacity: 0.7; }
 
   /* List layout: one compact row per resource */
+  /* List view sort controls */
+  .ean-sortbar { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-bottom: 8px; font-size: 0.85em; }
+  .ean-sortbar-label { opacity: 0.7; margin-right: 2px; }
+  .ean-sortbar button {
+    font: inherit; cursor: pointer; background: transparent; color: inherit;
+    border: 1px solid var(--ean-border); border-radius: 999px; padding: 2px 10px;
+  }
+  .ean-sortbar button[aria-pressed="true"] {
+    background: var(--ean-tag-active-bg); border-color: var(--ean-tag-active-border); color: var(--ean-tag-active-text); font-weight: 600;
+  }
   .ean-res-list {
     display: flex;
     flex-direction: column;
