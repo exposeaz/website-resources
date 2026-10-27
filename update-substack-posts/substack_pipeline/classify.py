@@ -243,7 +243,7 @@ def _retag_message(a):
 _DEDUPE_SYSTEM = """You review the posts one Substack publication has in a nonprofit's resource library on antizionism.
 Judge only from the records given.
 
-Find posts that make essentially the same argument as another post in the list: the same main thesis, without a distinct contribution of their own. A distinct contribution is something like a specific case, event, document, or historical episode examined, data, or a different line of argument. Posts that share a thesis but each have a distinct contribution are not duplicates.
+Find posts that make essentially the same argument as another post in the list: the same main thesis, without a distinct contribution of their own. A distinct contribution is something like a specific case, event, document, or historical episode examined, data, or a different line of argument. Posts that share a thesis but each have a distinct contribution are not duplicates. A different news hook (the event, person, or statement the post responds to) is not by itself a distinct contribution if the argument is the same.
 
 Group the duplicates. In each group, keep the post most useful to a reader: the one with the greatest distinct contribution or, if all are equally general, the fullest statement of the argument. Leave out posts that have no duplicate.
 
