@@ -138,10 +138,17 @@
     color: var(--ean-tag-active-text) !important;
   }
 
+  .ean-results-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+    margin-bottom: 16px;
+  }
+  .ean-results-head .ean-layout-toggle { margin-left: auto; }
   .ean-crumb {
     font-size: 1.05em;
     font-weight: 600;
-    margin-bottom: 16px;
   }
   .ean-news-toggle { font-weight: 400; font-size: 0.85em; opacity: 0.8; }
   .ean-news-toggle a { color: var(--ean-accent); font-weight: 600; }
