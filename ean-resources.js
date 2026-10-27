@@ -263,9 +263,18 @@
   // Cards (masonry grid) or list, per the visitor's layout choice
   // List view only: a chosen sort replaces the default order (and tag-match ranking); missing values go last
   var SORTS = [["title", "Title"], ["author", "Author"], ["year", "Year"], ["type", "Type"]];
+  // Surname of the first author ("Robert S. Wistrich (ed.)" -> "wistrich"); organisations sort by full name
+  var ORG_WORDS = /\b(institute|museum|movement|clarity|center|centre|journal|foundation|society|committee|network|project|council)\b/i;
+  function authorSortKey(author) {
+    var name = (author || "").replace(/\(.*?\)|\bet al\.?/gi, "").split(/\s+and\s+|\s*\/\s*|,/)[0].trim();
+    if (!name) return "";
+    var words = name.split(/\s+/);
+    if (ORG_WORDS.test(name) || words.length === 1) return name.toLowerCase();
+    return (words[words.length - 1] + " " + name).toLowerCase();
+  }
   function sortValue(r, key) {
     if (key === "title") return (r.title || "").toLowerCase();
-    if (key === "author") return (bylineFor(r) || "").toLowerCase();
+    if (key === "author") return authorSortKey(r.author);
     if (key === "type") return categoryLabel(r.category).toLowerCase();
     return r.date || (r.year ? String(r.year) : "");
   }
