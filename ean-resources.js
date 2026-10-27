@@ -200,6 +200,9 @@
     return '<div class="' + cls + ' ean-res-image--fallback">' + icon + '</div>';
   }
 
+  // Type label only in top-level search/tag results; inside one type it's redundant
+  function showsType() { return state.view === "categories"; }
+
   function renderResourceCard(r) {
     var html = '<div class="ean-res-card" data-res="' + esc(r.id) + '">';
     // Image block disabled sitewide (Sept 2026): only ~30% of resources
@@ -209,7 +212,7 @@
     // onerror fallback are all still intact below — to bring images back,
     // just re-add: html += resourceImageHtml(r);
     html += '<div class="ean-res-header">';
-    html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
+    if (showsType()) html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
     if (r.year) {
       html += '<span class="ean-res-year">' + esc(String(r.year)) + '</span>';
     }
@@ -250,7 +253,7 @@
   }
 
   function renderResourceRow(r) {
-    var meta = [bylineFor(r), r.year ? String(r.year) : "", categoryLabel(r.category)].filter(Boolean);
+    var meta = [bylineFor(r), r.year ? String(r.year) : "", showsType() ? categoryLabel(r.category) : ""].filter(Boolean);
     var html = '<div class="ean-res-row" data-res="' + esc(r.id) + '">';
     html += '<div class="ean-res-row-main"><h4>' + esc(r.title) + '</h4>';
     html += '<div class="ean-res-row-meta">' + meta.map(esc).join(' &middot; ') + '</div>';
