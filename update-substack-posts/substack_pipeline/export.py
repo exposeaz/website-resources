@@ -33,6 +33,12 @@ def _unique_id(base, taken):
     return rid
 
 
+def _auto_tags(article):
+    """The article's tags minus manual ones, which the pipeline never publishes."""
+    manual = state.manual_tag_ids()
+    return [t for t in article["tags"] if t not in manual]
+
+
 def _resource(article, taken):
     # Key order matches the existing entries in data.json, plus date
     return {
@@ -40,7 +46,7 @@ def _resource(article, taken):
         "title": article["title"],
         "category": settings.RESOURCE_CATEGORY_ID,
         "description": article["summary"],
-        "tags": article["tags"],
+        "tags": _auto_tags(article),
         "reference": f'{article["publication"]}. "{article["title"]}." Substack, {format_date(article["date"])}.',
         "author": article["publication"],
         "url": article["url"],
@@ -103,11 +109,13 @@ def sync_resources(articles, vocab):
     """Bring exported Substack articles in data.json in line with articles.json.
 
     Removes entries no longer publishable (and unmarks them, so they're exported again if they later
-    clear the bar) and refreshes the rest's tags. Entries a reviewer deleted stay deleted; other fields
-    and other categories are left alone. Returns (removed, retagged).
+    clear the bar) and refreshes the rest's tags, keeping any manual tags added by hand (first, so they
+    show on cards). Entries a reviewer deleted stay deleted; other fields and other categories are left
+    alone. Returns (removed, retagged).
     """
     data = json.loads(settings.RESOURCES_FILE.read_text())
     by_url = {a["url"]: a for a in articles}
+    manual = state.manual_tag_ids()
     kept, removed, retagged = [], 0, 0
     for r in data["resources"]:
         a = by_url.get(r.get("url")) if r["category"] == settings.RESOURCE_CATEGORY_ID else None
@@ -117,8 +125,9 @@ def sync_resources(articles, vocab):
             a["exported_resources"] = False
             removed += 1
         else:
-            if r["tags"] != a["tags"]:
-                r["tags"] = a["tags"]
+            tags = [t for t in r["tags"] if t in manual] + _auto_tags(a)
+            if r["tags"] != tags:
+                r["tags"] = tags
                 retagged += 1
             kept.append(r)
     data["resources"] = kept
@@ -150,7 +159,7 @@ def export_resources(articles, vocab):
             data["resources"].append(card)
             card_hosts.add(host)
             log.info("Drafted Substack card %r for %s", card["title"], host)
-        _add_tag_defs(data, article["tags"], vocab)
+        _add_tag_defs(data, _auto_tags(article), vocab)
         if article["url"] not in urls:
             data["resources"].append(_resource(article, taken_ids))
             urls.add(article["url"])

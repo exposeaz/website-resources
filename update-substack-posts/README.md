@@ -6,7 +6,7 @@ Run every task from the repo root with `pixi run <task>`; tasks that call Claude
 ## Files
 
 - `config/substacks.yaml`: publications to check.
-- `config/tags.json`: the tag vocabulary; a tag with a `scope` applies only when that condition holds.
+- `config/tags.json`: the tag vocabulary; a tag with a `scope` applies only when that condition holds, and a `manual` tag is never assigned by the pipeline, only by hand in `data.json`.
 - `config/settings.py`: every tunable number (score bars, tag targets, limits); each can be overridden by an environment variable.
 - `data/articles.json`: every classified post with its summary, tags, relevance and score; the source of truth.
 - `data/processed.json`: URLs already seen, so they're never classified twice.
