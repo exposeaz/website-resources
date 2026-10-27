@@ -159,12 +159,14 @@
     border-radius: 8px;
     padding: 20px;
     cursor: pointer;
-    transition: box-shadow .18s ease, border-color .18s ease;
+    transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
   }
   .ean-cat-card:hover {
     border-color: var(--ean-highlight);
-    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,.08);
   }
+  .ean-cat-card:active { transform: translateY(-1px); }
   .ean-cat-card h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.25; }
   .ean-cat-card p { margin: 0 0 10px; opacity: 0.75; font-size: 0.9em; }
   .ean-cat-count { font-size: 0.8em; opacity: 0.6; }
@@ -236,6 +238,7 @@
     opacity: 0.55;
     white-space: nowrap;
     flex-shrink: 0;
+    margin-left: auto;
   }
   .ean-res-badge {
     display: inline-block;
@@ -431,4 +434,10 @@
     margin: 0;
     font-size: 1.5rem;
     line-height: 1.3;
+  }
+
+  /* Squarespace site CSS can override the cursor on clickable bits */
+  #ean-resources-root :is(button, a, .ean-cat-card, .ean-res-card, .ean-res-row),
+  #ean-resources-root :is(button, a, .ean-cat-card, .ean-res-card, .ean-res-row) * {
+    cursor: pointer !important;
   }
