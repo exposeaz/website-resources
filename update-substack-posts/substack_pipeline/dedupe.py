@@ -1,6 +1,6 @@
 """Marks near-duplicate articles within each publication, so only the most useful of each group is published.
 
-Considers articles fill could publish (not --post-url ones), one Claude call per publication.
+Considers articles fill could publish and news clearing its bar (not --post-url ones), one Claude call per publication.
 A dropped article gets duplicate_of (the kept article's URL) and duplicate_reason; each publication's
 earlier marks are replaced when its call succeeds, so it can be re-run.
 Run after retag and before fill.
@@ -14,7 +14,7 @@ from collections import defaultdict
 
 from substack_pipeline import state
 from substack_pipeline.classify import Classifier, ClassifyAuthError, ClassifyError
-from substack_pipeline.export import fill_candidate
+from substack_pipeline.export import fill_candidate, news_candidate
 
 log = logging.getLogger(__name__)
 
@@ -36,7 +36,7 @@ def main():
     articles = state.load_articles()
     by_pub = defaultdict(list)
     for a in articles:
-        if not a["forced"] and fill_candidate(a):
+        if not a["forced"] and (fill_candidate(a) or news_candidate(a)):
             by_pub[a["publication"]].append(a)
     classifier = Classifier(state.load_tags())
     failed = 0

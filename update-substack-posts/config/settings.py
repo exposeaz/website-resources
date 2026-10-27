@@ -72,6 +72,11 @@ TAG_MIN_RESOURCES = _env("TAG_MIN_RESOURCES", 6, int)
 TAG_FILL_MIN_SCORE = _env("TAG_FILL_MIN_SCORE", 3, int)
 # fill adds nothing from a publication that already has this many publishable articles
 FILL_MAX_PER_PUBLICATION = _env("FILL_MAX_PER_PUBLICATION", 10, int)
+# News (posts Claude tags "news": mainly reporting events) gets its own category and a lower bar, and
+# never counts toward fill's tag totals or per-publication cap
+NEWS_MIN_SCORE = _env("NEWS_MIN_SCORE", 2, int)
+# retag --full-text re-reads articles scoring at least this, plus everything publishable
+FULL_TEXT_MIN_SCORE = _env("FULL_TEXT_MIN_SCORE", 4, int)
 TAG_REVIEW_MAX_OUTPUT_TOKENS = _env("TAG_REVIEW_MAX_OUTPUT_TOKENS", 100, int)
 
 # --- Output content ---
@@ -79,3 +84,6 @@ RESOURCE_CATEGORY_ID = "substack-articles"
 RESOURCE_CATEGORY_LABEL = "Substack articles"
 # Category of the per-publication Substack cards; articles are shown under their publication's card
 SUBSTACK_CATEGORY_ID = "substacks"
+NEWS_CATEGORY_ID = "news"
+NEWS_CATEGORY_LABEL = "News"
+NEWS_CATEGORY_BLURB = "Reporting on antizionist incidents, campaigns and responses."

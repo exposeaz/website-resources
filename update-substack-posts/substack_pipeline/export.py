@@ -14,6 +14,7 @@ from datetime import date
 
 from config import settings
 from substack_pipeline import fetch, state
+from substack_pipeline.classify import NEWS_TAG
 
 log = logging.getLogger(__name__)
 
@@ -34,9 +35,9 @@ def _unique_id(base, taken):
 
 
 def _auto_tags(article):
-    """The article's tags minus manual ones, which the pipeline never publishes."""
-    manual = state.manual_tag_ids()
-    return [t for t in article["tags"] if t not in manual]
+    """The article's tags minus manual ones (never published by the pipeline) and news (a category instead)."""
+    skip = state.manual_tag_ids() | {NEWS_TAG}
+    return [t for t in article["tags"] if t not in skip]
 
 
 def _resource(article, taken):
@@ -44,7 +45,7 @@ def _resource(article, taken):
     return {
         "id": _unique_id("substack-" + article["url"].rstrip("/").rsplit("/", 1)[-1], taken),
         "title": article["title"],
-        "category": settings.RESOURCE_CATEGORY_ID,
+        "category": category_for(article),
         "description": article["summary"],
         "tags": _auto_tags(article),
         "reference": f'{article["publication"]}. "{article["title"]}." Substack, {format_date(article["date"])}.',
@@ -90,9 +91,33 @@ def fill_candidate(a):
     return a["relevance"] in settings.PUBLISH_RELEVANCE and a.get("relevance_score", 0) >= settings.TAG_FILL_MIN_SCORE
 
 
+def is_news(a):
+    return NEWS_TAG in a["tags"]
+
+
+def news_candidate(a):
+    """News clearing its own, lower bar: relevant and scoring at least NEWS_MIN_SCORE."""
+    return is_news(a) and a["relevance"] in settings.PUBLISH_RELEVANCE and a.get("relevance_score", 0) >= settings.NEWS_MIN_SCORE
+
+
 def publishable(a):
-    """Clears the bar or was picked by fill, and isn't marked a duplicate by dedupe; or was added by URL."""
-    return a["forced"] or ((meets_bar(a) or bool(a.get("published_for_tag"))) and not a.get("duplicate_of"))
+    """Clears the bar, is news clearing the news bar, or was picked by fill, and isn't marked a duplicate
+    by dedupe; or was added by URL."""
+    return a["forced"] or ((meets_bar(a) or news_candidate(a) or bool(a.get("published_for_tag")))
+                           and not a.get("duplicate_of"))
+
+
+def category_for(a):
+    return settings.NEWS_CATEGORY_ID if is_news(a) else settings.RESOURCE_CATEGORY_ID
+
+
+def _add_categories(data):
+    """Add the Substack-article and news categories to data.json if missing."""
+    ids = {c["id"] for c in data["categories"]}
+    for c in ({"id": settings.RESOURCE_CATEGORY_ID, "label": settings.RESOURCE_CATEGORY_LABEL},
+              {"id": settings.NEWS_CATEGORY_ID, "label": settings.NEWS_CATEGORY_LABEL, "blurb": settings.NEWS_CATEGORY_BLURB}):
+        if c["id"] not in ids:
+            data["categories"].append(c)
 
 
 def _add_tag_defs(data, tag_ids, vocab):
@@ -109,8 +134,8 @@ def sync_resources(articles, vocab):
     """Bring exported Substack articles in data.json in line with articles.json.
 
     Removes entries no longer publishable (and unmarks them, so they're exported again if they later
-    clear the bar) and refreshes the rest's tags, keeping any manual tags added by hand (first, so they
-    show on cards). Entries a reviewer deleted stay deleted; other fields and other categories are left
+    clear the bar) and refreshes the rest's tags and category (news or not), keeping any manual tags added
+    by hand (first, so they show on cards); drops the news tag, which is a category instead. Entries a reviewer deleted stay deleted; other fields and other categories are left
     alone. Returns (removed, retagged).
     """
     data = json.loads(settings.RESOURCES_FILE.read_text())
@@ -118,7 +143,7 @@ def sync_resources(articles, vocab):
     manual = state.manual_tag_ids()
     kept, removed, retagged = [], 0, 0
     for r in data["resources"]:
-        a = by_url.get(r.get("url")) if r["category"] == settings.RESOURCE_CATEGORY_ID else None
+        a = by_url.get(r.get("url")) if r["category"] in (settings.RESOURCE_CATEGORY_ID, settings.NEWS_CATEGORY_ID) else None
         if a is None:
             kept.append(r)
         elif not publishable(a):
@@ -126,11 +151,13 @@ def sync_resources(articles, vocab):
             removed += 1
         else:
             tags = [t for t in r["tags"] if t in manual] + _auto_tags(a)
-            if r["tags"] != tags:
-                r["tags"] = tags
+            if r["tags"] != tags or r["category"] != category_for(a):
+                r["tags"], r["category"] = tags, category_for(a)
                 retagged += 1
             kept.append(r)
     data["resources"] = kept
+    data["tags"] = [t for t in data["tags"] if t["id"] != NEWS_TAG]
+    _add_categories(data)
     _add_tag_defs(data, [t for r in kept for t in r["tags"]], vocab)
     settings.RESOURCES_FILE.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
     return removed, retagged
@@ -145,8 +172,7 @@ def export_resources(articles, vocab):
     if not pending:
         return 0
     data = json.loads(settings.RESOURCES_FILE.read_text())
-    if not any(c["id"] == settings.RESOURCE_CATEGORY_ID for c in data["categories"]):
-        data["categories"].append({"id": settings.RESOURCE_CATEGORY_ID, "label": settings.RESOURCE_CATEGORY_LABEL})
+    _add_categories(data)
     taken_ids = {r["id"] for r in data["resources"]}
     urls = {r.get("url") for r in data["resources"]}
     card_hosts = {fetch.base_url(r["url"]) for r in data["resources"]

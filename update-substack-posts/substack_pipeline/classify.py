@@ -37,13 +37,18 @@ When in doubt, choose "unsure"."""
 
 
 def _score_rubric():
+    # Every level is anchored; with only the ends defined, solid pieces bunch in the middle
     lo, hi = settings.RELEVANCE_SCORE_MIN, settings.RELEVANCE_SCORE_MAX
     return (f"relevance_score: {lo} to {hi}, how useful the post would be as a library resource on antizionism or on "
             f"any theme in the tag vocabulary as it bears on antizionism. Judge depth, not how often the word "
             f"\"antizionism\" appears: a post centred on one of these themes (e.g. its history, sources, or institutions) "
-            f"can score {hi}. {hi} = develops one or more of these themes in depth, with its own analysis, evidence, or "
-            f"history; {lo} = these themes are barely present. A post that mainly restates a familiar thesis without "
-            f"developing it scores below one that does.")
+            f"can score {hi}.\n"
+            f"- 5: in-depth original analysis, evidence, or history on one or more of these themes; worth recommending.\n"
+            f"- 4: a substantive argument or analysis with its own reasoning or evidence, but narrower or less developed.\n"
+            f"- 3: on-topic commentary that is mostly opinion or familiar arguments, or a news report directly about "
+            f"antizionist activity.\n"
+            f"- 2: these themes are background to another subject.\n"
+            f"- 1: these themes are barely present.")
 
 
 def _tag_rule():
