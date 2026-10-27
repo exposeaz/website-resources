@@ -13,6 +13,7 @@ tag-stats = { cmd = "python -m substack_pipeline.tag_stats", cwd = "update-subst
 export = { cmd = "python -m substack_pipeline.export", cwd = "update-substack-posts" }
 pr-body = { cmd = "python -m substack_pipeline.pr_body", cwd = "update-substack-posts" }
 retag = { cmd = "python -m substack_pipeline.retag", cwd = "update-substack-posts" }
+retag-full-text = { cmd = "python -m substack_pipeline.retag --full-text", cwd = "update-substack-posts" }
 tag-review = { cmd = "python -m substack_pipeline.tag_review", cwd = "update-substack-posts" }
 dedupe = { cmd = "python -m substack_pipeline.dedupe", cwd = "update-substack-posts" }
 fill = { cmd = "python -m substack_pipeline.fill", cwd = "update-substack-posts" }

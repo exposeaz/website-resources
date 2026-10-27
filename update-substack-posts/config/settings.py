@@ -72,6 +72,8 @@ TAG_MIN_RESOURCES = _env("TAG_MIN_RESOURCES", 6, int)
 TAG_FILL_MIN_SCORE = _env("TAG_FILL_MIN_SCORE", 3, int)
 # fill adds nothing from a publication that already has this many publishable articles
 FILL_MAX_PER_PUBLICATION = _env("FILL_MAX_PER_PUBLICATION", 10, int)
+# retag --full-text re-reads articles scoring at least this, plus everything publishable
+FULL_TEXT_MIN_SCORE = _env("FULL_TEXT_MIN_SCORE", 4, int)
 TAG_REVIEW_MAX_OUTPUT_TOKENS = _env("TAG_REVIEW_MAX_OUTPUT_TOKENS", 100, int)
 
 # --- Output content ---
