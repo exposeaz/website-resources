@@ -79,9 +79,14 @@ def meets_bar(a):
     return a["relevance"] in settings.PUBLISH_RELEVANCE and a.get("relevance_score", 0) >= settings.PUBLISH_MIN_SCORE
 
 
+def fill_candidate(a):
+    """Could be published by fill to top up a tag: relevant enough and scoring at least TAG_FILL_MIN_SCORE."""
+    return a["relevance"] in settings.PUBLISH_RELEVANCE and a.get("relevance_score", 0) >= settings.TAG_FILL_MIN_SCORE
+
+
 def publishable(a):
-    """Clears the bar and isn't marked a duplicate by dedupe, or was added by URL."""
-    return a["forced"] or (meets_bar(a) and not a.get("duplicate_of"))
+    """Clears the bar or was picked by fill, and isn't marked a duplicate by dedupe; or was added by URL."""
+    return a["forced"] or ((meets_bar(a) or bool(a.get("published_for_tag"))) and not a.get("duplicate_of"))
 
 
 def _add_tag_defs(data, tag_ids, vocab):
