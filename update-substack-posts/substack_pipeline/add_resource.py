@@ -23,6 +23,7 @@ from substack_pipeline.export import _add_tag_defs, _unique_id
 
 log = logging.getLogger(__name__)
 
+# The library wants at least this many; fewer is flagged for a human rather than padded by Claude
 MIN_TAGS = 2
 
 
@@ -57,7 +58,7 @@ description: 1 to 2 sentences on what the piece argues, traces or reports, start
 reference: a citation in the library's style, like these:
 {refs}
 
-tags: {MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most central first. Tag only themes the piece as a whole is about or develops at some length; a theme mentioned in a sentence or an aside does not count. A tag with an "only when" note applies only when that note is true.
+tags: 1 to {settings.MAX_TAGS} IDs from this vocabulary, most central first. Tag only themes the piece as a whole is about or develops at some length; a theme mentioned in a sentence or an aside does not count. Fewer, accurate tags are better than more, weaker ones; don't add a tag just to reach a count. A tag with an "only when" note applies only when that note is true.
 {vocab}"""
 
 
