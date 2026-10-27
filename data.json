@@ -138,7 +138,10 @@
       "title": "Essays on Antisemitism, Anti-Zionism, and the Left",
       "category": "books",
       "description": "A posthumous English-language collection gathering Jean Améry's essays confronting antisemitism and antizionism, including his writings on the political currents of the postwar European left.",
-      "tags": [],
+      "tags": [
+        "western-antizionism",
+        "history-of-antizionism"
+      ],
       "reference": "Améry, Jean. Essays on Antisemitism, Anti-Zionism, and the Left. Edited by Marlene Gallner. Translated by Lars Fischer. Indiana University Press, 2021.",
       "author": "Jean Améry",
       "url": "https://www.amazon.com/dp/0253058767",
@@ -151,7 +154,8 @@
       "category": "books",
       "description": "One of the first book-length arguments that postwar hostility to Israel is a continuation of Judeophobia in a new guise; argues that opposition to Jewish national existence, however framed, ultimately derives from a refusal to accept a Jewish nation.",
       "tags": [
-        "jew-hatred"
+        "jew-hatred",
+        "history-of-antizionism"
       ],
       "reference": "Givet, Jacques. The Antizionist Complex. SBS Publishing, 1979.",
       "author": "Jacques Givet",
@@ -178,7 +182,9 @@
       "category": "books",
       "description": "Written in the wake of the 2001 Durban conference, argues that a \"new Judeophobia,\" distinct from older racial antisemitism, diabolizes Israel and Zionism (and by extension Jews) using antiracist and anti-imperialist language rather than racial theory.",
       "tags": [
-        "antizionism"
+        "antizionism",
+        "jew-hatred",
+        "western-antizionism"
       ],
       "reference": "Taguieff, Pierre-André. The New Judeophobia. 2002.",
       "author": "Pierre-André Taguieff",
@@ -206,7 +212,8 @@
       "category": "books",
       "description": "An edited volume examining the Soviet bloc's turn against Israel after 1967 and the antisemitic character much of that \"anti-Zionist\" campaign took on.",
       "tags": [
-        "soviet-antizionism"
+        "soviet-antizionism",
+        "history-of-antizionism"
       ],
       "reference": "Wistrich, Robert S. (ed.). The Left against Zion. Vallentine, Mitchell, 1979.",
       "author": "Robert S. Wistrich (ed.)",
@@ -218,7 +225,10 @@
       "title": "From Ambivalence to Betrayal: The Left, the Jews, and Israel",
       "category": "books",
       "description": "Traces the European left's shift from ambivalence toward, to eventual hostility against, Jews, Zionism, and Israel, from the origins of socialism in the 1840s to the present.",
-      "tags": [],
+      "tags": [
+        "western-antizionism",
+        "history-of-antizionism"
+      ],
       "reference": "Wistrich, Robert S. From Ambivalence to Betrayal: The Left, the Jews, and Israel. University of Nebraska Press, 2012.",
       "author": "Robert S. Wistrich",
       "url": "https://www.nebraskapress.unl.edu/nebraska/9780803240766/from-ambivalence-to-betrayal/",
@@ -230,7 +240,10 @@
       "category": "books",
       "description": "A sweeping single-volume history of antisemitism \"from antiquity to the global jihad,\" ending with chapters connecting the Soviet war on Zionism and contemporary jihadist and left-wing antisemitism to older Judeophobic traditions.",
       "tags": [
-        "soviet-antizionism"
+        "soviet-antizionism",
+        "jew-hatred",
+        "history-of-antizionism",
+        "islamism"
       ],
       "reference": "Wistrich, Robert S. A Lethal Obsession. Random House, 2010.",
       "author": "Robert S. Wistrich",
@@ -244,7 +257,8 @@
       "category": "books",
       "description": "A detailed two-volume history of Soviet Jewry, including the state's campaigns against Zionism and Hebrew culture from the 1920s onward.",
       "tags": [
-        "soviet-antizionism"
+        "soviet-antizionism",
+        "history-of-antizionism"
       ],
       "reference": "Levin, Nora. The Jews in the Soviet Union Since 1917: Paradox of Survival. NYU Press, 1988.",
       "author": "Nora Levin",
@@ -314,7 +328,8 @@
       "category": "scholarly-articles",
       "description": "Argues, using post–October 7 campus data, that universities should formally adopt the IHRA definition of antisemitism in their nondiscrimination policies to close the ambiguity around antizionism as a form of antisemitism and restore Title VI accountability.",
       "tags": [
-        "campus"
+        "campus",
+        "legal-public-affairs"
       ],
       "reference": "Martin, Andrea J. \"From Ambiguity to Accountability: The Case for a Legal Definition of Antisemitism in Academia.\" Pepperdine Law Review, 2025.",
       "author": "Andrea J. Martin",
@@ -327,7 +342,8 @@
       "category": "scholarly-articles",
       "description": "Argues under the Genocide Convention that Hamas's October 7 attack itself meets the legal definition of genocide, and examines how the reverse \"genocide\" accusation against Israel functions to deflect that recognition.",
       "tags": [
-        "genocide-libel"
+        "genocide-libel",
+        "legal-public-affairs"
       ],
       "reference": "Shalev, Avraham Russell. \"Hamas' October 7th Genocide: Legal Analysis and the Weaponisation of Reverse Accusations—A Study in Modern Genocide Recognition and Denial.\" Israel Law Review, Vol. 58, Special Issue 2–3, 2025.",
       "author": "Avraham Russell Shalev",
@@ -368,7 +384,9 @@
       "category": "scholarly-articles",
       "description": "Traces how Soviet-era \"anti-Zionist\" propaganda campaigns (1967–88) built a conspiracist, demonizing template for talking about Israel that Tabarovsky argues has been absorbed largely intact into today's left-wing discourse.",
       "tags": [
-        "soviet-antizionism"
+        "soviet-antizionism",
+        "western-antizionism",
+        "history-of-antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Demonization Blueprints: Soviet Conspiracist Antizionism in Contemporary Left-Wing Discourse.\" Journal of Contemporary Antisemitism, vol. 5, no. 1, 2022, pp. 1-20.",
       "author": "Izabella Tabarovsky",
@@ -410,7 +428,8 @@
       "category": "essays",
       "description": "Subtitled \"the anti-Jewish worldview behind anti-Israel obsessions,\" it argues antizionism functions as a self-contained worldview that constructs its own caricature of Israel and positions it as central to global oppression.",
       "tags": [
-        "antizionism"
+        "antizionism",
+        "western-antizionism"
       ],
       "reference": "Hirsh, David. \"'Anti-Zionism' and 'Antizionism'.\" Australia/Israel & Jewish Affairs Council.",
       "author": "David Hirsh",
@@ -450,7 +469,8 @@
       "category": "essays",
       "description": "Argues that today's genocide accusations against Israel by defenders of Hamas follow the same rhetorical playbook Hutu extremists used against Tutsis in Rwanda in the early 1990s — inverting the language of genocide to accuse the actual targets of it.",
       "tags": [
-        "genocide-libel"
+        "genocide-libel",
+        "colonizer-libel"
       ],
       "reference": "Louis-Klein, Adam. \"Rwanda, Israel and the Inversion of 'Genocide.'\" The Wall Street Journal, July 22, 2026.",
       "author": "Adam Louis-Klein",
@@ -488,7 +508,8 @@
       "category": "essays",
       "description": "Discussion of how Soviet-origin antizionist tropes, long assumed dead, keep resurfacing largely unchanged in Western left-wing discourse.",
       "tags": [
-        "soviet-antizionism"
+        "soviet-antizionism",
+        "western-antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Zombie Antizionism.\" Tablet Magazine.",
       "author": "Izabella Tabarovsky",
@@ -501,7 +522,8 @@
       "category": "essays",
       "description": "Lays out how the USSR's Cold War-era antizionist propaganda apparatus supplied the conspiratorial vocabulary and imagery still used against Israel and Zionism today.",
       "tags": [
-        "soviet-antizionism"
+        "soviet-antizionism",
+        "history-of-antizionism"
       ],
       "reference": "Tabarovsky, Izabella. \"Soviet Antizionism and Contemporary Left Antisemitism.\" Fathom Journal.",
       "author": "Izabella Tabarovsky",
@@ -542,7 +564,9 @@
       "category": "essays",
       "description": "Uses the Soviet-era suppression of the memory of the Babi Yar massacre as a case study for how erasing Jewish victimhood became a template later adopted by Western antizionist discourse.",
       "tags": [
-        "soviet-antizionism"
+        "soviet-antizionism",
+        "western-antizionism",
+        "history-of-antizionism"
       ],
       "reference": "Lekht, Naya. \"The Shadow of Babi Yar: How the Soviets Taught the West to Erase the Jews.\" Jewish Journal.",
       "author": "Naya Lekht",
@@ -613,7 +637,8 @@
       "category": "essays",
       "description": "Argues that antizionism, rather than traditional far-right antisemitism, has become the primary vector of anti-Jewish hostility today.",
       "tags": [
-        "antizionism"
+        "antizionism",
+        "jew-hatred"
       ],
       "reference": "Dabelstein, Joshua. \"The Greatest Threat to Jewish Safety Has a New Name.\" Australian Financial Review.",
       "author": "Joshua Dabelstein",
@@ -640,7 +665,8 @@
       "category": "data-research",
       "description": "Interactive data analysis on the overlap of Soviet anti-Zionist propaganda and today's antizionist speech.",
       "tags": [
-        "soviet-antizionism"
+        "soviet-antizionism",
+        "data-research"
       ],
       "reference": "\"I've Seen This Before.\" Data analysis, mapping Soviet anti-Zionist propaganda to modern echoes using semantic similarity.",
       "author": null,
@@ -654,7 +680,8 @@
       "category": "essays",
       "description": "Argues antizionism is not ordinary criticism of Israeli policy but a modernized, eliminationist hate ideology with its own closed analytical framework, comparable to other totalizing conspiracy theories.",
       "tags": [
-        "antizionism"
+        "antizionism",
+        "western-antizionism"
       ],
       "reference": "Heath, Allister. \"Antizionism Is a Totalitarian Conspiracy Theory Rotting the West From Within.\" The Telegraph.",
       "author": "Allister Heath",
@@ -992,7 +1019,8 @@
       "category": "scholarly-articles",
       "description": "Examines how Nowiny i Kurier, Israel's Polish-language newspaper, covered the 1968 anti-Zionist and antisemitic campaign in Poland that drove out nearly 13,000 Jews, including the emigrants who settled outside Israel and those who later moved again.",
       "tags": [
-        "poland-1968"
+        "poland-1968",
+        "soviet-antizionism"
       ],
       "reference": "Freilich, Miri, and Sharon Levinas. \"The Polish Exodus of 1968: Antisemitism, Dropouts, and Re-emigrants in Nowiny i Kurier.\" Polin: Studies in Polish Jewry, Vol. 35, 2023, pp. 337–352.",
       "author": "Miri Freilich and Sharon Levinas",
@@ -1065,7 +1093,8 @@
       "category": "essays",
       "description": "Surveys how Polish filmmakers have documented and interpreted the 1968 'March emigration' on screen, from Marian Marzyński's own exile documentary Skibet/Hatikvah through later films grappling with Polish-Jewish identity and the anti-Zionist purge that provoked it.",
       "tags": [
-        "poland-1968"
+        "poland-1968",
+        "antizionism-arts"
       ],
       "reference": "Shpolberg, Masha. 'The 1968 Forced Exodus of Polish Jewry on Film.' Tablet Magazine, May 1, 2018.",
       "author": "Masha Shpolberg",

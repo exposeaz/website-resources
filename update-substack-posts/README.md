@@ -28,6 +28,12 @@ Run it by hand from the Actions tab to force-include specific posts or check one
 Each step saves as it goes, so an interrupted run can simply be started again.
 Review `git diff data.json` before committing.
 
+## Non-Substack resources
+
+`add-resource` (Claude) adds essays, articles and other pages to `data.json`: it fetches each page and writes the description, citation and 2-5 tags.
+`pixi run add-resource --category essays URL [URL ...]` adds pages; paywalled or thin pages are skipped and listed, to add by hand.
+`pixi run add-resource --retag RESOURCE_ID [...]` re-tags existing entries from their pages, keeping manual tags and leaving their text alone.
+
 ## Other tasks
 
 - `dry-run` (Claude): classifies a small sample and writes a report to `output/`, without changing `articles.json` or `data.json`.

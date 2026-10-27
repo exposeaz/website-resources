@@ -16,6 +16,7 @@ retag = { cmd = "python -m substack_pipeline.retag", cwd = "update-substack-post
 tag-review = { cmd = "python -m substack_pipeline.tag_review", cwd = "update-substack-posts" }
 dedupe = { cmd = "python -m substack_pipeline.dedupe", cwd = "update-substack-posts" }
 fill = { cmd = "python -m substack_pipeline.fill", cwd = "update-substack-posts" }
+add-resource = { cmd = "python -m substack_pipeline.add_resource", cwd = "update-substack-posts" }
 export-sync = { cmd = "python -m substack_pipeline.export --sync", cwd = "update-substack-posts" }
 
 [dependencies]
