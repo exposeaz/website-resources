@@ -119,9 +119,13 @@
     margin-bottom: 24px;
   }
   /* Tag pills use Squarespace's own button element classes so they
-     inherit your Design > Buttons color/shape/hover automatically. */
+     inherit your Design > Buttons font and hover; the pill shape is forced
+     here to match the tags on cards. */
   .ean-tag {
     padding: 0.3em 0.9em !important;
+    border-radius: 999px !important;
+    border-style: solid !important;
+    border-width: 1px !important;
     cursor: pointer;
     background: var(--ean-tag-bg) !important;
     border-color: var(--ean-tag-border) !important;
