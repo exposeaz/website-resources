@@ -70,6 +70,8 @@ PUBLISH_MIN_SCORE = _env("PUBLISH_MIN_SCORE", 5, int)
 TAG_TARGET_RESOURCES = _env("TAG_TARGET_RESOURCES", 10, int)
 TAG_MIN_RESOURCES = _env("TAG_MIN_RESOURCES", 6, int)
 TAG_FILL_MIN_SCORE = _env("TAG_FILL_MIN_SCORE", 3, int)
+# fill adds nothing from a publication that already has this many publishable articles
+FILL_MAX_PER_PUBLICATION = _env("FILL_MAX_PER_PUBLICATION", 10, int)
 TAG_REVIEW_MAX_OUTPUT_TOKENS = _env("TAG_REVIEW_MAX_OUTPUT_TOKENS", 100, int)
 
 # --- Output content ---

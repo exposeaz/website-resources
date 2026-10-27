@@ -22,7 +22,7 @@ Run it by hand from the Actions tab to force-include specific posts or check one
 
 1. `retag` (Claude): re-judges relevance, score and tags for every article from its stored summary; re-run after changing the scoring rules or `tags.json`.
 2. `dedupe` (Claude): within each publication, marks posts that repeat another's argument (`duplicate_of`), keeping the most useful.
-3. `fill` (Claude): tops up each tag under 10 resources with held-back articles scoring 3 or more, once Claude confirms the tag is central to each (`published_for_tag`), and warns about tags still under 6.
+3. `fill` (Claude): tops up each tag under 10 resources with held-back articles scoring 3 or more, once Claude confirms the tag is central to each (`published_for_tag`), adds nothing from a publication that already has 10 publishable articles (`FILL_MAX_PER_PUBLICATION`), and warns about tags still under 6.
 4. `export-sync`: removes Substack cards that no longer qualify, refreshes the tags of the rest, and adds newly qualifying ones; cards deleted by hand stay deleted.
 
 Each step saves as it goes, so an interrupted run can simply be started again.
