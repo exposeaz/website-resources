@@ -89,7 +89,8 @@
     });
   }
 
-  function matchesFilters(r) {
+  // `inherited`: extra searchable text, e.g. a Substack's title/author for its articles
+  function matchesFilters(r, inherited) {
     // Every word must appear somewhere (text or tag labels), in any order, so "Adam Louis-Klein" matches "Louis-Klein, Adam"
     var words = state.search.trim().toLowerCase().split(/\s+/).filter(Boolean);
     if (words.length) {
@@ -97,7 +98,7 @@
         var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
         return tagDef ? tagDef.label : t;
       });
-      var hay = [r.title, r.author, r.description, r.reference].concat(tagLabels).join(" ").toLowerCase();
+      var hay = [r.title, r.author, r.description, r.reference].concat(tagLabels, inherited || []).join(" ").toLowerCase();
       if (!words.every(function (w) { return hay.indexOf(w) !== -1; })) return false;
     }
     if (state.activeTags.length) {
@@ -359,7 +360,7 @@
   function renderSubstackView(filtering) {
     var sub = resourceById(state.substackId);
     var items = articlesFor(sub).sort(byNewest);
-    if (filtering) items = items.filter(matchesFilters);
+    if (filtering) items = items.filter(function (a) { return matchesFilters(a, [sub.title, sub.author]); });
     var link = '<a href="' + esc(sub.url) + '" target="_blank" rel="noopener">' + esc(sub.title) + ' &#8599;</a>';
     var html = '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All resource types</a> / ' +
       '<a href="#" class="ean-crumb-link" data-back-substacks="1">' + esc(categoryLabel(SUBSTACK_CATEGORY)) + '</a> / ' + esc(sub.title);
@@ -392,7 +393,7 @@
       // *within* it instead of jumping out to a cross-category search —
       // only the top-level categories view searches everything at once.
       var items = state.data.resources.filter(function (r) { return r.category === state.categoryId; });
-      if (filtering) items = items.filter(matchesFilters);
+      if (filtering) items = items.filter(function (r) { return matchesFilters(r); });
       html += '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All resource types</a> / ' + esc(categoryLabel(state.categoryId));
       if (filtering) html += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
       html += '</div>';
@@ -402,7 +403,7 @@
         : '<div class="ean-empty">' + (filtering ? 'No resources of this type match your filters.' : 'No resources of this type yet.') + '</div>';
     } else if (filtering) {
       // Newest first; in "match any" mode, more matching tags still come first
-      var matched = state.data.resources.filter(matchesFilters).sort(byNewest);
+      var matched = state.data.resources.filter(function (r) { return matchesFilters(r); }).sort(byNewest);
       var news = matched.filter(function (r) { return r.category === NEWS_CATEGORY; });
       var results = matched.filter(function (r) { return r.category !== NEWS_CATEGORY; });
       if (state.showNews) results = results.concat(news);
