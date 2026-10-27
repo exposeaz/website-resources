@@ -2,7 +2,7 @@
 
 Re-judges every article not yet judged under the current rules and vocabulary, so re-run it after changing
 either. Saves after each article, so it resumes if interrupted.
-Run export --sync afterwards to carry the changes into data.json.
+Then run dedupe, fill and export --sync to carry the changes into data.json.
 Don't run it while the pipeline is running: both write data/articles.json.
 Run from update-substack-posts/: python -m substack_pipeline.retag
 """

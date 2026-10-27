@@ -1,9 +1,9 @@
 """Marks near-duplicate articles within each publication, so only the most useful of each group is published.
 
-Considers articles that clear the publishing bar (not --post-url ones), one Claude call per publication.
+Considers articles fill could publish (not --post-url ones), one Claude call per publication.
 A dropped article gets duplicate_of (the kept article's URL) and duplicate_reason; each publication's
 earlier marks are replaced when its call succeeds, so it can be re-run.
-Run after retag and before export --sync.
+Run after retag and before fill.
 Don't run it while the pipeline is running: both write data/articles.json.
 Run from update-substack-posts/: python -m substack_pipeline.dedupe
 """
@@ -14,7 +14,7 @@ from collections import defaultdict
 
 from substack_pipeline import state
 from substack_pipeline.classify import Classifier, ClassifyAuthError, ClassifyError
-from substack_pipeline.export import meets_bar
+from substack_pipeline.export import fill_candidate
 
 log = logging.getLogger(__name__)
 
@@ -36,7 +36,7 @@ def main():
     articles = state.load_articles()
     by_pub = defaultdict(list)
     for a in articles:
-        if not a["forced"] and meets_bar(a):
+        if not a["forced"] and fill_candidate(a):
             by_pub[a["publication"]].append(a)
     classifier = Classifier(state.load_tags())
     failed = 0
@@ -57,6 +57,11 @@ def main():
             a.pop("duplicate_reason", None)
         dropped = 0
         for keep, drop, reason in _valid_groups(groups, len(items)):
+            # Never drop a post for a lower-scoring one, which may not be published
+            group = [keep, *drop]
+            best = max(group, key=lambda i: items[i]["relevance_score"])
+            if items[best]["relevance_score"] > items[keep]["relevance_score"]:
+                keep, drop = best, [i for i in group if i != best]
             log.info("%s: keep %r, drop %s (%s)", pub, items[keep]["title"],
                      ", ".join(repr(items[j]["title"]) for j in drop), reason)
             for j in drop:
