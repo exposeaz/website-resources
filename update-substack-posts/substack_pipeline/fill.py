@@ -18,7 +18,7 @@ from collections import Counter
 from config import settings
 from substack_pipeline import state
 from substack_pipeline.classify import NEWS_TAG, Classifier, ClassifyAuthError, ClassifyError
-from substack_pipeline.export import fill_candidate, publishable
+from substack_pipeline.export import fill_candidate, is_news, publishable
 
 log = logging.getLogger(__name__)
 
@@ -29,12 +29,14 @@ def main():
     for a in articles:
         a.pop("published_for_tag", None)
     data = json.loads(settings.RESOURCES_FILE.read_text())
-    counts = Counter(t for r in data["resources"] if r["category"] != settings.RESOURCE_CATEGORY_ID for t in r["tags"])
-    counts.update(t for a in articles if publishable(a) for t in a["tags"])
+    # News is its own category: it neither fills tags nor counts toward them or the cap
+    counts = Counter(t for r in data["resources"] for t in r["tags"]
+                     if r["category"] not in (settings.RESOURCE_CATEGORY_ID, settings.NEWS_CATEGORY_ID))
+    counts.update(t for a in articles if publishable(a) and not is_news(a) for t in a["tags"])
     before = Counter(counts)
-    per_pub = Counter(a["publication"] for a in articles if publishable(a))
+    per_pub = Counter(a["publication"] for a in articles if publishable(a) and not is_news(a))
 
-    pool = [a for a in articles if not publishable(a) and not a.get("duplicate_of") and fill_candidate(a)]
+    pool = [a for a in articles if not publishable(a) and not a.get("duplicate_of") and fill_candidate(a) and not is_news(a)]
     pool.sort(key=lambda a: a["date"], reverse=True)
     vocab = state.load_tags()
     classifier = Classifier(vocab)

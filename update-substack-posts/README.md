@@ -16,6 +16,7 @@ Run every task from the repo root with `pixi run <task>`; tasks that call Claude
 `.github/workflows/update-substack-posts.yml` runs `pixi run pipeline` every Monday and opens a PR.
 It fetches new posts, has Claude judge each from its full text, saves them to `articles.json`, and exports publishable ones to `data.json`.
 A post is publishable if it is relevant and scores 5, or was picked by fill, and isn't marked a duplicate; posts added with `--post-url` always are.
+Posts Claude tags `news` (mainly reporting events) go to the News category instead, with a lower bar (relevant, score 2 or more); they never count toward fill's tag totals or cap, and the site leaves them out of tag and search results unless the visitor shows them.
 Run it by hand from the Actions tab to force-include specific posts or check one publication.
 
 ## Clean-up steps (run by hand, in this order)

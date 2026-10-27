@@ -32,6 +32,8 @@
   // publication's card in the Substacks category, matched by web address.
   var SUBSTACK_CATEGORY = "substacks";
   var ARTICLE_CATEGORY = "substack-articles";
+  // News is left out of cross-category search/tag results unless the visitor shows it
+  var NEWS_CATEGORY = "news";
   var LAYOUT_KEY = "ean-layout";
   // Results are shown this many at a time, with a "Show more" button for the next batch
   var PAGE_SIZE = 20;
@@ -40,7 +42,7 @@
   var state = {
     data: null, view: "categories", categoryId: null, substackId: null,
     search: "", activeTags: [], tagMode: "any", modalResourceId: null, layout: loadLayout(),
-    shown: PAGE_SIZE, pageKey: null
+    shown: PAGE_SIZE, pageKey: null, showNews: false
   };
 
   // Card/list choice is remembered per visitor; storage can be unavailable
@@ -67,7 +69,7 @@
   function articlesFor(substack) {
     var host = hostOf(substack.url);
     return state.data.resources.filter(function (r) {
-      return r.category === ARTICLE_CATEGORY && hostOf(r.url) === host;
+      return (r.category === ARTICLE_CATEGORY || r.category === NEWS_CATEGORY) && hostOf(r.url) === host;
     });
   }
   // Newest first by full date when present, else by year; undated sink to the end
@@ -76,10 +78,8 @@
     return db.localeCompare(da);
   }
   function bylineFor(r) {
-    if (r.category === ARTICLE_CATEGORY) {
-      var sub = substackFor(r);
-      return "via " + (sub ? sub.title : r.author);
-    }
+    var sub = (r.category === ARTICLE_CATEGORY || r.category === NEWS_CATEGORY) && substackFor(r);
+    if (r.category === ARTICLE_CATEGORY || sub) return sub ? sub.title : r.author;
     return r.author;
   }
 
@@ -338,7 +338,7 @@
 
   function render() {
     // A new listing (view, search or tags changed) starts again from the first page
-    var pageKey = JSON.stringify([state.view, state.categoryId, state.substackId, state.search, state.activeTags, state.tagMode]);
+    var pageKey = JSON.stringify([state.view, state.categoryId, state.substackId, state.search, state.activeTags, state.tagMode, state.showNews]);
     if (pageKey !== state.pageKey) {
       state.pageKey = pageKey;
       state.shown = PAGE_SIZE;
@@ -363,8 +363,17 @@
         : '<div class="ean-empty">' + (filtering ? 'No resources match your filters in this category.' : 'No resources in this category yet.') + '</div>';
     } else if (filtering) {
       // Newest first; in "match any" mode, more matching tags still come first
-      var results = state.data.resources.filter(matchesFilters).sort(byNewest);
-      html += '<div class="ean-crumb">' + results.length + ' result' + (results.length === 1 ? '' : 's') + '</div>';
+      var matched = state.data.resources.filter(matchesFilters).sort(byNewest);
+      var news = matched.filter(function (r) { return r.category === NEWS_CATEGORY; });
+      var results = matched.filter(function (r) { return r.category !== NEWS_CATEGORY; });
+      if (state.showNews) results = results.concat(news);
+      html += '<div class="ean-crumb">' + results.length + ' result' + (results.length === 1 ? '' : 's');
+      if (news.length) {
+        html += ' <span class="ean-news-toggle">&middot; ' + (state.showNews
+          ? 'including ' + news.length + ' news item' + (news.length === 1 ? '' : 's') + ' &middot; <a href="#" data-toggle-news="1">hide news</a>'
+          : '+' + news.length + ' news item' + (news.length === 1 ? '' : 's') + ' &middot; <a href="#" data-toggle-news="1">show</a>') + '</span>';
+      }
+      html += '</div>';
       html += results.length
         ? renderItems(results)
         : '<div class="ean-empty">No resources match your filters.</div>';
@@ -460,6 +469,14 @@
         render();
       });
     });
+    var newsToggle = root.querySelector("[data-toggle-news]");
+    if (newsToggle) {
+      newsToggle.addEventListener("click", function (e) {
+        e.preventDefault();
+        state.showNews = !state.showNews;
+        render();
+      });
+    }
     var clearBtn = root.querySelector("[data-clear-filters]");
     if (clearBtn) {
       clearBtn.addEventListener("click", function () {
