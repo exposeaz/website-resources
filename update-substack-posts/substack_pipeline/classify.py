@@ -45,7 +45,8 @@ def _score_rubric():
             f"can score {hi}.\n"
             f"- 5: in-depth original analysis, evidence, or history on one or more of these themes; worth recommending.\n"
             f"- 4: a substantive argument or analysis with its own reasoning or evidence, but narrower or less developed.\n"
-            f"- 3: on-topic commentary that is mostly opinion or familiar arguments, or a report with some context.\n"
+            f"- 3: on-topic commentary that is mostly opinion or familiar arguments, or a news report directly about "
+            f"antizionist activity.\n"
             f"- 2: these themes are background to another subject.\n"
             f"- 1: these themes are barely present.")
 
