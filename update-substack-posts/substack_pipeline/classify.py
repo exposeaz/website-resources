@@ -209,7 +209,9 @@ class Classifier:
 def _retag_system(tags):
     vocab = "\n".join(_vocab_line(t) for t in tags)
     return f"""You review short records of Substack posts for a nonprofit's resource library on antizionism.
-Judge only from the record given.
+Judge only from the record given. It holds a short summary, not the post: judge depth from what the summary
+says the post does (e.g. examines a case, traces a history, presents evidence), and don't mark a post down
+because its summary is brief.
 
 {_RELEVANCE_RULES}
 
