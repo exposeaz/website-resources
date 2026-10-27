@@ -21,6 +21,7 @@
     --ean-tag-bg: transparent;                  /* tag pill fill, inactive */
     --ean-tag-border: var(--ean-border);        /* tag pill border, inactive */
     --ean-tag-active-bg: var(--ean-accent);     /* tag pill fill when selected */
+    --ean-res-tag-bg: rgba(59,53,45,.07);       /* tag pill fill on cards and in the popup */
     --ean-card-image-bg: rgba(59,53,45,.05);    /* field behind fallback icon when no image is set */
     --ean-modal-bg: #F7F5F0;                    /* Parchment — detail popup background */
     --ean-modal-text: #3B352D;                  /* Armadillo — detail popup text */
@@ -249,18 +250,18 @@
     margin-top: 2px;
   }
   .ean-res-tags span {
-    font-size: 0.85em;
-    border: 1px solid var(--ean-border);
-    border-radius: 4px;
-    padding: 2px 7px;
-    opacity: 0.75;
+    font-size: 0.8em;
+    line-height: 1.3;
+    white-space: nowrap;
+    background: var(--ean-res-tag-bg);
+    border-radius: 999px;
+    padding: 3px 10px;
   }
   /* A card's tag that matches a selected filter pill */
   .ean-res-tags span[data-match="true"] {
-    border-color: var(--ean-accent);
-    color: var(--ean-accent);
+    background: var(--ean-tag-active-bg);
+    color: var(--ean-accent-text);
     font-weight: 600;
-    opacity: 1;
   }
   .ean-res-count { font-size: 0.85em; opacity: 0.7; }
 
