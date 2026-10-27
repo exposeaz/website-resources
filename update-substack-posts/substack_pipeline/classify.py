@@ -168,6 +168,17 @@ class Classifier:
         result["tags"] = _clean_tags(result["tags"], self.tags)
         return result
 
+    def confirm_tag(self, article, tag):
+        """True if the tag's theme is central to a stored article, judged from its title, summary and stance."""
+        scope = f" (only when {tag['scope']})" if tag.get("scope") else ""
+        system = f"""You review short records of Substack posts for a nonprofit's resource library on antizionism.
+Judge only from the record given; it holds a short summary, not the post.
+
+Answer whether this theme is central to the post: the post as a whole is about it or develops it at some length. A theme mentioned in passing, given as one example among several, or only implied does not count. An announcement or call for submissions is not about its topic.
+
+Theme: {tag['label']}{scope}"""
+        return self._call(system, _retag_message(article), _CONFIRM_SCHEMA, settings.TAG_REVIEW_MAX_OUTPUT_TOKENS)["central"]
+
     def group_duplicates(self, articles):
         """Groups of near-duplicate articles from one publication: [{"keep": i, "drop": [j, ...], "reason": str}]."""
         return self._call(_DEDUPE_SYSTEM, _dedupe_message(articles), _DEDUPE_SCHEMA,
@@ -248,6 +259,13 @@ Find posts that make essentially the same argument as another post in the list: 
 Group the duplicates. In each group, keep the post most useful to a reader: the one with the greatest distinct contribution or, if all are equally general, the fullest statement of the argument. Leave out posts that have no duplicate.
 
 For each group give keep (the kept post's number), drop (the other posts' numbers), and reason (one sentence on the shared argument)."""
+
+_CONFIRM_SCHEMA = {
+    "type": "object",
+    "properties": {"central": {"type": "boolean"}},
+    "required": ["central"],
+    "additionalProperties": False,
+}
 
 _DEDUPE_SCHEMA = {
     "type": "object",

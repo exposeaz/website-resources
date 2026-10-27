@@ -36,6 +36,7 @@ def main():
         article["relevance"] = result["relevance"]
         article["relevance_score"] = result["relevance_score"]
         article["tags"] = result["tags"]
+        article.pop("fill_checks", None)  # fill's verdicts were on the old tags
         article["retagged"] = classifier.retag_signature
         # Scoped tags were judged in the same call
         article["scoped_tags_reviewed"] = classifier.scoped_signature
