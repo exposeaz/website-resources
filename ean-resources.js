@@ -211,15 +211,11 @@
     // carries the `image` field and resourceImageHtml()/CATEGORY_ICONS/the
     // onerror fallback are all still intact below — to bring images back,
     // just re-add: html += resourceImageHtml(r);
-    html += '<div class="ean-res-header">';
     if (showsType()) html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
-    if (r.year) {
-      html += '<span class="ean-res-year">' + esc(String(r.year)) + '</span>';
-    }
-    html += '</div>';
     html += '<h4>' + esc(r.title) + '</h4>';
-    if (bylineFor(r)) {
-      html += '<div class="ean-res-author">' + esc(bylineFor(r)) + '</div>';
+    var meta = [bylineFor(r), r.year ? String(r.year) : ""].filter(Boolean);
+    if (meta.length) {
+      html += '<div class="ean-res-author">' + meta.map(esc).join(' &middot; ') + '</div>';
     }
     html += substackCountHtml(r);
     html += tagsHtml(r, CARD_TAG_LIMIT);
