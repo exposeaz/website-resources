@@ -36,10 +36,6 @@
       "label": "Soviet antizionism"
     },
     {
-      "id": "oct7",
-      "label": "October 7th"
-    },
-    {
       "id": "genocide-libel",
       "label": "Genocide libel"
     },
@@ -106,6 +102,14 @@
     {
       "id": "jew-hatred",
       "label": "Jew-hatred"
+    },
+    {
+      "id": "history-of-antizionism",
+      "label": "History of antizionism"
+    },
+    {
+      "id": "yevsektsiya",
+      "label": "Yevsektsiya"
     }
   ],
   "resources": [
@@ -589,7 +593,6 @@
       "category": "essays",
       "description": "Argues that antizionism, rather than traditional far-right antisemitism, has become the primary vector of anti-Jewish hostility today.",
       "tags": [
-        "oct7",
         "antizionism"
       ],
       "reference": "Dabelstein, Joshua. \"The Greatest Threat to Jewish Safety Has a New Name.\" Australian Financial Review.",
@@ -715,7 +718,7 @@
       "category": "data-research",
       "description": "A data study finding that antizionist views correlate with a broader \"moral inversion\" — a systematic tendency to misjudge or invert the actual human-rights records of authoritarian versus democratic states.",
       "tags": [
-        "oct7"
+        "data-research"
       ],
       "reference": "Dulberg, Zack, et al. Moral Inversion and the Rise of Authoritarian Sympathy. Rutgers University Social Perception Lab / Network Contagion Research Institute.",
       "author": "Zack Dulberg et al.",
@@ -742,7 +745,10 @@
       "category": "books",
       "description": "A follow-up to Horn's People Love Dead Jews, drawing on her post-October 7 work with university presidents and the U.S. government; diagnoses failures of Holocaust education and the long history of antizionism, and proposes a path forward.",
       "tags": [
-        "oct7"
+        "history-of-antizionism",
+        "soviet-antizionism",
+        "jewish-antizionism",
+        "yevsektsiya"
       ],
       "reference": "Horn, Dara. The Final Solution to the Jewish Question: A Love Story for the Living. Simon & Schuster, 2026.",
       "author": "Dara Horn",
@@ -1085,8 +1091,7 @@
         "genocide-libel",
         "colonizer-libel",
         "antizionism",
-        "antizionism-academy",
-        "oct7"
+        "antizionism-academy"
       ],
       "reference": "Movement Against Antizionism. \"How Antizionism’s Libels Against Israel Mirror the Prelude to the Rwandan Genocide.\" Substack, July 23, 2026.",
       "author": "Movement Against Antizionism",
@@ -1120,8 +1125,7 @@
       "tags": [
         "antizionism",
         "genocide-libel",
-        "colonizer-libel",
-        "oct7"
+        "colonizer-libel"
       ],
       "reference": "Movement Against Antizionism. \"This Essay Has No Right to Exist.\" Substack, June 3, 2026.",
       "author": "Movement Against Antizionism",
@@ -1308,8 +1312,7 @@
         "antizionism",
         "soviet-antizionism",
         "antizionism-academy",
-        "colonizer-libel",
-        "oct7"
+        "colonizer-libel"
       ],
       "reference": "Movement Against Antizionism. \"Dispatch #3: The Genealogy of Antizionist Hate.\" Substack, Nov. 17, 2025.",
       "author": "Movement Against Antizionism",
@@ -1377,8 +1380,7 @@
       "tags": [
         "antizionism-academy",
         "campus",
-        "colonizer-libel",
-        "oct7"
+        "colonizer-libel"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Jeffrey Malkan, \"The Fall of Jewish Columbia\".\" Substack, July 26, 2026.",
       "author": "Institute for Critical Study of Antizionism (ICSA)",
@@ -1509,7 +1511,6 @@
       "description": "Argues that after October 7, Western antizionist discourse turned 'Palestine' into both a totalizing moral cause and a trivialized meme, using 'context' and decolonization frames to negate Israeli victimhood. Contends this reproduces older Christian anti-Jewish supersessionist tropes, such as the 'Palestinian Jesus,' and conflates antizionism with exclusion of Jews in practice.",
       "tags": [
         "antizionism",
-        "oct7",
         "antizionism-arts",
         "campus"
       ],
@@ -1607,7 +1608,6 @@
       "category": "substack-articles",
       "description": "Shares Daniel Burston's review of Kara Jesella's forthcoming book on feminist antisemitism, which traces how feminism's identity-based theories came to cast Jews and Israel as oppressors, plus the abstract and opening of his essay on antizionism, authoritarianism, and denial of October 7 sexual violence on the Left. Burston argues that settler-colonial framings of Israel ignore historical facts and that Left authoritarianism shares dogmatism, conspiracy thinking, and antisemitism with its Right-wing counterpart.",
       "tags": [
-        "oct7",
         "colonizer-libel",
         "antizionism-academy",
         "antizionism"
@@ -1644,7 +1644,6 @@
         "antizionism",
         "antizionism-academy",
         "campus",
-        "oct7",
         "genocide-libel"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"A Taxonomy of Antizionism by Cary Nelson.\" Substack, Feb. 26, 2026.",
@@ -1748,8 +1747,7 @@
       "tags": [
         "antizionism-academy",
         "campus",
-        "genocide-libel",
-        "oct7"
+        "genocide-libel"
       ],
       "reference": "Andrew Pessin. \"Hate at a Liberal Arts College and the People Who Do Not Speak.\" Substack, Feb. 18, 2025.",
       "author": "Andrew Pessin",
@@ -1800,8 +1798,7 @@
         "antizionism",
         "campus",
         "bds",
-        "antizionism-academy",
-        "oct7"
+        "antizionism-academy"
       ],
       "reference": "Andrew Pessin. \"\"Anti-Zionism is Antisemitism,\" On Campus, Second Installment.\" Substack, Dec. 26, 2024.",
       "author": "Andrew Pessin",
@@ -1833,7 +1830,6 @@
       "description": "Argues that campus reactions to October 7 rest on the premise that Israel's 1948 founding was unjust. Contends that even if most of that premise were granted, it would not justify the movement to undo Israel. His case is that children are a moral fresh start, that demanding rectification of historical wrongs from later generations is itself unjust, and that such claims run in all directions.",
       "tags": [
         "antizionism",
-        "oct7",
         "campus",
         "colonizer-libel"
       ],
@@ -1884,7 +1880,6 @@
       "tags": [
         "antizionism",
         "campus",
-        "oct7",
         "colonizer-libel"
       ],
       "reference": "Andrew Pessin. \"Even If (Most Of) What Detractors Say About The Founding Of Israel Were True ... (Part 1 of 2).\" Substack, Dec. 25, 2023.",
@@ -1953,7 +1948,6 @@
         "antizionism",
         "colonizer-libel",
         "apartheid-libel",
-        "oct7",
         "soviet-antizionism"
       ],
       "reference": "Naya Lekht. \"The Nakba as Libel.\" Substack, May 4, 2026.",
@@ -1969,8 +1963,7 @@
       "description": "Building on Shulamit Volkov's idea of antisemitism as a 'cultural code,' argues that societies in each era define their moral order by casting Jews as its inverse, moving from anti-Judaism to racial antisemitism to antizionism. Contends that antizionism now signals progressive decolonial commitments, and that only a reckoning with it will lead the West to abandon this oppressor/oppressed moral framework.",
       "tags": [
         "antizionism",
-        "colonizer-libel",
-        "oct7"
+        "colonizer-libel"
       ],
       "reference": "Naya Lekht. \"Beyond Scapegoating: Antisemtism as a Mechanism for Moral Thinking.\" Substack, Dec. 28, 2025.",
       "author": "Naya Lekht",
@@ -2159,8 +2152,7 @@
       "description": "Argues that antizionism is a distinct, eliminationist form of anti-Jewish bigotry that cannot be treated as political criticism, and urges the Royal Commission to name it and uphold the IHRA definition. Then recounts how antizionism has affected the author's own life since October 7, including social exclusion and his earlier history as an antizionist Jew.",
       "tags": [
         "antizionism",
-        "legal-public-affairs",
-        "oct7"
+        "legal-public-affairs"
       ],
       "reference": "Joshua Dabelstein. \"Submission to the Royal Commission..\" Substack, June 14, 2026.",
       "author": "Joshua Dabelstein",
@@ -2280,8 +2272,7 @@
       "tags": [
         "antizionism",
         "poland-1968",
-        "legal-public-affairs",
-        "oct7"
+        "legal-public-affairs"
       ],
       "reference": "Joshua Dabelstein. \"Combatting Antizionist Hate in 2026..\" Substack, April 15, 2026.",
       "author": "Joshua Dabelstein",
@@ -2469,8 +2460,7 @@
       "category": "substack-articles",
       "description": "Introduces an interview with Adam Louis-Klein, founder of the Movement Against Antizionism, and argues that antizionism is a bigoted, libellous, violence-inspiring mechanism for harming Jews in its own right, not merely a variant of antisemitism. Cites the Bondi massacre, synagogue attacks and 'globalise the intifada' rhetoric as evidence, and promotes MAAZ as vital to Jewish advocacy.",
       "tags": [
-        "antizionism",
-        "oct7"
+        "antizionism"
       ],
       "reference": "Joshua Dabelstein. \"Adam Louis-Klein | Antizionism • Hasbara.\" Substack, Jan. 1, 2026.",
       "author": "Joshua Dabelstein",
@@ -2521,7 +2511,6 @@
       "description": "Argues that antizionism is driven by subconscious emotional needs, especially Western colonial shame and a desire for atonement, which are moralised into a witch hunt against Israel. Offers 15 points contending that antizionism uniquely demands a state's elimination irrespective of its actions, and that Israel serves as a scapegoat for the West's historical guilt.",
       "tags": [
         "antizionism",
-        "oct7",
         "colonizer-libel"
       ],
       "reference": "Joshua Dabelstein. \"Of Moths and Men.\" Substack, Dec. 9, 2025.",
@@ -2557,7 +2546,6 @@
         "antizionism",
         "genocide-libel",
         "soviet-antizionism",
-        "oct7",
         "poland-1968"
       ],
       "reference": "Joshua Dabelstein. \"Trolley Problems for Normal People.\" Substack, June 6, 2025.",
@@ -2673,8 +2661,7 @@
         "antizionism",
         "apartheid-libel",
         "colonizer-libel",
-        "genocide-libel",
-        "oct7"
+        "genocide-libel"
       ],
       "reference": "Jonah Platt. \"Apartheid, Colonizer, Baby Killers, Genocide: A Field Guide to the Lies About Israel.\" Substack, June 8, 2026.",
       "author": "Jonah Platt",
@@ -2760,7 +2747,6 @@
       "tags": [
         "antizionism",
         "islamism",
-        "oct7",
         "media-commentary"
       ],
       "reference": "Kevin Deutsch. \"Islamophoria: The Emotional High Behind the West’s Antizionist Frenzy.\" Substack, May 31, 2026.",
@@ -3076,8 +3062,7 @@
         "antizionism",
         "genocide-libel",
         "antizionism-academy",
-        "media-commentary",
-        "oct7"
+        "media-commentary"
       ],
       "reference": "Kile B. Jones. \"Gazology, Antizionism, and the Manufacture of Conviction.\" Substack, July 29, 2026.",
       "author": "Kile B. Jones",
@@ -3236,8 +3221,7 @@
       "description": "Argues that antizionist activists captured the DSA, using the Gaza war and the October 7 response to radicalize and recruit. Claims they are now attempting to take over the Democratic Party in a way that serves Muslim Brotherhood and Iranian regime goals of isolating Israel from the US.",
       "tags": [
         "islamism",
-        "bds",
-        "oct7"
+        "bds"
       ],
       "reference": "ESK. \"The anatomy of entryism: How the captured DSA is trying to capture the Democrats.\" Substack, July 14, 2026.",
       "author": "ESK",
@@ -3252,7 +3236,6 @@
       "description": "Argues that post-October 7 antizionist activity is a coordinated campaign to delegitimize Israel, and that defenders should stop justifying Israel's existence and instead ask critics why Pakistan, born of a violent 1947 partition with a record of religious persecution, is never challenged. Contends that accusations of ethnostate, apartheid, and settler colonialism are applied selectively to Israel alone.",
       "tags": [
         "antizionism",
-        "oct7",
         "apartheid-libel",
         "colonizer-libel",
         "genocide-libel"
@@ -3305,7 +3288,6 @@
       "description": "Argues that Western leftist movements aligning with Hamas and other jihadist groups after October 7 should be named 'Neo-Jihadism,' drawing a parallel with Neo-Nazism. Contends this movement adopts jihadist symbols, rhetoric, and violence, with roots in Soviet-Arab antizionism and postcolonial theory, and is mainstreaming in Western institutions.",
       "tags": [
         "islamism",
-        "oct7",
         "colonizer-libel",
         "soviet-antizionism",
         "antizionism"
@@ -3445,8 +3427,7 @@
         "antizionism",
         "islamism",
         "arab-supremacy",
-        "colonizer-libel",
-        "oct7"
+        "colonizer-libel"
       ],
       "reference": "Whole Story Institute. \"The First English Translation Of The Full Rashid Rida Letter Launching Reactionary Antizionism In 1898.\" Substack, July 31, 2026.",
       "author": "Whole Story Institute",
@@ -3546,7 +3527,6 @@
       "tags": [
         "antizionism",
         "islamism",
-        "oct7",
         "arab-supremacy",
         "data-research"
       ],
@@ -3758,7 +3738,6 @@
       "description": "Argues that antisemitism, historically recurring in new forms, now appears as antizionism and anti-colonialism, citing the global street reaction to October 7 and chants like 'From the river to the sea' as evidence. Contends that calling for Israel's destruction cannot be separated from antisemitism given its consequences for Jews, and traces the hatred's roots to the Abrahamic religions.",
       "tags": [
         "antizionism",
-        "oct7",
         "campus",
         "colonizer-libel"
       ],
