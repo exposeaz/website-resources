@@ -28,7 +28,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -60,7 +60,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -92,7 +92,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -152,7 +152,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false
+    }
   },
   {
     "publication": "Movement Against Antizionism",
@@ -184,7 +187,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -338,7 +341,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -370,8 +373,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false
+    }
   },
   {
     "publication": "Movement Against Antizionism",
@@ -401,8 +407,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://movementagainstantizionism.substack.com/p/dispatch-10-how-jewish-discourse",
+    "duplicate_reason": "Both argue that Jewish institutions' preferred language (ADL's discouraging the word antizionism; 'cross the line,' 'mask,' hyphenation) folds antizionism into classical antisemitism and obscures it, and both call for naming it plainly as a distinct ideology."
   },
   {
     "publication": "Movement Against Antizionism",
@@ -434,7 +442,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -466,7 +474,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -558,7 +566,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -618,8 +626,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "jewish-antizionism": true
+    }
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -649,7 +660,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://icsa.substack.com/p/by-simon-lucas-academic-antizionism",
+    "duplicate_reason": "All four Simon Lucas posts argue that antizionist bias has corrupted academic philosophy/bioethics standards of rigor, with 29 giving the fullest diagnostic statement of that thesis."
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -680,8 +693,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://icsa.substack.com/p/by-simon-lucas-academic-antizionism",
+    "duplicate_reason": "All four Simon Lucas posts argue that antizionist bias has corrupted academic philosophy/bioethics standards of rigor, with 29 giving the fullest diagnostic statement of that thesis."
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -770,7 +785,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -803,7 +818,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -1016,7 +1031,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -1046,7 +1061,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -1103,7 +1118,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -1228,7 +1243,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    }
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -1315,7 +1333,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -1380,7 +1398,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://icsa.substack.com/p/by-simon-lucas-academic-antizionism",
+    "duplicate_reason": "All four Simon Lucas posts argue that antizionist bias has corrupted academic philosophy/bioethics standards of rigor, with 29 giving the fullest diagnostic statement of that thesis."
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -1412,8 +1432,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false
+    }
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -1665,7 +1688,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://andrewpessin.substack.com/p/time-for-the-critical-study-of-antizionism",
+    "duplicate_reason": "Both announce the launch of the Institute for the Critical Study of Antizionism and its mission, with the later post adding only a genocide rebuttal while the earlier gives the fuller launch case."
   },
   {
     "publication": "Andrew Pessin",
@@ -1696,7 +1721,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -1727,7 +1752,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    },
+    "published_for_tag": "red-green-alliance",
+    "exported_resources": true
   },
   {
     "publication": "Andrew Pessin",
@@ -1758,7 +1788,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -1820,8 +1850,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://andrewpessin.substack.com/p/protocols-of-the-elders-of-anti-zion",
+    "duplicate_reason": "Both present the same 'Protocols of the Elders of Anti-Zion' thesis of a century-long conspiracy against Jews, drawing on Tabarovsky and Pacepa and the Soviet recasting of the conflict as colonizer versus indigenous."
   },
   {
     "publication": "Andrew Pessin",
@@ -1972,7 +2004,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -2002,7 +2034,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -2035,7 +2067,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -2068,7 +2100,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -2098,7 +2130,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -2127,8 +2159,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://andrewpessin.substack.com/p/anti-zionism-is-antisemitism-on-campus-d24",
+    "duplicate_reason": "Both state the same case that antizionism in practice on campuses is generally a species of antisemitism, built from Zionism's centrality to Jewish identity, appeal to antisemites, and shared tropes, with the later piece being the fuller statement."
   },
   {
     "publication": "Andrew Pessin",
@@ -2273,8 +2307,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://andrewpessin.substack.com/p/even-if-most-of-what-detractors-say",
+    "duplicate_reason": "Both argue that even granting the detractors' narrative of Israel's 1948 founding, descendants cannot justly be held responsible or made to rectify ancestral injustices, so undoing Israel remains morally objectionable."
   },
   {
     "publication": "Andrew Pessin",
@@ -2332,7 +2368,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Andrew Pessin",
@@ -2391,7 +2430,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": true
+    },
+    "published_for_tag": "data-research",
+    "exported_resources": true
   },
   {
     "publication": "Andrew Pessin",
@@ -2479,7 +2523,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -2770,7 +2814,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -2883,7 +2927,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://andrewpessin.substack.com/p/zohran-mamdani-and-the-book-that",
+    "duplicate_reason": "Both review Richard Landes's book arguing that Western progressive cognitive egocentrism leads to alliance with Caliphator Islamism and foresaw October 7."
   },
   {
     "publication": "Andrew Pessin",
@@ -2969,7 +3015,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -3090,7 +3136,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -3123,7 +3169,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -3155,7 +3201,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -3315,7 +3361,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -3348,7 +3394,8 @@
     "forced": false,
     "relevance_score": 5,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "exported_resources": true
   },
   {
     "publication": "Naya Lekht",
@@ -3378,8 +3425,10 @@
     "forced": false,
     "relevance_score": 5,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://nayalekht.substack.com/p/the-villain-the-victim-and-the-rescuer",
+    "duplicate_reason": "Both are 60-75 minute lesson plans teaching the three eras of Jew-hatred, each casting Jews as violators of the era's moral values, and teaching students to identify libels; post 7 adds the Villain-Victim-Rescuer framework and Soviet origins."
   },
   {
     "publication": "Naya Lekht",
@@ -3563,7 +3612,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -3595,7 +3644,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://nayalekht.substack.com/p/a-lethal-hatred-teachers-guide-on",
+    "duplicate_reason": "Both are the same 60-minute high school teacher's guide presenting Jew-hatred as three eras (anti-Judaism, anti-Semitism, anti-Zionism) with six recurring accusations applied to apartheid/colonialist imagery."
   },
   {
     "publication": "Naya Lekht",
@@ -3773,8 +3824,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    }
   },
   {
     "publication": "Joshua Dabelstein",
@@ -3954,7 +4008,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4010,7 +4064,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4128,7 +4182,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4191,7 +4245,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4249,7 +4303,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4282,7 +4336,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4378,7 +4432,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Joshua Dabelstein",
@@ -4440,7 +4497,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4470,7 +4527,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4557,8 +4614,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://fornormalpeople.substack.com/p/part-3-an-arsenal-against-antizionism",
+    "duplicate_reason": "All three make the same language-precision argument: avoid calling antizionists 'pro-Palestinian' or 'anti-Israel' and treat the ideology as eliminationist libel rather than political criticism; 56 gives the fullest set of tools."
   },
   {
     "publication": "Joshua Dabelstein",
@@ -4698,7 +4757,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://fornormalpeople.substack.com/p/i-was-an-antizionist-i-know-what",
+    "duplicate_reason": "Both argue modern anti-Jewish vilification travels through antizionism rather than classical antisemitism, so condemning 'antisemitism' fails to protect Jews, and that antizionism must be separated from criticism of Israel in law; 48 mainly promotes a training event."
   },
   {
     "publication": "Joshua Dabelstein",
@@ -4786,7 +4847,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4847,8 +4908,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://fornormalpeople.substack.com/p/crossing-the-line",
+    "duplicate_reason": "Both argue the Royal Commission's inquiry into when antizionism 'crosses the line' wrongly presumes antizionism is legitimate by default, when it is an eliminationist ideology that must be named and examined for what it does."
   },
   {
     "publication": "Joshua Dabelstein",
@@ -4879,7 +4942,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -4909,8 +4972,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://fornormalpeople.substack.com/p/part-3-an-arsenal-against-antizionism",
+    "duplicate_reason": "All three make the same language-precision argument: avoid calling antizionists 'pro-Palestinian' or 'anti-Israel' and treat the ideology as eliminationist libel rather than political criticism; 56 gives the fullest set of tools."
   },
   {
     "publication": "Joshua Dabelstein",
@@ -4971,7 +5036,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    },
+    "published_for_tag": "antizionism-arts",
+    "exported_resources": true
   },
   {
     "publication": "Joshua Dabelstein",
@@ -5002,7 +5072,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -5035,8 +5105,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://fornormalpeople.substack.com/p/granting-permission-for-vilification",
+    "duplicate_reason": "Both argue antijudaism, antisemitism and antizionism are successive libel systems whose language creates a permission structure for violence like the Bondi massacre, and that antizionist language escapes existing protections."
   },
   {
     "publication": "Joshua Dabelstein",
@@ -5129,7 +5201,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -5210,7 +5282,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -5276,7 +5348,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -5331,7 +5403,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -5361,7 +5433,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -5390,7 +5462,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://fornormalpeople.substack.com/p/of-moths-and-men",
+    "duplicate_reason": "Both argue antizionism is driven by subconscious needs and Western colonial shame displaced onto Israel as a 'witch,' and is a belief that Israel must not exist rather than a stance on its actions; 31 adds the fifteen-point elaboration."
   },
   {
     "publication": "Joshua Dabelstein",
@@ -5476,7 +5550,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://fornormalpeople.substack.com/p/blind-spot-error-or-worse",
+    "duplicate_reason": "Same ABC Israel-Gaza coverage critique citing the Qatar peace-broker framing, the journalist-death statistic and the Hasan Piker interview; 25 additionally covers John Lyons on the PA."
   },
   {
     "publication": "Joshua Dabelstein",
@@ -5938,7 +6014,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false
+    }
   },
   {
     "publication": "Joshua Dabelstein",
@@ -5967,7 +6046,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -6087,7 +6166,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    },
+    "published_for_tag": "antizionism-arts",
+    "exported_resources": true
   },
   {
     "publication": "Joshua Dabelstein",
@@ -6148,7 +6232,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    },
+    "published_for_tag": "antizionism-arts",
+    "exported_resources": true
   },
   {
     "publication": "Joshua Dabelstein",
@@ -6524,7 +6613,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -6800,7 +6889,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "poland-1968": true
+    },
+    "published_for_tag": "poland-1968",
+    "exported_resources": true
   },
   {
     "publication": "Samuel J. Hyde",
@@ -6831,7 +6925,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Samuel J. Hyde",
@@ -7102,7 +7199,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -7130,7 +7227,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -8038,7 +8135,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://sjhyde.substack.com/p/no-solution",
+    "duplicate_reason": "Both argue that one-state/binational proposals are not a new solution but were already proposed and rejected during the Mandate era and before, undermining the claim that partition caused the conflict."
   },
   {
     "publication": "Samuel J. Hyde",
@@ -8313,7 +8412,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -8486,8 +8585,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://jonahplatt.substack.com/p/apartheid-colonizer-baby-killers",
+    "duplicate_reason": "Both rebut the same antizionist slogan-libels (apartheid, colonizer, genocide, baby killer) by pointing to their false premises and Soviet/antisemitic origins, and 21 gives the fuller rebuttal of each."
   },
   {
     "publication": "Jonah Platt",
@@ -8598,7 +8699,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://jonahplatt.substack.com/p/antizionism-is-not-a-political-position",
+    "duplicate_reason": "Both argue antizionism is the latest repackaging of ancient Jew hatred in a society's moral framework, but 18 supplies more historical parallels, media/institutional claims and a behavior checklist than 24's Klan analogy."
   },
   {
     "publication": "Jonah Platt",
@@ -8658,7 +8761,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": false
+    }
   },
   {
     "publication": "Jonah Platt",
@@ -8691,7 +8797,11 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
     "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "apartheid-libel": true
+    },
+    "published_for_tag": "apartheid-libel"
   },
   {
     "publication": "Jonah Platt",
@@ -8785,7 +8895,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -9462,7 +9572,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    },
+    "published_for_tag": "antizionism-arts",
+    "exported_resources": true
   },
   {
     "publication": "Jonah Platt",
@@ -10087,7 +10202,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "bds": true
+    },
+    "published_for_tag": "bds",
+    "exported_resources": true
   },
   {
     "publication": "Kevin Deutsch",
@@ -11011,7 +11131,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    },
+    "published_for_tag": "antizionism-arts",
+    "exported_resources": true
   },
   {
     "publication": "Kevin Deutsch",
@@ -11823,7 +11948,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    },
+    "published_for_tag": "antizionism-arts",
+    "exported_resources": true
   },
   {
     "publication": "Kevin Deutsch",
@@ -12246,7 +12376,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": true
+    },
+    "published_for_tag": "data-research",
+    "exported_resources": true
   },
   {
     "publication": "Kevin Deutsch",
@@ -12885,7 +13020,11 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
     "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    },
+    "published_for_tag": "red-green-alliance"
   },
   {
     "publication": "Kevin Deutsch",
@@ -13895,7 +14034,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -13959,7 +14098,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -14049,7 +14188,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": true
+    },
+    "published_for_tag": "antizionism-medicine",
+    "exported_resources": true
   },
   {
     "publication": "Kevin Deutsch",
@@ -14521,7 +14665,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": false
+    }
   },
   {
     "publication": "Kevin Deutsch",
@@ -15193,7 +15340,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -16583,7 +16730,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    },
+    "published_for_tag": "antizionism-arts",
+    "exported_resources": true
   },
   {
     "publication": "Kevin Deutsch",
@@ -17548,7 +17700,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": true
+    },
+    "published_for_tag": "antizionism-medicine",
+    "exported_resources": true
   },
   {
     "publication": "Kevin Deutsch",
@@ -18067,7 +18224,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    },
+    "published_for_tag": "antizionism-arts",
+    "exported_resources": true
   },
   {
     "publication": "Kevin Deutsch",
@@ -18588,7 +18750,11 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
     "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    },
+    "published_for_tag": "red-green-alliance"
   },
   {
     "publication": "Kevin Deutsch",
@@ -19424,7 +19590,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": true
+    },
+    "published_for_tag": "antizionism-medicine",
+    "exported_resources": true
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -19484,7 +19655,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -19578,8 +19749,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://jenniferkogan.substack.com/p/young-people-and-the-cult-of-antizionism",
+    "duplicate_reason": "Both argue that young people are captured by antizionism through developmental needs for belonging and certainty, with the later post adding no distinct case beyond survey data."
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -19610,7 +19783,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -19642,7 +19815,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -19730,7 +19903,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -19762,7 +19935,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": true
+    },
+    "published_for_tag": "antizionism-medicine",
+    "exported_resources": true
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -19795,7 +19973,11 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
     "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": true
+    },
+    "published_for_tag": "antizionism-medicine"
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -19824,7 +20006,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -19916,7 +20098,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -19946,8 +20128,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://jenniferkogan.substack.com/p/why-i-joined-the-movement-against",
+    "duplicate_reason": "Both argue that antizionism is a hate movement derived from Soviet propaganda that has infiltrated mental health institutions, and invite readers to join a movement against it."
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -19976,7 +20160,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://jenniferkogan.substack.com/p/nasw-violates-its-own-code-of-ethics",
+    "duplicate_reason": "Both argue that NASW ignores Jewish members' complaints about antizionist listserv content and thereby violates its own Code of Ethics, but the kept post compares the Code section by section."
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -20070,7 +20256,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": true
+    },
+    "published_for_tag": "antizionism-medicine",
+    "exported_resources": true
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -20157,7 +20348,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": true
+    },
+    "published_for_tag": "antizionism-medicine",
+    "exported_resources": true
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -20217,7 +20413,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://jenniferkogan.substack.com/p/decolonizingtherapyantizionism",
+    "duplicate_reason": "Both argue that decolonizing therapy casts Zionists/Jews as colonizers and excludes Jewish clients and therapists, with no distinct case in the later post beyond personal diaspora anecdotes."
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -20366,7 +20564,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": true
+    },
+    "published_for_tag": "antizionism-medicine",
+    "exported_resources": true
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -20396,7 +20599,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": true
+    },
+    "published_for_tag": "antizionism-medicine",
+    "exported_resources": true
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -20485,7 +20693,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": true
+    },
+    "published_for_tag": "data-research",
+    "exported_resources": true
   },
   {
     "publication": "Kile B. Jones",
@@ -20546,8 +20759,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-medicine": false
+    }
   },
   {
     "publication": "Kile B. Jones",
@@ -20578,7 +20794,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false
+    }
   },
   {
     "publication": "Kile B. Jones",
@@ -20635,7 +20854,11 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
     "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "apartheid-libel": true
+    },
+    "published_for_tag": "apartheid-libel"
   },
   {
     "publication": "Kile B. Jones",
@@ -20692,7 +20915,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": true
+    },
+    "published_for_tag": "data-research",
+    "exported_resources": true
   },
   {
     "publication": "Kile B. Jones",
@@ -20840,7 +21068,11 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
     "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "jewish-antizionism": true
+    },
+    "published_for_tag": "jewish-antizionism"
   },
   {
     "publication": "Kile B. Jones",
@@ -20926,8 +21158,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": false
+    }
   },
   {
     "publication": "Kile B. Jones",
@@ -21048,7 +21283,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://kilejones.substack.com/p/special-report-the-return-test",
+    "duplicate_reason": "Both test the 'Israel is uniquely an ethnostate/apartheid' charge by comparing Israel's return laws and character with other states; 27 compares sixteen countries and traces the term's history, making it the fuller version."
   },
   {
     "publication": "Kile B. Jones",
@@ -21079,7 +21316,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Kile B. Jones",
@@ -21139,7 +21379,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    },
+    "published_for_tag": "red-green-alliance",
+    "exported_resources": true
   },
   {
     "publication": "Kile B. Jones",
@@ -21314,7 +21559,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": false
+    }
   },
   {
     "publication": "Kile B. Jones",
@@ -21373,7 +21621,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -21459,7 +21707,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -21576,7 +21824,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -21606,8 +21854,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://kilejones.substack.com/p/the-language-that-eats-the-evidence",
+    "duplicate_reason": "Both argue that the antizionist verdict words (genocide, apartheid, colonizer) borrow moral weight from other atrocities to strip Israel of legitimacy; 9 adds the Soviet propaganda lineage."
   },
   {
     "publication": "Kile B. Jones",
@@ -21693,8 +21943,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "apartheid-libel": false
+    }
   },
   {
     "publication": "Kile B. Jones",
@@ -22021,7 +22274,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://kilejones.substack.com/p/gazology-antizionism-and-the-manufacture",
+    "duplicate_reason": "Both present Matti Friedman's 'Gazology' critique, arguing the genre of Gaza books omits Hamas and October 7 context and substitutes 'genocide' for evidence; 25 adds the author's own training and a fuller argument."
   },
   {
     "publication": "Kile B. Jones",
@@ -22051,7 +22306,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -22080,7 +22335,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://kilejones.substack.com/p/tattooed-by-a-nazi",
+    "duplicate_reason": "All three are the author's story of absorbing antizionist and postcolonial theory at Boston University and then leaving it, arguing the theory inverts history and recasts Jews as villains; 28 adds the punk-scene background and October 7 sexual-violence denial that prompted his break."
   },
   {
     "publication": "Kile B. Jones",
@@ -22110,8 +22367,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://kilejones.substack.com/p/tattooed-by-a-nazi",
+    "duplicate_reason": "All three are the author's story of absorbing antizionist and postcolonial theory at Boston University and then leaving it, arguing the theory inverts history and recasts Jews as villains; 28 adds the punk-scene background and October 7 sexual-violence denial that prompted his break."
   },
   {
     "publication": "Kile B. Jones",
@@ -22170,7 +22429,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://thegoldenpill.substack.com/p/the-raw-truth-on-the-neo-jihadist",
+    "duplicate_reason": "All are general statements of the same thesis that a 'Neo-Jihadist' red-green alliance of Western leftists and Islamists emerged after October 7, with no distinct case or evidence that outweighs the fullest statement in the kept post."
   },
   {
     "publication": "ESK",
@@ -22201,7 +22462,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://thegoldenpill.substack.com/p/the-raw-truth-on-the-neo-jihadist",
+    "duplicate_reason": "All are general statements of the same thesis that a 'Neo-Jihadist' red-green alliance of Western leftists and Islamists emerged after October 7, with no distinct case or evidence that outweighs the fullest statement in the kept post."
   },
   {
     "publication": "ESK",
@@ -22234,7 +22497,11 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
     "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": true
+    },
+    "published_for_tag": "arab-supremacy"
   },
   {
     "publication": "ESK",
@@ -22295,7 +22562,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -22359,7 +22626,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    },
+    "published_for_tag": "red-green-alliance",
+    "exported_resources": true
   },
   {
     "publication": "ESK",
@@ -22476,7 +22748,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -22538,7 +22810,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -22568,7 +22840,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    },
+    "published_for_tag": "red-green-alliance",
+    "exported_resources": true
   },
   {
     "publication": "ESK",
@@ -22598,7 +22875,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://thegoldenpill.substack.com/p/the-raw-truth-on-the-neo-jihadist",
+    "duplicate_reason": "All are general statements of the same thesis that a 'Neo-Jihadist' red-green alliance of Western leftists and Islamists emerged after October 7, with no distinct case or evidence that outweighs the fullest statement in the kept post."
   },
   {
     "publication": "ESK",
@@ -22692,7 +22971,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    },
+    "published_for_tag": "red-green-alliance",
+    "exported_resources": true
   },
   {
     "publication": "ESK",
@@ -22724,7 +23008,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "ESK",
@@ -22815,7 +23102,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://thegoldenpill.substack.com/p/the-raw-truth-on-the-neo-jihadist",
+    "duplicate_reason": "All are general statements of the same thesis that a 'Neo-Jihadist' red-green alliance of Western leftists and Islamists emerged after October 7, with no distinct case or evidence that outweighs the fullest statement in the kept post."
   },
   {
     "publication": "ESK",
@@ -22877,7 +23166,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "ESK",
@@ -22940,7 +23232,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "ESK",
@@ -23058,7 +23353,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -23089,7 +23384,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    },
+    "published_for_tag": "red-green-alliance",
+    "exported_resources": true
   },
   {
     "publication": "ESK",
@@ -23120,8 +23420,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://thegoldenpill.substack.com/p/the-raw-truth-on-the-neo-jihadist",
+    "duplicate_reason": "All are general statements of the same thesis that a 'Neo-Jihadist' red-green alliance of Western leftists and Islamists emerged after October 7, with no distinct case or evidence that outweighs the fullest statement in the kept post."
   },
   {
     "publication": "ESK",
@@ -23150,7 +23452,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://thegoldenpill.substack.com/p/the-martyrcide-of-gaza",
+    "duplicate_reason": "Both argue that Hamas deliberately sacrifices Gaza's civilians through martyrdom ideology and human shields, making the genocide accusation against Israel a distortion that serves Hamas's propaganda."
   },
   {
     "publication": "David Christopher Kaufman",
@@ -23383,7 +23687,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://davidkaufman.substack.com/p/how-palestine-caused-a-blacks-and",
+    "duplicate_reason": "Both argue that Palestinian and Black liberation struggles are not truly intertwined and that intersectional framing wrongly casts Jews as oppressors, but 17 adds data and a broader account of Black antisemitism and the Black-Jewish rupture."
   },
   {
     "publication": "David Christopher Kaufman",
@@ -23471,7 +23777,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://davidkaufman.substack.com/p/sunday-archive-time-to-make-our-own",
+    "duplicate_reason": "Both argue that Jews should stop funding and allying with progressive DEI/identity groups that sided against Israel and instead invest in their own institutions and advocacy."
   },
   {
     "publication": "David Christopher Kaufman",
@@ -23699,7 +24007,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://davidkaufman.substack.com/p/enter-the-era-of-peak-goodjew",
+    "duplicate_reason": "Both argue that anti-Zionist 'good Jews' who side against Israel (Beinart, Ridker's writers, Mamdani's allies) will not be spared from antisemitism and serve to legitimize hatred of Jews."
   },
   {
     "publication": "David Christopher Kaufman",
@@ -24108,7 +24418,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "poland-1968": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -24258,7 +24571,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": true
+    },
+    "published_for_tag": "data-research",
+    "exported_resources": true
   },
   {
     "publication": "Whole Story Institute",
@@ -24417,7 +24735,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -24480,7 +24798,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": true
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -24511,7 +24832,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": true
+    },
+    "published_for_tag": "data-research",
+    "exported_resources": true
   },
   {
     "publication": "Whole Story Institute",
@@ -24543,8 +24869,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false,
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -24575,7 +24905,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": true
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -24605,7 +24938,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false,
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -24638,7 +24975,11 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
     "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": true
+    },
+    "published_for_tag": "arab-nazi-antizionism"
   },
   {
     "publication": "Whole Story Institute",
@@ -24763,7 +25104,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -24823,7 +25167,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": true
+    },
+    "published_for_tag": "data-research",
+    "exported_resources": true
   },
   {
     "publication": "Whole Story Institute",
@@ -25305,7 +25654,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -25367,7 +25716,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -25399,7 +25751,11 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
     "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": true
+    },
+    "published_for_tag": "data-research"
   },
   {
     "publication": "Whole Story Institute",
@@ -25430,8 +25786,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -25460,7 +25819,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -25553,7 +25915,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -25614,8 +25976,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -25707,8 +26072,11 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -25739,7 +26107,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -25802,7 +26173,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -25834,7 +26208,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -25864,7 +26238,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -25953,7 +26330,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -25983,7 +26363,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -26014,7 +26397,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -26046,7 +26432,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -26075,7 +26464,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -26134,7 +26526,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-nazi-antizionism": false
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -26165,7 +26560,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -26256,7 +26651,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -26348,7 +26743,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "apartheid-libel": true
+    }
   },
   {
     "publication": "Whole Story Institute",
@@ -26498,7 +26896,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -26901,7 +27299,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -26987,7 +27385,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "jewish-antizionism": true
+    },
+    "published_for_tag": "jewish-antizionism",
+    "exported_resources": true
   },
   {
     "publication": "Moral Clarity",
@@ -28362,7 +28765,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -28440,7 +28843,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -28576,7 +28982,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/the-colonizers-who-forgot-to-have",
+    "duplicate_reason": "All three argue that calling Zionism settler-colonialism/colonizer fails because Jews are indigenous Middle Eastern people with no mother country; 184 is the fullest statement, while 185 is a comic retelling."
   },
   {
     "publication": "Moral Clarity",
@@ -28680,7 +29088,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -29205,7 +29613,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/everything-you-know-about-settlements",
+    "duplicate_reason": "All argue media coverage of Judea and Samaria settlements is distorted and that illegal Palestinian Area C construction under Oslo far exceeds Israeli building; 56 has the most complete treatment."
   },
   {
     "publication": "Moral Clarity",
@@ -31001,7 +31411,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/repeat-the-psychosis-of-anti-israel",
+    "duplicate_reason": "Both republish the same 'Palestinian Delusional Disorder' thesis that anti-Israel protestors suffer a mass delusion with the same symptoms."
   },
   {
     "publication": "Moral Clarity",
@@ -31559,7 +31971,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
@@ -32391,7 +32803,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "antizionism-arts": true
+    },
+    "published_for_tag": "antizionism-arts",
+    "exported_resources": true
   },
   {
     "publication": "Moral Clarity",
@@ -33106,7 +33523,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/the-narrative-israel-should-adopt",
+    "duplicate_reason": "Both argue Jews are indigenous to the land and base Israel's claim on history and indigeneity rather than a simplistic religious deed; 24 adds the legal pillars (Balfour, San Remo, Mandate)."
   },
   {
     "publication": "Moral Clarity",
@@ -33216,7 +33635,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -34848,7 +35270,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -35612,7 +36037,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/what-the-drive-to-recognize-a-palestinian",
+    "duplicate_reason": "Both argue Western recognition of a Palestinian state is meaningless and rewards Hamas's October 7 massacre, comparing leaders to appeasers; 103 is the fuller argument."
   },
   {
     "publication": "Moral Clarity",
@@ -36515,7 +36942,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -36971,7 +37401,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/reprise-france-has-become-a-muslim",
+    "duplicate_reason": "Both argue France recognizing a Palestinian state rewards October 7 and shows it has become a Muslim client state pandering to Muslim voters."
   },
   {
     "publication": "Moral Clarity",
@@ -37196,7 +37628,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -37526,7 +37961,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/part-2-anti-zionism-is-antisemitism",
+    "duplicate_reason": "All three argue antizionism is antisemitism within the same fortnight series; 88 and 89 each add distinct arguments (general theory; Judaism fuses faith and homeland) but 90 is only a preview with no distinct contribution."
   },
   {
     "publication": "Moral Clarity",
@@ -37580,8 +38017,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
-    "retagged": "c78da2b03775"
+    "exported_resources": false,
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/part-2-anti-zionism-is-antisemitism",
+    "duplicate_reason": "All three argue antizionism is antisemitism within the same fortnight series; 88 and 89 each add distinct arguments (general theory; Judaism fuses faith and homeland) but 90 is only a preview with no distinct contribution."
   },
   {
     "publication": "Moral Clarity",
@@ -38320,7 +38759,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -38461,7 +38903,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/should-israel-quit-the-united-nations",
+    "duplicate_reason": "Both argue Israel should ban UN staff and operations and consider quitting the UN as corrupt and antisemitic; 75 is an update adding Guterres, but 26 is the original fuller statement."
   },
   {
     "publication": "Moral Clarity",
@@ -39471,7 +39915,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "red-green-alliance": true
+    },
+    "published_for_tag": "red-green-alliance",
+    "exported_resources": true
   },
   {
     "publication": "Moral Clarity",
@@ -39720,7 +40169,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/western-leaders-antisemitic-shame",
+    "duplicate_reason": "All argue Western governments' rhetoric and policy toward Israel stoke and normalize antisemitism; 58 is the fullest with its multi-country survey while 84 adds specific attacks, so keep 58 and drop 37 and 84 as generic restatements."
   },
   {
     "publication": "Moral Clarity",
@@ -39996,7 +40447,12 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "data-research": true
+    },
+    "published_for_tag": "data-research",
+    "exported_resources": true
   },
   {
     "publication": "Moral Clarity",
@@ -40080,7 +40536,10 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -40164,7 +40623,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/reprise-the-pro-palestinians-have",
+    "duplicate_reason": "Both argue pro-Palestinian activists have no good arguments and that the Palestinian narrative is a myth that more knowledge dispels; 80 is the fuller restatement."
   },
   {
     "publication": "Moral Clarity",
@@ -41055,7 +41516,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/western-leaders-antisemitic-shame",
+    "duplicate_reason": "All argue Western governments' rhetoric and policy toward Israel stoke and normalize antisemitism; 58 is the fullest with its multi-country survey while 84 adds specific attacks, so keep 58 and drop 37 and 84 as generic restatements."
   },
   {
     "publication": "Moral Clarity",
@@ -41475,7 +41938,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/everything-you-know-about-settlements",
+    "duplicate_reason": "All argue media coverage of Judea and Samaria settlements is distorted and that illegal Palestinian Area C construction under Oslo far exceeds Israeli building; 56 has the most complete treatment."
   },
   {
     "publication": "Moral Clarity",
@@ -41788,7 +42253,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/reprise-the-medias-top-15-anti-israel",
+    "duplicate_reason": "Both present the media's list of loaded anti-Israel phrases that feign impartiality while casting Israel as aggressor; 25 is the original and fuller list, so keep 25 over the reprise 65."
   },
   {
     "publication": "Moral Clarity",
@@ -41933,7 +42400,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/the-colonizers-who-forgot-to-have",
+    "duplicate_reason": "All three argue that calling Zionism settler-colonialism/colonizer fails because Jews are indigenous Middle Eastern people with no mother country; 184 is the fullest statement, while 185 is a comic retelling."
   },
   {
     "publication": "Moral Clarity",
@@ -42023,7 +42492,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/reprise-no-you-are-not-going-insane",
+    "duplicate_reason": "Both list the same moral-inversion examples (ICC, UN, media, Israel's moral war) under the same 'you are not going insane' thesis; the reprise is the fuller statement."
   },
   {
     "publication": "Moral Clarity",
@@ -42278,7 +42749,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -42336,7 +42810,9 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/reprise-the-slow-death-of-american",
+    "duplicate_reason": "Both argue the petition by journalism professors over the NYT October 7 sexual violence story is a denialist campaign reflecting the decline of American journalism."
   },
   {
     "publication": "Moral Clarity",
@@ -42618,7 +43094,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/reprise-the-unholy-alliance-between",
+    "duplicate_reason": "Both argue the Woke Left and Islamists form an unholy alliance based on shared worldview; the reprise is the fuller statement."
   },
   {
     "publication": "Moral Clarity",
@@ -42779,7 +43257,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -42807,7 +43288,9 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "duplicate_of": "https://moralclaritynewsletter.substack.com/p/reprise-the-hamas-pr-machine",
+    "duplicate_reason": "Both argue Hamas ran a highly effective PR campaign that turned media, policymakers and UN officials into promoters of its agenda; the reprise is the fuller version while the original is only an intro."
   },
   {
     "publication": "Moral Clarity",
@@ -43008,7 +43491,10 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "retagged": "c78da2b03775"
+    "retagged": "c78da2b03775",
+    "fill_checks": {
+      "arab-supremacy": false
+    }
   },
   {
     "publication": "Moral Clarity",
@@ -43094,7 +43580,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "94d95a24ae8e",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775"
   },
   {
