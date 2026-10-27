@@ -12,6 +12,16 @@
   // Hint shown above the tag pills.
   // Tags shown on a card or list row; the detail popup shows all of them
   var CARD_TAG_LIMIT = 3;
+  // Filter bar order, so related tags sit together; tags not listed go last
+  var TAG_ORDER = [
+    "antizionism", "jew-hatred", "history-of-antizionism",
+    "soviet-antizionism", "yevsektsiya", "poland-1968", "arab-nazi-antizionism", "western-antizionism",
+    "islamism", "arab-supremacy", "red-green-alliance", "jewish-antizionism",
+    "genocide-libel", "colonizer-libel", "apartheid-libel",
+    "antizionism-academy", "campus", "antizionism-medicine", "antizionism-arts", "media-commentary",
+    "institutional-capture", "legal-public-affairs", "bds",
+    "oct7", "data-research"
+  ];
   var TAG_HINT = "Select tags to filter resources by topic. Choose more than one to show resources matching any or all of them.";
 
   // Wording shown above the Substack cards in the Substacks category.
@@ -122,6 +132,13 @@
       (active ? " sqs-block-button-element--primary" : " sqs-block-button-element--tertiary");
   }
 
+  function orderedTags() {
+    var rank = function (t) { var i = TAG_ORDER.indexOf(t.id); return i === -1 ? TAG_ORDER.length : i; };
+    return state.data.tags.map(function (t, i) { return { t: t, i: i }; })
+      .sort(function (a, b) { return rank(a.t) - rank(b.t) || a.i - b.i; })
+      .map(function (x) { return x.t; });
+  }
+
   function renderToolbar() {
     var html = '<div class="ean-toolbar">';
     html += '<input class="ean-search" type="text" placeholder="Search titles, descriptions, citations..." value="' + esc(state.search) + '" />';
@@ -135,7 +152,7 @@
     html += '</div>';
     html += '<p class="ean-tag-hint">' + esc(TAG_HINT) + '</p>';
     html += '<div class="ean-tagbar">';
-    state.data.tags.forEach(function (t) {
+    orderedTags().forEach(function (t) {
       var active = state.activeTags.indexOf(t.id) !== -1;
       html += '<button class="' + tagBtnClasses(active) + '" data-tag="' + t.id + '" data-active="' + active + '">' + esc(t.label) + '</button>';
     });
