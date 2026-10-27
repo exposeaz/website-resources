@@ -10,6 +10,18 @@
     "See the full Substack for all posts: {link}";
 
   // Hint shown above the tag pills.
+  // Tags shown on a card or list row; the detail popup shows all of them
+  var CARD_TAG_LIMIT = 3;
+  // Filter bar order, so related tags sit together; tags not listed go last
+  var TAG_ORDER = [
+    "antizionism", "jew-hatred", "history-of-antizionism",
+    "soviet-antizionism", "yevsektsiya", "poland-1968", "arab-nazi-antizionism", "western-antizionism",
+    "islamism", "arab-supremacy", "red-green-alliance", "jewish-antizionism",
+    "genocide-libel", "colonizer-libel", "apartheid-libel",
+    "antizionism-academy", "campus", "antizionism-medicine", "antizionism-arts", "media-commentary",
+    "institutional-capture", "legal-public-affairs", "bds",
+    "data-research"
+  ];
   var TAG_HINT = "Select tags to filter resources by topic. Choose more than one to show resources matching any or all of them.";
 
   // Wording shown above the Substack cards in the Substacks category.
@@ -120,6 +132,13 @@
       (active ? " sqs-block-button-element--primary" : " sqs-block-button-element--tertiary");
   }
 
+  function orderedTags() {
+    var rank = function (t) { var i = TAG_ORDER.indexOf(t.id); return i === -1 ? TAG_ORDER.length : i; };
+    return state.data.tags.map(function (t, i) { return { t: t, i: i }; })
+      .sort(function (a, b) { return rank(a.t) - rank(b.t) || a.i - b.i; })
+      .map(function (x) { return x.t; });
+  }
+
   function renderToolbar() {
     var html = '<div class="ean-toolbar">';
     html += '<input class="ean-search" type="text" placeholder="Search titles, descriptions, citations..." value="' + esc(state.search) + '" />';
@@ -133,7 +152,7 @@
     html += '</div>';
     html += '<p class="ean-tag-hint">' + esc(TAG_HINT) + '</p>';
     html += '<div class="ean-tagbar">';
-    state.data.tags.forEach(function (t) {
+    orderedTags().forEach(function (t) {
       var active = state.activeTags.indexOf(t.id) !== -1;
       html += '<button class="' + tagBtnClasses(active) + '" data-tag="' + t.id + '" data-active="' + active + '">' + esc(t.label) + '</button>';
     });
@@ -200,14 +219,23 @@
       html += '<div class="ean-res-author">' + esc(bylineFor(r)) + '</div>';
     }
     html += substackCountHtml(r);
-    html += tagsHtml(r);
+    html += tagsHtml(r, CARD_TAG_LIMIT);
     html += '</div>';
     return html;
   }
 
-  function tagsHtml(r) {
+  // Cards and rows show up to CARD_TAG_LIMIT tags (selected ones first, then the most central);
+  // the modal passes no limit and shows them all
+  function tagsHtml(r, limit) {
     if (!r.tags || !r.tags.length) return "";
-    return '<div class="ean-res-tags">' + r.tags.map(function (t) {
+    var shown = r.tags;
+    if (limit) {
+      var isActive = function (t) { return state.activeTags.indexOf(t) !== -1; };
+      var matched = r.tags.filter(isActive);
+      var rest = r.tags.filter(function (t) { return !isActive(t); }).slice(0, Math.max(limit - matched.length, 0));
+      shown = r.tags.filter(function (t) { return matched.indexOf(t) !== -1 || rest.indexOf(t) !== -1; });
+    }
+    return '<div class="ean-res-tags">' + shown.map(function (t) {
       var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
       var match = state.activeTags.indexOf(t) !== -1;
       return '<span data-tag="' + esc(t) + '" data-match="' + match + '">' + esc(tagDef ? tagDef.label : t) + '</span>';
@@ -227,7 +255,7 @@
     html += '<div class="ean-res-row-main"><h4>' + esc(r.title) + '</h4>';
     html += '<div class="ean-res-row-meta">' + meta.map(esc).join(' &middot; ') + '</div>';
     html += substackCountHtml(r) + '</div>';
-    html += tagsHtml(r);
+    html += tagsHtml(r, CARD_TAG_LIMIT);
     html += '</div>';
     return html;
   }
@@ -271,6 +299,7 @@
     if (r.reference) {
       html += '<p class="ean-res-reference">' + esc(r.reference) + '</p>';
     }
+    html += tagsHtml(r);
     if (r.url) {
       html += '<a class="ean-res-link" href="' + esc(r.url) + '" target="_blank" rel="noopener">Continue to source &rarr;</a>';
     }

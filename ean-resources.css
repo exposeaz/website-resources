@@ -12,7 +12,7 @@
      ================================================================ */
   #ean-resources-root {
     /* Brand palette: Armadillo #3B352D, Parchment #F7F5F0, Cobalt #2D61AF, Tangerine #FF8642 */
-    --ean-accent: #2D61AF;                      /* Cobalt — selected tag pills, "Continue to source" button */
+    --ean-accent: #2D61AF;                      /* Cobalt — buttons and links ("Continue to source", layout switch, Show more) */
     --ean-accent-text: #FFFFFF;                 /* text on --ean-accent (Armadillo if the accent is Tangerine) */
     --ean-highlight: #FF8642;                   /* Tangerine — card top edge, hover border, search focus ring */
     --ean-card-bg: #FFFFFF;                     /* card fill color, on the Parchment page */
@@ -20,7 +20,10 @@
     --ean-border-strong: rgba(59,53,45,.45);    /* fallback icon color */
     --ean-tag-bg: transparent;                  /* tag pill fill, inactive */
     --ean-tag-border: var(--ean-border);        /* tag pill border, inactive */
-    --ean-tag-active-bg: var(--ean-accent);     /* tag pill fill when selected */
+    --ean-tag-active-bg: rgba(255,134,66,.22);  /* tag pill fill when selected (light Tangerine, unlike the buttons) */
+    --ean-tag-active-border: var(--ean-highlight); /* tag pill outline when selected */
+    --ean-tag-active-text: #3B352D;             /* Armadillo — tag pill text when selected */
+    --ean-res-tag-bg: rgba(59,53,45,.07);       /* tag pill fill on cards and in the popup */
     --ean-card-image-bg: rgba(59,53,45,.05);    /* field behind fallback icon when no image is set */
     --ean-modal-bg: #F7F5F0;                    /* Parchment — detail popup background */
     --ean-modal-text: #3B352D;                  /* Armadillo — detail popup text */
@@ -118,17 +121,21 @@
     margin-bottom: 24px;
   }
   /* Tag pills use Squarespace's own button element classes so they
-     inherit your Design > Buttons color/shape/hover automatically. */
+     inherit your Design > Buttons font and hover; the pill shape is forced
+     here to match the tags on cards. */
   .ean-tag {
     padding: 0.3em 0.9em !important;
+    border-radius: 999px !important;
+    border-style: solid !important;
+    border-width: 1px !important;
     cursor: pointer;
     background: var(--ean-tag-bg) !important;
     border-color: var(--ean-tag-border) !important;
   }
   .ean-tag[data-active="true"] {
     background: var(--ean-tag-active-bg) !important;
-    border-color: var(--ean-tag-active-bg) !important;
-    color: var(--ean-accent-text) !important;
+    border-color: var(--ean-tag-active-border) !important;
+    color: var(--ean-tag-active-text) !important;
   }
 
   .ean-crumb {
@@ -249,18 +256,19 @@
     margin-top: 2px;
   }
   .ean-res-tags span {
-    font-size: 0.85em;
-    border: 1px solid var(--ean-border);
-    border-radius: 4px;
-    padding: 2px 7px;
-    opacity: 0.75;
+    font-size: 0.8em;
+    line-height: 1.3;
+    white-space: nowrap;
+    background: var(--ean-res-tag-bg);
+    border-radius: 999px;
+    padding: 3px 10px;
   }
   /* A card's tag that matches a selected filter pill */
   .ean-res-tags span[data-match="true"] {
-    border-color: var(--ean-accent);
-    color: var(--ean-accent);
+    background: var(--ean-tag-active-bg);
+    box-shadow: inset 0 0 0 1px var(--ean-tag-active-border);
+    color: var(--ean-tag-active-text);
     font-weight: 600;
-    opacity: 1;
   }
   .ean-res-count { font-size: 0.85em; opacity: 0.7; }
 
