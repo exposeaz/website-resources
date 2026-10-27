@@ -89,7 +89,8 @@
     });
   }
 
-  function matchesFilters(r) {
+  // `inherited`: extra searchable text, e.g. a Substack's title/author for its articles
+  function matchesFilters(r, inherited) {
     // Every word must appear somewhere (text or tag labels), in any order, so "Adam Louis-Klein" matches "Louis-Klein, Adam"
     var words = state.search.trim().toLowerCase().split(/\s+/).filter(Boolean);
     if (words.length) {
@@ -97,7 +98,7 @@
         var tagDef = state.data.tags.filter(function (x) { return x.id === t; })[0];
         return tagDef ? tagDef.label : t;
       });
-      var hay = [r.title, r.author, r.description, r.reference].concat(tagLabels).join(" ").toLowerCase();
+      var hay = [r.title, r.author, r.description, r.reference].concat(tagLabels, inherited || []).join(" ").toLowerCase();
       if (!words.every(function (w) { return hay.indexOf(w) !== -1; })) return false;
     }
     if (state.activeTags.length) {
@@ -139,16 +140,22 @@
       .map(function (x) { return x.t; });
   }
 
-  function renderToolbar() {
-    var html = '<div class="ean-toolbar">';
-    html += '<input class="ean-search" type="text" placeholder="Search titles, descriptions, citations..." value="' + esc(state.search) + '" />';
-    html += '<button type="button" class="ean-clear-btn" data-clear-filters="1">Clear filters</button>';
+  // Breadcrumb / result count on the left, Cards/List switch on the right
+  function resultsHead(crumbHtml) {
+    var html = '<div class="ean-results-head">';
+    if (crumbHtml) html += '<div class="ean-crumb">' + crumbHtml + '</div>';
     html += '<div class="ean-segmented ean-layout-toggle" role="group" aria-label="Layout">';
     ["cards", "list"].forEach(function (l) {
       html += '<button type="button" data-layout="' + l + '" aria-pressed="' + (state.layout === l) + '">' +
         (l === "cards" ? "Cards" : "List") + '</button>';
     });
-    html += '</div>';
+    return html + '</div></div>';
+  }
+
+  function renderToolbar() {
+    var html = '<div class="ean-toolbar">';
+    html += '<input class="ean-search" type="text" placeholder="Search titles, descriptions, citations..." value="' + esc(state.search) + '" />';
+    html += '<button type="button" class="ean-clear-btn" data-clear-filters="1">Clear filters</button>';
     html += '</div>';
     html += '<p class="ean-tag-hint">' + esc(TAG_HINT) + '</p>';
     html += '<div class="ean-tagbar">';
@@ -359,12 +366,12 @@
   function renderSubstackView(filtering) {
     var sub = resourceById(state.substackId);
     var items = articlesFor(sub).sort(byNewest);
-    if (filtering) items = items.filter(matchesFilters);
+    if (filtering) items = items.filter(function (a) { return matchesFilters(a, [sub.title, sub.author]); });
     var link = '<a href="' + esc(sub.url) + '" target="_blank" rel="noopener">' + esc(sub.title) + ' &#8599;</a>';
-    var html = '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All resource types</a> / ' +
+    var crumb = '<a href="#" class="ean-crumb-link" data-back="1">&larr; All resource types</a> / ' +
       '<a href="#" class="ean-crumb-link" data-back-substacks="1">' + esc(categoryLabel(SUBSTACK_CATEGORY)) + '</a> / ' + esc(sub.title);
-    if (filtering) html += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
-    html += '</div>';
+    if (filtering) crumb += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
+    var html = resultsHead(crumb);
     html += '<div class="ean-substack-head"><h3>' + esc(sub.title) + '</h3>';
     if (sub.description) html += '<p>' + esc(sub.description) + '</p>';
     html += '<p class="ean-substack-note">' +
@@ -392,32 +399,33 @@
       // *within* it instead of jumping out to a cross-category search —
       // only the top-level categories view searches everything at once.
       var items = state.data.resources.filter(function (r) { return r.category === state.categoryId; });
-      if (filtering) items = items.filter(matchesFilters);
-      html += '<div class="ean-crumb"><a href="#" class="ean-crumb-link" data-back="1">&larr; All resource types</a> / ' + esc(categoryLabel(state.categoryId));
-      if (filtering) html += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
-      html += '</div>';
+      if (filtering) items = items.filter(function (r) { return matchesFilters(r); });
+      var crumb = '<a href="#" class="ean-crumb-link" data-back="1">&larr; All resource types</a> / ' + esc(categoryLabel(state.categoryId));
+      if (filtering) crumb += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
+      html += resultsHead(crumb);
       if (state.categoryId === SUBSTACK_CATEGORY) html += '<p class="ean-substack-note ean-substacks-intro">' + esc(SUBSTACKS_INTRO) + '</p>';
       html += items.length
         ? renderCategoryResources(state.categoryId, items)
         : '<div class="ean-empty">' + (filtering ? 'No resources of this type match your filters.' : 'No resources of this type yet.') + '</div>';
     } else if (filtering) {
       // Newest first; in "match any" mode, more matching tags still come first
-      var matched = state.data.resources.filter(matchesFilters).sort(byNewest);
+      var matched = state.data.resources.filter(function (r) { return matchesFilters(r); }).sort(byNewest);
       var news = matched.filter(function (r) { return r.category === NEWS_CATEGORY; });
       var results = matched.filter(function (r) { return r.category !== NEWS_CATEGORY; });
       if (state.showNews) results = results.concat(news);
-      html += '<div class="ean-crumb">' + results.length + ' result' + (results.length === 1 ? '' : 's');
+      var count = results.length + ' result' + (results.length === 1 ? '' : 's');
       if (news.length) {
-        html += ' <span class="ean-news-toggle">&middot; ' + (state.showNews
+        count += ' <span class="ean-news-toggle">&middot; ' + (state.showNews
           ? 'including ' + news.length + ' news item' + (news.length === 1 ? '' : 's') + ' &middot; <a href="#" data-toggle-news="1">hide news</a>'
           : '+' + news.length + ' news item' + (news.length === 1 ? '' : 's') + ' &middot; <a href="#" data-toggle-news="1">show</a>') + '</span>';
       }
-      html += '</div>';
+      html += resultsHead(count);
       html += results.length
         ? renderItems(results)
         : '<div class="ean-empty">No resources match your filters.</div>';
     } else {
       var asList = state.layout === "list";
+      html += resultsHead("");
       html += asList ? '<div class="ean-res-list">' : '<div class="ean-cat-grid">';
       state.data.categories.forEach(function (c) {
         if (c.id === ARTICLE_CATEGORY) return;
