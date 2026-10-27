@@ -3,7 +3,8 @@
 By default judges from each article's title, summary and stance, for every article not yet judged under the
 current rules and vocabulary, so re-run it after changing either.
 With --full-text, re-fetches and re-reads the full post (the weekly run's prompt) for articles scoring
-FULL_TEXT_MIN_SCORE or more and everything publishable; summaries are kept.
+FULL_TEXT_MIN_SCORE or more, everything publishable, and anything an earlier full-text run re-read;
+summaries are kept.
 Saves after each article, so it resumes if interrupted.
 Then run dedupe, fill and export --sync to carry the changes into data.json.
 Don't run it while the pipeline is running: both write data/articles.json.
@@ -42,8 +43,9 @@ def main():
     if full_text:
         # Changes whenever the full-text prompt or vocabulary change
         signature = hashlib.sha1((classifier.system + json.dumps(classifier.schema, sort_keys=True)).encode()).hexdigest()[:12]
-        targets = [a for a in articles
-                   if a.get("relevance_score", 0) >= settings.FULL_TEXT_MIN_SCORE or publishable(a)]
+        # Anything an earlier full-text run re-read stays in, even if that run lowered its score
+        targets = [a for a in articles if a.get("relevance_score", 0) >= settings.FULL_TEXT_MIN_SCORE
+                   or publishable(a) or a.get("reread")]
         pending = [a for a in targets if a.get("reread") != signature]
         configured = state.load_publications()
     else:
