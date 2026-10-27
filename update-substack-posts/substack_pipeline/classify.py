@@ -29,11 +29,29 @@ def scoped_signature(tags):
     return hashlib.sha1(json.dumps(scoped_tags(tags), sort_keys=True).encode()).hexdigest()[:12]
 
 
+_RELEVANCE_RULES = """Relevance:
+- "relevant": antizionism (its ideology, rhetoric, history, institutions, or responses to it), or a theme in the tag vocabulary below as it bears on antizionism, is a substantial topic of the post.
+- "unsure": antizionism comes up only in passing or as background to another subject (e.g. Israeli politics or security, antisemitism generally, Jewish identity), or you cannot tell. A human will review these.
+- "not_relevant": the post has no connection to antizionism at all.
+When in doubt, choose "unsure"."""
+
+
 def _score_rubric():
     lo, hi = settings.RELEVANCE_SCORE_MIN, settings.RELEVANCE_SCORE_MAX
-    return (f"relevance_score: {lo} to {hi}, how central antizionism is to the post and how useful it would be "
-            f"as a resource on antizionism. {hi} = antizionism is the core subject, examined in depth; "
-            f"{lo} = antizionism is barely present.")
+    return (f"relevance_score: {lo} to {hi}, how useful the post would be as a library resource on antizionism or on "
+            f"any theme in the tag vocabulary as it bears on antizionism. Judge depth, not how often the word "
+            f"\"antizionism\" appears: a post centred on one of these themes (e.g. its history, sources, or institutions) "
+            f"can score {hi}. {hi} = develops one or more of these themes in depth, with its own analysis, evidence, or "
+            f"history; {lo} = these themes are barely present. A post that mainly restates a familiar thesis without "
+            f"developing it scores below one that does.")
+
+
+def _tag_rule():
+    return (f"{settings.MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most central first. Tag only themes "
+            f"the post as a whole is about or develops at some length; a theme mentioned in a sentence or an aside does "
+            f"not count. Fewer, accurate tags are better than more, weaker ones. A tag with an \"only when\" note "
+            f"applies only when that note is true. Use \"{NEWS_TAG}\" when the post mainly reports events rather than "
+            f"arguing or analyzing.")
 
 
 def _score_schema():
@@ -52,11 +70,7 @@ def _system_prompt(tags):
     vocab = "\n".join(_vocab_line(t) for t in tags)
     return f"""You review Substack posts for a nonprofit's resource library on antizionism.
 
-Relevance:
-- "relevant": antizionism (its ideology, rhetoric, history, institutions, or responses to it) is a substantial topic of the post.
-- "unsure": antizionism comes up only in passing or as background to another subject (e.g. Israeli politics or security, antisemitism generally, Jewish identity), or you cannot tell. A human will review these.
-- "not_relevant": the post has no connection to antizionism at all.
-When in doubt, choose "unsure".
+{_RELEVANCE_RULES}
 
 relevance_reason: one sentence explaining the relevance judgment.
 
@@ -66,7 +80,7 @@ too_thin: true if the post is too brief or slight to stand alone as a library re
 
 roundup: true if the post is mainly a newsletter digest, link roundup, event listing, fundraising appeal, or organizational announcement; false if it is an article, essay, interview, or report with its own substantive content.
 
-tags: {settings.MIN_TAGS} to {settings.MAX_TAGS} IDs from this vocabulary, most applicable first. Be generous: include every tag that plausibly applies, except that a tag with an "only when" note applies only when that note is true. Use "{NEWS_TAG}" when the post mainly reports events rather than arguing or analyzing.
+tags: {_tag_rule()}
 {vocab}
 
 suggested_tags: up to {settings.MAX_SUGGESTED_TAGS} broad themes the vocabulary above does not cover, that could apply to many posts and would be useful as a filter in a resource library. Be generous; a human curates them. Each must be a subject the post is about (e.g. a movement, institution, region, historical period, or field). Not tone, genre, or format (e.g. satire, polemic, interview), and not details specific to this post (people, events, documents, or one-off arguments). Never repeat a vocabulary tag.
@@ -106,15 +120,18 @@ def _user_message(post):
     return f"{context}\nTitle: {post.title}\nPublished: {post.published}{paywall}\n\n<post>\n{post.text}\n</post>"
 
 
-def _clean(result, tags):
+def _clean_tags(ids, tags):
+    """Vocabulary IDs only, deduplicated, at most MAX_TAGS."""
     vocab_ids = {t["id"] for t in tags}
-    vocab_names = vocab_ids | {t["label"].lower() for t in tags}
+    kept = [t for t in dict.fromkeys(ids) if t in vocab_ids]
+    if len(kept) < len(ids):
+        log.warning("Dropped non-vocabulary tags: %s", set(ids) - vocab_ids)
+    return kept[: settings.MAX_TAGS]
 
-    kept = [t for t in dict.fromkeys(result["tags"]) if t in vocab_ids]
-    if len(kept) < len(result["tags"]):
-        log.warning("Dropped non-vocabulary tags: %s", set(result["tags"]) - vocab_ids)
-    result["tags"] = kept[: settings.MAX_TAGS]
 
+def _clean(result, tags):
+    vocab_names = {t["id"] for t in tags} | {t["label"].lower() for t in tags}
+    result["tags"] = _clean_tags(result["tags"], tags)
     suggested = [s.strip() for s in result["suggested_tags"] if s.strip().lower() not in vocab_names]
     result["suggested_tags"] = list(dict.fromkeys(suggested))[: settings.MAX_SUGGESTED_TAGS]
     return result
@@ -127,6 +144,11 @@ class Classifier:
         self.system = _system_prompt(tags)
         self.schema = _output_schema(tags)
         self.scoped_signature = scoped_signature(tags)
+        self.retag_system = _retag_system(tags)
+        self.retag_schema = _retag_schema(tags)
+        # Changes whenever the retag rules or vocabulary change, so retag knows what to re-judge
+        self.retag_signature = hashlib.sha1(
+            (self.retag_system + json.dumps(self.retag_schema, sort_keys=True)).encode()).hexdigest()[:12]
 
     def classify(self, post):
         return _clean(self._call(self.system, _user_message(post), self.schema, settings.MAX_OUTPUT_TOKENS), self.tags)
@@ -141,8 +163,26 @@ class Classifier:
         return self._call(system, _retag_message(article), schema, settings.TAG_REVIEW_MAX_OUTPUT_TOKENS)
 
     def retag(self, article):
-        """relevance_score and news (bool) for a stored article, judged from its title, summary and stance."""
-        return self._call(_retag_system(), _retag_message(article), _retag_schema(), settings.RETAG_MAX_OUTPUT_TOKENS)
+        """relevance, relevance_score and tags for a stored article, judged from its title, summary and stance."""
+        result = self._call(self.retag_system, _retag_message(article), self.retag_schema, settings.RETAG_MAX_OUTPUT_TOKENS)
+        result["tags"] = _clean_tags(result["tags"], self.tags)
+        return result
+
+    def confirm_tag(self, article, tag):
+        """True if the tag's theme is central to a stored article, judged from its title, summary and stance."""
+        scope = f" (only when {tag['scope']})" if tag.get("scope") else ""
+        system = f"""You review short records of Substack posts for a nonprofit's resource library on antizionism.
+Judge only from the record given; it holds a short summary, not the post.
+
+Answer whether this theme is central to the post: the post as a whole is about it or develops it at some length. A theme mentioned in passing, given as one example among several, or only implied does not count. An announcement or call for submissions is not about its topic.
+
+Theme: {tag['label']}{scope}"""
+        return self._call(system, _retag_message(article), _CONFIRM_SCHEMA, settings.TAG_REVIEW_MAX_OUTPUT_TOKENS)["central"]
+
+    def group_duplicates(self, articles):
+        """Groups of near-duplicate articles from one publication: [{"keep": i, "drop": [j, ...], "reason": str}]."""
+        return self._call(_DEDUPE_SYSTEM, _dedupe_message(articles), _DEDUPE_SCHEMA,
+                          settings.DEDUPE_MAX_OUTPUT_TOKENS)["groups"]
 
     def _call(self, system, user, schema, max_tokens):
         try:
@@ -177,24 +217,78 @@ class Classifier:
         return json.loads(text)
 
 
-def _retag_system():
+def _retag_system(tags):
+    vocab = "\n".join(_vocab_line(t) for t in tags)
     return f"""You review short records of Substack posts for a nonprofit's resource library on antizionism.
-Judge only from the record given.
+Judge only from the record given. It holds a short summary, not the post: judge depth from what the summary
+says the post does (e.g. examines a case, traces a history, presents evidence), and don't mark a post down
+because its summary is brief.
+
+{_RELEVANCE_RULES}
 
 {_score_rubric()}
 
-news: true if the post mainly reports events rather than arguing or analyzing."""
+tags: {_tag_rule()}
+{vocab}"""
 
 
-def _retag_schema():
+def _retag_schema(tags):
+    # Array length bounds aren't supported by structured outputs; enforced in _clean_tags()
     return {
         "type": "object",
-        "properties": {"relevance_score": _score_schema(), "news": {"type": "boolean"}},
-        "required": ["relevance_score", "news"],
+        "properties": {
+            "relevance": {"type": "string", "enum": RELEVANCE_VALUES},
+            "relevance_score": _score_schema(),
+            "tags": {"type": "array", "items": {"type": "string", "enum": [t["id"] for t in tags]}},
+        },
+        "required": ["relevance", "relevance_score", "tags"],
         "additionalProperties": False,
     }
 
 
 def _retag_message(a):
     return (f"Publication: {a['publication']}\nTitle: {a['title']}\nSummary: {a['summary']}\n"
-            f"Stance: {a['stance']}\nTags: {', '.join(a['tags'])}\nRelevance note: {a['relevance_reason']}")
+            f"Stance: {a['stance']}")
+
+
+_DEDUPE_SYSTEM = """You review the posts one Substack publication has in a nonprofit's resource library on antizionism.
+Judge only from the records given.
+
+Find posts that make essentially the same argument as another post in the list: the same main thesis, without a distinct contribution of their own. A distinct contribution is something like a specific case, event, document, or historical episode examined, data, or a different line of argument. Posts that share a thesis but each have a distinct contribution are not duplicates. A different news hook (the event, person, or statement the post responds to) is not by itself a distinct contribution if the argument is the same.
+
+Group the duplicates. In each group, keep the post most useful to a reader: the one with the greatest distinct contribution or, if all are equally general, the fullest statement of the argument. Leave out posts that have no duplicate.
+
+For each group give keep (the kept post's number), drop (the other posts' numbers), and reason (one sentence on the shared argument)."""
+
+_CONFIRM_SCHEMA = {
+    "type": "object",
+    "properties": {"central": {"type": "boolean"}},
+    "required": ["central"],
+    "additionalProperties": False,
+}
+
+_DEDUPE_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "groups": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "keep": {"type": "integer"},
+                    "drop": {"type": "array", "items": {"type": "integer"}},
+                    "reason": {"type": "string"},
+                },
+                "required": ["keep", "drop", "reason"],
+                "additionalProperties": False,
+            },
+        },
+    },
+    "required": ["groups"],
+    "additionalProperties": False,
+}
+
+
+def _dedupe_message(articles):
+    return "\n\n".join(f"[{i}] {a['date']} | {a['title']}\nSummary: {a['summary']}\nTags: {', '.join(a['tags'])}"
+                        for i, a in enumerate(articles))

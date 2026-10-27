@@ -51,7 +51,12 @@ def merge_articles(existing, new):
 
 
 def load_tags():
-    return json.loads(settings.TAGS_FILE.read_text())
+    """The vocabulary the pipeline may assign; tags marked "manual" are only ever added by hand in data.json."""
+    return [t for t in json.loads(settings.TAGS_FILE.read_text()) if not t.get("manual")]
+
+
+def manual_tag_ids():
+    return {t["id"] for t in json.loads(settings.TAGS_FILE.read_text()) if t.get("manual")}
 
 
 def load_publications():

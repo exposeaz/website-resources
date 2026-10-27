@@ -3,9 +3,11 @@
 Each article is added once (exported_resources), so an interrupted run exports on the next one
 and entries a reviewer deletes stay deleted. A publication without a Substack card gets one,
 drafted from its own feed for a reviewer to check.
+With --sync, exported articles are first updated after retag or dedupe (see sync_resources).
 Run from update-substack-posts/: python -m substack_pipeline.export
 """
 
+import argparse
 import json
 import logging
 from datetime import date
@@ -31,6 +33,12 @@ def _unique_id(base, taken):
     return rid
 
 
+def _auto_tags(article):
+    """The article's tags minus manual ones, which the pipeline never publishes."""
+    manual = state.manual_tag_ids()
+    return [t for t in article["tags"] if t not in manual]
+
+
 def _resource(article, taken):
     # Key order matches the existing entries in data.json, plus date
     return {
@@ -38,7 +46,7 @@ def _resource(article, taken):
         "title": article["title"],
         "category": settings.RESOURCE_CATEGORY_ID,
         "description": article["summary"],
-        "tags": article["tags"],
+        "tags": _auto_tags(article),
         "reference": f'{article["publication"]}. "{article["title"]}." Substack, {format_date(article["date"])}.',
         "author": article["publication"],
         "url": article["url"],
@@ -72,10 +80,60 @@ def _substack_card(host, publications, taken):
     }
 
 
+def meets_bar(a):
+    """Clears the website bar: PUBLISH_RELEVANCE and PUBLISH_MIN_SCORE."""
+    return a["relevance"] in settings.PUBLISH_RELEVANCE and a.get("relevance_score", 0) >= settings.PUBLISH_MIN_SCORE
+
+
+def fill_candidate(a):
+    """Could be published by fill to top up a tag: relevant enough and scoring at least TAG_FILL_MIN_SCORE."""
+    return a["relevance"] in settings.PUBLISH_RELEVANCE and a.get("relevance_score", 0) >= settings.TAG_FILL_MIN_SCORE
+
+
 def publishable(a):
-    """Clears the website bar (PUBLISH_RELEVANCE and PUBLISH_MIN_SCORE), or was added by URL."""
-    return a["forced"] or (a["relevance"] in settings.PUBLISH_RELEVANCE
-                           and a.get("relevance_score", 0) >= settings.PUBLISH_MIN_SCORE)
+    """Clears the bar or was picked by fill, and isn't marked a duplicate by dedupe; or was added by URL."""
+    return a["forced"] or ((meets_bar(a) or bool(a.get("published_for_tag"))) and not a.get("duplicate_of"))
+
+
+def _add_tag_defs(data, tag_ids, vocab):
+    """Add any tag missing from data.json's tag list, labelled from the vocabulary."""
+    known = {t["id"] for t in data["tags"]}
+    labels = {t["id"]: t["label"] for t in vocab}
+    for tag in tag_ids:
+        if tag not in known:
+            data["tags"].append({"id": tag, "label": labels.get(tag, tag)})
+            known.add(tag)
+
+
+def sync_resources(articles, vocab):
+    """Bring exported Substack articles in data.json in line with articles.json.
+
+    Removes entries no longer publishable (and unmarks them, so they're exported again if they later
+    clear the bar) and refreshes the rest's tags, keeping any manual tags added by hand (first, so they
+    show on cards). Entries a reviewer deleted stay deleted; other fields and other categories are left
+    alone. Returns (removed, retagged).
+    """
+    data = json.loads(settings.RESOURCES_FILE.read_text())
+    by_url = {a["url"]: a for a in articles}
+    manual = state.manual_tag_ids()
+    kept, removed, retagged = [], 0, 0
+    for r in data["resources"]:
+        a = by_url.get(r.get("url")) if r["category"] == settings.RESOURCE_CATEGORY_ID else None
+        if a is None:
+            kept.append(r)
+        elif not publishable(a):
+            a["exported_resources"] = False
+            removed += 1
+        else:
+            tags = [t for t in r["tags"] if t in manual] + _auto_tags(a)
+            if r["tags"] != tags:
+                r["tags"] = tags
+                retagged += 1
+            kept.append(r)
+    data["resources"] = kept
+    _add_tag_defs(data, [t for r in kept for t in r["tags"]], vocab)
+    settings.RESOURCES_FILE.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
+    return removed, retagged
 
 
 def export_resources(articles, vocab):
@@ -89,8 +147,6 @@ def export_resources(articles, vocab):
     data = json.loads(settings.RESOURCES_FILE.read_text())
     if not any(c["id"] == settings.RESOURCE_CATEGORY_ID for c in data["categories"]):
         data["categories"].append({"id": settings.RESOURCE_CATEGORY_ID, "label": settings.RESOURCE_CATEGORY_LABEL})
-    known_tags = {t["id"] for t in data["tags"]}
-    labels = {t["id"]: t["label"] for t in vocab}
     taken_ids = {r["id"] for r in data["resources"]}
     urls = {r.get("url") for r in data["resources"]}
     card_hosts = {fetch.base_url(r["url"]) for r in data["resources"]
@@ -103,10 +159,7 @@ def export_resources(articles, vocab):
             data["resources"].append(card)
             card_hosts.add(host)
             log.info("Drafted Substack card %r for %s", card["title"], host)
-        for tag in article["tags"]:
-            if tag not in known_tags:
-                data["tags"].append({"id": tag, "label": labels.get(tag, tag)})
-                known_tags.add(tag)
+        _add_tag_defs(data, _auto_tags(article), vocab)
         if article["url"] not in urls:
             data["resources"].append(_resource(article, taken_ids))
             urls.add(article["url"])
@@ -115,9 +168,13 @@ def export_resources(articles, vocab):
     return len(pending)
 
 
-def run_export():
+def run_export(sync=False):
     articles = state.load_articles()
-    added = export_resources(articles, state.load_tags())
+    vocab = state.load_tags()
+    if sync:
+        removed, retagged = sync_resources(articles, vocab)
+        log.info("Synced data.json: removed %d articles, updated tags on %d", removed, retagged)
+    added = export_resources(articles, vocab)
     state.save_articles(articles)
     held = sum(not a.get("exported_resources") for a in articles)
     log.info("Exported %d articles to data.json; %d held back below the publishing bar", added, held)
@@ -125,4 +182,7 @@ def run_export():
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
-    run_export()
+    parser = argparse.ArgumentParser(description="Export articles from data/articles.json to data.json")
+    parser.add_argument("--sync", action="store_true",
+                        help="first remove exported articles no longer publishable and refresh exported articles' tags")
+    run_export(sync=parser.parse_args().sync)

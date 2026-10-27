@@ -31,7 +31,8 @@ USER_AGENT = _env(
 # --- Classification ---
 MODEL = _env("MODEL", "claude-sonnet-5-5")
 MAX_OUTPUT_TOKENS = _env("MAX_OUTPUT_TOKENS", 600, int)
-RETAG_MAX_OUTPUT_TOKENS = _env("RETAG_MAX_OUTPUT_TOKENS", 100, int)
+RETAG_MAX_OUTPUT_TOKENS = _env("RETAG_MAX_OUTPUT_TOKENS", 200, int)
+DEDUPE_MAX_OUTPUT_TOKENS = _env("DEDUPE_MAX_OUTPUT_TOKENS", 16000, int)
 RELEVANCE_SCORE_MIN = _env("RELEVANCE_SCORE_MIN", 1, int)
 RELEVANCE_SCORE_MAX = _env("RELEVANCE_SCORE_MAX", 5, int)
 MIN_TAGS = _env("MIN_TAGS", 1, int)
@@ -64,6 +65,13 @@ PR_BODY_MAX_CHARS = _env("PR_BODY_MAX_CHARS", 60000, int)
 # published automatically on a later run if these are loosened.
 PUBLISH_RELEVANCE = tuple(_env("PUBLISH_RELEVANCE", "relevant").split(","))
 PUBLISH_MIN_SCORE = _env("PUBLISH_MIN_SCORE", 5, int)
+# fill tops up tags with fewer than TAG_TARGET_RESOURCES resources on the site, using held-back articles
+# scoring at least TAG_FILL_MIN_SCORE, and warns about tags still under TAG_MIN_RESOURCES
+TAG_TARGET_RESOURCES = _env("TAG_TARGET_RESOURCES", 10, int)
+TAG_MIN_RESOURCES = _env("TAG_MIN_RESOURCES", 6, int)
+TAG_FILL_MIN_SCORE = _env("TAG_FILL_MIN_SCORE", 3, int)
+# fill adds nothing from a publication that already has this many publishable articles
+FILL_MAX_PER_PUBLICATION = _env("FILL_MAX_PER_PUBLICATION", 10, int)
 TAG_REVIEW_MAX_OUTPUT_TOKENS = _env("TAG_REVIEW_MAX_OUTPUT_TOKENS", 100, int)
 
 # --- Output content ---
