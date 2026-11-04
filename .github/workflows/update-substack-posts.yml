@@ -34,7 +34,7 @@ permissions:
 
 env:
   PR_BRANCH: bot/substack-articles
-  PIXI_VERSION: v0.66.0
+  PIXI_VERSION: v0.84.1
 
 jobs:
   update:
