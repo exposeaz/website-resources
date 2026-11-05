@@ -102,6 +102,7 @@ def _publication_entries(pub, args):
 
 
 def gather_candidates(args, processed, errors):
+    """(candidates, publications checked, publications that failed to fetch)."""
     configured = state.load_publications()
     post_urls = _split_urls(args.post_url)
     candidates = []
@@ -124,11 +125,13 @@ def gather_candidates(args, processed, errors):
         pubs = configured
 
     seen = {state.normalize_url(c.url) for c in candidates}
+    failed = 0
     for pub in pubs:
         try:
             entries = _publication_entries(pub, args)
         except (fetch.FetchError, ValueError) as exc:
             _record_error(errors, pub.name, pub.url, exc)
+            failed += not isinstance(exc, fetch.NotPublicError)
             continue
         for url, published in entries:
             key = state.normalize_url(url)
@@ -143,7 +146,7 @@ def gather_candidates(args, processed, errors):
         rest = sorted((c for c in candidates if not c.forced),
                       key=lambda c: c.published or date.min, reverse=True)
         candidates = forced + rest[: max(size - len(forced), 0)]
-    return candidates
+    return candidates, len(pubs), failed
 
 
 def _skipped(post, reason):
@@ -274,7 +277,7 @@ def main(argv=None):
 
     errors = []
     processed = state.load_processed()
-    candidates = gather_candidates(args, processed, errors)
+    candidates, checked, failed = gather_candidates(args, processed, errors)
     log.info("%d posts to classify", len(candidates))
     # Errors aren't recorded, so those posts are retried next run
     recorder = None if args.dry_run else StateRecorder(processed)
@@ -294,6 +297,9 @@ def main(argv=None):
     json_path.write_text(json.dumps({"records": records, "skipped": skipped, "errors": errors}, indent=2, ensure_ascii=False) + "\n")
     md_path.write_text(run_report("Dry run" if args.dry_run else "Run", records, skipped, errors))
     log.info("Wrote %s and %s", json_path, md_path)
+    # Everything saved above is kept; a non-zero exit just stops a total outage looking like "no new posts"
+    if checked and failed == checked:
+        sys.exit(f"Stopped: all {checked} publications failed to fetch, so nothing was checked.")
 
 
 if __name__ == "__main__":
