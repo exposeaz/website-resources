@@ -63,6 +63,8 @@ jobs:
       - name: Run pipeline
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # TEMPORARY test: is Substack's 403 about the bot User-Agent (vs. GitHub's IP range)?
+          USER_AGENT: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
           # Inputs pass through env, never interpolated into the script
           POST_URLS: ${{ inputs.post_urls }}
           PUBLICATION_URL: ${{ inputs.publication_url }}
