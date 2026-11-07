@@ -65,10 +65,12 @@ def load_publications():
     for entry in yaml.safe_load(settings.SUBSTACKS_FILE.read_text()):
         key = base_url(entry["url"])
         desc = (entry.get("description") or "").strip()
+        author = (entry.get("author") or "").strip()
         if key in merged:
             pub = merged[key]
             pub.name = f"{pub.name} / {entry['name']}"
             pub.description = " ".join(d for d in (pub.description, desc) if d)
+            pub.author = pub.author or author
         else:
-            merged[key] = Publication(name=entry["name"], url=key, description=desc)
+            merged[key] = Publication(name=entry["name"], url=key, description=desc, author=author)
     return list(merged.values())

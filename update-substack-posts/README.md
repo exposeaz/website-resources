@@ -25,6 +25,7 @@ Tasks that change the same file must not run at the same time.
 ## Files
 
 - `config/substacks.yaml`: publications to check.
+  An optional `author` names the writer of a single-writer publication with a brand name, so its new articles list that person as author.
 - `config/tags.json`: the tag vocabulary; a tag with a `scope` applies only when that condition holds, and a `manual` tag is never assigned by the pipeline, only by hand in `data.json`.
 - `config/settings.py`: every tunable number (score bars, tag targets, limits); each can be overridden by an environment variable.
 - `data/articles.json`: every classified post with its summary, tags, relevance and score; the source of truth.
