@@ -445,6 +445,92 @@
     line-height: 1.3;
   }
 
+  /* ---- help popup, suggest and report links ---- */
+  .ean-help-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 16px;
+    margin-bottom: 4px;
+  }
+  .ean-help-btn {
+    padding: 0.5em 1em;
+    border: 1px solid var(--ean-border-strong);
+    border-radius: 6px;
+    font: inherit;
+    color: var(--ean-input-text);
+    background: var(--ean-card-bg);
+    cursor: pointer;
+    transition: border-color .15s ease;
+  }
+  .ean-help-btn:hover { border-color: var(--ean-input-text); }
+  .ean-suggest-link { color: var(--ean-accent); font-weight: 600; }
+  .ean-suggest-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    margin-top: 28px;
+    padding: 16px 20px;
+    border: 1px dashed var(--ean-border-strong);
+    border-radius: 8px;
+  }
+  .ean-empty-suggest { margin-top: 10px; }
+
+  .ean-help-modal { max-width: 760px; }
+  .ean-help-body {
+    padding: 28px 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .ean-help-body h3 { margin: 0; padding-right: 40px; font-size: 1.6rem; line-height: 1.2; }
+  .ean-help-group h4 {
+    margin: 0 0 12px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--ean-border);
+    font-size: 1.2rem;
+  }
+  .ean-help-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px 28px;
+  }
+  .ean-help-grid h5 { margin: 0 0 4px; font-size: 1rem; font-weight: 600; }
+  .ean-help-grid p { margin: 0; font-size: 0.95em; line-height: 1.55; }
+  .ean-help-body code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.88em;
+    background: var(--ean-res-tag-bg);
+    padding: 1px 5px;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  .ean-help-cta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px 16px;
+    padding: 14px 18px;
+    border: 1px solid var(--ean-border);
+    border-radius: 8px;
+  }
+  .ean-help-cta--tint { background: var(--ean-res-tag-bg); border-color: transparent; }
+  .ean-help-cta a { color: var(--ean-accent); font-weight: 600; }
+  .ean-help-actions { display: flex; justify-content: flex-end; }
+  .ean-help-done {
+    padding: 0.6em 1.6em;
+    border: none;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 600;
+    background: var(--ean-accent);
+    color: var(--ean-accent-text);
+    cursor: pointer;
+  }
+
   /* Squarespace site CSS can override the cursor on clickable bits */
   #ean-resources-root :is(button, a, .ean-cat-card, .ean-res-card, .ean-res-row),
   #ean-resources-root :is(button, a, .ean-cat-card, .ean-res-card, .ean-res-row) * {
