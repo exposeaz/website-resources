@@ -492,6 +492,11 @@
     padding-bottom: 6px;
     border-bottom: 1px solid var(--ean-border);
     font-size: 1.2rem;
+    /* The site's body font, not its heading font */
+    font-family: inherit;
+    font-weight: 600;
+    letter-spacing: normal;
+    text-transform: none;
   }
   .ean-help-grid {
     display: grid;

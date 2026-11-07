@@ -206,8 +206,9 @@
   }
 
   var ARROW_OUT = ' &#8599;';
+  // With a custom label there's no arrow (e.g. in the help popup, beside the plain email link)
   function suggestLinkHtml(label) {
-    return '<a class="ean-suggest-link" href="' + esc(SUGGEST_URL) + '" target="_blank" rel="noopener">' + (label || 'Suggest a resource') + ARROW_OUT + '</a>';
+    return '<a class="ean-suggest-link" href="' + esc(SUGGEST_URL) + '" target="_blank" rel="noopener">' + (label || 'Suggest a resource' + ARROW_OUT) + '</a>';
   }
 
   // Above the search bar: opens the help popup, plus the suggest link
