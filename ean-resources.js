@@ -62,6 +62,12 @@
   var PAGE_SIZE = 20;
 
   var root = document.getElementById("ean-resources-root");
+  // Popups are drawn here, directly on <body>, not inside the widget: Squarespace
+  // layers each page block separately, so a popup inside the widget's block would
+  // sit underneath the other blocks (heading, intro text) whatever its z-index.
+  var modalRoot = document.createElement("div");
+  modalRoot.id = "ean-resources-modal-root";
+  document.body.appendChild(modalRoot);
   var state = {
     data: null, view: "categories", categoryId: null, substackId: null,
     search: "", activeTags: [], tagMode: "any", modalResourceId: null, layout: loadLayout(),
@@ -245,11 +251,13 @@
       });
       html += '</div></section>';
     });
+    html += '<div class="ean-help-ctas">';
     if (SUGGEST_URL) {
       html += '<div class="ean-help-cta ean-help-cta--tint"><span>Can&#39;t find something you expected?</span>' + suggestLinkHtml() + '</div>';
     }
     html += '<div class="ean-help-cta"><span>Think something in the library is wrong?</span>' +
       '<a href="mailto:' + esc(REPORT_EMAIL) + '">Email us at ' + esc(REPORT_EMAIL) + '</a></div>';
+    html += '</div>';
     html += '<div class="ean-help-actions"><button type="button" class="ean-help-done" data-modal-close="1">Got it</button></div>';
     html += '</div></div></div>';
     return html;
@@ -527,14 +535,16 @@
 
     html += renderSuggestFooter();
 
+    var modalHtml = "";
     if (state.helpOpen) {
-      html += renderHelpModal();
+      modalHtml = renderHelpModal();
     } else if (state.modalResourceId) {
       var modalRes = state.data.resources.filter(function (r) { return r.id === state.modalResourceId; })[0];
-      if (modalRes) html += renderResourceModal(modalRes);
+      if (modalRes) modalHtml = renderResourceModal(modalRes);
     }
 
     root.innerHTML = html;
+    modalRoot.innerHTML = modalHtml;
     attachEvents();
     layoutMasonry();
   }
@@ -690,12 +700,12 @@
         render();
       });
     });
-    var overlay = root.querySelector("[data-modal-overlay]");
+    var overlay = modalRoot.querySelector("[data-modal-overlay]");
     if (overlay) {
       overlay.addEventListener("click", function (e) {
         if (e.target === overlay) closeModal();
       });
-      root.querySelectorAll("[data-modal-close]").forEach(function (btn) {
+      modalRoot.querySelectorAll("[data-modal-close]").forEach(function (btn) {
         btn.addEventListener("click", closeModal);
       });
     }
@@ -704,7 +714,7 @@
       helpBtn.addEventListener("click", function () {
         state.helpOpen = true;
         render();
-        var close = root.querySelector(".ean-help-modal .ean-modal-close");
+        var close = modalRoot.querySelector(".ean-help-modal .ean-modal-close");
         if (close) close.focus();
       });
     }
