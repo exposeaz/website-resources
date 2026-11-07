@@ -47,7 +47,7 @@
     ] },
     { heading: "About the library", items: [
       { title: "How it is curated", body: "Resources are identified either manually by our team or by AI. Descriptions are AI-generated and human-reviewed. Substack articles are found and summarized by AI, and our team reviews each batch before it is added." },
-      { title: "News", body: "By default, News items are hidden from search and tag results. Use the `show` link that appears when searching to also show News items." }
+      { title: "News items in the library", body: "By default, News items are hidden from search and tag results. Use the `show` link that appears when searching to also show News items." }
     ] }
   ];
 
