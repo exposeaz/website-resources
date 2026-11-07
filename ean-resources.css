@@ -530,17 +530,6 @@
   }
   .ean-help-cta--tint { background: var(--ean-res-tag-bg); border-color: transparent; }
   .ean-help-cta a { color: var(--ean-accent); font-weight: 600; }
-  .ean-help-actions { display: flex; justify-content: flex-end; }
-  .ean-help-done {
-    padding: 0.6em 1.6em;
-    border: none;
-    border-radius: 999px;
-    font: inherit;
-    font-weight: 600;
-    background: var(--ean-accent);
-    color: var(--ean-accent-text);
-    cursor: pointer;
-  }
 
   /* Squarespace site CSS can override the cursor on clickable bits */
   #ean-resources-root :is(button, a, .ean-cat-card, .ean-res-card, .ean-res-row),
