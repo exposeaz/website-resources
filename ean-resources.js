@@ -39,7 +39,7 @@
   var HELP_SECTIONS = [
     { heading: "Using the library", items: [
       { title: "Browse or search", body: "Pick a category to see everything in it, or use the search bar to look through the whole library. Search covers titles, authors, descriptions, citations, and tags. If you're already in a category, search only looks there." },
-      { title: "Filter by tag", body: "Tags group resources by topic across all categories. Select a tag to filter, and select it again to remove it. With two or more tags, choose `Match any` or `Match all`." },
+      { title: "Filter by tag", body: "Tags group resources by topic. Select a tag to filter, and select it again to remove it. If you're already in a category, tags only filter within it. With two or more tags, choose `Match any` or `Match all`." },
       { title: "Open a resource", body: "Select a resource to see its full description, citation, and tags, with a link to the original source." },
       { title: "Browsing Substacks", body: "Selecting a Substack shows a set of AI-curated articles about antizionism from that Substack. A link to the Substack itself is also provided." },
       { title: "Cards or list", body: "Switch between `Cards` and `List` at any time. List view also lets you sort by title, author, year, or type." },
