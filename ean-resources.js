@@ -28,6 +28,29 @@
   var SUBSTACKS_INTRO = "Each Substack below links to a set of its articles related to antizionism, automatically curated by AI. " +
     "Select a Substack to browse its articles, or visit the full Substack for everything it publishes.";
 
+  // "Suggest a resource" Google Form. Leave empty to hide every suggest link.
+  var SUGGEST_URL = "https://forms.gle/qBYXL35iX48KGb9b6";
+  // Shown in the help popup for reporting mistakes
+  var REPORT_EMAIL = "info@exposeantizionism.org";
+
+  // Help popup ("How to use this library"). Text in `backticks` is a control
+  // the visitor clicks, and is shown in code style.
+  var HELP_TITLE = "How to use the resource library";
+  var HELP_SECTIONS = [
+    { heading: "Using the library", items: [
+      { title: "Browse or search", body: "Pick a category to see everything in it, or use the search bar to look through the whole library. Search covers titles, authors, descriptions, citations, and tags. If you're already in a category, search only looks there." },
+      { title: "Filter by tag", body: "Tags group resources by topic. Select a tag to filter, and select it again to remove it. If you're already in a category, tags only filter within it. With two or more tags, choose `Match any` or `Match all`." },
+      { title: "Open a resource", body: "Select a resource to see its full description, citation, and tags, with a link to the original source." },
+      { title: "Browsing Substacks", body: "Selecting a Substack shows a set of AI-curated articles about antizionism from that Substack. A link to the Substack itself is also provided." },
+      { title: "Cards or list", body: "Switch between `Cards` and `List` at any time. List view also lets you sort by title, author, year, or type." },
+      { title: "Clear filters", body: "Clears the search box and all selected tags. Use `All resource types` to return to the main page." }
+    ] },
+    { heading: "About the library", items: [
+      { title: "How it is curated", body: "Resources are identified either manually by our team or by AI. Descriptions are AI-generated and human-reviewed. Substack articles are found and summarized by AI, and our team reviews each batch before it is added." },
+      { title: "News items in the library", body: "By default, News items are hidden from search and tag results. Use the `show` link that appears when searching to also show News items." }
+    ] }
+  ];
+
   // Substack articles aren't a top-level category; each one appears under its
   // publication's card in the Substacks category, matched by web address.
   var SUBSTACK_CATEGORY = "substacks";
@@ -42,7 +65,7 @@
   var state = {
     data: null, view: "categories", categoryId: null, substackId: null,
     search: "", activeTags: [], tagMode: "any", modalResourceId: null, layout: loadLayout(),
-    shown: PAGE_SIZE, pageKey: null, showNews: false, sortKey: null, sortDir: 1
+    shown: PAGE_SIZE, pageKey: null, showNews: false, sortKey: null, sortDir: 1, helpOpen: false
   };
 
   // Card/list choice is remembered per visitor; storage can be unavailable
@@ -173,6 +196,62 @@
       });
       html += '</div></div>';
     }
+    return html;
+  }
+
+  var ARROW_OUT = ' &#8599;';
+  function suggestLinkHtml() {
+    return '<a class="ean-suggest-link" href="' + esc(SUGGEST_URL) + '" target="_blank" rel="noopener">Suggest a resource' + ARROW_OUT + '</a>';
+  }
+
+  // Above the search bar: opens the help popup, plus the suggest link
+  function renderHelpLinks() {
+    var html = '<div class="ean-help-links">';
+    html += '<button type="button" class="ean-help-btn" data-help-open="1">How to use this library</button>';
+    if (SUGGEST_URL) html += suggestLinkHtml();
+    return html + '</div>';
+  }
+
+  // Under the results
+  function renderSuggestFooter() {
+    if (!SUGGEST_URL) return "";
+    return '<div class="ean-suggest-footer"><span>Know a resource that belongs here?</span>' + suggestLinkHtml() + '</div>';
+  }
+
+  // Empty results; when filtering, also offer the suggest link
+  function emptyHtml(message, filtering) {
+    var html = '<div class="ean-empty">' + message;
+    if (filtering && SUGGEST_URL) html += '<div class="ean-empty-suggest">Think something belongs here? ' + suggestLinkHtml() + '</div>';
+    return html + '</div>';
+  }
+
+  // Escapes help text and shows `backticked` control names in code style
+  function helpTextHtml(text) {
+    return text.split("`").map(function (part, i) {
+      return i % 2 ? '<code>' + esc(part) + '</code>' : esc(part);
+    }).join("");
+  }
+
+  function renderHelpModal() {
+    var html = '<div class="ean-modal-overlay" data-modal-overlay="1">';
+    html += '<div class="ean-modal ean-help-modal" role="dialog" aria-modal="true" aria-labelledby="ean-help-title">';
+    html += '<button class="ean-modal-close" data-modal-close="1" aria-label="Close">&times;</button>';
+    html += '<div class="ean-help-body">';
+    html += '<h3 id="ean-help-title">' + esc(HELP_TITLE) + '</h3>';
+    HELP_SECTIONS.forEach(function (g) {
+      html += '<section class="ean-help-group"><h4>' + esc(g.heading) + '</h4><div class="ean-help-grid">';
+      g.items.forEach(function (s) {
+        html += '<div><h5>' + esc(s.title) + '</h5><p>' + helpTextHtml(s.body) + '</p></div>';
+      });
+      html += '</div></section>';
+    });
+    if (SUGGEST_URL) {
+      html += '<div class="ean-help-cta ean-help-cta--tint"><span>Can&#39;t find something you expected?</span>' + suggestLinkHtml() + '</div>';
+    }
+    html += '<div class="ean-help-cta"><span>Think something in the library is wrong?</span>' +
+      '<a href="mailto:' + esc(REPORT_EMAIL) + '">Email us at ' + esc(REPORT_EMAIL) + '</a></div>';
+    html += '<div class="ean-help-actions"><button type="button" class="ean-help-done" data-modal-close="1">Got it</button></div>';
+    html += '</div></div></div>';
     return html;
   }
 
@@ -378,7 +457,7 @@
       esc(SUBSTACK_NOTE).replace("{title}", esc(sub.title)).replace("{link}", link) + '</p></div>';
     html += items.length
       ? renderItems(items)
-      : '<div class="ean-empty">No articles match your filters.</div>';
+      : emptyHtml('No articles match your filters.', filtering);
     return html;
   }
 
@@ -390,7 +469,7 @@
       state.shown = PAGE_SIZE;
     }
     var filtering = state.search.trim() !== "" || state.activeTags.length > 0;
-    var html = renderToolbar();
+    var html = renderHelpLinks() + renderToolbar();
 
     if (state.view === "substack") {
       html += renderSubstackView(filtering);
@@ -406,7 +485,7 @@
       if (state.categoryId === SUBSTACK_CATEGORY) html += '<p class="ean-substack-note ean-substacks-intro">' + esc(SUBSTACKS_INTRO) + '</p>';
       html += items.length
         ? renderCategoryResources(state.categoryId, items)
-        : '<div class="ean-empty">' + (filtering ? 'No resources of this type match your filters.' : 'No resources of this type yet.') + '</div>';
+        : emptyHtml(filtering ? 'No resources of this type match your filters.' : 'No resources of this type yet.', filtering);
     } else if (filtering) {
       // Newest first; in "match any" mode, more matching tags still come first
       var matched = state.data.resources.filter(function (r) { return matchesFilters(r); }).sort(byNewest);
@@ -422,7 +501,7 @@
       html += resultsHead(count);
       html += results.length
         ? renderItems(results)
-        : '<div class="ean-empty">No resources match your filters.</div>';
+        : emptyHtml('No resources match your filters.', true);
     } else {
       var asList = state.layout === "list";
       html += resultsHead("");
@@ -446,7 +525,11 @@
       html += '</div>';
     }
 
-    if (state.modalResourceId) {
+    html += renderSuggestFooter();
+
+    if (state.helpOpen) {
+      html += renderHelpModal();
+    } else if (state.modalResourceId) {
       var modalRes = state.data.resources.filter(function (r) { return r.id === state.modalResourceId; })[0];
       if (modalRes) html += renderResourceModal(modalRes);
     }
@@ -612,17 +695,34 @@
       overlay.addEventListener("click", function (e) {
         if (e.target === overlay) closeModal();
       });
-      root.querySelector("[data-modal-close]").addEventListener("click", closeModal);
+      root.querySelectorAll("[data-modal-close]").forEach(function (btn) {
+        btn.addEventListener("click", closeModal);
+      });
+    }
+    var helpBtn = root.querySelector("[data-help-open]");
+    if (helpBtn) {
+      helpBtn.addEventListener("click", function () {
+        state.helpOpen = true;
+        render();
+        var close = root.querySelector(".ean-help-modal .ean-modal-close");
+        if (close) close.focus();
+      });
     }
   }
 
   function closeModal() {
+    var wasHelp = state.helpOpen;
     state.modalResourceId = null;
+    state.helpOpen = false;
     render();
+    if (wasHelp) {
+      var helpBtn = root.querySelector("[data-help-open]");
+      if (helpBtn) helpBtn.focus();
+    }
   }
 
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && state.modalResourceId) closeModal();
+    if (e.key === "Escape" && (state.modalResourceId || state.helpOpen)) closeModal();
   });
 
   root.innerHTML = '<div class="ean-empty">Loading resources&hellip;</div>';
