@@ -30,6 +30,16 @@
       "label": "Substack articles"
     },
     {
+      "id": "podcast-episodes",
+      "label": "Podcast episodes",
+      "blurb": "Podcast episodes about antizionism."
+    },
+    {
+      "id": "talks",
+      "label": "Talks",
+      "blurb": "Talks about antizionism."
+    },
+    {
       "id": "news",
       "label": "News",
       "blurb": "Reporting on antizionist incidents, campaigns and responses."
@@ -1326,7 +1336,7 @@
         "jewish-antizionism"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Simon Lucas, \"Academic antizionism as secularized religious dogma\".\" Substack, May 11, 2026.",
-      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "author": "Simon Lucas",
       "url": "https://icsa.substack.com/p/by-simon-lucas-academic-antizionism",
       "year": 2026,
       "date": "2026-05-11"
@@ -1343,7 +1353,7 @@
         "campus"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Kenneth Levin, \"Varieties of Jewish Antizionism\".\" Substack, March 22, 2026.",
-      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "author": "Kenneth Levin",
       "url": "https://icsa.substack.com/p/by-kenneth-levin-varieties-of-jewish",
       "year": 2026,
       "date": "2026-03-22"
@@ -1360,7 +1370,7 @@
         "history-of-antizionism"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"Gregg Rosenberg, \"A Wolfe in Sheep’s Clothing: A Critique of Israeli ‘Settler-Colonialism’\".\" Substack, March 13, 2026.",
-      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "author": "Gregg Rosenberg",
       "url": "https://icsa.substack.com/p/gregg-rosenberg-a-wolfe-in-sheeps",
       "year": 2026,
       "date": "2026-03-13"
@@ -1378,7 +1388,7 @@
         "jewish-antizionism"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"A Taxonomy of Antizionism by Cary Nelson.\" Substack, Feb. 26, 2026.",
-      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "author": "Cary Nelson",
       "url": "https://icsa.substack.com/p/a-taxonomy-of-antizionism-by-cary",
       "year": 2026,
       "date": "2026-02-26"
@@ -1485,7 +1495,7 @@
         "jew-hatred"
       ],
       "reference": "Jennifer Kogan / Levari. \"The Psychological Inversion Playbook.\" Substack, Feb. 13, 2026.",
-      "author": "Jennifer Kogan / Levari",
+      "author": "Levari",
       "url": "https://jenniferkogan.substack.com/p/the-psychological-inversion-playbook",
       "year": 2026,
       "date": "2026-02-13"
@@ -1593,7 +1603,7 @@
       "description": "Author, husband and scholar. Look up my book, \"Zionism and Anti-Zionism\" on Amazon.",
       "tags": [],
       "reference": "Whole Story Institute. Whole Story Institute (Substack).",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "image": "https://substackcdn.com/image/fetch/$s_!Y6Cv!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F931afde2-5267-4c54-a81a-c4ae46787f0f_887x887.png",
       "url": "https://ghrosenb.substack.com",
       "year": null
@@ -1611,7 +1621,7 @@
         "antizionism-academy"
       ],
       "reference": "Whole Story Institute. \"The Short Bridge From Nazism To ‘Liberation’.\" Substack, Sept. 27, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/the-short-bridge-from-nazism-to-liberation",
       "year": 2026,
       "date": "2026-09-27"
@@ -1628,7 +1638,7 @@
         "jew-hatred"
       ],
       "reference": "Whole Story Institute. \"The First English Translation Of The Full Rashid Rida Letter Launching Reactionary Antizionism In 1898.\" Substack, July 31, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/the-only-english-translation-of-the",
       "year": 2026,
       "date": "2026-07-31"
@@ -1646,7 +1656,7 @@
         "data-research"
       ],
       "reference": "Whole Story Institute. \"Ethnic Cleansing, 1948? Deconstructing The Antizionist Narrative.\" Substack, June 30, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/ethnic-cleansing-1948-deconstructing",
       "year": 2026,
       "date": "2026-06-30"
@@ -1663,7 +1673,7 @@
         "history-of-antizionism"
       ],
       "reference": "Whole Story Institute. \"The Unbearable Lightness of Academic Antizionism (Part 3 of 3).\" Substack, May 3, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/the-unbearable-lightness-of-academic-44e",
       "year": 2026,
       "date": "2026-05-03"
@@ -1920,7 +1930,7 @@
         "institutional-capture"
       ],
       "reference": "Jennifer Kogan / Levari. \"Forget Empathy: Here’s What Antizionist Therapists Need Instead.\" Substack, Oct. 1, 2026.",
-      "author": "Jennifer Kogan / Levari",
+      "author": "Jennifer Kogan",
       "url": "https://jenniferkogan.substack.com/p/forget-empathy-heres-what-antizionist",
       "year": 2026,
       "date": "2026-10-01"
@@ -1937,7 +1947,7 @@
         "colonizer-libel"
       ],
       "reference": "Jennifer Kogan / Levari. \"No Space For Hate in the Therapy Room.\" Substack, March 7, 2026.",
-      "author": "Jennifer Kogan / Levari",
+      "author": "Levari",
       "url": "https://jenniferkogan.substack.com/p/no-space-for-hate-in-the-therapy",
       "year": 2026,
       "date": "2026-03-07"
@@ -1954,7 +1964,7 @@
         "western-antizionism"
       ],
       "reference": "Jennifer Kogan / Levari. \"Mental health is not a zero sum game.\" Substack, Aug. 25, 2025.",
-      "author": "Jennifer Kogan / Levari",
+      "author": "Jennifer Kogan",
       "url": "https://jenniferkogan.substack.com/p/mental-health-is-not-a-zero-sum-game",
       "year": 2025,
       "date": "2025-08-25"
@@ -1970,7 +1980,7 @@
         "jewish-antizionism"
       ],
       "reference": "Jennifer Kogan / Levari. \"Anatomy of Evil.\" Substack, Aug. 5, 2025.",
-      "author": "Jennifer Kogan / Levari",
+      "author": "Jennifer Kogan",
       "url": "https://jenniferkogan.substack.com/p/the-anatomy-of-evil",
       "year": 2025,
       "date": "2025-08-05"
@@ -1987,7 +1997,7 @@
         "western-antizionism"
       ],
       "reference": "Jennifer Kogan / Levari. \"House of mirrors.\" Substack, June 3, 2025.",
-      "author": "Jennifer Kogan / Levari",
+      "author": "Jennifer Kogan",
       "url": "https://jenniferkogan.substack.com/p/house-of-mirrors",
       "year": 2025,
       "date": "2025-06-03"
@@ -2053,7 +2063,7 @@
         "data-research"
       ],
       "reference": "Whole Story Institute. \"Fun With Maps: Palestine 1880, 1920, 1948.\" Substack, Oct. 7, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/fun-with-maps-palestine-1880-1920",
       "year": 2026,
       "date": "2026-10-07"
@@ -2071,7 +2081,7 @@
         "antizionism-academy"
       ],
       "reference": "Whole Story Institute. \"The Effendi’s Alibi: A Forensic Audit Of Rashid Khalidi.\" Substack, Aug. 28, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/the-effendis-alibi-a-forensic-audit",
       "year": 2026,
       "date": "2026-08-28"
@@ -2088,7 +2098,7 @@
         "western-antizionism"
       ],
       "reference": "Whole Story Institute. \"\"Settler Violence?\" The Antizionist Narrative Deconstructed.\" Substack, July 30, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/settler-violence-the-antizionist",
       "year": 2026,
       "date": "2026-07-30"
@@ -2152,7 +2162,7 @@
         "institutional-capture"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Rebecca Nesvet: “Profiles and Cowardice: Anti-Zionism: A Jewish History and the New York Public Library”.\" Substack, Oct. 4, 2026.",
-      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "author": "Rebecca Nesvet",
       "url": "https://icsa.substack.com/p/by-rebecca-nesvet-profiles-and-cowardice",
       "year": 2026,
       "date": "2026-10-04"
@@ -2169,7 +2179,7 @@
         "institutional-capture"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Simon Lucas: “The ‘Toxic Colonialism’ that Wasn’t”.\" Substack, Oct. 3, 2026.",
-      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "author": "Simon Lucas",
       "url": "https://icsa.substack.com/p/by-simon-lucas-the-toxic-colonialism",
       "year": 2026,
       "date": "2026-10-03"
@@ -2187,7 +2197,7 @@
         "genocide-libel"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Dan Burmawi, \"The Re-Zionization of the West\".\" Substack, March 27, 2026.",
-      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "author": "Dan Burmawi",
       "url": "https://icsa.substack.com/p/by-dan-burmawi-the-re-zionization",
       "year": 2026,
       "date": "2026-03-27"
@@ -2205,7 +2215,7 @@
         "antizionism-medicine"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Simon Lucas, \"The Curious Case of Philosophy's Disciplinary Failure in Addressing Gaza\".\" Substack, March 19, 2026.",
-      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "author": "Simon Lucas",
       "url": "https://icsa.substack.com/p/by-simon-lucas-the-curious-case-of",
       "year": 2026,
       "date": "2026-03-19"
@@ -3839,7 +3849,7 @@
       "id": "substack-uft-pushes-error-filled-anti-israel",
       "title": "UFT Pushes Error-Filled Anti-Israel Resolution, Ignoring Jewish Teachers",
       "category": "news",
-      "description": "The author reports that UFT delegates voted 684\\u2013492 to place an anti-Israel resolution targeting U.S. military support for Israel on the May delegate assembly agenda. He argues the resolution is inaccurate and one-sided, promotes Hamas talking points, and ignores the union's Jewish educators.",
+      "description": "The author reports that UFT delegates voted 684–492 to place an anti-Israel resolution targeting U.S. military support for Israel on the May delegate assembly agenda. He argues the resolution is inaccurate and one-sided, promotes Hamas talking points, and ignores the union's Jewish educators.",
       "tags": [
         "institutional-capture",
         "media-commentary"
@@ -5305,7 +5315,7 @@
         "antizionism-medicine"
       ],
       "reference": "Jennifer Kogan / Levari. \"The Cost of Overlooking Jewish Students.\" Substack, Aug. 7, 2026.",
-      "author": "Jennifer Kogan / Levari",
+      "author": "Jennifer Kogan",
       "url": "https://jenniferkogan.substack.com/p/the-cost-of-overlooking-jewish-students",
       "year": 2026,
       "date": "2026-08-07"
@@ -5521,7 +5531,7 @@
         "apartheid-libel"
       ],
       "reference": "Whole Story Institute. \"It Could Have Been Worse.\" Substack, Aug. 31, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/it-could-have-been-worse",
       "year": 2026,
       "date": "2026-08-31"
@@ -5537,7 +5547,7 @@
         "colonizer-libel"
       ],
       "reference": "Whole Story Institute. \"Byline, Palestine 1920: What If Zionists Had Behaved Better?.\" Substack, Aug. 6, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/byline-palestine-1920-what-if-zionists",
       "year": 2026,
       "date": "2026-08-06"
@@ -5555,7 +5565,7 @@
         "colonizer-libel"
       ],
       "reference": "Whole Story Institute. \"MacGuffinism: Why The World Keeps Chasing Israel.\" Substack, June 11, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/macguffinism-why-the-world-keeps",
       "year": 2026,
       "date": "2026-06-11"
@@ -5570,7 +5580,7 @@
         "genocide-libel"
       ],
       "reference": "Whole Story Institute. \"The Intimate Violence of Antizionism: Kinocide.\" Substack, April 28, 2026.",
-      "author": "Whole Story Institute",
+      "author": "Gregg Rosenberg",
       "url": "https://ghrosenb.substack.com/p/the-intimate-violence-of-antizionism",
       "year": 2026,
       "date": "2026-04-28"
@@ -5584,7 +5594,7 @@
         "media-commentary"
       ],
       "reference": "Moral Clarity. \"The Western news media is in a shambles.\" Substack, Sept. 24, 2026.",
-      "author": "Moral Clarity",
+      "author": "Nachum Kaplan",
       "url": "https://moralclaritynewsletter.substack.com/p/the-gaza-you-were-never-allowed-to",
       "year": 2026,
       "date": "2026-09-24"
@@ -5599,7 +5609,7 @@
         "legal-public-affairs"
       ],
       "reference": "Moral Clarity. \"The BDS movement is wildly antisemitic.\" Substack, Sept. 17, 2026.",
-      "author": "Moral Clarity",
+      "author": "Nachum Kaplan",
       "url": "https://moralclaritynewsletter.substack.com/p/the-bds-movement-is-wildly-antisemitic",
       "year": 2026,
       "date": "2026-09-17"
@@ -5616,7 +5626,7 @@
         "islamism"
       ],
       "reference": "Moral Clarity. \"Great Britain's great shame.\" Substack, April 29, 2026.",
-      "author": "Moral Clarity",
+      "author": "Nachum Kaplan",
       "url": "https://moralclaritynewsletter.substack.com/p/great-britains-great-shame",
       "year": 2026,
       "date": "2026-04-29"
@@ -5631,7 +5641,7 @@
         "media-commentary"
       ],
       "reference": "Moral Clarity. \"How anti-Israel protests turned policing into a spectator sport.\" Substack, Oct. 19, 2025.",
-      "author": "Moral Clarity",
+      "author": "Nachum Kaplan",
       "url": "https://moralclaritynewsletter.substack.com/p/how-anti-israel-protests-turned-policing",
       "year": 2025,
       "date": "2025-10-19"
@@ -5646,7 +5656,7 @@
         "legal-public-affairs"
       ],
       "reference": "Moral Clarity. \"Australia's sinister betrayal of Israel and its Jewish community.\" Substack, Aug. 13, 2025.",
-      "author": "Moral Clarity",
+      "author": "Nachum Kaplan",
       "url": "https://moralclaritynewsletter.substack.com/p/australias-moral-dereliction-toward",
       "year": 2025,
       "date": "2025-08-13"
@@ -5660,7 +5670,7 @@
         "media-commentary"
       ],
       "reference": "Moral Clarity. \"Between the Lines: CBS News and the art of fake balance.\" Substack, Jan. 7, 2025.",
-      "author": "Moral Clarity",
+      "author": "Nachum Kaplan",
       "url": "https://moralclaritynewsletter.substack.com/p/between-the-lines-cbs-news-and-the",
       "year": 2025,
       "date": "2025-01-07"
@@ -5675,10 +5685,465 @@
         "institutional-capture"
       ],
       "reference": "Moral Clarity. \"Norway has kicked an own goal against Israel.\" Substack, Dec. 8, 2024.",
-      "author": "Moral Clarity",
+      "author": "Nachum Kaplan",
       "url": "https://moralclaritynewsletter.substack.com/p/norway-has-kicked-an-own-goal-against",
       "year": 2024,
       "date": "2024-12-08"
+    },
+    {
+      "id": "horn-antisemitism-too-easy",
+      "title": "Antisemitism is too EASY! Dara Horn Explains Why It NEVER Goes Out of Style",
+      "category": "podcast-episodes",
+      "description": "Dara Horn argues that antisemitism is a power-serving lie, always the claim that Jews are destroying whatever others value most, rather than mere prejudice. Traces the lie from blood libels and Nazi propaganda through Soviet and Islamist networks and the 2001 Durban Conference to NGOs, campuses, Wikipedia, Reddit, and AI.",
+      "tags": [
+        "jew-hatred",
+        "history-of-antizionism",
+        "soviet-antizionism",
+        "islamism"
+      ],
+      "reference": "Jonah Platt. \"Antisemitism is too EASY! Dara Horn Explains Why It NEVER Goes Out of Style.\" Being Jewish with Jonah Platt, with Dara Horn. YouTube, Oct. 6, 2026.",
+      "author": "Jonah Platt with Dara Horn",
+      "url": "https://www.youtube.com/watch?v=wVEps1AI8TE",
+      "year": 2026,
+      "date": "2026-10-06"
+    },
+    {
+      "id": "louis-klein-does-antizionism-equal-antisemitism",
+      "title": "Does Antizionism = Antisemitism? The Definitive Answer From MAAZ Founder Adam Louis-Klein",
+      "category": "podcast-episodes",
+      "description": "Adam Louis-Klein argues that antizionism is a distinct hate movement rather than simply antisemitism, built on the colonizer, apartheid, and genocide libels. Covers its Arab nationalist and Soviet origins, its capture of universities, NGOs, media, and governments, pre-1948 Jewish anti-Zionism, and how to counter it.",
+      "tags": [
+        "antizionism",
+        "colonizer-libel",
+        "apartheid-libel",
+        "genocide-libel"
+      ],
+      "reference": "Jonah Platt. \"Does Antizionism = Antisemitism? The Definitive Answer From MAAZ Founder Adam Louis-Klein.\" Being Jewish with Jonah Platt, with Adam Louis-Klein. YouTube, June 2, 2026.",
+      "author": "Jonah Platt with Adam Louis-Klein",
+      "url": "https://www.youtube.com/watch?v=nsI0EjX7zG0",
+      "year": 2026,
+      "date": "2026-06-02"
+    },
+    {
+      "id": "wilf-new-vision-for-israel",
+      "title": "A New Vision for Israel: Palestinianism, Arab Zionism and the “Right of Return\" with Dr. Einat Wilf",
+      "category": "podcast-episodes",
+      "description": "Einat Wilf argues that ideology rather than borders has been the central obstacle to peace and that international frameworks have repeatedly failed to reckon with Jewish self-determination. Discusses her concept of 'Arab Zionism,' critiques of UNRWA, and the launch of her Oz Party after October 7.",
+      "tags": [
+        "institutional-capture"
+      ],
+      "reference": "Jonah Platt. \"A New Vision for Israel: Palestinianism, Arab Zionism and the “Right of Return\" with Dr. Einat Wilf.\" Being Jewish with Jonah Platt, with Einat Wilf. YouTube, Jan. 27, 2026.",
+      "author": "Jonah Platt with Einat Wilf",
+      "url": "https://www.youtube.com/watch?v=tsHsAJtGAr8",
+      "year": 2026,
+      "date": "2026-01-27"
+    },
+    {
+      "id": "kelner-story-of-american-antizionism",
+      "title": "The Story of American Antizionism - with Shaul Kelner",
+      "category": "podcast-episodes",
+      "description": "Shaul Kelner examines the Soviet roots of antizionism, how it entered the West, and its spread through American universities. Considers why many American Jews were unprepared for its scale and why some are drawn to it.",
+      "tags": [
+        "soviet-antizionism",
+        "western-antizionism",
+        "antizionism-academy",
+        "jewish-antizionism"
+      ],
+      "reference": "Dan Senor. \"The Story of American Antizionism - with Shaul Kelner.\" Call Me Back, with Shaul Kelner. YouTube, Jan. 29, 2026.",
+      "author": "Dan Senor with Shaul Kelner",
+      "url": "https://www.youtube.com/watch?v=PcSsEEzifCo",
+      "year": 2026,
+      "date": "2026-01-29"
+    },
+    {
+      "id": "kelner-cold-war-ghosts",
+      "title": "Cold War Ghosts: The American Afterlife of Soviet Antizionism with Shaul Kelner",
+      "category": "podcast-episodes",
+      "description": "Shaul Kelner examines antizionism as a powerful social movement in the American context, contrasting its Soviet origin as state propaganda with its greater social normalization in the United States. Draws on Kelner's research on the Soviet Jewry movement and his paper American Antizionism.",
+      "tags": [
+        "soviet-antizionism",
+        "western-antizionism",
+        "history-of-antizionism"
+      ],
+      "reference": "Naya Lekht. \"Cold War Ghosts: The American Afterlife of Soviet Antizionism with Shaul Kelner.\" Don't Know Much About, with Shaul Kelner. YouTube, Feb. 24, 2026.",
+      "author": "Naya Lekht with Shaul Kelner",
+      "url": "https://www.youtube.com/watch?v=OIpuJ5yPrH8",
+      "year": 2026,
+      "date": "2026-02-24"
+    },
+    {
+      "id": "wilf-getting-out-of-antizionist-matrix",
+      "title": "Getting Out of the Antizionist Matrix with Einat Wilf",
+      "category": "podcast-episodes",
+      "description": "Einat Wilf examines the claim that antizionism is a venerable Jewish tradition, arguing that Bolshevism, Bundism, socialism, and diaspora nationalism failed Jews and should not be romanticized. Discusses the value of Jewish participation to the antizionist project and whether Israelis understand antizionism.",
+      "tags": [
+        "jewish-antizionism",
+        "antizionism"
+      ],
+      "reference": "Naya Lekht. \"Getting Out of the Antizionist Matrix with Einat Wilf.\" Don't Know Much About, with Einat Wilf. YouTube, Oct. 6, 2026.",
+      "author": "Naya Lekht with Einat Wilf",
+      "url": "https://www.youtube.com/watch?v=AoxXstWDMf0",
+      "year": 2026,
+      "date": "2026-10-06"
+    },
+    {
+      "id": "cohen-un-antizionist-machine",
+      "title": "The UN's Antizionist Machine: 50 Years of Institutional Bias with Ben Cohen",
+      "category": "podcast-episodes",
+      "description": "Ben Cohen traces the UN's institutional hostility toward Israel from the 1975 'Zionism is racism' resolution and the Palestinian rights committee created alongside it. Covers UNRWA's refugee definition, the 2001 Durban conference, and the shift from 'bistro antisemitism' to open hatred.",
+      "tags": [
+        "institutional-capture",
+        "soviet-antizionism",
+        "history-of-antizionism"
+      ],
+      "reference": "Naya Lekht. \"The UN's Antizionist Machine: 50 Years of Institutional Bias with Ben Cohen.\" Don't Know Much About, with Ben Cohen. YouTube, May 11, 2026.",
+      "author": "Naya Lekht with Ben Cohen",
+      "url": "https://www.youtube.com/watch?v=o4eKUrkpzA8",
+      "year": 2026,
+      "date": "2026-05-11"
+    },
+    {
+      "id": "lekht-propaganda-in-ussr-virtue-in-usa",
+      "title": "Propaganda in the USSR, Virtue in the USA: Antizionism",
+      "category": "podcast-episodes",
+      "description": "Naya Lekht argues that antizionism is more dangerous in the West than in the Soviet Union that invented it, because state propaganda no one believed was repackaged in Western universities through postcolonial theory and anti-imperialism as a moral cause. Contends that framing antizionism as a moral duty treats dissent as immorality and can make violence appear justified.",
+      "tags": [
+        "soviet-antizionism",
+        "western-antizionism",
+        "antizionism-academy"
+      ],
+      "reference": "Naya Lekht. \"Propaganda in the USSR, Virtue in the USA: Antizionism.\" Don't Know Much About. YouTube, March 13, 2026.",
+      "author": "Naya Lekht",
+      "url": "https://www.youtube.com/watch?v=TRAMe6pVz_I",
+      "year": 2026,
+      "date": "2026-03-13"
+    },
+    {
+      "id": "louis-klein-genocidal-claim-of-genocide",
+      "title": "Episode 37: The genocidal claim of genocide with Adam Louis-Klein",
+      "category": "podcast-episodes",
+      "description": "Examines the campaign accusing Israel of genocide and colonialism, asking what antizionists argue and want and when such claims are antisemitic. Surveys academic and elite anti-Israel narratives and the problems they pose for Jews.",
+      "tags": [
+        "genocide-libel",
+        "colonizer-libel",
+        "antizionism"
+      ],
+      "reference": "Haviv Rettig Gur. \"Episode 37: The genocidal claim of genocide with Adam Louis-Klein.\" Ask Haviv Anything, with Adam Louis-Klein. YouTube, Aug. 22, 2025.",
+      "author": "Haviv Rettig Gur with Adam Louis-Klein",
+      "url": "https://www.youtube.com/watch?v=qe_ppEHXs3w",
+      "year": 2025,
+      "date": "2025-08-22"
+    },
+    {
+      "id": "louis-klein-antizionism-inherently-violent",
+      "title": "Episode 68: Antizionism is inherently violent, with Adam Louis-Klein",
+      "category": "podcast-episodes",
+      "description": "Argues that antizionism may be a form of hatred of Jews but differs from the classical antisemitism of the 19th and 20th centuries and is not mere criticism of Israeli policy. Discusses what it is and how to fight it, in the wake of the Bondi Beach massacre.",
+      "tags": [
+        "antizionism",
+        "jew-hatred"
+      ],
+      "reference": "Haviv Rettig Gur. \"Episode 68: Antizionism is inherently violent, with Adam Louis-Klein.\" Ask Haviv Anything, with Adam Louis-Klein. YouTube, Dec. 17, 2025.",
+      "author": "Haviv Rettig Gur with Adam Louis-Klein",
+      "url": "https://www.youtube.com/watch?v=7qO7afN7YBc",
+      "year": 2025,
+      "date": "2025-12-17"
+    },
+    {
+      "id": "kaufman-antizionisms-legal-fight",
+      "title": "Antizionism's Legal Fight w/ Prof. Rona Kaufman",
+      "category": "podcast-episodes",
+      "description": "Examines how antizionism took hold in academia and spread to broader institutions, and why the legal system struggles to address coded anti-Jewish hostility. Covers why Jews do not fit neatly into anti-discrimination frameworks, the MIT lawsuit, and the new legal scholarship needed.",
+      "tags": [
+        "legal-public-affairs",
+        "antizionism-academy",
+        "campus"
+      ],
+      "reference": "David Bernstein. \"Antizionism's Legal Fight w/ Prof. Rona Kaufman.\" David L Bernstein, with Rona Kaufman. YouTube, March 12, 2026.",
+      "author": "David Bernstein with Rona Kaufman",
+      "url": "https://www.youtube.com/watch?v=QH0Yj14H4NU",
+      "year": 2026,
+      "date": "2026-03-12"
+    },
+    {
+      "id": "kelner-americanization-of-antizionism",
+      "title": "The Americanization of Antizionism | Shaul Kelner",
+      "category": "talks",
+      "description": "Explores the ideological roots and social structure of the American antizionist movement, asking whether the discourse of antizionism masks antisemitism under another name. Presented by the Harvard Catholic Forum and Harvard Hillel.",
+      "tags": [
+        "western-antizionism",
+        "jew-hatred"
+      ],
+      "reference": "Shaul Kelner. \"The Americanization of Antizionism | Shaul Kelner.\" Harvard Catholic Forum. YouTube, Oct. 23, 2026.",
+      "author": "Shaul Kelner",
+      "url": "https://www.youtube.com/watch?v=OyrTfAIegZE",
+      "year": 2026,
+      "date": "2026-10-23"
+    },
+    {
+      "id": "kelner-othering-of-american-jews",
+      "title": "Antizionism and the Othering of American Jews with Shaul Kelner",
+      "category": "talks",
+      "description": "Discusses the damaging impact of the antizionist movement on American Jews, arguing that the debate over whether antizionism is antisemitism distracts from the behaviors and effects it produces. Notes that Americans have not been educated about the history of Soviet antizionism.",
+      "tags": [
+        "western-antizionism",
+        "jew-hatred"
+      ],
+      "reference": "Shaul Kelner. \"Antizionism and the Othering of American Jews with Shaul Kelner.\" London Centre Study of Contemporary Antisemitism. YouTube, Dec. 14, 2025.",
+      "author": "Shaul Kelner",
+      "url": "https://www.youtube.com/watch?v=aSlZyJNZmzo",
+      "year": 2025,
+      "date": "2025-12-14"
+    },
+    {
+      "id": "kelner-cultural-sociology-antizionist-movement",
+      "title": "Cultural Sociological Perspectives on the Antizionist Movement in the US",
+      "category": "talks",
+      "description": "Applies cultural sociology to antizionism in the US, examining its continuities and discontinuities with past anti-Jewish politics and its use of symbols, rituals, and boundary-defining mechanisms to build community through the social construction of an Other.",
+      "tags": [
+        "western-antizionism",
+        "antizionism"
+      ],
+      "reference": "Shaul Kelner. \"Cultural Sociological Perspectives on the Antizionist Movement in the US.\" Yale Program for the Study of Antisemitism. YouTube, Oct. 13, 2026.",
+      "author": "Shaul Kelner",
+      "url": "https://www.youtube.com/watch?v=gGER74_My98",
+      "year": 2026,
+      "date": "2026-10-13"
+    },
+    {
+      "id": "pessin-big-questions-on-antizionism",
+      "title": "The Big Questions on Antizionism: Answered by ICSA on the 6-Part Series Featuring Dr. Andrew Pessin",
+      "category": "talks",
+      "description": "Responds to audience questions from a six-part Scholars Circle series on the historical origins, evolution, and contemporary manifestations of antizionism. Presented by Andrew Pessin of the Institute for the Critical Study of Antizionism.",
+      "tags": [
+        "antizionism",
+        "history-of-antizionism"
+      ],
+      "reference": "Andrew Pessin. \"The Big Questions on Antizionism: Answered by ICSA on the 6-Part Series Featuring Dr. Andrew Pessin.\" Chai Mitzvah. YouTube, June 8, 2026.",
+      "author": "Andrew Pessin",
+      "url": "https://www.youtube.com/watch?v=TLPPWrJyn9Q",
+      "year": 2026,
+      "date": "2026-06-08"
+    },
+    {
+      "id": "mansour-genealogy-of-arab-islamic-antizionism",
+      "title": "The Genealogy of Arab–Islamic Antizionism",
+      "category": "talks",
+      "description": "Traces the genealogy of Islamic antizionism from its theological antecedents to its modern systematization, arguing it is an engineered ideological formation that grafted European racial antisemitism, including the Protocols and Nazi propaganda, onto Islamic frameworks. Argues that Arab nationalist regimes later instrumentalized and sponsored its production.",
+      "tags": [
+        "arab-nazi-antizionism",
+        "islamism",
+        "history-of-antizionism"
+      ],
+      "reference": "Hussein Aboubakr Mansour. \"The Genealogy of Arab–Islamic Antizionism.\" Chai Mitzvah. YouTube, April 13, 2026.",
+      "author": "Hussein Aboubakr Mansour",
+      "url": "https://www.youtube.com/watch?v=lmVr5fI1zRs",
+      "year": 2026,
+      "date": "2026-04-13"
+    },
+    {
+      "id": "louis-klein-tying-it-all-together",
+      "title": "Tying It All Together: Antizionism, A Holistic Ideology Featuring Adam Louis-Klein",
+      "category": "talks",
+      "description": "Analyzes antizionism as a distinct ideological formation succeeding Christian and Islamic anti-Judaism and classical antisemitism, defined by three core libels: colonizer, apartheid, and genocide. Traces the libels to Nazi-Islamist convergences, Soviet propaganda, and Western settler-colonial theory, and argues that antizionism operates as a dogma.",
+      "tags": [
+        "antizionism",
+        "colonizer-libel",
+        "apartheid-libel",
+        "genocide-libel"
+      ],
+      "reference": "Adam Louis-Klein. \"Tying It All Together: Antizionism, A Holistic Ideology Featuring Adam Louis-Klein.\" Chai Mitzvah. YouTube, May 11, 2026.",
+      "author": "Adam Louis-Klein",
+      "url": "https://www.youtube.com/watch?v=NCyUPbAzhA0",
+      "year": 2026,
+      "date": "2026-05-11"
+    },
+    {
+      "id": "landes-great-lethal-projection",
+      "title": "The Great Lethal Projection: Antizionism’s Debt to the Protocols of the Elders of Zion",
+      "category": "talks",
+      "description": "Argues that the accusation of genocide against Israel repeats the projection at the heart of the Protocols of the Elders of Zion, in which a group's own desire for world dominion and genocide is attributed to Jews. Asks whether pro-Hamas progressives promote the libel out of fear of their Islamist allies or unconsciously share those desires.",
+      "tags": [
+        "genocide-libel",
+        "arab-nazi-antizionism",
+        "red-green-alliance"
+      ],
+      "reference": "Richard Landes. \"The Great Lethal Projection: Antizionism’s Debt to the Protocols of the Elders of Zion.\" Chai Mitzvah. YouTube, Feb. 25, 2026.",
+      "author": "Richard Landes",
+      "url": "https://www.youtube.com/watch?v=OnVBbE_Ll24",
+      "year": 2026,
+      "date": "2026-02-25"
+    },
+    {
+      "id": "pessin-that-thin-line",
+      "title": "That Thin Line: Why Anti-Zionism is Antisemitism",
+      "category": "talks",
+      "description": "Argues that although anti-Zionism is technically separable from antisemitism, in its actual manifestations it is antisemitic, since Israel is a fundamental Jewish project and anti-Zionist positions amount to supporting a program of mass murder of Jews. Focuses on its manifestations on North American college campuses.",
+      "tags": [
+        "campus",
+        "jew-hatred",
+        "antizionism"
+      ],
+      "reference": "Andrew Pessin. \"That Thin Line: Why Anti-Zionism is Antisemitism.\" Chai Mitzvah. YouTube, Feb. 3, 2025.",
+      "author": "Andrew Pessin",
+      "url": "https://www.youtube.com/watch?v=Y6rrvHGvlGw",
+      "year": 2025,
+      "date": "2025-02-03"
+    },
+    {
+      "id": "lekht-assembly-line-of-antizionism",
+      "title": "The Assembly Line of Antizionism: Soviet Roots of Today’s Progressive Antizionism",
+      "category": "talks",
+      "description": "Traces the Soviet roots of today's progressive antizionism, from 1949 Soviet statements that later gave way to framing Zionism as imperialism and colonialism, to a 1983 anti-Zionist committee that enlisted Jews, to the export of Soviet ideas to the Arab world. Presented as a Scholars Circle lecture.",
+      "tags": [
+        "soviet-antizionism",
+        "western-antizionism"
+      ],
+      "reference": "Naya Lekht. \"The Assembly Line of Antizionism: Soviet Roots of Today’s Progressive Antizionism.\" Chai Mitzvah. YouTube, March 26, 2026.",
+      "author": "Naya Lekht",
+      "url": "https://www.youtube.com/watch?v=mQoH8V2lqPk",
+      "year": 2026,
+      "date": "2026-03-26"
+    },
+    {
+      "id": "herf-nazis-soviets-islamists",
+      "title": "Prof Herf: Secular and Religious Forms of Antagonism to Israel: Nazis, Soviets, Islamists",
+      "category": "talks",
+      "description": "Examines secular and religious forms of antagonism to Israel rooted in Nazi, Soviet, and Islamist sources, including Hamas's covenant and the Soviet presentation of antizionism as anti-fascism and anti-imperialism after 1967. Presented by Jeffrey Herf in a Scholars Circle lecture.",
+      "tags": [
+        "arab-nazi-antizionism",
+        "soviet-antizionism",
+        "islamism"
+      ],
+      "reference": "Jeffrey Herf. \"Prof Herf: Secular and Religious Forms of Antagonism to Israel: Nazis, Soviets, Islamists.\" Chai Mitzvah. YouTube, March 13, 2026.",
+      "author": "Jeffrey Herf",
+      "url": "https://www.youtube.com/watch?v=K11Ubw_iQh0",
+      "year": 2026,
+      "date": "2026-03-13"
+    },
+    {
+      "id": "bernstein-conspiracy-to-social-justice",
+      "title": "From Conspiracy to Social Justice Featuring David Bernstein",
+      "category": "talks",
+      "description": "Traces how progressive antizionism emerged and became a dominant moral framework in Western academic and activist spaces, drawing on postcolonial theory and Critical Race Theory to recast Zionism as racial domination and Jews as 'hyper-whites.' Highlights the role of scholars, faculty networks, and NGOs in institutionalizing it, and situates it within Russian, Nazi, Soviet, and Islamist antisemitism, including the Red-Green Alliance.",
+      "tags": [
+        "western-antizionism",
+        "antizionism-academy",
+        "red-green-alliance",
+        "institutional-capture"
+      ],
+      "reference": "David Bernstein. \"From Conspiracy to Social Justice Featuring David Bernstein.\" Chai Mitzvah. YouTube, April 27, 2026.",
+      "author": "David Bernstein",
+      "url": "https://www.youtube.com/watch?v=sau78a_n4Po",
+      "year": 2026,
+      "date": "2026-04-27"
+    },
+    {
+      "id": "social-workers-against-antizionism",
+      "title": "Social Workers Against Antizionism",
+      "category": "talks",
+      "description": "Frames antizionism as the successor to antijudaism and antisemitism within a recurring cycle of libels, stigma, violence, and denial, with examples drawn from the social work field.",
+      "tags": [
+        "jew-hatred",
+        "antizionism"
+      ],
+      "reference": "Social Workers Against Antizionism. Canva video.",
+      "author": "Jennifer Kogan",
+      "url": "https://www.canva.com/design/DAG-WU5e0Sk/9iczvYqhKifO-gNJPDz0EQ/view",
+      "year": null
+    },
+    {
+      "id": "dabelstein-understanding-and-confronting-antizionism",
+      "title": "Understanding & Confronting Antizionism with Joshua Dabelstein, Movement Against Antizionism (MAAZ)",
+      "category": "talks",
+      "description": "Presents antizionism as the single greatest threat facing Jews in the Diaspora today, using real-world examples to build a toolkit for confronting it. Presented by Joshua Dabelstein, Australian head of the Movement Against Antizionism.",
+      "tags": [
+        "antizionism",
+        "jew-hatred"
+      ],
+      "reference": "Joshua Dabelstein. \"Understanding & Confronting Antizionism with Joshua Dabelstein, Movement Against Antizionism (MAAZ).\" Australian Jewish Association. YouTube, April 22, 2026.",
+      "author": "Joshua Dabelstein",
+      "url": "https://www.youtube.com/watch?v=9m7ITsu5nFY",
+      "year": 2026,
+      "date": "2026-04-22"
+    },
+    {
+      "id": "louis-klein-har-zion-interview",
+      "title": "Adam Louis-Klein interview with Cantor Randy Herman",
+      "category": "talks",
+      "description": "Argues in an interview at Har Zion Temple that the colonizer and genocide libels are inherently connected and that every iteration of the genocide libel rests on settler-colonial theory and the claim that Israel is inherently genocidal. Calls for a new vocabulary, including colonizer libel, apartheid libel, and genocide libel, so the public can name and reject antizionism.",
+      "tags": [
+        "antizionism",
+        "colonizer-libel",
+        "genocide-libel"
+      ],
+      "reference": "Adam Louis-Klein. \"Adam Louis-Klein interview with Cantor Randy Herman.\" Har Zion Temple. YouTube, April 29, 2026.",
+      "author": "Cantor Randy Herman with Adam Louis-Klein",
+      "url": "https://www.youtube.com/watch?v=T4-Y_QCi3os",
+      "year": 2026,
+      "date": "2026-04-29"
+    },
+    {
+      "id": "maaz-what-is-antizionism",
+      "title": "What is Antizionism?",
+      "category": "essays",
+      "description": "Defines antizionism as an ideology that treats Israel's existence as an inherent crime, built on the colonizer, apartheid, and genocide libels and distinct from pre-1948 Jewish anti-Zionism, criticism of Israeli policy, and human-rights activism. Situates it within a recurring libel-cycle of Jew-hatred running from anti-Judaism through antisemitism to antizionism.",
+      "tags": [
+        "antizionism",
+        "jewish-antizionism",
+        "jew-hatred"
+      ],
+      "reference": "Movement Against Antizionism. \"What is Antizionism?\" movementagainstantizionism.org.",
+      "author": "Movement Against Antizionism",
+      "url": "https://www.movementagainstantizionism.org/antizionism",
+      "year": null
+    },
+    {
+      "id": "maaz-history-of-antizionism",
+      "title": "History of Antizionism",
+      "category": "essays",
+      "description": "Documents a century of antizionism through Soviet campaigns from Lenin onward, the 1968 Polish purges, and the 1975 'Zionism is racism' resolution; Middle East and North Africa pogroms and armed campaigns; and Western postcolonial theory, NGO, BDS, press, and campus manifestations. Presents antizionism as a coherent, organized hate movement.",
+      "tags": [
+        "history-of-antizionism",
+        "soviet-antizionism",
+        "islamism",
+        "western-antizionism"
+      ],
+      "reference": "Movement Against Antizionism. \"History of Antizionism.\" movementagainstantizionism.org.",
+      "author": "Movement Against Antizionism",
+      "url": "https://www.movementagainstantizionism.org/history",
+      "year": null
+    },
+    {
+      "id": "maaz-anti-jewish-libels",
+      "title": "Anti-Jewish Libels",
+      "category": "essays",
+      "description": "Catalogs anti-Jewish libels from the ancient and medieval deicide and blood libels through modern antisemitic libels to the colonizer, apartheid, genocide, and other popular antizionist libels. Closes with a taxonomy of antizionist narrative, social-control, overload, and escalation tactics.",
+      "tags": [
+        "colonizer-libel",
+        "apartheid-libel",
+        "genocide-libel",
+        "jew-hatred"
+      ],
+      "reference": "Movement Against Antizionism. \"Anti-Jewish Libels.\" movementagainstantizionism.org.",
+      "author": "Movement Against Antizionism",
+      "url": "https://www.movementagainstantizionism.org/libels",
+      "year": null
+    },
+    {
+      "id": "substack-how-antizionism-erases-jews-and-prevents",
+      "title": "How Antizionism Erases Jews (And Prevents Peace)",
+      "category": "substack-articles",
+      "description": "Argues that the Palestinian national narrative was built as a counter-narrative to erase Jewish history, recasting Jews as colonial settlers, the Nakba as the equivalent of the Holocaust, and \"Palestine\" as an ancient name. Contends this severs the Jews' historical tie to their land and begins to argue that Palestinian peoplehood was a constructed identity.",
+      "tags": [
+        "colonizer-libel",
+        "history-of-antizionism"
+      ],
+      "reference": "Whole Story Institute. \"How Antizionism Erases Jews (And Prevents Peace).\" Substack, July 7, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/how-antizionism-erases-jews-and-prevents",
+      "year": 2026,
+      "date": "2026-07-07"
     }
   ]
 }

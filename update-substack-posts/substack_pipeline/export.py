@@ -40,7 +40,8 @@ def _auto_tags(article):
     return [t for t in article["tags"] if t not in skip]
 
 
-def _resource(article, taken):
+def _resource(article, taken, author=None):
+    """`author`: the publication's configured writer; without one, the publication name is the author."""
     # Key order matches the existing entries in data.json, plus date
     return {
         "id": _unique_id("substack-" + article["url"].rstrip("/").rsplit("/", 1)[-1], taken),
@@ -49,7 +50,7 @@ def _resource(article, taken):
         "description": article["summary"],
         "tags": _auto_tags(article),
         "reference": f'{article["publication"]}. "{article["title"]}." Substack, {format_date(article["date"])}.',
-        "author": article["publication"],
+        "author": author or article["publication"],
         "url": article["url"],
         "year": int(article["date"][:4]),
         "date": article["date"],  # full date, so the site can sort a Substack's articles newest first
@@ -65,7 +66,7 @@ def _substack_card(host, publications, taken):
         log.warning("%s; drafting its Substack card from the config only", exc)
         feed = None
     title = (feed and feed.title) or (pub and pub.name) or host
-    author = (pub and pub.name) or title
+    author = (pub and (pub.author or pub.name)) or title
     slug = host.split("://", 1)[-1].removesuffix(".substack.com").replace(".", "-")
     return {
         "id": _unique_id(f"substack-{slug}", taken),
@@ -187,7 +188,8 @@ def export_resources(articles, vocab):
             log.info("Drafted Substack card %r for %s", card["title"], host)
         _add_tag_defs(data, _auto_tags(article), vocab)
         if article["url"] not in urls:
-            data["resources"].append(_resource(article, taken_ids))
+            pub = next((p for p in publications if p.url == host), None)
+            data["resources"].append(_resource(article, taken_ids, pub and pub.author))
             urls.add(article["url"])
         article["exported_resources"] = True
     settings.RESOURCES_FILE.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")

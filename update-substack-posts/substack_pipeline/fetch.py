@@ -48,6 +48,7 @@ class Publication:
     name: str
     url: str
     description: str
+    author: str = ""  # the writer, when a single person publishes under a brand name; else empty
 
 
 class FetchError(Exception):

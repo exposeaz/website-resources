@@ -2,6 +2,8 @@
 # The description is passed to Claude as context when classifying that publication's posts.
 # An empty description falls back to the publication's own feed description.
 # A publication not listed here can still be run once with --publication-url; its name and description come from its feed.
+# An optional author names the writer when one person publishes under a brand name; their articles then list that writer as author, and citations keep the publication name.
+# Leave it out when several people write for the publication; its articles then list the publication as author.
 
 - name: Movement Against Antizionism
   url: https://movementagainstantizionism.substack.com
@@ -64,10 +66,12 @@
 
 - name: Whole Story Institute
   url: https://ghrosenb.substack.com
+  author: Gregg Rosenberg
   description: '"Combating Anti-Zionism Through Education in History, Politics and Law"; regional history.'
 
 - name: Moral Clarity
   url: https://moralclaritynewsletter.substack.com
+  author: Nachum Kaplan
   description: '"Truths in Politics and Culture"; critical essays on politics and culture with a focus on Israel and the Middle East.'
 
 - name: Melissa Brodsky
