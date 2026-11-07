@@ -40,7 +40,8 @@
     { heading: "Using the library", items: [
       { title: "Browse or search", body: "Open a category to see everything in it, or search the whole library from the main page. Search checks titles, authors, descriptions, citations, and tags. Inside a category, search stays within that category." },
       { title: "Filter by tag", body: "Tags group resources by topic across all categories. Select a tag to filter, and select it again to remove it. With two or more tags, choose `Match any` or `Match all`." },
-      { title: "Open a resource", body: "Select a resource to see its full description, citation, and tags, with a link to the original source. Selecting a Substack shows the articles collected from it." },
+      { title: "Open a resource", body: "Select a resource to see its full description, citation, and tags, with a link to the original source." },
+      { title: "Browsing Substacks", body: "Selecting a Substack shows a set of AI-curated articles about antizionism from that Substack. A link to the Substack itself is also provided." },
       { title: "Cards or list", body: "Switch between `Cards` and `List` at any time. List view also lets you sort by title, author, year, or type." },
       { title: "Clear filters", body: "Clears the search box and all selected tags. Use `All resource types` to return to the main page." },
       { title: "Citations and links", body: "Every resource links to its source and includes a full citation." }
