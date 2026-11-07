@@ -215,7 +215,7 @@
   function renderHelpLinks() {
     var html = '<div class="ean-help-links">';
     html += '<button type="button" class="ean-help-btn" data-help-open="1">How to use this library</button>';
-    if (SUGGEST_URL) html += suggestLinkHtml();
+    if (SUGGEST_URL) html += suggestLinkHtml('Help us grow the library! Suggest a resource &rarr;');
     return html + '</div>';
   }
 
