@@ -28,8 +28,8 @@
   var SUBSTACKS_INTRO = "Each Substack below links to a set of its articles related to antizionism, automatically curated by AI. " +
     "Select a Substack to browse its articles, or visit the full Substack for everything it publishes.";
 
-  // "Suggest a resource" form (e.g. a Tally link). Leave empty to hide every suggest link.
-  var SUGGEST_URL = "";
+  // "Suggest a resource" Google Form. Leave empty to hide every suggest link.
+  var SUGGEST_URL = "https://forms.gle/qBYXL35iX48KGb9b6";
   // Shown in the help popup for reporting mistakes
   var REPORT_EMAIL = "info@exposeantizionism.org";
 
