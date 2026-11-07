@@ -10,7 +10,8 @@
        .ean-tag[data-tag="campus"] { background: ... !important; }
      No need to touch anything else if you do that.
      ================================================================ */
-  #ean-resources-root {
+  /* The popups are drawn in #ean-resources-modal-root on <body> (see ean-resources.js), so it shares these values */
+  #ean-resources-root, #ean-resources-modal-root {
     /* Brand palette: Armadillo #3B352D, Parchment #F7F5F0, Cobalt #2D61AF, Tangerine #FF8642 */
     --ean-accent: #2D61AF;                      /* Cobalt — buttons and links ("Continue to source", layout switch, Show more) */
     --ean-accent-text: #FFFFFF;                 /* text on --ean-accent (Armadillo if the accent is Tangerine) */
@@ -30,7 +31,7 @@
     --ean-input-text: #3B352D;                  /* Armadillo — search box text and placeholder */
     width: 100%;
   }
-  #ean-resources-root * { box-sizing: border-box; }
+  #ean-resources-root *, #ean-resources-modal-root * { box-sizing: border-box; }
 
   /* ---- everything past this point is structural/layout only ---- */
   .ean-toolbar {
@@ -394,7 +395,7 @@
     align-items: center;
     justify-content: center;
     padding: 24px;
-    z-index: 100;
+    z-index: 10000; /* above the Squarespace site header */
     animation: ean-fade-in .15s ease;
   }
   @keyframes ean-fade-in {
@@ -478,7 +479,7 @@
   }
   .ean-empty-suggest { margin-top: 10px; }
 
-  .ean-help-modal { max-width: 760px; }
+  .ean-help-modal { max-width: 1000px; }
   .ean-help-body {
     padding: 28px 28px 24px;
     display: flex;
@@ -507,12 +508,17 @@
     border-radius: 4px;
     white-space: nowrap;
   }
+  /* Suggest and report boxes side by side, stacking on narrow screens */
+  .ean-help-ctas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+  }
   .ean-help-cta {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
     padding: 14px 18px;
     border: 1px solid var(--ean-border);
     border-radius: 8px;
@@ -533,6 +539,8 @@
 
   /* Squarespace site CSS can override the cursor on clickable bits */
   #ean-resources-root :is(button, a, .ean-cat-card, .ean-res-card, .ean-res-row),
-  #ean-resources-root :is(button, a, .ean-cat-card, .ean-res-card, .ean-res-row) * {
+  #ean-resources-root :is(button, a, .ean-cat-card, .ean-res-card, .ean-res-row) *,
+  #ean-resources-modal-root :is(button, a),
+  #ean-resources-modal-root :is(button, a) * {
     cursor: pointer !important;
   }
