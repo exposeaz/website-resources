@@ -220,12 +220,6 @@
   }
 
 
-  // Empty results; when filtering, also offer the suggest link
-  function emptyHtml(message, filtering) {
-    var html = '<div class="ean-empty">' + message;
-    if (filtering && SUGGEST_URL) html += '<div class="ean-empty-suggest">Think something belongs here? ' + suggestLinkHtml() + '</div>';
-    return html + '</div>';
-  }
 
   // Escapes help text and shows `backticked` control names in code style
   function helpTextHtml(text) {
@@ -460,7 +454,7 @@
       esc(SUBSTACK_NOTE).replace("{title}", esc(sub.title)).replace("{link}", link) + '</p></div>';
     html += items.length
       ? renderItems(items)
-      : emptyHtml('No articles match your filters.', filtering);
+      : '<div class="ean-empty">No articles match your filters.</div>';
     return html;
   }
 
@@ -488,7 +482,7 @@
       if (state.categoryId === SUBSTACK_CATEGORY) html += '<p class="ean-substack-note ean-substacks-intro">' + esc(SUBSTACKS_INTRO) + '</p>';
       html += items.length
         ? renderCategoryResources(state.categoryId, items)
-        : emptyHtml(filtering ? 'No resources of this type match your filters.' : 'No resources of this type yet.', filtering);
+        : '<div class="ean-empty">' + (filtering ? 'No resources of this type match your filters.' : 'No resources of this type yet.') + '</div>';
     } else if (filtering) {
       // Newest first; in "match any" mode, more matching tags still come first
       var matched = state.data.resources.filter(function (r) { return matchesFilters(r); }).sort(byNewest);
@@ -504,7 +498,7 @@
       html += resultsHead(count);
       html += results.length
         ? renderItems(results)
-        : emptyHtml('No resources match your filters.', true);
+        : '<div class="ean-empty">No resources match your filters.</div>';
     } else {
       var asList = state.layout === "list";
       html += resultsHead("");

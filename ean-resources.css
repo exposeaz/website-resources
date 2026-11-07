@@ -466,7 +466,6 @@
   }
   .ean-help-btn:hover { border-color: var(--ean-input-text); }
   .ean-suggest-link { color: var(--ean-accent); font-weight: 600; }
-  .ean-empty-suggest { margin-top: 10px; }
 
   .ean-help-modal { max-width: 1000px; }
   .ean-help-body {
