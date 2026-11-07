@@ -218,7 +218,7 @@
       ],
       "reference": "Wistrich, Robert S. (ed.). The Left against Zion. Vallentine, Mitchell, 1979.",
       "author": "Robert S. Wistrich (ed.)",
-      "url": "https://www.pen-and-sword.co.uk/The-Left-Against-Zion-Hardback/p/55936",
+      "url": "https://www.goodreads.com/book/show/1048181.The_Left_Against_Zion",
       "year": 1979
     },
     {
@@ -239,7 +239,7 @@
       "id": "wistrich-lethal-obsession",
       "title": "A Lethal Obsession",
       "category": "books",
-      "description": "A sweeping single-volume history of antisemitism \"from antiquity to the global jihad,\" ending with chapters connecting the Soviet war on Zionism and contemporary jihadist and left-wing antisemitism to older Judeophobic traditions.",
+      "description": "A sweeping single-volume history of antisemitism \"from antiquity to the global jihad,\" ending with chapters connecting the Soviet war on Zionism and contemporary jihadist and left-wing antisemitism and antizionism to older Judeophobic traditions.",
       "tags": [
         "soviet-antizionism",
         "jew-hatred",
@@ -288,7 +288,9 @@
       "category": "books",
       "description": "A collection of nine essays offering historical analysis, contemporary commentary, and practical solutions for a path to a multi-national and multi-religious Middle East, free of the mendacious and destructive force of antizionism.",
       "tags": [
-        "islamism"
+        "islamism",
+        "history-of-antizionism",
+        "western-antizionism"
       ],
       "reference": "Kirschbaum-Shirazki, Olga. From Antizionism to a New Middle East. 2026.",
       "author": "Olga Kirschbaum-Shirazki",
@@ -445,7 +447,6 @@
       "tags": [
         "antizionism",
         "antizionism-academy",
-        "history-of-antizionism",
         "jewish-antizionism",
         "genocide-libel",
         "colonizer-libel"
@@ -462,7 +463,8 @@
       "description": "Continues Louis-Klein's argument that antizionism is a structured ideology with its own libels (colonizer, apartheid, genocide) rather than simply a political stance on Israeli policy.",
       "tags": [
         "colonizer-libel",
-        "genocide-libel"
+        "genocide-libel",
+        "apartheid-libel"
       ],
       "reference": "Louis-Klein, Adam. \"What Antizionism Really Is.\" The Free Press.",
       "author": "Adam Louis-Klein",
@@ -488,7 +490,10 @@
       "title": "The Left-Wing Case Against Anti-Zionism",
       "category": "essays",
       "description": "Makes the case, aimed at a left-leaning audience, that opposing antizionism is consistent with — not opposed to — progressive values.",
-      "tags": [],
+      "tags": [
+        "western-antizionism",
+        "soviet-antizionism"
+      ],
       "reference": "Louis-Klein, Adam. \"The Left-Wing Case Against Anti-Zionism.\" The Atlantic.",
       "author": "Adam Louis-Klein",
       "url": "https://www.theatlantic.com/ideas/2026/06/left-against-antizionism-israel/687616/",
@@ -681,7 +686,7 @@
         "data-research"
       ],
       "reference": "\"I've Seen This Before.\" Data analysis, mapping Soviet anti-Zionist propaganda to modern echoes using semantic similarity.",
-      "author": null,
+      "author": "Anonymous",
       "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/ive-seen-this-before.png",
       "url": "https://iveseenthisbefore.org/",
       "year": 2026
@@ -927,18 +932,6 @@
       "year": null
     },
     {
-      "id": "substack-einat-wilf",
-      "title": "Einat Wilf",
-      "category": "substacks",
-      "description": "Speaker and writer.",
-      "tags": [],
-      "reference": "Wilf, Einat. Einat Wilf (Substack).",
-      "author": "Einat Wilf",
-      "image": "https://substackcdn.com/image/fetch/$s_!38O_!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Feinatwilf.substack.com%2Ftwitter%2Fsubscribe-card.jpg%3Fv%3D-1729408728%26version%3D9",
-      "url": "https://einatwilf.substack.com",
-      "year": null
-    },
-    {
       "id": "substack-sjhyde",
       "title": "Beyond Belief",
       "category": "substacks",
@@ -1043,7 +1036,7 @@
       "id": "clarfield-soviet-doctors-plot",
       "title": "The Soviet \"Doctors' Plot\"—50 Years On",
       "category": "scholarly-articles",
-      "description": "Revisits Stalin's 1953 accusation that a group of mostly Jewish doctors had plotted against the Soviet leadership, the only one of his show trials that never took place because he died first. Argues the affair reveals Stalin's politics and the survival of overt antisemitism in the postwar Soviet Union.",
+      "description": "Revisits Stalin's 1953 accusation that a group of mostly Jewish doctors had plotted against the Soviet leadership, the only one of his show trials that never took place because he died first. Argues the affair reveals Stalin's politics and the survival of overt Jew-hatred operating as antizionism in the postwar Soviet Union.",
       "tags": [
         "soviet-antizionism",
         "antizionism-medicine"
@@ -1066,7 +1059,7 @@
       "reference": "Bacharach, Barak. 'On Antizionism and Unlearning Arab Supremacy.' Haverford College Political Science Department, Alumni Corner.",
       "author": "Barak Bacharach",
       "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/blogpostphoto.png.webp",
-      "url": "https://pols.sites.haverford.edu/alumni-corner/on-antizionism-and-unlearning-arab-supremacy/",
+      "url": "https://haverfordpols.com/alumni-corner/on-antizionism-and-unlearning-arab-supremacy/",
       "year": 2025
     },
     {
@@ -1627,7 +1620,7 @@
       "id": "substack-the-only-english-translation-of-the",
       "title": "The First English Translation Of The Full Rashid Rida Letter Launching Reactionary Antizionism In 1898",
       "category": "substack-articles",
-      "description": "Presents the first complete English translation of Rashid Rida's 1898 al-Manar commentary on Zionism, arguing it planted the ideological seed of antizionism by recasting Jewish refugees as prospective conquerors. Traces a line of descent from Rida through Amin al-Husseini and the Muslim Brotherhood to Hamas and October 7. ",
+      "description": "Presents the first complete English translation of Rashid Rida's 1898 al-Manar commentary on Zionism, arguing it planted the ideological seed of antizionism by recasting Jewish refugees as prospective conquerors. Traces a line of descent from Rida through Amin al-Husseini and the Muslim Brotherhood to Hamas and October 7.",
       "tags": [
         "history-of-antizionism",
         "islamism",
@@ -2156,8 +2149,7 @@
       "tags": [
         "jewish-antizionism",
         "history-of-antizionism",
-        "institutional-capture",
-        "media-commentary"
+        "institutional-capture"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Rebecca Nesvet: “Profiles and Cowardice: Anti-Zionism: A Jewish History and the New York Public Library”.\" Substack, Oct. 4, 2026.",
       "author": "Institute for Critical Study of Antizionism (ICSA)",
@@ -2288,190 +2280,6 @@
       "url": "https://nayalekht.substack.com/p/new-yorkers-said-enough-in-front",
       "year": 2026,
       "date": "2026-05-15"
-    },
-    {
-      "id": "substack-institutions-and-violence-from-medieval",
-      "title": "Institutions and violence: from Medieval Spain to Helen Haines.",
-      "category": "news",
-      "description": "The author argues that institutions transform conspiracy theories into accepted knowledge, which then inspires violence by individuals on the ground, drawing a line from medieval Spanish blood libels to modern accusations of 'genocide' and 'ecocide' against Israel. He links this to an attack on Australian MP Helen Haines and criticizes the ABC, UN, Amnesty International and the New York Times, interweaving travel reflections from Girona and Jerusalem.",
-      "tags": [
-        "genocide-libel",
-        "jew-hatred",
-        "institutional-capture",
-        "media-commentary"
-      ],
-      "reference": "Joshua Dabelstein. \"Institutions and violence: from Medieval Spain to Helen Haines..\" Substack, Oct. 23, 2026.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/institutions-and-violence-from-medieval",
-      "year": 2026,
-      "date": "2026-10-23"
-    },
-    {
-      "id": "substack-why-naza-feels-so-good",
-      "title": "Why NAZA Feels So Good",
-      "category": "substack-articles",
-      "description": "The author argues that the record 24-minute standing ovation for the documentary NAZA at Venice reflects audiences using art for moral self-presentation rather than judging its quality, comparing it to Soviet-style prolonged applause and witch hunts. He uses his partner's 'favourite' unseen films as an analogy for how taste works autobiographically, and criticizes the Guardian's role and the use of Israeli Jewish directors as legitimizing 'asajews'.",
-      "tags": [
-        "antizionism-arts",
-        "media-commentary",
-        "jewish-antizionism",
-        "western-antizionism"
-      ],
-      "reference": "Joshua Dabelstein. \"Why NAZA Feels So Good.\" Substack, Sept. 29, 2026.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/why-naza-feels-so-good",
-      "year": 2026,
-      "date": "2026-09-29"
-    },
-    {
-      "id": "substack-ed-sheeran-has-done-something-wrong",
-      "title": "Ed Sheeran has done something wrong",
-      "category": "substack-articles",
-      "description": "The author argues that the key wrong in the Sheeran/Macklemore episode was Sheeran's decision to invite Macklemore, which exemplifies how arts and cultural institutions act as the engine room of an antizionist system. He contends that antizionism is a systemic ideology (not mere political criticism) that Jews and allies strengthen by using euphemisms like 'pro-Palestinian' or 'antisemitism' instead of naming antizionism.",
-      "tags": [
-        "institutional-capture",
-        "antizionism-arts",
-        "western-antizionism",
-        "jew-hatred",
-        "media-commentary"
-      ],
-      "reference": "Joshua Dabelstein. \"Ed Sheeran has done something wrong.\" Substack, Sept. 20, 2026.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/ed-sheeran-has-done-something-wrong",
-      "year": 2026,
-      "date": "2026-09-20"
-    },
-    {
-      "id": "substack-state-of-new-south-wales-v-farhat",
-      "title": "State of New South Wales v Farhat",
-      "category": "substack-articles",
-      "description": "The author argues that State of NSW v Farhat shows the legal system's failure to recognise antizionism as a distinct form of anti-Jewish hostility rather than political criticism of Israel. He criticises the judge's dismissal of the IHRA definition, his use of the phrase 'Israel's genocide', and his framing of Zionism as a chosen ideology.",
-      "tags": [
-        "legal-public-affairs",
-        "genocide-libel",
-        "jew-hatred",
-        "institutional-capture",
-        "history-of-antizionism"
-      ],
-      "reference": "Joshua Dabelstein. \"State of New South Wales v Farhat.\" Substack, Aug. 20, 2026.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/state-of-new-south-wales-v-farhat",
-      "year": 2026,
-      "date": "2026-08-20"
-    },
-    {
-      "id": "substack-grace-tames-peaceful-calls-to-peacefully",
-      "title": "Grace Tame's peaceful calls to peacefully globalise peaceful intifada result in peaceful protest",
-      "category": "news",
-      "description": "The author argues that Grace Tame's \"globalise the intifada\" chant exemplifies antizionism as a distinct, socially permitted pathway of anti-Jewish harm, separate from classical antisemitism and from legitimate political criticism. He contends that Australian law (citing Wertheim v Haddad) and a Royal Commission focused only on whether antizionism \"crosses the line\" into antisemitism risk leaving this mechanism untouched, and urges naming antizionism as eliminationism.",
-      "tags": [
-        "jew-hatred",
-        "legal-public-affairs",
-        "western-antizionism",
-        "genocide-libel"
-      ],
-      "reference": "Joshua Dabelstein. \"Grace Tame's peaceful calls to peacefully globalise peaceful intifada result in peaceful protest.\" Substack, Feb. 9, 2026.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/grace-tames-peaceful-calls-to-peacefully",
-      "year": 2026,
-      "date": "2026-02-09"
-    },
-    {
-      "id": "substack-adelaide-writers-festival-farewell",
-      "title": "Adelaide Writers' Festival: farewell, bigots!",
-      "category": "substack-articles",
-      "description": "The author argues that the Adelaide Writers' Festival was right to drop Randa Abdel-Fattah, characterising her record of statements as eliminationist antizionist bigotry rather than legitimate critique of Israel. He contends that free-speech and anti-Palestinian-racism objections are misplaced, that boycotting participants have excluded themselves, and that antizionism is the main driver of anti-Jewish vilification in Australia today.",
-      "tags": [
-        "antizionism-arts",
-        "institutional-capture",
-        "media-commentary"
-      ],
-      "reference": "Joshua Dabelstein. \"Adelaide Writers' Festival: farewell, bigots!.\" Substack, Jan. 9, 2026.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/adelaide-writers-festival-farewell",
-      "year": 2026,
-      "date": "2026-01-09"
-    },
-    {
-      "id": "substack-glastonbury-2025-eating-from-the",
-      "title": "Glastonbury 2025: eating from the trash.",
-      "category": "substack-articles",
-      "description": "The author argues that Glastonbury 2025 and the BBC's live-streaming of Kneecap and Bob Vylan show antisemitic ideas spreading as fashion, with cultural institutions choosing to cater to the crowd rather than lead. He compares the artists and festivals to fast fashion and contrasts the crowd's chants with the reality of the Nova festival massacre.",
-      "tags": [
-        "antizionism-arts",
-        "media-commentary",
-        "institutional-capture",
-        "western-antizionism"
-      ],
-      "reference": "Joshua Dabelstein. \"Glastonbury 2025: eating from the trash..\" Substack, July 2, 2025.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/glastonbury-2025-eating-from-the",
-      "year": 2025,
-      "date": "2025-07-02"
-    },
-    {
-      "id": "substack-usyd-staff-defend-right-to-advocate",
-      "title": "USYD staff defend right to advocate for \"elimination\" of Jewish State.",
-      "category": "news",
-      "description": "The author reports on a University of Sydney staff forum at which speakers argued against adopting the Universities Australia antisemitism definition, including defending the right to call for the 'elimination' of Israel as free speech. The piece contrasts these views with testimony from Jewish and Israeli staff who described exclusion and an unsafe campus, and notes the near-unanimous vote to reject the definition.",
-      "tags": [
-        "antizionism-academy",
-        "jewish-antizionism",
-        "campus",
-        "institutional-capture"
-      ],
-      "reference": "Joshua Dabelstein. \"USYD staff defend right to advocate for \"elimination\" of Jewish State..\" Substack, May 31, 2025.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/usyd-staff-defend-right-to-advocate",
-      "year": 2025,
-      "date": "2025-05-31"
-    },
-    {
-      "id": "substack-sabsabi-breaks-silence",
-      "title": "Khaled Sabsabi breaks silence.",
-      "category": "substack-articles",
-      "description": "The author argues that artist Khaled Sabsabi, despite being treated unfairly by Creative Australia's rescinding of his Venice Biennale appointment, belongs to a boycott culture that singles out Israel and Israeli artists, which the author characterises as antisemitic. He also contends that Australia's publicly funded arts sector platforms radicalised artists and that Creative Australia handled the matter clumsily without addressing the underlying problems.",
-      "tags": [
-        "antizionism-arts",
-        "bds",
-        "institutional-capture",
-        "media-commentary"
-      ],
-      "reference": "Joshua Dabelstein. \"Khaled Sabsabi breaks silence..\" Substack, April 2, 2025.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/sabsabi-breaks-silence",
-      "year": 2025,
-      "date": "2025-04-02"
-    },
-    {
-      "id": "substack-short-good-morning-world",
-      "title": "Short: Good morning world",
-      "category": "news",
-      "description": "The author reflects on a morning in Sydney marked by antizionist stickers, graffiti, and calls to globalise the intifada, arguing that the supposed distinction between antizionism and antisemitism has collapsed. He cites a news report of cars vandalised with 'fuck Israel' messages and contests the claim that Jewish indigeneity does not ground a land claim.",
-      "tags": [
-        "western-antizionism",
-        "jew-hatred",
-        "colonizer-libel"
-      ],
-      "reference": "Joshua Dabelstein. \"Short: Good morning world.\" Substack, Nov. 21, 2024.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/short-good-morning-world",
-      "year": 2024,
-      "date": "2024-11-21"
-    },
-    {
-      "id": "substack-a-brief-and-personal-reflection",
-      "title": "Questioning the word 'pogrom'",
-      "category": "news",
-      "description": "The author, a Sydney Jew, uses a beach afternoon and the mitzvah on idol worship to wrestle with the Amsterdam beatings of Jewish football fans and whether 'pogrom' is the right word. He questions people who post 'context' to justify the attacks, compares this logic to excuses made for October 7, and asks why Jews are held responsible for Israeli government actions in ways Palestinians are not for Hamas.",
-      "tags": [
-        "jew-hatred"
-      ],
-      "reference": "Joshua Dabelstein. \"Questioning the word 'pogrom'.\" Substack, Nov. 11, 2024.",
-      "author": "Joshua Dabelstein",
-      "url": "https://fornormalpeople.substack.com/p/a-brief-and-personal-reflection",
-      "year": 2024,
-      "date": "2024-11-11"
     },
     {
       "id": "substack-ldor-vadorable-returns-and-3x-academy-875",
@@ -3277,18 +3085,6 @@
       "url": "https://kevindeutsch.substack.com/p/former-holocaust-center-director",
       "year": 2026,
       "date": "2026-07-13"
-    },
-    {
-      "id": "substack-kansas-city-nonprofit-to-host-pakistani",
-      "title": "Kansas City Nonprofit to Host Pakistani Envoy Who Blamed Israel for October 7 and Rejects Israel’s Existence",
-      "category": "news",
-      "description": "The author reports that the Kansas City International Relations Council is scheduled to host a senior Pakistani diplomat who does not recognize Israel's existence and blamed Israel for the October 7 massacre. Only the opening lines are available, so the full argument is not shown.",
-      "tags": [],
-      "reference": "Kevin Deutsch. \"Kansas City Nonprofit to Host Pakistani Envoy Who Blamed Israel for October 7 and Rejects Israel’s Existence.\" Substack, July 10, 2026.",
-      "author": "Kevin Deutsch",
-      "url": "https://kevindeutsch.substack.com/p/kansas-city-nonprofit-to-host-pakistani",
-      "year": 2026,
-      "date": "2026-07-10"
     },
     {
       "id": "substack-pew-survey-shows-44-percent-of-muslim",

@@ -466,18 +466,6 @@
   }
   .ean-help-btn:hover { border-color: var(--ean-input-text); }
   .ean-suggest-link { color: var(--ean-accent); font-weight: 600; }
-  .ean-suggest-footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 8px 16px;
-    margin-top: 28px;
-    padding: 16px 20px;
-    border: 1px dashed var(--ean-border-strong);
-    border-radius: 8px;
-  }
-  .ean-empty-suggest { margin-top: 10px; }
 
   .ean-help-modal { max-width: 1000px; }
   .ean-help-body {
