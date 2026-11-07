@@ -255,7 +255,7 @@
     if (SUGGEST_URL) {
       html += '<div class="ean-help-cta ean-help-cta--tint"><span><strong>Help us grow the library.</strong></span>' + suggestLinkHtml() + '</div>';
     }
-    html += '<div class="ean-help-cta"><span>Think something in the library is wrong?</span>' +
+    html += '<div class="ean-help-cta ean-help-cta--tint"><span><strong>Report errors or other issues.</strong></span>' +
       '<a href="mailto:' + esc(REPORT_EMAIL) + '">Email us at ' + esc(REPORT_EMAIL) + '</a></div>';
     html += '</div>';
     html += '<div class="ean-help-actions"><button type="button" class="ean-help-done" data-modal-close="1">Got it</button></div>';
