@@ -219,11 +219,6 @@
     return html + '</div>';
   }
 
-  // Under the results
-  function renderSuggestFooter() {
-    if (!SUGGEST_URL) return "";
-    return '<div class="ean-suggest-footer"><span>Know a resource that belongs here?</span>' + suggestLinkHtml() + '</div>';
-  }
 
   // Empty results; when filtering, also offer the suggest link
   function emptyHtml(message, filtering) {
@@ -532,8 +527,6 @@
       });
       html += '</div>';
     }
-
-    html += renderSuggestFooter();
 
     var modalHtml = "";
     if (state.helpOpen) {
