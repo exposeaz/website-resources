@@ -206,8 +206,8 @@
   }
 
   var ARROW_OUT = ' &#8599;';
-  function suggestLinkHtml() {
-    return '<a class="ean-suggest-link" href="' + esc(SUGGEST_URL) + '" target="_blank" rel="noopener">Suggest a resource' + ARROW_OUT + '</a>';
+  function suggestLinkHtml(label) {
+    return '<a class="ean-suggest-link" href="' + esc(SUGGEST_URL) + '" target="_blank" rel="noopener">' + (label || 'Suggest a resource') + ARROW_OUT + '</a>';
   }
 
   // Above the search bar: opens the help popup, plus the suggest link
@@ -253,7 +253,7 @@
     });
     html += '<div class="ean-help-ctas">';
     if (SUGGEST_URL) {
-      html += '<div class="ean-help-cta ean-help-cta--tint"><span><strong>Help us grow the library.</strong></span>' + suggestLinkHtml() + '</div>';
+      html += '<div class="ean-help-cta ean-help-cta--tint"><span><strong>Help us grow the library.</strong></span>' + suggestLinkHtml('Fill out the resource suggestion form') + '</div>';
     }
     html += '<div class="ean-help-cta ean-help-cta--tint"><span><strong>Report errors or other issues.</strong></span>' +
       '<a href="mailto:' + esc(REPORT_EMAIL) + '">Email us at ' + esc(REPORT_EMAIL) + '</a></div>';
