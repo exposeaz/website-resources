@@ -253,7 +253,7 @@
     });
     html += '<div class="ean-help-ctas">';
     if (SUGGEST_URL) {
-      html += '<div class="ean-help-cta ean-help-cta--tint"><span><strong>Help us grow the library.</strong> Know a book, article, or Substack that belongs here?</span>' + suggestLinkHtml() + '</div>';
+      html += '<div class="ean-help-cta ean-help-cta--tint"><span><strong>Help us grow the library.</strong></span>' + suggestLinkHtml() + '</div>';
     }
     html += '<div class="ean-help-cta"><span>Think something in the library is wrong?</span>' +
       '<a href="mailto:' + esc(REPORT_EMAIL) + '">Email us at ' + esc(REPORT_EMAIL) + '</a></div>';
