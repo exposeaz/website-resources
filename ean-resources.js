@@ -43,8 +43,7 @@
       { title: "Open a resource", body: "Select a resource to see its full description, citation, and tags, with a link to the original source." },
       { title: "Browsing Substacks", body: "Selecting a Substack shows a set of AI-curated articles about antizionism from that Substack. A link to the Substack itself is also provided." },
       { title: "Cards or list", body: "Switch between `Cards` and `List` at any time. List view also lets you sort by title, author, year, or type." },
-      { title: "Clear filters", body: "Clears the search box and all selected tags. Use `All resource types` to return to the main page." },
-      { title: "Citations and links", body: "Every resource links to its source and includes a full citation." }
+      { title: "Clear filters", body: "Clears the search box and all selected tags. Use `All resource types` to return to the main page." }
     ] },
     { heading: "About the library", items: [
       { title: "How it is curated", body: "Resources are identified either manually by our team or by AI. Descriptions are AI-generated and human-reviewed. Substack articles are found and summarized by AI, and our team reviews each batch before it is added." },
