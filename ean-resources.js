@@ -112,6 +112,13 @@
     return r.author;
   }
 
+  // Meta line for cards and rows: author, source (the Substack, when different from the author), year, then type
+  function metaParts(r, withType) {
+    var sub = (r.category === ARTICLE_CATEGORY || r.category === NEWS_CATEGORY) && substackFor(r);
+    var source = sub && sub.title !== r.author ? sub.title : "";
+    return [r.author, source, r.year ? String(r.year) : "", withType ? categoryLabel(r.category) : ""].filter(Boolean);
+  }
+
   function esc(s) {
     return (s || "").replace(/[&<>"']/g, function (c) {
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
@@ -296,7 +303,7 @@
     // just re-add: html += resourceImageHtml(r);
     if (showsType()) html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
     html += '<h4>' + esc(r.title) + '</h4>';
-    var meta = [bylineFor(r), r.year ? String(r.year) : ""].filter(Boolean);
+    var meta = metaParts(r, false);
     if (meta.length) {
       html += '<div class="ean-res-author">' + meta.map(esc).join(' &middot; ') + '</div>';
     }
@@ -332,7 +339,7 @@
   }
 
   function renderResourceRow(r) {
-    var meta = [bylineFor(r), r.year ? String(r.year) : "", showsType() ? categoryLabel(r.category) : ""].filter(Boolean);
+    var meta = metaParts(r, showsType());
     var html = '<div class="ean-res-row" data-res="' + esc(r.id) + '">';
     html += '<div class="ean-res-row-main"><h4>' + esc(r.title) + '</h4>';
     html += '<div class="ean-res-row-meta">' + meta.map(esc).join(' &middot; ') + '</div>';
