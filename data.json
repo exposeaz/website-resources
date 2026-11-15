@@ -698,8 +698,7 @@
       "reference": "\"I've Seen This Before.\" Data analysis, mapping Soviet anti-Zionist propaganda to modern echoes using semantic similarity.",
       "author": "Anonymous",
       "image": "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/images/ive-seen-this-before.png",
-      "url": "https://iveseenthisbefore.org/",
-      "year": 2026
+      "url": "https://iveseenthisbefore.org/"
     },
     {
       "id": "drop-the-hyphen",
@@ -1699,6 +1698,18 @@
       "author": "Moral Clarity",
       "image": "https://substackcdn.com/image/fetch/$s_!zCjw!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdd923638-3ba6-4bc4-9eab-6a65d1c5c512_200x200.png",
       "url": "https://moralclaritynewsletter.substack.com",
+      "year": null
+    },
+    {
+      "id": "substack-ean",
+      "title": "Expose Antizionism",
+      "category": "substacks",
+      "description": "Expose Antizionism Now is a nonprofit organization dedicated to combatting antizionism through education, communication, and community building.",
+      "tags": [],
+      "reference": "Spielman, Stephanie. Expose Antizionism (Substack).",
+      "author": "Stephanie Spielman",
+      "image": null,
+      "url": "https://exposeantizionism.substack.com",
       "year": null
     },
     {
