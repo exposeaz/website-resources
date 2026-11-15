@@ -702,6 +702,17 @@
       "year": 2026
     },
     {
+      "id": "drop-the-hyphen",
+      "title": "Drop the Hyphen",
+      "category": "data-research",
+      "description": "A catalog of the scholars, organizations, and institutions that have dropped the hyphen to standardize \"antizionism\" over \"anti-zionism\", along with the status of other campaigns encouraging more to do the same.",
+      "tags": [
+        "data-research"
+      ],
+      "author": "Lauren Swersky, Josh Warhit, and Ioana Timariu",
+      "url": "https://drop-the-hyphen.com"
+    },
+    {
       "id": "heath-totalitarian-conspiracy-theory",
       "title": "Antizionism Is a Totalitarian Conspiracy Theory Rotting the West From Within",
       "category": "essays",
