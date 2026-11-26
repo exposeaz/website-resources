@@ -6,7 +6,7 @@
     : "https://cdn.jsdelivr.net/gh/exposeaz/website-resources@main/data.json";
 
   // Wording shown above a single Substack's articles. {title} and {link} are filled in.
-  var SUBSTACK_NOTE = "This is a set of articles from {title} related to antizionism, automatically curated by AI. " +
+  var SUBSTACK_NOTE = "This is a subset of articles from {title}, automatically curated by AI, that are specifically relevant to the topics in antizionism covered by this library and are not paywalled. " +
     "See the full Substack for all posts: {link}";
 
   // Hint shown above the tag pills.
@@ -25,7 +25,7 @@
   var TAG_HINT = "Select tags to filter resources by topic. Choose more than one to show resources matching any or all of them.";
 
   // Wording shown above the Substack cards in the Substacks category.
-  var SUBSTACKS_INTRO = "Each Substack below links to a set of its articles related to antizionism, automatically curated by AI. " +
+  var SUBSTACKS_INTRO = "Each Substack below links to a subset of its articles, automatically curated by AI, that are specifically relevant to the topics in antizionism covered by this library and are not paywalled. " +
     "Select a Substack to browse its articles, or visit the full Substack for everything it publishes.";
 
   // "Suggest a resource" Google Form. Leave empty to hide every suggest link.
@@ -421,11 +421,13 @@
     }).join('') + '</div>';
   }
 
-  function renderItems(items) {
+  // `noSort`: list view without the Sort by bar, keeping the given order
+  function renderItems(items, noSort) {
     var total = items.length;
     var asList = state.layout === "list";
-    var bar = asList ? sortBarHtml(items) : "";
-    items = (asList && state.sortKey ? sortItems(items) : rankByTagMatches(items)).slice(0, state.shown);
+    var sortable = asList && !noSort;
+    var bar = sortable ? sortBarHtml(items) : "";
+    items = (sortable && state.sortKey ? sortItems(items) : rankByTagMatches(items)).slice(0, state.shown);
     var html = asList
       ? bar + '<div class="ean-res-list">' + items.map(renderResourceRow).join('') + '</div>'
       : '<div class="ean-res-grid">' + items.map(renderResourceCard).join('') + '</div>';
@@ -471,12 +473,13 @@
   }
 
   // A single category: Substack cards alphabetical (they're publications,
-  // not dated pieces); everything else newest first.
+  // not dated pieces, so no Sort by bar); everything else newest first.
   function renderCategoryResources(categoryId, items) {
-    var sorted = items.slice().sort(categoryId === SUBSTACK_CATEGORY
+    var isSubstacks = categoryId === SUBSTACK_CATEGORY;
+    var sorted = items.slice().sort(isSubstacks
       ? function (a, b) { return a.title.localeCompare(b.title); }
       : byNewest);
-    return renderItems(sorted);
+    return renderItems(sorted, isSubstacks);
   }
 
   // One Substack's curated articles, under a header linking to the full Substack
@@ -520,7 +523,7 @@
       var crumb = '<a href="#" class="ean-crumb-link" data-back="1">&larr; All resource types</a> / ' + esc(categoryLabel(state.categoryId));
       if (filtering) crumb += ' — ' + items.length + ' result' + (items.length === 1 ? '' : 's');
       html += resultsHead(crumb);
-      if (state.categoryId === SUBSTACK_CATEGORY) html += '<p class="ean-substack-note ean-substacks-intro">' + esc(SUBSTACKS_INTRO) + '</p>';
+      if (state.categoryId === SUBSTACK_CATEGORY) html += '<div class="ean-substack-head"><p class="ean-substack-note ean-substacks-intro">' + esc(SUBSTACKS_INTRO) + '</p></div>';
       html += items.length
         ? renderCategoryResources(state.categoryId, items)
         : '<div class="ean-empty">' + (filtering ? 'No resources of this type match your filters.' : 'No resources of this type yet.') + '</div>';
@@ -546,18 +549,16 @@
       html += asList ? '<div class="ean-res-list">' : '<div class="ean-cat-grid">';
       state.data.categories.forEach(function (c) {
         if (c.id === ARTICLE_CATEGORY) return;
-        var count = state.data.resources.filter(function (r) { return r.category === c.id; }).length;
-        var countHtml = '<div class="ean-cat-count">' + count + ' resource' + (count === 1 ? '' : 's') + '</div>';
         if (asList) {
           html += '<div class="ean-res-row ean-cat-row" data-cat="' + c.id + '">';
           html += '<div class="ean-res-row-main"><h4>' + esc(c.label) + '</h4>';
           if (c.blurb) html += '<div class="ean-res-row-meta">' + esc(c.blurb) + '</div>';
-          html += '</div>' + countHtml + '</div>';
+          html += '</div></div>';
         } else {
           html += '<div class="ean-cat-card" data-cat="' + c.id + '">';
           html += '<h3>' + esc(c.label) + '</h3>';
           html += '<p>' + esc(c.blurb || '') + '</p>';
-          html += countHtml + '</div>';
+          html += '</div>';
         }
       });
       html += '</div>';

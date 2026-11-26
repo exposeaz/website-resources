@@ -211,7 +211,6 @@
   .ean-cat-card:active { transform: translateY(-1px); }
   .ean-cat-card h3 { margin: 0 0 6px; font-size: 1.3rem; line-height: 1.25; }
   .ean-cat-card p { margin: 0 0 10px; opacity: 0.75; font-size: 0.9em; }
-  .ean-cat-count { font-size: 0.8em; opacity: 0.6; }
 
   /* Masonry positioning here is computed in JS (see layoutMasonry in
      ean-resources.js), not CSS `columns:`. CSS multicol was tried first and
@@ -354,7 +353,6 @@
   .ean-res-row-meta { font-size: 0.85em; opacity: 0.7; margin-top: 2px; }
   .ean-res-row .ean-res-tags { flex: 0 1 auto; justify-content: flex-end; margin-top: 0; }
   .ean-cat-row h4 { font-size: 1rem; }
-  .ean-cat-row .ean-cat-count { flex: 0 0 auto; }
 
   /* Header above one Substack's curated articles */
   .ean-substack-head {
@@ -369,7 +367,8 @@
   .ean-substack-head p { margin: 0 0 6px; }
   .ean-substack-note { font-size: 0.9em; opacity: 0.8; }
   .ean-substack-note a { color: var(--ean-accent); font-weight: 600; }
-  .ean-substacks-intro { margin: 0 0 16px; }
+  /* Intro above the Substack cards, in the same callout box */
+  .ean-substack-head .ean-substacks-intro { margin: 0; font-size: 1.1em; opacity: 0.9; }
 
   /* Modal-only: the reading view leads with the description at a bigger,
      roomier size than anything on the card face. */
