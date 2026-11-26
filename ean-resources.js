@@ -18,8 +18,8 @@
     "soviet-antizionism", "yevsektsiya", "poland-1968", "arab-nazi-antizionism", "western-antizionism",
     "islamism", "arab-supremacy", "red-green-alliance", "jewish-antizionism",
     "genocide-libel", "colonizer-libel", "apartheid-libel",
-    "antizionism-academy", "campus", "antizionism-medicine", "antizionism-arts", "media-commentary",
-    "institutional-capture", "legal-public-affairs", "bds",
+    "antizionism-academy", "campus", "antizionism-healthcare", "antizionism-arts", "media-commentary",
+    "institutional-capture", "legal-public-affairs", "bds", "advocacy",
     "data-research"
   ];
   var TAG_HINT = "Select tags to filter resources by topic. Choose more than one to show resources matching any or all of them.";

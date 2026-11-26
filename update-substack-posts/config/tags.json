@@ -17,7 +17,7 @@
   {"id": "antizionism-academy", "label": "Antizionism in the academy"},
   {"id": "institutional-capture", "label": "Institutional capture",
    "scope": "the post examines how antizionism has become embedded in an institution's policies, leadership, staffing, funding, or curricula (e.g. universities, NGOs, professional bodies, unions, government agencies)"},
-  {"id": "antizionism-medicine", "label": "Antizionism in medicine"},
+  {"id": "antizionism-healthcare", "label": "Antizionism in healthcare"},
   {"id": "antizionism-arts", "label": "Antizionism in the arts"},
   {"id": "genocide-libel", "label": "Genocide libel"},
   {"id": "campus", "label": "Campuses"},
@@ -31,6 +31,8 @@
   {"id": "bds", "label": "BDS and Boycotts"},
   {"id": "media-commentary", "label": "Media bias"},
   {"id": "legal-public-affairs", "label": "Legal & public affairs"},
+  {"id": "advocacy", "label": "Advocating against antizionism",
+   "scope": "the post is about opposing antizionism in practice: rallies, campaigns, organizing or other action against it; guidance on how to recognize, talk about, or respond to it; or calls to action. Not for posts that only analyze or criticize antizionism without addressing how to counter it. Countering it must be a main focus of the post; a closing call to name, expose or confront antizionism does not count"},
   {"id": "data-research", "label": "Data & Research"},
   {"id": "news", "label": "News"}
 ]

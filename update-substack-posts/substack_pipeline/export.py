@@ -103,9 +103,9 @@ def news_candidate(a):
 
 def publishable(a):
     """Clears the bar, is news clearing the news bar, or was picked by fill, and isn't marked a duplicate
-    by dedupe; or was added by URL."""
-    return a["forced"] or ((meets_bar(a) or news_candidate(a) or bool(a.get("published_for_tag")))
-                           and not a.get("duplicate_of"))
+    by dedupe; or was added by URL, or hand-picked by a reviewer (hand_picked in articles.json)."""
+    return a["forced"] or bool(a.get("hand_picked")) or (
+        (meets_bar(a) or news_candidate(a) or bool(a.get("published_for_tag"))) and not a.get("duplicate_of"))
 
 
 def category_for(a):

@@ -99,8 +99,8 @@
       "label": "Jewish antizionism"
     },
     {
-      "id": "antizionism-medicine",
-      "label": "Antizionism in medicine"
+      "id": "antizionism-healthcare",
+      "label": "Antizionism in healthcare"
     },
     {
       "id": "legal-public-affairs",
@@ -141,6 +141,10 @@
     {
       "id": "arab-nazi-antizionism",
       "label": "Arab/Nazi antizionism"
+    },
+    {
+      "id": "advocacy",
+      "label": "Advocating against antizionism"
     }
   ],
   "resources": [
@@ -342,7 +346,8 @@
       "description": "Argues, using post–October 7 campus data, that universities should formally adopt the IHRA definition of antisemitism in their nondiscrimination policies to close the ambiguity around antizionism as a form of antisemitism and restore Title VI accountability.",
       "tags": [
         "campus",
-        "legal-public-affairs"
+        "legal-public-affairs",
+        "advocacy"
       ],
       "reference": "Martin, Andrea J. \"From Ambiguity to Accountability: The Case for a Legal Definition of Antisemitism in Academia.\" Pepperdine Law Review, 2025.",
       "author": "Andrea J. Martin",
@@ -459,7 +464,8 @@
         "antizionism-academy",
         "jewish-antizionism",
         "genocide-libel",
-        "colonizer-libel"
+        "colonizer-libel",
+        "advocacy"
       ],
       "reference": "Louis-Klein, Adam. \"Defeating Antizionism.\" Sapir, Issue 12, 2026.",
       "author": "Adam Louis-Klein",
@@ -603,7 +609,8 @@
       "description": "Argues that Jewish communal advocacy has relied on three failed strategies of \"inward advocacy\" (self-promotion, aligning Israel with fashionable values, and correcting facts) that treat antizionist libels as misinformation and keep Jews in the defendant's seat. Calls for turning the lens on the accuser by exposing antizionism's Soviet origins and teaching ideological literacy.",
       "tags": [
         "soviet-antizionism",
-        "colonizer-libel"
+        "colonizer-libel",
+        "advocacy"
       ],
       "reference": "Lekht, Naya. \"Three Failed Strategies of Inward Advocacy.\" JNS.",
       "author": "Naya Lekht",
@@ -706,7 +713,8 @@
       "category": "data-research",
       "description": "A catalog of the scholars, organizations, and institutions that have dropped the hyphen to standardize \"antizionism\" over \"anti-zionism\", along with the status of other campaigns encouraging more to do the same.",
       "tags": [
-        "data-research"
+        "data-research",
+        "advocacy"
       ],
       "author": "Lauren Swersky, Josh Warhit, and Ioana Timariu",
       "url": "https://drop-the-hyphen.com"
@@ -760,7 +768,8 @@
       "description": "Written after the 2025 Bondi Beach Hanukkah attack in Australia, argues — using the Southern Poverty Law Center's own definition of an antisemitic hate group — that the antizionist movement now meets that standard.",
       "tags": [
         "antizionism",
-        "legal-public-affairs"
+        "legal-public-affairs",
+        "advocacy"
       ],
       "reference": "Martin, Andrea J. \"The Antizionist Movement Is a Hate Movement: It's Time to Say So.\" The Times of Israel Blogs.",
       "author": "Andrea J. Martin",
@@ -832,7 +841,8 @@
         "history-of-antizionism",
         "soviet-antizionism",
         "jewish-antizionism",
-        "yevsektsiya"
+        "yevsektsiya",
+        "advocacy"
       ],
       "reference": "Horn, Dara. The Final Solution to the Jewish Question: A Love Story for the Living. Simon & Schuster, 2026.",
       "author": "Dara Horn",
@@ -847,7 +857,8 @@
       "description": "Pairs the stories of Soviet-era refuseniks — Jews who defied a state doctrine equating Zionism with racism and genocide — with those of Jewish students facing similar antizionist pressure on American campuses today, drawing practical strategies from the earlier movement. Foreword by Natan Sharansky.",
       "tags": [
         "soviet-antizionism",
-        "campus"
+        "campus",
+        "advocacy"
       ],
       "reference": "Tabarovsky, Izabella. Be a Refusenik: A Jewish Student's Survival Guide. Wicked Son, 2025.",
       "author": "Izabella Tabarovsky",
@@ -1083,7 +1094,7 @@
       "description": "Revisits Stalin's 1953 accusation that a group of mostly Jewish doctors had plotted against the Soviet leadership, the only one of his show trials that never took place because he died first. Argues the affair reveals Stalin's politics and the survival of overt Jew-hatred operating as antizionism in the postwar Soviet Union.",
       "tags": [
         "soviet-antizionism",
-        "antizionism-medicine"
+        "antizionism-healthcare"
       ],
       "reference": "Clarfield, A. Mark. \"The Soviet 'Doctors' Plot'—50 Years On.\" BMJ, Vol. 325, No. 7378, 2002, pp. 1487–1489.",
       "author": "A. Mark Clarfield",
@@ -1348,7 +1359,8 @@
         "jew-hatred",
         "antizionism-academy",
         "genocide-libel",
-        "colonizer-libel"
+        "colonizer-libel",
+        "advocacy"
       ],
       "reference": "Wilf, Einat. 'The Palestine Propaganda Complex.' Sapir, Volume 12, Winter 2024.",
       "author": "Einat Wilf",
@@ -1395,7 +1407,8 @@
         "bds",
         "history-of-antizionism",
         "soviet-antizionism",
-        "jew-hatred"
+        "jew-hatred",
+        "advocacy"
       ],
       "reference": "Movement Against Antizionism. \"Dispatch #11: Apartheid Week Is Coming. Are We Ready?.\" Substack, Feb. 12, 2026.",
       "author": "Movement Against Antizionism",
@@ -1519,7 +1532,8 @@
         "jew-hatred",
         "western-antizionism",
         "genocide-libel",
-        "history-of-antizionism"
+        "history-of-antizionism",
+        "advocacy"
       ],
       "reference": "Joshua Dabelstein. \"Submission to the Royal Commission into Antisemitism and Social Cohesion.\" Substack, May 11, 2026.",
       "author": "Joshua Dabelstein",
@@ -1568,7 +1582,7 @@
       "category": "substack-articles",
       "description": "Argues that antizionism operates through psychological inversion, projection, DARVO and 'accusation in the mirror', casting Jews as oppressors in order to justify exclusion and hostility. Documents examples from therapy and academia, including boycott lists of Zionist therapists and the petition on 'complicity to genocide', compare the pattern to the complicity of professionals in the 1930s, and call for organizations to enforce their ethical codes.",
       "tags": [
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "institutional-capture",
         "genocide-libel",
         "colonizer-libel",
@@ -1956,7 +1970,7 @@
       "category": "news",
       "description": "The author reports that a Philadelphia cardiologist told Congress his union is calling for Israeli healthcare workers to be excluded from hospital employment, while requiring Jewish and Israeli members to fund it through mandatory dues.",
       "tags": [
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "institutional-capture",
         "legal-public-affairs"
       ],
@@ -1987,7 +2001,7 @@
       "category": "news",
       "description": "The author reports that a dentist licensed in Illinois and California has publicly celebrated the killing of Jews and urged violence against 'Zionists'. Jewish civil-rights advocates cited in the piece say this raises serious questions about his professional fitness.",
       "tags": [
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "jew-hatred"
       ],
       "reference": "Kevin Deutsch. \"‘More Dead Zionists’: Dentist’s Public Calls for Murder of Jews Spark Professional Fitness Questions.\" Substack, Jan. 6, 2026.",
@@ -2018,8 +2032,9 @@
       "category": "substack-articles",
       "description": "The author, a clinical social worker, argues that antizionist therapists' hostility toward Zionist clients and colleagues reflects parochial empathy (intergroup empathy bias), so urging more empathy is unrealistic. She proposes starting with curiosity and describes a mindfulness-based exercise from Levari's multicultural competency trainings to interrupt label-based assumptions.",
       "tags": [
-        "antizionism-medicine",
-        "institutional-capture"
+        "antizionism-healthcare",
+        "institutional-capture",
+        "advocacy"
       ],
       "reference": "Jennifer Kogan / Levari. \"Forget Empathy: Here’s What Antizionist Therapists Need Instead.\" Substack, Oct. 1, 2026.",
       "author": "Jennifer Kogan",
@@ -2033,7 +2048,7 @@
       "category": "substack-articles",
       "description": "The authors argue that professional ethics codes in mental health, especially social work's social-justice emphasis, have been used to justify imposing political frameworks on clients. They contend that decolonial and liberation-psychology approaches can exclude or pressure Jewish and Israeli clients to adopt antizionist views, comparing this to past abuses like Soviet psychiatry, eugenics, and conversion therapy.",
       "tags": [
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "institutional-capture",
         "western-antizionism",
         "colonizer-libel"
@@ -2050,10 +2065,11 @@
       "category": "substack-articles",
       "description": "The author, a clinical social worker, argues that antizionism and decolonizing practices are inherently antisemitic and widely embraced in social work and psychotherapy institutions, which face no consequences for discrimination. She describes Jewish professionals building affiliation groups and scholarship in response, and insists that therapeutic care must be available to all.",
       "tags": [
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "institutional-capture",
         "jew-hatred",
-        "western-antizionism"
+        "western-antizionism",
+        "advocacy"
       ],
       "reference": "Jennifer Kogan / Levari. \"Mental health is not a zero sum game.\" Substack, Aug. 25, 2025.",
       "author": "Jennifer Kogan",
@@ -2067,7 +2083,7 @@
       "category": "substack-articles",
       "description": "The author, a Jewish clinical social worker, argues that Jewish therapists face antisemitism from colleagues who claim to hate only 'Zionists,' which she says means hating most Jews. She contends the psychotherapy field neglects to examine its own bias about antisemitism, and she calls on non-Jewish colleagues to speak out as allies.",
       "tags": [
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "jew-hatred",
         "jewish-antizionism"
       ],
@@ -2084,7 +2100,7 @@
       "description": "The author, a Jewish clinical social worker, argues that the mental health professions have become hostile to Jewish providers and clients since October 7th, citing examples such as the use of \"Zio,\" a Zionist referral blacklist, and \"decolonizing therapy\" training. She contrasts this with the overt Jewish quotas her grandfather faced in medical school.",
       "tags": [
         "institutional-capture",
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "jew-hatred",
         "western-antizionism"
       ],
@@ -2218,7 +2234,8 @@
         "media-commentary",
         "history-of-antizionism",
         "genocide-libel",
-        "jew-hatred"
+        "jew-hatred",
+        "advocacy"
       ],
       "reference": "Movement Against Antizionism. \"Yesterday We Stood Up — This Is Only the Beginning.\" Substack, May 15, 2026.",
       "author": "Movement Against Antizionism",
@@ -2251,7 +2268,8 @@
       "tags": [
         "jewish-antizionism",
         "history-of-antizionism",
-        "institutional-capture"
+        "institutional-capture",
+        "media-commentary"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Rebecca Nesvet: “Profiles and Cowardice: Anti-Zionism: A Jewish History and the New York Public Library”.\" Substack, Oct. 4, 2026.",
       "author": "Rebecca Nesvet",
@@ -2266,7 +2284,7 @@
       "description": "The author argues that a Journal of Medical Ethics editorial accusing Israel of 'toxic colonialism' in Gaza relies on selective evidence, misquoted figures, and assumptions that assign guilt in advance, ignoring alternative explanations such as organizational failures and uncoordinated donations via Egypt. He contends this exemplifies ideological bias and weak evidentiary standards in contemporary bioethics.",
       "tags": [
         "colonizer-libel",
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "antizionism-academy",
         "institutional-capture"
       ],
@@ -2304,7 +2322,7 @@
         "institutional-capture",
         "western-antizionism",
         "genocide-libel",
-        "antizionism-medicine"
+        "antizionism-healthcare"
       ],
       "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Simon Lucas, \"The Curious Case of Philosophy's Disciplinary Failure in Addressing Gaza\".\" Substack, March 19, 2026.",
       "author": "Simon Lucas",
@@ -2358,7 +2376,8 @@
         "campus",
         "legal-public-affairs",
         "institutional-capture",
-        "colonizer-libel"
+        "colonizer-libel",
+        "advocacy"
       ],
       "reference": "Andrew Pessin. \"Anti-Israel Divestment Demands Demand a “Damn no!” Response.\" Substack, July 7, 2024.",
       "author": "Andrew Pessin",
@@ -2375,7 +2394,8 @@
         "jew-hatred",
         "media-commentary",
         "genocide-libel",
-        "history-of-antizionism"
+        "history-of-antizionism",
+        "advocacy"
       ],
       "reference": "Naya Lekht. \"New Yorkers said \"enough\" in front of Der Sturmer, aka The New York Times.\" Substack, May 15, 2026.",
       "author": "Naya Lekht",
@@ -2720,7 +2740,8 @@
       "tags": [
         "campus",
         "legal-public-affairs",
-        "islamism"
+        "islamism",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Missouri Attorney General Launches Terror-Funding Probe Into Pro-Hamas SJP Network.\" Substack, Sept. 23, 2026.",
       "author": "Kevin Deutsch",
@@ -2784,7 +2805,8 @@
       "tags": [
         "campus",
         "antizionism-academy",
-        "genocide-libel"
+        "genocide-libel",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"UF Bars Antizionist Course Series Teaching ‘Genocide’ and ‘Ethnic Cleansing’ Falsehoods From Campus.\" Substack, Sept. 14, 2026.",
       "author": "Kevin Deutsch",
@@ -2948,7 +2970,8 @@
       "tags": [
         "genocide-libel",
         "media-commentary",
-        "western-antizionism"
+        "western-antizionism",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"‘That’s Propaganda’: Veteran TV Journalist Confronts Antizionist Candidate Over Israel ‘Genocide’ Claims.\" Substack, Aug. 18, 2026.",
       "author": "Kevin Deutsch",
@@ -2995,7 +3018,8 @@
       "description": "The author reports that Peloton instructor Adrian Williams deleted an Instagram promotion showing a menu map of an antizionist Palestinian restaurant that erased Israel, and posted a statement about listening and learning. The author also notes that StandWithUs sent Peloton's leadership a letter asking it to review instructors' social-media conduct, adopt the IHRA definition of antisemitism, and provide antisemitism training.",
       "tags": [
         "institutional-capture",
-        "media-commentary"
+        "media-commentary",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Peloton Instructor Deletes Israel-Erasure Post as Company Plans Jewish Member Forum Amid Backlash.\" Substack, Aug. 14, 2026.",
       "author": "Kevin Deutsch",
@@ -3026,7 +3050,8 @@
       "description": "The author reports that Peloton has stayed silent after instructor Adrian Williams advertised a Palestinian restaurant chain whose menu shows a map labeling Israel as 'Palestine,' and that StandWithUs has launched a campaign urging Peloton to enforce its policies against anti-Jewish bigotry. The author frames the map as erasing the Jewish state and notes the chain's earlier use of 'From the River to the Sea.'",
       "tags": [
         "institutional-capture",
-        "media-commentary"
+        "media-commentary",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Peloton Goes Silent as Jewish Backlash Grows Over Instructor’s Israel-Erasure Ad.\" Substack, Aug. 11, 2026.",
       "author": "Kevin Deutsch",
@@ -3134,7 +3159,8 @@
       "tags": [
         "legal-public-affairs",
         "campus",
-        "jew-hatred"
+        "jew-hatred",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"U.S. Supreme Court Brief Seeks Recognition of Antizionism as Distinct Form of Anti-Jewish Discrimination.\" Substack, July 22, 2026.",
       "author": "Kevin Deutsch",
@@ -3636,7 +3662,8 @@
       "tags": [
         "legal-public-affairs",
         "western-antizionism",
-        "institutional-capture"
+        "institutional-capture",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Why a Jewish Civil Rights Group Wants Mamdani Removed From Office.\" Substack, June 3, 2026.",
       "author": "Kevin Deutsch",
@@ -3729,7 +3756,8 @@
       "description": "The author reports that Council Speaker Julie Menin has introduced new legislation to restore buffer-zone protections for Jewish schools and institutions after Mayor Mamdani vetoed the original bill. He argues the veto handed a win to DSA, CAIR, and Jewish Voice for Peace and that the new bill sidesteps the constitutional objections Mamdani cited.",
       "tags": [
         "legal-public-affairs",
-        "jewish-antizionism"
+        "jewish-antizionism",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"NYC Council Speaker Julie Menin Just Found a Way Around Mamdani’s Veto of Jewish School Safety Bill.\" Substack, May 20, 2026.",
       "author": "Kevin Deutsch",
@@ -3774,7 +3802,8 @@
       "description": "The author reports that two NYC public school teachers face calls for discipline after being photographed at demonstrations outside Manhattan's Park East Synagogue, which he describes as anti-Jewish mobs. The head of United Jewish Teachers filed complaints seeking investigations, and one teacher also joined marches in Brooklyn's Midwood neighborhood.",
       "tags": [
         "institutional-capture",
-        "jew-hatred"
+        "jew-hatred",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"NYC Teachers Face Calls for Discipline After Joining Anti-Jewish Mobs Targeting Synagogues.\" Substack, May 15, 2026.",
       "author": "Kevin Deutsch",
@@ -4034,7 +4063,8 @@
       "tags": [
         "jewish-antizionism",
         "history-of-antizionism",
-        "institutional-capture"
+        "institutional-capture",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Brooklyn Public Library to Host Anti-Israel Event Tonight Featuring Antizionist Pair, Including Author Who Distorts Jewish History.\" Substack, April 13, 2026.",
       "author": "Kevin Deutsch",
@@ -4083,7 +4113,8 @@
         "genocide-libel",
         "media-commentary",
         "colonizer-libel",
-        "institutional-capture"
+        "institutional-capture",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Selling Hate as ‘History’: Kansas City Bookstores, Library Elevate Antizionist Author Trafficking in Anti-Jewish Libels.\" Substack, April 7, 2026.",
       "author": "Kevin Deutsch",
@@ -4220,7 +4251,8 @@
       "category": "news",
       "description": "The author reports that UT Dallas suspended its SJP chapter for at least a year after disruptions tied to the 2025 commencement, stripping its registered-organization status. The post frames the suspension as a win for Jewish student advocacy, citing Hillel president Jade Steinberg.",
       "tags": [
-        "campus"
+        "campus",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"UT Dallas Suspends Bigoted SJP Chapter After Jewish Student Advocacy: “We Are Not Jews With Trembling Knees”.\" Substack, March 26, 2026.",
       "author": "Kevin Deutsch",
@@ -4252,7 +4284,8 @@
         "campus",
         "legal-public-affairs",
         "antizionism-academy",
-        "institutional-capture"
+        "institutional-capture",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Trump DOJ Hits UCLA With Second Lawsuit Over Antizionist Bigotry, Says University Failed to Protect Jewish Faculty From Harassment.\" Substack, March 26, 2026.",
       "author": "Kevin Deutsch",
@@ -4358,7 +4391,8 @@
       "tags": [
         "campus",
         "legal-public-affairs",
-        "institutional-capture"
+        "institutional-capture",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Berkeley Settlement Shatters the “It’s Just Antizionism” Defense.\" Substack, March 19, 2026.",
       "author": "Kevin Deutsch",
@@ -4388,7 +4422,7 @@
       "category": "news",
       "description": "The author reports that a taxpayer-funded social worker in New York City's public hospital system expressed hatred toward Jews and engaged in antizionist activism, including support for the October 7 massacre.",
       "tags": [
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "institutional-capture",
         "jew-hatred"
       ],
@@ -4497,7 +4531,8 @@
       "description": "The author reports that JewsInSchool, an advocacy group for Jewish students and families, is urging Congress to investigate the National Association of Independent Schools, alleging it has embedded antisemitism and antizionist ideology across elite K-12 private schools. Only a one-sentence preview is available.",
       "tags": [
         "institutional-capture",
-        "legal-public-affairs"
+        "legal-public-affairs",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"JewsInSchool Presses Congress to Probe NAIS Over Anti-Jewish Bigotry in Elite K–12 Schools.\" Substack, March 2, 2026.",
       "author": "Kevin Deutsch",
@@ -4558,7 +4593,8 @@
       "description": "The author reports that the Missouri House passed a bill adopting the IHRA working definition of antisemitism and requiring reporting of antisemitic incidents in public schools and universities, framing it as a victory for Jewish students since October 7. The bill, sponsored by Rep. George Hruza, now moves to the state Senate.",
       "tags": [
         "legal-public-affairs",
-        "campus"
+        "campus",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Missouri House Takes Stand Against Surging Anti-Jewish Bigotry, Advances IHRA Bill to Protect Students.\" Substack, Feb. 17, 2026.",
       "author": "Kevin Deutsch",
@@ -4574,7 +4610,8 @@
       "tags": [
         "bds",
         "legal-public-affairs",
-        "institutional-capture"
+        "institutional-capture",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Brooklyn Navy Yard Faces Allegations of Illegal Israel Boycott in Clash With State Anti-BDS Law.\" Substack, Feb. 15, 2026.",
       "author": "Kevin Deutsch",
@@ -4680,7 +4717,8 @@
       "tags": [
         "institutional-capture",
         "legal-public-affairs",
-        "antizionism-medicine"
+        "antizionism-healthcare",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"NYC Health Department Used Taxpayer Dollars for Antizionist Indoctrination.\" Substack, Feb. 4, 2026.",
       "author": "Kevin Deutsch",
@@ -4878,7 +4916,8 @@
       "tags": [
         "islamism",
         "legal-public-affairs",
-        "jew-hatred"
+        "jew-hatred",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"'Pose a Real Threat': Jewish Advocates Urge Chicago Venue to Cancel Muslim American Society Event Over Alleged Ties to Terrorism.\" Substack, Dec. 20, 2025.",
       "author": "Kevin Deutsch",
@@ -4894,7 +4933,8 @@
       "tags": [
         "genocide-libel",
         "antizionism-academy",
-        "campus"
+        "campus",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Jewish Leaders Demand Princeton Cancel Course Accusing Israel of “Ongoing Genocide”.\" Substack, Dec. 20, 2025.",
       "author": "Kevin Deutsch",
@@ -4956,7 +4996,8 @@
       "description": "The author reports that outgoing NYC Mayor Eric Adams announced two executive orders at an antisemitism summit to protect the city's relationship with Israel and shield Jewish institutions from harassment. He notes that antizionist Mayor-elect Zohran Mamdani will soon decide whether to cancel them.",
       "tags": [
         "legal-public-affairs",
-        "western-antizionism"
+        "western-antizionism",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"A Preemptive Defense of Jewish New Yorkers — and Israel — Before Mamdani Takes Power.\" Substack, Dec. 5, 2025.",
       "author": "Kevin Deutsch",
@@ -5065,7 +5106,8 @@
       "description": "The author argues that Texas Governor Greg Abbott's designation of CAIR and the Muslim Brotherhood as terrorist organizations is long overdue. He contends these groups demonize Israel and its supporters and launder Hamas and Brotherhood ideology through American civil society, and urges Florida to follow.",
       "tags": [
         "islamism",
-        "legal-public-affairs"
+        "legal-public-affairs",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"CAIR’s Libels Against Jews Just Met Their First Real Consequence—In Texas.\" Substack, Nov. 18, 2025.",
       "author": "Kevin Deutsch",
@@ -5156,7 +5198,7 @@
       "category": "news",
       "description": "The author reports that nearly five months after Dr. Mahbubul Patwary's antisemitic social-media activity drew calls for action from Jewish organizations and a Missouri lawmaker, he remains on staff at SSM Health hospitals and is still listed as an active provider.",
       "tags": [
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "jew-hatred",
         "institutional-capture"
       ],
@@ -5218,7 +5260,8 @@
       "description": "The author reports that over 500 legal experts, Holocaust historians, and genocide scholars signed a letter urging reversal of a resolution accusing Israel of genocide in Gaza, arguing the charge distorts international law and misrepresents facts.",
       "tags": [
         "genocide-libel",
-        "legal-public-affairs"
+        "legal-public-affairs",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"“When everything becomes genocide, nothing does”: Legal scholars and historians demand reversal of genocide label against Israel.\" Substack, Oct. 28, 2025.",
       "author": "Kevin Deutsch",
@@ -5234,7 +5277,8 @@
       "tags": [
         "western-antizionism",
         "legal-public-affairs",
-        "jew-hatred"
+        "jew-hatred",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"St. Louis and Kansas City Rabbis Join Over 700 Jewish Clergy in Condemning Antizionism and Rising Hostility Toward Jews.\" Substack, Oct. 22, 2025.",
       "author": "Kevin Deutsch",
@@ -5264,7 +5308,8 @@
       "tags": [
         "bds",
         "legal-public-affairs",
-        "antizionism-academy"
+        "antizionism-academy",
+        "advocacy"
       ],
       "reference": "Kevin Deutsch. \"Florida Expands Anti-BDS Blacklist, Barring 91 New Entities from State Investments.\" Substack, Oct. 21, 2025.",
       "author": "Kevin Deutsch",
@@ -5385,7 +5430,7 @@
       "category": "news",
       "description": "The author reports that a St. Louis doctor accused of making antisemitic comments on social media has drawn condemnation from Jewish groups and the chair of Missouri's Senate Health and Welfare Committee, who called for an investigation into his conduct.",
       "tags": [
-        "antizionism-medicine",
+        "antizionism-healthcare",
         "jew-hatred"
       ],
       "reference": "Kevin Deutsch. \"“Alarming Bias”: Jewish Groups, Lawmaker Condemn Doctor's Antisemitic X Posts.\" Substack, June 25, 2024.",
@@ -5404,7 +5449,7 @@
         "antizionism-academy",
         "jew-hatred",
         "colonizer-libel",
-        "antizionism-medicine"
+        "antizionism-healthcare"
       ],
       "reference": "Jennifer Kogan / Levari. \"The Cost of Overlooking Jewish Students.\" Substack, Aug. 7, 2026.",
       "author": "Jennifer Kogan",
@@ -6137,7 +6182,8 @@
       "description": "Frames antizionism as the successor to antijudaism and antisemitism within a recurring cycle of libels, stigma, violence, and denial, with examples drawn from the social work field.",
       "tags": [
         "jew-hatred",
-        "antizionism"
+        "antizionism",
+        "advocacy"
       ],
       "reference": "Social Workers Against Antizionism. Canva video.",
       "author": "Jennifer Kogan",
@@ -6151,7 +6197,8 @@
       "description": "Presents antizionism as the single greatest threat facing Jews in the Diaspora today, using real-world examples to build a toolkit for confronting it. Presented by Joshua Dabelstein, Australian head of the Movement Against Antizionism.",
       "tags": [
         "antizionism",
-        "jew-hatred"
+        "jew-hatred",
+        "advocacy"
       ],
       "reference": "Joshua Dabelstein. \"Understanding & Confronting Antizionism with Joshua Dabelstein, Movement Against Antizionism (MAAZ).\" Australian Jewish Association. YouTube, April 22, 2026.",
       "author": "Joshua Dabelstein",
@@ -6167,7 +6214,8 @@
       "tags": [
         "antizionism",
         "colonizer-libel",
-        "genocide-libel"
+        "genocide-libel",
+        "advocacy"
       ],
       "reference": "Adam Louis-Klein. \"Adam Louis-Klein interview with Cantor Randy Herman.\" Har Zion Temple. YouTube, April 29, 2026.",
       "author": "Cantor Randy Herman with Adam Louis-Klein",
@@ -6223,21 +6271,6 @@
       "year": null
     },
     {
-      "id": "substack-how-antizionism-erases-jews-and-prevents",
-      "title": "How Antizionism Erases Jews (And Prevents Peace)",
-      "category": "substack-articles",
-      "description": "Argues that the Palestinian national narrative was built as a counter-narrative to erase Jewish history, recasting Jews as colonial settlers, the Nakba as the equivalent of the Holocaust, and \"Palestine\" as an ancient name. Contends this severs the Jews' historical tie to their land and begins to argue that Palestinian peoplehood was a constructed identity.",
-      "tags": [
-        "colonizer-libel",
-        "history-of-antizionism"
-      ],
-      "reference": "Whole Story Institute. \"How Antizionism Erases Jews (And Prevents Peace).\" Substack, July 7, 2026.",
-      "author": "Gregg Rosenberg",
-      "url": "https://ghrosenb.substack.com/p/how-antizionism-erases-jews-and-prevents",
-      "year": 2026,
-      "date": "2026-07-07"
-    },
-    {
       "id": "substack-by-zachary-dulberg-the-relationship",
       "title": "By Zachary Dulberg, “The relationship between antizionism, antisemitism, and moral inversion: A data-driven approach”",
       "category": "substack-articles",
@@ -6280,7 +6313,7 @@
         "institutional-capture",
         "antizionism-academy",
         "western-antizionism",
-        "antizionism-medicine",
+        "jew-hatred",
         "campus"
       ],
       "reference": "Jennifer Kogan / Levari. \"The Politics of Oppression: How Social Work Abandoned the Jews.\" Substack, Nov. 9, 2026.",
@@ -6297,7 +6330,8 @@
       "tags": [
         "bds",
         "jew-hatred",
-        "media-commentary"
+        "media-commentary",
+        "advocacy"
       ],
       "reference": "ESK. \"Why is this Neo-Jihadist hate ride different from all other Neo-Jihadist hate rides?.\" Substack, Nov. 9, 2026.",
       "author": "ESK",
@@ -6511,6 +6545,1027 @@
       "url": "https://johnaziz.substack.com/p/the-intifada-arrives-in-australia",
       "year": 2025,
       "date": "2025-12-14"
+    },
+    {
+      "id": "substack-how-antizionisms-libels-against-israel",
+      "title": "How Antizionism’s Libels Against Israel Mirror the Prelude to the Rwandan Genocide",
+      "category": "substack-articles",
+      "description": "The author summarizes a Wall Street Journal essay by Adam Louis-Klein arguing that accusations of genocide against Israel parallel Hutu propaganda that falsely accused Tutsis of genocide before 1994. It contends that the 'settler-colonial' framing mirrors colonial-era 'Hamitic' racial myths and calls for exposing this pattern while still permitting critique of specific Israeli policies.",
+      "tags": [
+        "genocide-libel",
+        "colonizer-libel",
+        "western-antizionism",
+        "antizionism-academy",
+        "jew-hatred"
+      ],
+      "reference": "Movement Against Antizionism. \"How Antizionism’s Libels Against Israel Mirror the Prelude to the Rwandan Genocide.\" Substack, July 23, 2026.",
+      "author": "Movement Against Antizionism",
+      "url": "https://movementagainstantizionism.substack.com/p/how-antizionisms-libels-against-israel",
+      "year": 2026,
+      "date": "2026-07-23"
+    },
+    {
+      "id": "substack-meet-the-architects-of-academic-antizionism",
+      "title": "Meet the Architects of Academic Antizionism (Dispatch #13)",
+      "category": "substack-articles",
+      "description": "The author traces a roughly century-long genealogy of antizionism in academia, from Soviet and Arab nationalist propaganda through postcolonial theory and settler-colonial theory to the construction of the genocide libel. The dispatch names key scholars at each stage and argues they embedded antizionist ideology in academic institutions, with several Jewish or Israeli-born figures tokenized for added legitimacy.",
+      "tags": [
+        "antizionism-academy",
+        "history-of-antizionism",
+        "soviet-antizionism",
+        "colonizer-libel",
+        "genocide-libel"
+      ],
+      "reference": "Movement Against Antizionism. \"Meet the Architects of Academic Antizionism (Dispatch #13).\" Substack, March 18, 2026.",
+      "author": "Movement Against Antizionism",
+      "url": "https://movementagainstantizionism.substack.com/p/meet-the-architects-of-academic-antizionism",
+      "year": 2026,
+      "date": "2026-03-18"
+    },
+    {
+      "id": "substack-antizionism-is-not-jewish-anti-zionism",
+      "title": "Antizionism Is Not Jewish Anti-Zionism (Dispatch #12)",
+      "category": "substack-articles",
+      "description": "The author argues that conflating pre-1948 Jewish anti-Zionism, a set of intra-Jewish debates, with contemporary antizionism, which he characterizes as a hate ideology denying Jews the right to political self-determination, gives the latter cover and endangers Jewish communities. He urges hyphenation-based terminological precision, naming antizionism as hate, and asking non-Jews for help in interrupting it.",
+      "tags": [
+        "jewish-antizionism",
+        "history-of-antizionism",
+        "soviet-antizionism",
+        "jew-hatred",
+        "colonizer-libel",
+        "advocacy"
+      ],
+      "reference": "Movement Against Antizionism. \"Antizionism Is Not Jewish Anti-Zionism (Dispatch #12).\" Substack, March 13, 2026.",
+      "author": "Movement Against Antizionism",
+      "url": "https://movementagainstantizionism.substack.com/p/antizionism-is-not-jewish-anti-zionism",
+      "year": 2026,
+      "date": "2026-03-13"
+    },
+    {
+      "id": "substack-dispatch-10-how-jewish-discourse",
+      "title": "Dispatch #10: How Jewish Discourse Misdiagnoses Antizionism",
+      "category": "substack-articles",
+      "description": "The author argues that Jewish discourse repeatedly misdiagnoses antizionism through seven rhetorical habits, including 'cross the line' framing, the 'mask' metaphor, hyphenating 'anti-Zionism,' and claiming 'it's not about Israel.' He contends these habits fold antizionism into older forms of antisemitism rather than treating it as a distinct ideology aimed at eliminating Israel and purging those labeled 'Zionists,' and he proposes clearer language instead.",
+      "tags": [
+        "jew-hatred",
+        "media-commentary",
+        "history-of-antizionism",
+        "advocacy"
+      ],
+      "reference": "Movement Against Antizionism. \"Dispatch #10: How Jewish Discourse Misdiagnoses Antizionism.\" Substack, Jan. 26, 2026.",
+      "author": "Movement Against Antizionism",
+      "url": "https://movementagainstantizionism.substack.com/p/dispatch-10-how-jewish-discourse",
+      "year": 2026,
+      "date": "2026-01-26"
+    },
+    {
+      "id": "substack-why-physical-self-defense-is-not",
+      "title": "Dispatch #8: Why Physical Self-Defense Is Not a Politics",
+      "category": "substack-articles",
+      "description": "The author argues that the turn toward armed self-defense after the Bondi Hanukkah massacre reflects Jewish civic retreat, and that Jewish organizations have failed for decades to name antizionism as the ideology driving anti-Jewish hate. He contends antizionism is a libel-narrative system with Nazi-Arab, Soviet, and settler-colonial roots that operates across left and right, and calls for precise public campaigns against it.",
+      "tags": [
+        "history-of-antizionism",
+        "jew-hatred",
+        "colonizer-libel",
+        "genocide-libel",
+        "institutional-capture",
+        "advocacy"
+      ],
+      "reference": "Movement Against Antizionism. \"Dispatch #8: Why Physical Self-Defense Is Not a Politics.\" Substack, Dec. 22, 2025.",
+      "author": "Movement Against Antizionism",
+      "url": "https://movementagainstantizionism.substack.com/p/why-physical-self-defense-is-not",
+      "year": 2025,
+      "date": "2025-12-22"
+    },
+    {
+      "id": "substack-dispatch-6-the-political-rationalization",
+      "title": "Dispatch #6: The Political Rationalization of Anti-Jewish Hate",
+      "category": "substack-articles",
+      "description": "The author argues that every era justifies anti-Jewish hatred as a political response to supposed Jewish offenses, tracing this from medieval libels through Dreyfus and Kristallnacht to the Amsterdam attacks and the Boulder firebombing. He contends that contemporary antizionist narratives (colonizer, apartheid, genocide) are libels in the same lineage, and that softening our language for them obscures the pattern.",
+      "tags": [
+        "jew-hatred",
+        "history-of-antizionism",
+        "media-commentary",
+        "genocide-libel",
+        "colonizer-libel"
+      ],
+      "reference": "Movement Against Antizionism. \"Dispatch #6: The Political Rationalization of Anti-Jewish Hate.\" Substack, Dec. 8, 2025.",
+      "author": "Movement Against Antizionism",
+      "url": "https://movementagainstantizionism.substack.com/p/dispatch-6-the-political-rationalization",
+      "year": 2025,
+      "date": "2025-12-08"
+    },
+    {
+      "id": "substack-dispatch-3-the-geneology-of-antizionist",
+      "title": "Dispatch #3: The Genealogy of Antizionist Hate",
+      "category": "substack-articles",
+      "description": "The author traces antizionism from Lenin and the Yevsektsiya through Soviet propaganda, into Arab nationalism and expulsions of Jews from the Middle East, and then into Western academia and activism, culminating in its post-October 7 surge. The author argues it is a coherent ideology of exclusion that should be critically studied, and the post also includes a call for personal stories for a podcast series.",
+      "tags": [
+        "history-of-antizionism",
+        "soviet-antizionism",
+        "yevsektsiya",
+        "western-antizionism",
+        "arab-nazi-antizionism"
+      ],
+      "reference": "Movement Against Antizionism. \"Dispatch #3: The Genealogy of Antizionist Hate.\" Substack, Nov. 17, 2025.",
+      "author": "Movement Against Antizionism",
+      "url": "https://movementagainstantizionism.substack.com/p/dispatch-3-the-geneology-of-antizionist",
+      "year": 2025,
+      "date": "2025-11-17"
+    },
+    {
+      "id": "substack-by-jeffrey-malkan-the-fall-of-jewish",
+      "title": "By Jeffrey Malkan, \"The Fall of Jewish Columbia\"",
+      "category": "substack-articles",
+      "description": "The author argues that Columbia University's faculty and students, driven by critical race theory and a settler-colonial worldview, have turned the campus against Jews and Israel, culminating in the 2024 encampments and celebration of October 7. He frames this as a betrayal of academic vocation, comparable to the treason of German intellectuals in the 1920s, and as a revival of Jewish scapegoating.",
+      "tags": [
+        "antizionism-academy",
+        "campus",
+        "western-antizionism",
+        "institutional-capture",
+        "colonizer-libel"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Jeffrey Malkan, \"The Fall of Jewish Columbia\".\" Substack, July 26, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-jeffrey-malkan-the-fall-of-jewish",
+      "year": 2026,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "substack-by-jones-and-gisle-the-antizionist",
+      "title": "By Jones and Gisle: \"The Antizionist Script: How Two Strangers Reached the Same Conclusion\"",
+      "category": "substack-articles",
+      "description": "Two authors, Jones and Gisle, each recount how they came to antizionism through academia and punk/anarchist activism, and how October 7th led them away from it. They argue the movement uses an identical script of 'colonizer, apartheid, genocide', drawn from Said, Fanon, Wolfe and others, and that it shuts out dissenters and ultimately targets Jews.",
+      "tags": [
+        "western-antizionism",
+        "colonizer-libel",
+        "genocide-libel",
+        "apartheid-libel",
+        "antizionism-academy"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Jones and Gisle: \"The Antizionist Script: How Two Strangers Reached the Same Conclusion\".\" Substack, July 15, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-jones-and-gisle-the-antizionist",
+      "year": 2026,
+      "date": "2026-07-15"
+    },
+    {
+      "id": "substack-by-barry-finger-review-of-molly-crabapple",
+      "title": "By Barry Finger, \"Review of Molly Crabapple, 'Here Where We Live Is Our Country' (Random House, 2026)\"",
+      "category": "substack-articles",
+      "description": "The author reviews Molly Crabapple's book, which holds up the anti-Zionist Bund as a model for leftist Jews today, and argues she ignores Labor Zionism's critique of Bundism and the Bund's historical failures. He traces the socialist movement's indifference to Jewish survival and contends that both the Bund and Labor Zionists offered serious but competing programs for Jewish national survival.",
+      "tags": [
+        "jewish-antizionism",
+        "history-of-antizionism",
+        "soviet-antizionism",
+        "jew-hatred"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Barry Finger, \"Review of Molly Crabapple, 'Here Where We Live Is Our Country' (Random House, 2026)\".\" Substack, July 11, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-barry-finger-review-of-molly-crabapple",
+      "year": 2026,
+      "date": "2026-07-11"
+    },
+    {
+      "id": "substack-by-ernest-sternberg-dog-rape-and",
+      "title": "By Ernest Sternberg: \"Dog-Rape and Organ Harvesting: The Logic of Humanitarian Blood Libel\"",
+      "category": "substack-articles",
+      "description": "The author argues that claims of dog-rape and organ harvesting against Israel, such as Nicholas Kristof's reliance on Euro-Med Human Rights Monitor, are modern blood libels, and shows the organ-theft claim is medically implausible. He contends that progressive humanitarianism now plays the role that race pseudoscience played in earlier antisemitism, serving as a respectable vehicle for demonizing Zionists.",
+      "tags": [
+        "jew-hatred",
+        "western-antizionism",
+        "institutional-capture",
+        "media-commentary",
+        "genocide-libel"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Ernest Sternberg: \"Dog-Rape and Organ Harvesting: The Logic of Humanitarian Blood Libel\".\" Substack, May 31, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-ernest-sternberg-dog-rape-and",
+      "year": 2026,
+      "date": "2026-05-31"
+    },
+    {
+      "id": "substack-by-russell-shalev-a-bespoke-slur",
+      "title": "By Russell Shalev: \"A Bespoke Slur: Why 'Ethnocracy' is a Pseudo-Academic Weapon Against Israel\"",
+      "category": "substack-articles",
+      "description": "The author argues that 'ethnocracy' is a term coined specifically to delegitimize Israel and is applied selectively, since democracies like Greece and Estonia have comparable ethnic and diaspora ties. He also disputes claims of discriminatory Israeli land law and argues a Palestinian state would itself be an ethnostate.",
+      "tags": [
+        "apartheid-libel",
+        "antizionism-academy",
+        "legal-public-affairs"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Russell Shalev: \"A Bespoke Slur: Why 'Ethnocracy' is a Pseudo-Academic Weapon Against Israel\".\" Substack, May 2, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-russell-shalev-a-bespoke-slur",
+      "year": 2026,
+      "date": "2026-05-02"
+    },
+    {
+      "id": "substack-by-allen-zeesman-how-antisemitism",
+      "title": "By Allen Zeesman: How Antisemitism Adapts to the Moral Language of Each Age",
+      "category": "substack-articles",
+      "description": "The author, drawing on Jonathan Sacks, argues that antisemitism persists by adapting to the dominant moral language of each era (religious, national, racial, and now liberal discourse centered on power and justice). In the contemporary liberal age, he contends, it often takes the form of antizionism, in which Israel is classed as 'powerful' and judged asymmetrically.",
+      "tags": [
+        "jew-hatred",
+        "history-of-antizionism",
+        "western-antizionism"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Allen Zeesman: How Antisemitism Adapts to the Moral Language of Each Age.\" Substack, May 2, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-allen-zeesman-how-antisemitism",
+      "year": 2026,
+      "date": "2026-05-02"
+    },
+    {
+      "id": "substack-by-erez-levin-the-linguistic-shell",
+      "title": "By Erez Levin, \"The Linguistic Shell Game\"",
+      "category": "substack-articles",
+      "description": "The author argues that 'antisemitism' has been diluted by overuse, while antizionism, which he says advocates dismantling Israel, has been sanitized as academic critique. He proposes a 'hierarchy of harm' that separates tropes and legitimate policy critique from eliminationist Jew-hatred and antizionism, and urges reserving the strongest condemnation for the latter.",
+      "tags": [
+        "jew-hatred",
+        "media-commentary"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Erez Levin, \"The Linguistic Shell Game\".\" Substack, April 26, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-erez-levin-the-linguistic-shell",
+      "year": 2026,
+      "date": "2026-04-26"
+    },
+    {
+      "id": "substack-by-marcia-kupfer-palestine-as-a-geographic",
+      "title": "By Marcia Kupfer, \"'Palestine'\" as a geographic label in popular and academic histories\"",
+      "category": "substack-articles",
+      "description": "The author argues that after October 7, Western antizionist discourse turned 'Palestine' into both a totalizing moral cause and a trivialized meme, using 'context' and decolonization frames to negate Israeli victimhood. She contends this reproduces older Christian anti-Jewish supersessionist tropes, such as the 'Palestinian Jesus,' and conflates antizionism with exclusion of Jews in practice.",
+      "tags": [
+        "western-antizionism",
+        "jew-hatred",
+        "institutional-capture",
+        "antizionism-arts",
+        "genocide-libel"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Marcia Kupfer, \"'Palestine'\" as a geographic label in popular and academic histories\".\" Substack, March 27, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-marcia-kupfer-palestine-as-a-geographic",
+      "year": 2026,
+      "date": "2026-03-27"
+    },
+    {
+      "id": "substack-by-eric-daniel-buesing-from-eugenics",
+      "title": "By Eric Daniel Buesing, \"From Eugenics to Anti-Zionism: Elite Philanthropy and the Structural Marginalization of Jewish Self-Determination\"",
+      "category": "substack-articles",
+      "description": "The author argues, using Foucault's genealogical method, that the Ford, Rockefeller, Carnegie, and Mellon foundations have shifted from funding eugenics and immigration restriction aimed at Jews to funding BDS groups and decolonial academic pipelines that delegitimize Israel. The paper contends that the institutional effect on Jewish self-determination has stayed the same even as the ideological vocabulary changed.",
+      "tags": [
+        "institutional-capture",
+        "antizionism-academy",
+        "history-of-antizionism",
+        "bds",
+        "western-antizionism"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Eric Daniel Buesing, \"From Eugenics to Anti-Zionism: Elite Philanthropy and the Structural Marginalization of Jewish Self-Determination\".\" Substack, March 27, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-eric-daniel-buesing-from-eugenics",
+      "year": 2026,
+      "date": "2026-03-27"
+    },
+    {
+      "id": "substack-by-gary-gindler-from-lenin-to-marcuse",
+      "title": "By Gary Gindler, \"From Lenin to Marcuse to Anti-Zionism\"",
+      "category": "substack-articles",
+      "description": "The author argues that Lenin's rules of 'exterminative' polemics against political enemies and Marcuse's 'repressive tolerance' together created an asymmetric framework that underlies Soviet antizionism and today's leftist delegitimization of Zionism, including deplatforming and BDS. The post also carries announcements, such as a call for panelists on antizionism in Middle East Studies and an upcoming webinar, plus a plug for the author's new book.",
+      "tags": [
+        "western-antizionism",
+        "soviet-antizionism",
+        "history-of-antizionism",
+        "campus",
+        "bds"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Gary Gindler, \"From Lenin to Marcuse to Anti-Zionism\".\" Substack, March 18, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-gary-gindler-from-lenin-to-marcuse",
+      "year": 2026,
+      "date": "2026-03-18"
+    },
+    {
+      "id": "substack-tobias-gisle-we-need-to-talk-about",
+      "title": "Tobias Gisle, We Need to Talk About the Most Influential Academic Fraud of the 20th Century",
+      "category": "substack-articles",
+      "description": "The author argues that Said's Orientalism is a methodologically flawed, politically motivated theory that became a foundational paradigm in Middle Eastern studies because it reframes Arab grievances, deflects from internal problems, and creates an Arab analogue to antisemitism that erases Jewish specificity and delegitimizes Israel. The piece also faults Foucault's and Said's failure to anticipate or understand political Islam.",
+      "tags": [
+        "antizionism-academy",
+        "western-antizionism",
+        "colonizer-libel",
+        "history-of-antizionism"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"Tobias Gisle, We Need to Talk About the Most Influential Academic Fraud of the 20th Century.\" Substack, March 15, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/tobias-gisle-we-need-to-talk-about",
+      "year": 2026,
+      "date": "2026-03-15"
+    },
+    {
+      "id": "substack-the-great-lethal-projection-antizionisms",
+      "title": "\"The Great Lethal Projection: Antizionism’s Debt to the Protocols,\" by Richard Landes",
+      "category": "substack-articles",
+      "description": "The author argues that the Protocols of the Elders of Zion is best read as a gentile projection of the dominating imperative onto Jews, which the Bolsheviks and Nazis used to justify their own domination and genocide. He suggests antizionism, especially accusing Israel of genocide, continues this pattern, and asks whether antizionist progressives fear their Islamist allies or unconsciously share those desires.",
+      "tags": [
+        "jew-hatred",
+        "genocide-libel",
+        "arab-nazi-antizionism",
+        "soviet-antizionism",
+        "western-antizionism"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"\"The Great Lethal Projection: Antizionism’s Debt to the Protocols,\" by Richard Landes.\" Substack, Feb. 27, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/the-great-lethal-projection-antizionisms",
+      "year": 2026,
+      "date": "2026-02-27"
+    },
+    {
+      "id": "substack-demonizing-black-people-can-become",
+      "title": "Demonizing black people can become racist when...",
+      "category": "substack-articles",
+      "description": "The author argues that, as with libels against other groups, demonizing Israel as genocidal, apartheid, or colonial is itself the bigotry rather than something that 'crosses the line' into it. She contends Jewish legacy organizations cling to the 'crossing the line' framing because of a narrow Holocaust-era view of antisemitism, and promotes the Three Era Framework to recognize antizionism as a new form of Jew-hatred.",
+      "tags": [
+        "jew-hatred",
+        "genocide-libel",
+        "apartheid-libel",
+        "colonizer-libel",
+        "western-antizionism"
+      ],
+      "reference": "Naya Lekht. \"Demonizing black people can become racist when....\" Substack, July 10, 2026.",
+      "author": "Naya Lekht",
+      "url": "https://nayalekht.substack.com/p/demonizing-black-people-can-become",
+      "year": 2026,
+      "date": "2026-07-10"
+    },
+    {
+      "id": "substack-beware-those-who-denounce-antisemitism",
+      "title": "Beware Those Who Denounce Antisemitism",
+      "category": "substack-articles",
+      "description": "The author argues that from Lenin and the Soviet Union to modern campus speakers, Hasan Piker, and Zohran Mamdani, antizionists denounce antisemitism while denying Jewish nationhood and promoting antizionist libels. The author sees this as a continuation of older patterns of separating individual Jews from Jewish collective identity, and urges demanding that such figures denounce antizionism too.",
+      "tags": [
+        "soviet-antizionism",
+        "history-of-antizionism",
+        "jew-hatred",
+        "western-antizionism",
+        "genocide-libel"
+      ],
+      "reference": "Naya Lekht. \"Beware Those Who Denounce Antisemitism.\" Substack, Nov. 22, 2025.",
+      "author": "Naya Lekht",
+      "url": "https://nayalekht.substack.com/p/beware-those-who-denounce-antisemitism",
+      "year": 2025,
+      "date": "2025-11-22"
+    },
+    {
+      "id": "substack-decoding-antizionism-as-the-third",
+      "title": "Decoding Antizionism as the Third Era of Jew-Hatred",
+      "category": "substack-articles",
+      "description": "The author presents a 60-75 minute lesson plan arguing that Jew-hatred evolves through three eras (anti-Judaism, antisemitism, antizionism), each casting Jews as violators of the era's dominant moral values. It teaches students to identify recurring libels and their modern forms, with discussion prompts, a case study, and a worksheet.",
+      "tags": [
+        "jew-hatred",
+        "genocide-libel",
+        "colonizer-libel",
+        "apartheid-libel",
+        "campus",
+        "advocacy"
+      ],
+      "reference": "Naya Lekht. \"Decoding Antizionism as the Third Era of Jew-Hatred.\" Substack, Nov. 10, 2025.",
+      "author": "Naya Lekht",
+      "url": "https://nayalekht.substack.com/p/decoding-antizionism-as-the-third",
+      "year": 2025,
+      "date": "2025-11-10"
+    },
+    {
+      "id": "substack-what-is-antizionism",
+      "title": "What Is Antizionism?",
+      "category": "substack-articles",
+      "description": "The author argues that antizionism is the current era of anti-Jewish hate movements, following antijudaism and antisemitism, each driven by libels that construct Jews as villains. She offers a Q&A guide for recognizing and naming the genocide and colonizer libels without getting drawn into factual debates, and advertises educational sessions.",
+      "tags": [
+        "jew-hatred",
+        "genocide-libel",
+        "colonizer-libel",
+        "history-of-antizionism",
+        "soviet-antizionism",
+        "advocacy"
+      ],
+      "reference": "Naya Lekht. \"What Is Antizionism?.\" Substack, Sept. 28, 2025.",
+      "author": "Naya Lekht",
+      "url": "https://nayalekht.substack.com/p/what-is-antizionism",
+      "year": 2025,
+      "date": "2025-09-28"
+    },
+    {
+      "id": "substack-before-we-explain-zionism-again",
+      "title": "Before We Explain Zionism Again...",
+      "category": "substack-articles",
+      "description": "The author responds to Eitan Chitayat's 'Two Arguments. One Battle.' by arguing that Zionism education and antizionism education are complementary but not equal in sequence. He contends that antizionism has built institutional systems and libels that make Zionism explanations unhearable, so dismantling that system must come first.",
+      "tags": [
+        "western-antizionism",
+        "institutional-capture",
+        "genocide-libel",
+        "apartheid-libel",
+        "colonizer-libel",
+        "advocacy"
+      ],
+      "reference": "Joshua Dabelstein. \"Before We Explain Zionism Again....\" Substack, July 27, 2026.",
+      "author": "Joshua Dabelstein",
+      "url": "https://fornormalpeople.substack.com/p/before-we-explain-zionism-again",
+      "year": 2026,
+      "date": "2026-07-27"
+    },
+    {
+      "id": "substack-how-to-change-the-world",
+      "title": "How to change the world",
+      "category": "substack-articles",
+      "description": "The author argues that, after the Royal Commission testimonies, Jewish leaders and others conflate antizionism with 'criticism of Israel' and adopt antizionist framing like 'pro-Palestine'. He contends that this communications failure should be fixed by naming antizionism directly and treating it as a bigotry distinct from criticism, with grassroots Jews ahead of institutional leaders on this point.",
+      "tags": [
+        "legal-public-affairs",
+        "media-commentary",
+        "jew-hatred",
+        "advocacy"
+      ],
+      "reference": "Joshua Dabelstein. \"How to change the world.\" Substack, July 9, 2026.",
+      "author": "Joshua Dabelstein",
+      "url": "https://fornormalpeople.substack.com/p/how-to-change-the-world",
+      "year": 2026,
+      "date": "2026-07-09"
+    },
+    {
+      "id": "substack-snorkels-in-a-hailstorm",
+      "title": "Snorkels in a Hailstorm",
+      "category": "substack-articles",
+      "description": "The author traces how anti-Jewish hatred has repeatedly shifted its justifying story (theological, racial, and now antizionist) and argues that responses focused only on 'antisemitism' misdiagnose the current form. He contends that antizionism functions as a moral permission structure and must be named and confronted directly, and appeals for funding for his organisation's training work.",
+      "tags": [
+        "jew-hatred",
+        "history-of-antizionism",
+        "western-antizionism",
+        "poland-1968",
+        "legal-public-affairs",
+        "advocacy"
+      ],
+      "reference": "Joshua Dabelstein. \"Snorkels in a Hailstorm.\" Substack, June 23, 2026.",
+      "author": "Joshua Dabelstein",
+      "url": "https://fornormalpeople.substack.com/p/snorkels-in-a-hailstorm",
+      "year": 2026,
+      "date": "2026-06-23"
+    },
+    {
+      "id": "substack-nakba-and-the-rebranding-of-humiliation",
+      "title": "Nakba and the rebranding of humiliation",
+      "category": "substack-articles",
+      "description": "The author argues that Constantine Zurayk coined 'Nakba' to describe the political and civilisational humiliation of the Arab states' failed 1948 invasion, not primarily a humanitarian disaster. He contends modern antizionism misrepresents the term to invert the Holocaust and delegitimise Israel, and that the 'ongoing Nakba' reflects a continued refusal to modernise, with Palestinians used as pawns by regimes like Iran.",
+      "tags": [
+        "history-of-antizionism",
+        "arab-supremacy",
+        "genocide-libel",
+        "islamism"
+      ],
+      "reference": "Joshua Dabelstein. \"Nakba and the rebranding of humiliation.\" Substack, April 30, 2026.",
+      "author": "Joshua Dabelstein",
+      "url": "https://fornormalpeople.substack.com/p/nakba-and-the-rebranding-of-humiliation",
+      "year": 2026,
+      "date": "2026-04-30"
+    },
+    {
+      "id": "substack-part-3-an-arsenal-against-antizionism",
+      "title": "Part 3: An Arsenal Against Antizionism - Taking Control.",
+      "category": "substack-articles",
+      "description": "The author argues that antizionism is sustained through language and proposes six rhetorical tools to counter it, including dropping the hyphen to distinguish it from historical Jewish anti-Zionism, rejecting the idea that it is political criticism, and naming the genocide, apartheid and colonialism claims as libels. He also urges against calling antizionists \"pro-Palestinian,\" describing Jews as a people rather than a faith, and focusing on what antizionism does rather than on definitional debates.",
+      "tags": [
+        "genocide-libel",
+        "apartheid-libel",
+        "colonizer-libel",
+        "media-commentary",
+        "jewish-antizionism",
+        "advocacy"
+      ],
+      "reference": "Joshua Dabelstein. \"Part 3: An Arsenal Against Antizionism - Taking Control..\" Substack, April 17, 2026.",
+      "author": "Joshua Dabelstein",
+      "url": "https://fornormalpeople.substack.com/p/part-3-an-arsenal-against-antizionism",
+      "year": 2026,
+      "date": "2026-04-17"
+    },
+    {
+      "id": "substack-bad-advocacy-is-worse-than-none-at",
+      "title": "Bad advocacy is worse than none at all",
+      "category": "substack-articles",
+      "description": "The author argues that Australian advocates, media, and courts weaken protection of Jews by describing Jews as a faith group and by labeling antizionists 'pro-Palestine' or 'anti-Israel.' He contends antizionism is an eliminationist ideology built on libels about a phantom 'Zionist' rather than legitimate political criticism, and that precise language is essential to combating it.",
+      "tags": [
+        "media-commentary",
+        "jew-hatred",
+        "western-antizionism",
+        "advocacy"
+      ],
+      "reference": "Joshua Dabelstein. \"Bad advocacy is worse than none at all.\" Substack, Jan. 30, 2026.",
+      "author": "Joshua Dabelstein",
+      "url": "https://fornormalpeople.substack.com/p/bad-advocacy-is-worse-than-none-at",
+      "year": 2026,
+      "date": "2026-01-30"
+    },
+    {
+      "id": "substack-truahs-antizionist-problem-how-one",
+      "title": "T’ruah’s Antizionist Problem: How One of America’s Most Influential Rabbinic Groups Sides With Israel’s Enemies",
+      "category": "substack-articles",
+      "description": "The author reports on an investigation finding that T'ruah has hired, partnered with, and honored activists who accuse Israel of apartheid and genocide, opposed anti-BDS laws and the IHRA definition, and aligned with antizionist groups. He argues this diverges from the views of mainstream American rabbis and congregants.",
+      "tags": [
+        "jewish-antizionism",
+        "institutional-capture",
+        "apartheid-libel",
+        "genocide-libel",
+        "bds"
+      ],
+      "reference": "Kevin Deutsch. \"T’ruah’s Antizionist Problem: How One of America’s Most Influential Rabbinic Groups Sides With Israel’s Enemies.\" Substack, June 4, 2026.",
+      "author": "Kevin Deutsch",
+      "url": "https://kevindeutsch.substack.com/p/truahs-antizionist-problem-how-one",
+      "year": 2026,
+      "date": "2026-06-04"
+    },
+    {
+      "id": "substack-the-shofar-awakens-us-a-call-for",
+      "title": "The Shofar Awakens Us: A Call for Ethics in Social Work",
+      "category": "substack-articles",
+      "description": "The author argues that antiracist, decolonial, and abolitionist frameworks in social work education omit Jews or recast them as colonizers by treating Zionists as separate from Jews. She cites curricula, a student's account, and activist networks, compares this to Soviet-era antizionism, and calls on Jewish social workers to organize and remain in the profession.",
+      "tags": [
+        "institutional-capture",
+        "antizionism-academy",
+        "colonizer-libel",
+        "jew-hatred",
+        "soviet-antizionism",
+        "advocacy"
+      ],
+      "reference": "Jennifer Kogan / Levari. \"The Shofar Awakens Us: A Call for Ethics in Social Work.\" Substack, Sept. 9, 2026.",
+      "author": "Jennifer Kogan / Levari",
+      "url": "https://jenniferkogan.substack.com/p/the-shofar-awakens-us-a-call-for",
+      "year": 2026,
+      "date": "2026-09-09"
+    },
+    {
+      "id": "substack-the-antizionism-permission-slip",
+      "title": "The Antizionism Permission Slip",
+      "category": "substack-articles",
+      "description": "The author argues that antizionism is a distinct form of Jew hatred, part of a recurring cycle of libel, stigma, violence, and denial that traces from antijudaism through racial antisemitism, with Soviet propaganda and UN Resolution 3379 giving it legitimacy. She contends that failing to name it separately lets Jews targeted as Zionists fall outside legal and institutional protections, citing the MIT case now before the Supreme Court.",
+      "tags": [
+        "jew-hatred",
+        "soviet-antizionism",
+        "legal-public-affairs",
+        "history-of-antizionism",
+        "campus"
+      ],
+      "reference": "Jennifer Kogan / Levari. \"The Antizionism Permission Slip.\" Substack, Aug. 10, 2026.",
+      "author": "Jennifer Kogan / Levari",
+      "url": "https://jenniferkogan.substack.com/p/the-antizionism-permission-slip",
+      "year": 2026,
+      "date": "2026-08-10"
+    },
+    {
+      "id": "substack-nasw-violates-its-own-code-of-ethics",
+      "title": "NASW violates its own Code of Ethics by allowing Antizionism to thrive",
+      "category": "substack-articles",
+      "description": "The author argues that NASW has allowed antizionism to flourish and has breached its own Code of Ethics, comparing section after section of the Code with Jewish social workers' experiences since October 7. She contends leadership dismissed reports of discrimination as 'sensitive' matters and failed to investigate or correct unethical conduct.",
+      "tags": [
+        "institutional-capture",
+        "jew-hatred",
+        "colonizer-libel",
+        "western-antizionism"
+      ],
+      "reference": "Jennifer Kogan / Levari. \"NASW violates its own Code of Ethics by allowing Antizionism to thrive.\" Substack, Jan. 9, 2026.",
+      "author": "Jennifer Kogan / Levari",
+      "url": "https://jenniferkogan.substack.com/p/nasw-violates-its-own-code-of-ethics",
+      "year": 2026,
+      "date": "2026-01-09"
+    },
+    {
+      "id": "substack-new-report-documents-pervasive-antisemitism",
+      "title": "New report documents pervasive antisemitism in social work",
+      "category": "substack-articles",
+      "description": "The author reports that since October 7 Jewish social workers have faced silencing, exclusion, and hostility in US social work schools and professional bodies like NASW, driven by antizionist and decolonial oppressor/oppressed frameworks. The report argues that institutions have failed to address antisemitism and calls for accountability and Jewish inclusion in anti-oppression practice.",
+      "tags": [
+        "institutional-capture",
+        "antizionism-academy",
+        "western-antizionism",
+        "jew-hatred",
+        "colonizer-libel"
+      ],
+      "reference": "Jennifer Kogan / Levari. \"New report documents pervasive antisemitism in social work.\" Substack, Sept. 15, 2025.",
+      "author": "Jennifer Kogan / Levari",
+      "url": "https://jenniferkogan.substack.com/p/new-report-documents-pervasive-antisemitism",
+      "year": 2025,
+      "date": "2025-09-15"
+    },
+    {
+      "id": "substack-the-cool-jews",
+      "title": "The cool Jews",
+      "category": "substack-articles",
+      "description": "The author argues that Jews who position themselves as morally superior by embracing 'free Palestine' and antizionism, such as Sarah Sherman, Matt Bernstein, Peter Beinart, and groups like JVP and IfNotNow, repeat an ancient pattern of a minority of Jews collaborating against their own for personal gain. The author frames this as the modern 'Erev Rav,' traces how antizionist tenets were seeded in leftist and academic spheres before October 7, and argues that Israel's creation saved Jews that diaspora countries turned away.",
+      "tags": [
+        "jewish-antizionism",
+        "genocide-libel",
+        "colonizer-libel",
+        "apartheid-libel",
+        "history-of-antizionism"
+      ],
+      "reference": "ESK. \"The cool Jews.\" Substack, March 23, 2026.",
+      "author": "ESK",
+      "url": "https://thegoldenpill.substack.com/p/the-cool-jews",
+      "year": 2026,
+      "date": "2026-03-23"
+    },
+    {
+      "id": "substack-critical-dhimmi-theory",
+      "title": "Critical dhimmi theory",
+      "category": "substack-articles",
+      "description": "The author argues that the American race-based lens (Critical Race Theory) misreads the Israeli/Palestinian conflict, which is rooted in 1,400 years of Islamic religious hierarchy and the dhimmi system rather than white supremacy. Tracing Khaybar, the Pact of Umar, and the Tanzimat reforms, the author claims dhimmitude's end helped enable Zionism and that Ottoman resistance to Jewish land purchase was driven by the settlers' Jewishness.",
+      "tags": [
+        "arab-supremacy",
+        "history-of-antizionism",
+        "colonizer-libel",
+        "islamism",
+        "jew-hatred"
+      ],
+      "reference": "ESK. \"Critical dhimmi theory.\" Substack, Oct. 30, 2025.",
+      "author": "ESK",
+      "url": "https://thegoldenpill.substack.com/p/critical-dhimmi-theory",
+      "year": 2025,
+      "date": "2025-10-30"
+    },
+    {
+      "id": "substack-the-palestine-fetish",
+      "title": "The Palestine fetish",
+      "category": "substack-articles",
+      "description": "The author argues that Western 'oikophobia' and secular spiritual emptiness have made Palestine an 'omnicause' that fills a void for activists, producing performative, commodified advocacy and a fetishization of Palestinians as perfect victims. The author contends this ignores Hamas atrocities and jihadist violence and helps nobody in Gaza.",
+      "tags": [
+        "western-antizionism",
+        "islamism",
+        "media-commentary"
+      ],
+      "reference": "ESK. \"The Palestine fetish.\" Substack, Sept. 20, 2025.",
+      "author": "ESK",
+      "url": "https://thegoldenpill.substack.com/p/the-palestine-fetish",
+      "year": 2025,
+      "date": "2025-09-20"
+    },
+    {
+      "id": "substack-why-anti-zionism-is-antisemitism",
+      "title": "Why antizionism is the new antisemitism",
+      "category": "substack-articles",
+      "description": "The author argues that antizionism is the modern form of long-standing systemic Jewish hatred, pointing to the lack of comparable opposition to Pakistan's creation and tracing opposition to Jewish independence through Christian European, Arab-Muslim, Nazi, and Soviet traditions. He rejects the charges that Zionism is supremacy, apartheid, or genocide, insisting Zionism was an escape from them and a movement of Jewish liberation.",
+      "tags": [
+        "jew-hatred",
+        "history-of-antizionism",
+        "arab-nazi-antizionism",
+        "colonizer-libel",
+        "soviet-antizionism"
+      ],
+      "reference": "ESK. \"Why antizionism is the new antisemitism.\" Substack, Aug. 15, 2025.",
+      "author": "ESK",
+      "url": "https://thegoldenpill.substack.com/p/why-anti-zionism-is-antisemitism",
+      "year": 2025,
+      "date": "2025-08-15"
+    },
+    {
+      "id": "substack-how-palestine-caused-a-blacks-and",
+      "title": "HOW #PALESTINE CAUSED A BLACKS-AND- JEWISH BREAK-UP",
+      "category": "substack-articles",
+      "description": "The author argues that efforts to revive historic Black-Jewish alliances are ineffective and obscure the real problem: many Black Americans identify with the Palestinian cause through intersectional logic, BLM, DEI frameworks, and figures like Malcolm X and Farrakhan. He calls for studying Black antisemitism and countering narratives that cast Jews as oppressors and Palestinians as natural allies, drawing on data and his own family history.",
+      "tags": [
+        "western-antizionism",
+        "jew-hatred",
+        "colonizer-libel",
+        "institutional-capture",
+        "data-research"
+      ],
+      "reference": "David Christopher Kaufman. \"HOW #PALESTINE CAUSED A BLACKS-AND- JEWISH BREAK-UP.\" Substack, Feb. 10, 2026.",
+      "author": "David Christopher Kaufman",
+      "url": "https://davidkaufman.substack.com/p/how-palestine-caused-a-blacks-and",
+      "year": 2026,
+      "date": "2026-02-10"
+    },
+    {
+      "id": "substack-how-zionism-is-racism-traveled-from",
+      "title": "How “Zionism Is Racism” Traveled From A Cold War UN Resolution Into Academic Authority",
+      "category": "substack-articles",
+      "description": "The author argues that UNGA Resolution 3379 was a Soviet/Arab Cold War propaganda device that academia later turned into intellectual authority for 'Zionism is racism'. He contends postmodern scholarship emptied 'racism' of definite meaning so the emotional charge could be aimed at Jews, and that the slogan has neither meaning nor truth-value.",
+      "tags": [
+        "western-antizionism",
+        "antizionism-academy",
+        "soviet-antizionism",
+        "history-of-antizionism",
+        "institutional-capture"
+      ],
+      "reference": "Whole Story Institute. \"How “Zionism Is Racism” Traveled From A Cold War UN Resolution Into Academic Authority.\" Substack, Sept. 30, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/how-zionism-is-racism-traveled-from",
+      "year": 2026,
+      "date": "2026-09-30"
+    },
+    {
+      "id": "substack-the-100-years-war-on-palestine-interrupted",
+      "title": "The 100 Years War On Palestine, Interrupted",
+      "category": "substack-articles",
+      "description": "The author contrasts Rashid Khalidi's polished settler-colonial history with Gregg Rosenberg's blunter logical critique, arguing that Rosenberg's account better explains Zionism as a refugee project and the Nakba as a product of war rather than necessary displacement. He argues that terms like 'settler colonialism' and 'resistance' smuggle in assumptions, and that Arab rejection of any Jewish sovereignty, including Nazi-linked leadership, drove the conflict.",
+      "tags": [
+        "colonizer-libel",
+        "history-of-antizionism",
+        "arab-nazi-antizionism",
+        "western-antizionism"
+      ],
+      "reference": "Whole Story Institute. \"The 100 Years War On Palestine, Interrupted.\" Substack, Aug. 23, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/the-100-years-war-on-palestine-interrupted",
+      "year": 2026,
+      "date": "2026-08-23"
+    },
+    {
+      "id": "substack-waking-up-from-the-antizionist-slumber",
+      "title": "Waking Up From The Antizionist Slumber",
+      "category": "substack-articles",
+      "description": "The author argues that appeals to the complexity of Palestinian society obscure how antizionist rejectionism has dominated and suppressed moderates, from the 1936-39 revolt through the refugee camps, Oslo, the intifadas, and Hamas's rule. He contends Palestinians have been active agents in their own fate and cites a survey showing most West Bank students view the conflict in religious terms.",
+      "tags": [
+        "history-of-antizionism",
+        "arab-nazi-antizionism",
+        "islamism",
+        "arab-supremacy",
+        "data-research"
+      ],
+      "reference": "Whole Story Institute. \"Waking Up From The Antizionist Slumber.\" Substack, May 30, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/waking-up-from-the-antizionist-slumber",
+      "year": 2026,
+      "date": "2026-05-30"
+    },
+    {
+      "id": "substack-why-do-so-many-people-hate-the-jews",
+      "title": "Why Do So Many People Hate The Jews?",
+      "category": "substack-articles",
+      "description": "The author argues that antisemitism stems from Christian and Muslim theologies that required Jewish subjugation, and has been repeatedly re-skinned (racial theory, now human-rights and social justice language). On this view antizionism makes 'Zionist' a vessel for old hatreds, and the Gaza war narrative, which the author says Hamas deliberately engineered, serves as the pretext.",
+      "tags": [
+        "jew-hatred",
+        "history-of-antizionism",
+        "western-antizionism",
+        "genocide-libel",
+        "islamism"
+      ],
+      "reference": "Whole Story Institute. \"Why Do So Many People Hate The Jews?.\" Substack, May 24, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/why-do-so-many-people-hate-the-jews",
+      "year": 2026,
+      "date": "2026-05-24"
+    },
+    {
+      "id": "substack-byline-palestine-1920-how-fear-of",
+      "title": "Byline, Palestine 1920: How Fear Of The Eight-Hour Workday Started A Century-Long War",
+      "category": "substack-articles",
+      "description": "The author argues that in the 1920s Arab notable families, threatened by Jewish-assisted Arab labor organizing, used religious appeals and Protocols-style propaganda to turn Arab peasants against Jews, leading to the 1929 violence. The post ends with a reader's letter likening Gaza's October 7 attackers to a crocodile fed by naive Israeli peace activists.",
+      "tags": [
+        "history-of-antizionism",
+        "jew-hatred",
+        "arab-supremacy",
+        "islamism"
+      ],
+      "reference": "Whole Story Institute. \"Byline, Palestine 1920: How Fear Of The Eight-Hour Workday Started A Century-Long War.\" Substack, May 22, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/byline-palestine-1920-how-fear-of",
+      "year": 2026,
+      "date": "2026-05-22"
+    },
+    {
+      "id": "substack-antizionism-is-not-just-politics",
+      "title": "Antizionism Is Not Just Politics. It Is A Product.",
+      "category": "substack-articles",
+      "description": "The author argues that the claim 'Israelis/Jews are Nazis' is the Big Lie of antizionism, popularized by Edward Said in 1983 and embedded in an ideological narrative. Using a product-adoption funnel analogy, he traces the narrative from Soviet and Arab-Marxist anti-imperialism to Western academic colonialism framing and intersectional politics, which let it reach the mainstream.",
+      "tags": [
+        "history-of-antizionism",
+        "western-antizionism",
+        "soviet-antizionism",
+        "colonizer-libel",
+        "antizionism-academy"
+      ],
+      "reference": "Whole Story Institute. \"Antizionism Is Not Just Politics. It Is A Product..\" Substack, May 21, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/antizionism-is-not-just-politics",
+      "year": 2026,
+      "date": "2026-05-21"
+    },
+    {
+      "id": "substack-the-deep-provenance-of-the-rape-dog",
+      "title": "The Deep Provenance Of The \"Rape Dog\" Libel",
+      "category": "substack-articles",
+      "description": "The author argues that Palestinian leaders adopted fabricated atrocity accusations as a deliberate strategy in 1948, citing Eliezer Tauber's research on Deir Yassin, and that this groundwork enabled the later genocide charge and the framing of October 7 as 'resistance'. He also disputes the genocide charge against Israel on legal and demographic grounds.",
+      "tags": [
+        "genocide-libel",
+        "history-of-antizionism",
+        "legal-public-affairs",
+        "institutional-capture"
+      ],
+      "reference": "Whole Story Institute. \"The Deep Provenance Of The \"Rape Dog\" Libel.\" Substack, May 15, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/the-deep-provenance-of-the-rape-dog",
+      "year": 2026,
+      "date": "2026-05-15"
+    },
+    {
+      "id": "substack-the-authors-of-human-rights-were",
+      "title": "The Authors of Human Rights Were Zionists ... And It Shows",
+      "category": "substack-articles",
+      "description": "The author argues that the Universal Declaration of Human Rights was shaped by Zionist-sympathetic figures, chiefly René Cassin and Eleanor Roosevelt, whose Holocaust-era experience led them to see Jewish statehood as an application of human rights. He contends that campus antizionism inverts this history and that Palestinian statelessness stems from Arab and antizionist rejection of Jewish sovereignty, including Jordan's role from 1948 to 1967.",
+      "tags": [
+        "history-of-antizionism",
+        "western-antizionism",
+        "campus",
+        "legal-public-affairs",
+        "antizionism-academy"
+      ],
+      "reference": "Whole Story Institute. \"The Authors of Human Rights Were Zionists ... And It Shows.\" Substack, May 11, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/the-authors-of-human-rights-were",
+      "year": 2026,
+      "date": "2026-05-11"
+    },
+    {
+      "id": "substack-by-richard-landes-i-caliphator",
+      "title": "By Richard Landes, “I, Caliphator”",
+      "category": "substack-articles",
+      "description": "Writing in the voice of a triumphalist Muslim Caliphator historian, the author argues that Edward Said's Orientalism and the post-colonial paradigm disarmed Western Middle Eastern studies, discouraged scrutiny of jihad after 9/11, and that credulous leftists, including some Jews, aided an Islamist project of conquest by da'wa.",
+      "tags": [
+        "antizionism-academy",
+        "islamism",
+        "western-antizionism",
+        "red-green-alliance",
+        "jewish-antizionism"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Richard Landes, “I, Caliphator”.\" Substack, Nov. 21, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-richard-landes-i-caliphator",
+      "year": 2026,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "substack-guest-review-review-of-emmaia-gelmans",
+      "title": "Guest Review: “Review of Emmaia Gelman’s ‘The Anti-Defamation League and the Racial State’”",
+      "category": "substack-articles",
+      "description": "The author reviews Emmaia Gelman's book on the ADL, conceding some of its history of class-aligned elitism but arguing it lacks comparative context, omits the Leo Frank case and October 7, and casts the ADL as uniquely evil. The author also ties Gelman to campus antisemitism at Haverford and suggests she plays the role of the 'Good Jew' who authorizes evil's narrative.",
+      "tags": [
+        "jewish-antizionism",
+        "institutional-capture",
+        "genocide-libel",
+        "campus",
+        "colonizer-libel"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"Guest Review: “Review of Emmaia Gelman’s ‘The Anti-Defamation League and the Racial State’”.\" Substack, Nov. 21, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/guest-review-review-of-emmaia-gelmans",
+      "year": 2026,
+      "date": "2026-11-21"
+    },
+    {
+      "id": "substack-by-elder-of-ziyon-the-university",
+      "title": "By Elder of Ziyon: “The University Professor Who Wants to Eradicate Zionism from Academia”",
+      "category": "substack-articles",
+      "description": "The author (Elder of Ziyon) dissects UC professor Sean Malloy's essays calling for the 'dezionization' of the University of California, arguing they rely on a persuasive redefinition of Zionism, assume rather than demonstrate Zionist power, and treat disparate Jewish organizations as a single conspiratorial actor. He argues the proposal would exclude Jewish campus groups like Hillel on the basis of collective guilt and compares the logic to antisemitic conspiracy theories.",
+      "tags": [
+        "antizionism-academy",
+        "institutional-capture",
+        "campus",
+        "western-antizionism",
+        "legal-public-affairs"
+      ],
+      "reference": "Institute for Critical Study of Antizionism (ICSA). \"By Elder of Ziyon: “The University Professor Who Wants to Eradicate Zionism from Academia”.\" Substack, Oct. 29, 2026.",
+      "author": "Institute for Critical Study of Antizionism (ICSA)",
+      "url": "https://icsa.substack.com/p/by-elder-of-ziyon-the-university",
+      "year": 2026,
+      "date": "2026-10-29"
+    },
+    {
+      "id": "substack-the-left-arm-my-new-primer-on-modern",
+      "title": "The Left Arm: My New Primer on Modern Antizionism",
+      "category": "substack-articles",
+      "description": "The author announces his primer on modern antizionism and shares its first chapter, arguing that antizionism, unlike legitimate criticism of Israel, widens its target from specific acts to the whole state, and that it should be written without a hyphen because it is a distinct movement rather than a political critique. He frames it as a subculture with its own language, symbols, and mobilization that recycles older libels against Jews.",
+      "tags": [
+        "western-antizionism",
+        "jew-hatred",
+        "history-of-antizionism",
+        "colonizer-libel",
+        "apartheid-libel"
+      ],
+      "reference": "Kile B. Jones. \"The Left Arm: My New Primer on Modern Antizionism.\" Substack, Nov. 16, 2026.",
+      "author": "Kile B. Jones",
+      "url": "https://kilejones.substack.com/p/the-left-arm-my-new-primer-on-modern",
+      "year": 2026,
+      "date": "2026-11-16"
+    },
+    {
+      "id": "substack-persecuted-by-invitation",
+      "title": "Persecuted by Invitation",
+      "category": "substack-articles",
+      "description": "The author, a former antizionist and BU graduate, recounts a symposium celebrating 'Jewish Anti-Zionism: A Historical Anthology,' arguing that antizionism is canonical in higher education and that speakers' claims of bravery and persecution are ironic given institutional support. He quotes Butler and other speakers calling Israel genocidal and racist, notes a critic's point about the anthology's omission of Soviet Jewish antizionism, and cites campus incidents elsewhere.",
+      "tags": [
+        "antizionism-academy",
+        "jewish-antizionism",
+        "campus",
+        "colonizer-libel",
+        "genocide-libel"
+      ],
+      "reference": "Kile B. Jones. \"Persecuted by Invitation.\" Substack, Nov. 13, 2026.",
+      "author": "Kile B. Jones",
+      "url": "https://kilejones.substack.com/p/persecuted-by-invitation",
+      "year": 2026,
+      "date": "2026-11-13"
+    },
+    {
+      "id": "substack-theres-nothing-more-jewish-than-telling",
+      "title": "There's Nothing More Jewish Than Telling Jews Not to Pray in Hebrew",
+      "category": "substack-articles",
+      "description": "The author argues that Jewish Voice for Peace is a fringe group, citing polling that puts antizionist Jews at roughly 4-7%, that it lacks self-awareness and trades on the word \"Jewish\" in its name. He cites its rhetoric, finances and statements around October 7 in an endnote list, and the post is framed by his perspective as a non-Jewish former antizionist.",
+      "tags": [
+        "jewish-antizionism",
+        "jew-hatred",
+        "legal-public-affairs",
+        "data-research"
+      ],
+      "reference": "Kile B. Jones. \"There's Nothing More Jewish Than Telling Jews Not to Pray in Hebrew.\" Substack, Nov. 7, 2026.",
+      "author": "Kile B. Jones",
+      "url": "https://kilejones.substack.com/p/theres-nothing-more-jewish-than-telling",
+      "year": 2026,
+      "date": "2026-11-07"
+    },
+    {
+      "id": "substack-the-icj-the-politics-of-genocide",
+      "title": "The ICJ, the Politics of Genocide, and the Limits of International Law",
+      "category": "substack-articles",
+      "description": "The author argues that the ICJ's Gambia v. Myanmar judgment has been quickly turned into a referendum on Israel, traces the genocide accusation against Israel to earlier UN resolutions, and contends that genocide must remain a legally distinct crime requiring proof of specific intent. She examines the majority and dissenting opinions on circumstantial evidence, the meaning of 'destruction,' and the duty to prevent genocide, concluding the Court can still keep the distinction intact in South Africa v. Israel.",
+      "tags": [
+        "genocide-libel",
+        "legal-public-affairs",
+        "history-of-antizionism"
+      ],
+      "reference": "Sarah Ettedgui. \"The ICJ, the Politics of Genocide, and the Limits of International Law.\" Substack, Nov. 22, 2026.",
+      "author": "Sarah Ettedgui",
+      "url": "https://sarahettedgui.substack.com/p/the-icj-the-politics-of-genocide",
+      "year": 2026,
+      "date": "2026-11-22"
+    },
+    {
+      "id": "substack-deir-yassin-and-the-logic-of-elimination",
+      "title": "Deir Yassin And The “Logic Of Elimination”",
+      "category": "substack-articles",
+      "description": "The author argues that Wolfe's 'logic of elimination' replaces causal analysis with a moral verdict, pointing to Jewish land purchases that freed indebted tenants and to the prosperous village of Deir Yassin, whose men fought despite material gains. He contends that the real driver was a reactionary refusal to accept Jews as political equals, not material dispossession.",
+      "tags": [
+        "colonizer-libel",
+        "western-antizionism",
+        "antizionism-academy",
+        "history-of-antizionism"
+      ],
+      "reference": "Whole Story Institute. \"Deir Yassin And The “Logic Of Elimination”.\" Substack, Nov. 17, 2026.",
+      "author": "Gregg Rosenberg",
+      "url": "https://ghrosenb.substack.com/p/deir-yassin-and-the-logic-of-elimination",
+      "year": 2026,
+      "date": "2026-11-17"
+    },
+    {
+      "id": "substack-pat604johnson",
+      "title": "Pat’s BEATEN WITH A SHTICK Substack",
+      "category": "substacks",
+      "description": "Snappy smackdowns of antisemitism and anti-Zionism from a gay, progressive left Canadian activist and writer.",
+      "tags": [],
+      "reference": "pat604johnson. Pat’s BEATEN WITH A SHTICK Substack (Substack).",
+      "author": "pat604johnson",
+      "image": "https://substackcdn.com/image/fetch/$s_!HXAj!,w_256,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fdacce649-62f6-4c8b-a7dc-d682ce404fb8_1024x1024.png",
+      "url": "https://pat604johnson.substack.com",
+      "year": null
+    },
+    {
+      "id": "substack-the-jews-must-suffer",
+      "title": "THE JEWS MUST SUFFER",
+      "category": "substack-articles",
+      "description": "The author argues that Augustine's doctrine of Jewish suffering as proof of Christianity has been secularized into modern expectations that Jews and Israel serve as moral lessons for others, as seen in Holocaust literature and post-October 7 reactions. He contends that Jewish sovereignty is resented because it ends this assigned role and makes Jews a people like any other.",
+      "tags": [
+        "jew-hatred",
+        "western-antizionism",
+        "history-of-antizionism",
+        "genocide-libel"
+      ],
+      "reference": "pat604johnson. \"THE JEWS MUST SUFFER.\" Substack, Nov. 24, 2026.",
+      "author": "pat604johnson",
+      "url": "https://pat604johnson.substack.com/p/the-jews-must-suffer",
+      "year": 2026,
+      "date": "2026-11-24"
+    },
+    {
+      "id": "substack-genocide-the-ultimate-blood-libel",
+      "title": "GENOCIDE: THE ULTIMATE BLOOD LIBEL",
+      "category": "substack-articles",
+      "description": "The author argues that accusing Israel of genocide is the latest form of the historical blood libel against Jews, functioning as a litmus test that demands conformity, justifies boycotts and cancellations, and ultimately rationalizes violence against Jews and Zionists. He claims the accusation is false and is deployed to legitimize antisemitism.",
+      "tags": [
+        "genocide-libel",
+        "jew-hatred",
+        "bds",
+        "western-antizionism"
+      ],
+      "reference": "pat604johnson. \"GENOCIDE: THE ULTIMATE BLOOD LIBEL.\" Substack, Nov. 10, 2026.",
+      "author": "pat604johnson",
+      "url": "https://pat604johnson.substack.com/p/genocide-the-ultimate-blood-libel",
+      "year": 2026,
+      "date": "2026-11-10"
     }
   ]
 }
