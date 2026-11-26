@@ -139,6 +139,38 @@
     color: var(--ean-tag-active-text) !important;
   }
 
+  /* Shown under the search bar while an author filter is on; the chip removes it */
+  .ean-author-filter {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: -4px 0 16px;
+    font-size: 0.85em;
+  }
+  .ean-author-chip {
+    padding: 0.3em 0.9em !important;
+    border-radius: 999px !important;
+    border: 1px solid var(--ean-tag-active-border) !important;
+    background: var(--ean-tag-active-bg) !important;
+    color: var(--ean-tag-active-text) !important;
+    cursor: pointer;
+  }
+  /* Author names on cards, rows and the popup: plain text until hovered */
+  .ean-author-link {
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
+  }
+  .ean-author-link:hover,
+  .ean-author-link:focus-visible { text-decoration: underline solid; color: var(--ean-accent); }
+  .ean-author-link[data-active="true"] { font-weight: 600; }
+
   .ean-results-head {
     display: flex;
     flex-wrap: wrap;

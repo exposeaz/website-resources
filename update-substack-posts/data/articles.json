@@ -7892,7 +7892,7 @@
     "relevance_score": 3,
     "scoped_tags_reviewed": "2b1263741753",
     "retagged": "c78da2b03775",
-    "exported_resources": true,
+    "exported_resources": false,
     "reread": "cb796fb0988c",
     "fill_checks": {
       "poland-1968": true
@@ -8109,7 +8109,7 @@
     "relevance_score": 3,
     "scoped_tags_reviewed": "2b1263741753",
     "retagged": "c78da2b03775",
-    "exported_resources": true,
+    "exported_resources": false,
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
@@ -14746,7 +14746,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -14913,7 +14913,7 @@
       "bds": true
     },
     "published_for_tag": "bds",
-    "exported_resources": true,
+    "exported_resources": false,
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     }
@@ -15746,7 +15746,7 @@
       "advocacy": "c5bcdd14c455"
     },
     "hand_picked": true,
-    "exported_resources": true
+    "exported_resources": false
   },
   {
     "publication": "Kevin Deutsch",
@@ -21259,7 +21259,7 @@
     "forced": false,
     "relevance_score": 3,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": true,
+    "exported_resources": false,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -23709,7 +23709,7 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
     "retagged": "c78da2b03775",
-    "exported_resources": true,
+    "exported_resources": false,
     "reread": "cb796fb0988c",
     "fill_checks": {
       "data-research": true
@@ -23753,7 +23753,7 @@
       "data-research": true
     },
     "published_for_tag": "data-research",
-    "exported_resources": true,
+    "exported_resources": false,
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     }
@@ -24239,7 +24239,7 @@
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
     "retagged": "c78da2b03775",
-    "exported_resources": true,
+    "exported_resources": false,
     "reread": "cb796fb0988c",
     "fill_checks": {
       "red-green-alliance": true
@@ -31644,7 +31644,7 @@
       "bds": true
     },
     "published_for_tag": "bds",
-    "exported_resources": true,
+    "exported_resources": false,
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     }
