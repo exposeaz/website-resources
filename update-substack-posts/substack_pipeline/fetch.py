@@ -63,6 +63,14 @@ _session = requests.Session()
 _session.headers["User-Agent"] = settings.USER_AGENT
 
 
+def _error_detail(resp, max_chars=200):
+    """The start of a rejected request's response, e.g. Substack's {"errors": ...} explanation; empty if none."""
+    body = " ".join(resp.text.split())
+    if not body:
+        return ""
+    return ": " + (body[:max_chars] + "..." if len(body) > max_chars else body)
+
+
 def _get(url, params=None):
     """GET with a polite delay before every request and retries on transient failures."""
     for attempt in range(1, settings.MAX_RETRIES + 1):
@@ -80,7 +88,7 @@ def _get(url, params=None):
                                          "likely subscriber-only)")
                 return resp
             if resp.status_code not in _RETRY_STATUSES:
-                raise FetchError(f"{url}: HTTP {resp.status_code}")
+                raise FetchError(f"{url}: HTTP {resp.status_code}{_error_detail(resp)}")
             err = f"HTTP {resp.status_code}"
             retry_after = resp.headers.get("Retry-After", "")
             if retry_after.isdigit():
