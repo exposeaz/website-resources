@@ -16,7 +16,7 @@ Run every task from the repo root with `pixi run <task>`; tasks that call Claude
 | `export-sync` | no | `data.json` | Removes cards that no longer qualify, refreshes tags and category (News or not), and adds new ones. |
 | `export` | no | `data.json` | Only adds newly publishable articles; no removals or re-tagging. |
 | `add-resource` | yes | `data.json` | Adds non-Substack pages (`--category essays URL ...`) or re-tags existing entries (`--retag ID ...`). |
-| `tag-review` | yes | `articles.json` | Re-checks only the scoped tags; not needed after `retag`. |
+| `tag-review` | yes | `articles.json` | Re-checks only the scoped tags; not needed after `retag`. Flag: `--only TAG` (check just that tag, e.g. after adding it). |
 | `tag-stats` | no | nothing | Counts the tags Claude suggested beyond the vocabulary, to spot new tag candidates. |
 | `pr-body` | no | `output/pr-body.md` | Writes the weekly PR description. |
 
@@ -29,6 +29,7 @@ Tasks that change the same file must not run at the same time.
 - `config/tags.json`: the tag vocabulary; a tag with a `scope` applies only when that condition holds, and a `manual` tag is never assigned by the pipeline, only by hand in `data.json`.
 - `config/settings.py`: every tunable number (score bars, tag targets, limits); each can be overridden by an environment variable.
 - `data/articles.json`: every classified post with its summary, tags, relevance and score; the source of truth.
+  To publish specific held-back articles, set `"hand_picked": true` on them; `export-sync` then adds them and never removes them.
 - `data/processed.json`: URLs already seen, so they're never classified twice.
 
 ## Weekly run

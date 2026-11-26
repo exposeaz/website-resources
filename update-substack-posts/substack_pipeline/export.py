@@ -110,11 +110,12 @@ def news_candidate(a):
 
 def publishable(a):
     """Clears the bar, is news clearing the news bar, or was picked by fill, and isn't marked a duplicate
-    by dedupe; or was added by URL. Paywalled articles (not news) never are."""
+    by dedupe; or was added by URL, or hand-picked by a reviewer (hand_picked in articles.json).
+    Paywalled articles (not news) never are, even when added by URL or hand-picked."""
     if paywalled_article(a):
         return False
-    return a["forced"] or ((meets_bar(a) or news_candidate(a) or bool(a.get("published_for_tag")))
-                           and not a.get("duplicate_of"))
+    return a["forced"] or bool(a.get("hand_picked")) or (
+        (meets_bar(a) or news_candidate(a) or bool(a.get("published_for_tag"))) and not a.get("duplicate_of"))
 
 
 def category_for(a):
