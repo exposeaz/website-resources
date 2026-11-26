@@ -6,6 +6,7 @@ import logging
 import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
+from urllib.parse import urlsplit
 
 from config import settings
 from substack_pipeline import export, fetch, state
@@ -60,6 +61,10 @@ def _resolve_publication(url_or_name, configured):
         if pub.name.lower() == url_or_name.strip().lower():
             return pub
     key = fetch.base_url(url_or_name if "://" in url_or_name else f"https://{url_or_name}")
+    # substack.com links (profiles like substack.com/@name, or posts opened in the app) name no publication
+    if urlsplit(key).netloc in ("substack.com", "www.substack.com"):
+        raise fetch.FetchError(f"{url_or_name} is a substack.com link, not a publication; use the "
+                               "publication's own address (e.g. name.substack.com) or the post's link there")
     for pub in configured:
         if pub.url == key:
             return pub
@@ -72,12 +77,13 @@ def _resolve_publication(url_or_name, configured):
     return fetch.Publication(name=title or key, url=key, description=description)
 
 
-def _publication_entries(pub, args):
+def _publication_entries(pub, args, errors):
     """(url, date) entries for one publication.
 
     Dry run: every feed item.
     Otherwise: posts on or after START_DATE.
     An unreadable feed falls back to the JSON archive in every mode.
+    An unreadable archive falls back to the feed's posts, noted in errors so the run report shows it.
     """
     try:
         feed = fetch.read_feed(pub.url)
@@ -97,7 +103,17 @@ def _publication_entries(pub, args):
     # The feed holds only recent items; page the archive when it may not reach START_DATE
     oldest = min((d for _, d in entries or [] if d), default=None)
     if entries is None or (entries and oldest and oldest >= settings.START_DATE):
-        entries = fetch.archive_entries(pub.url, since=settings.START_DATE)
+        try:
+            entries = fetch.archive_entries(pub.url, since=settings.START_DATE)
+        except fetch.NotPublicError:
+            raise
+        except fetch.FetchError as exc:
+            if entries is None:
+                raise
+            # Older posts the feed doesn't reach aren't marked processed, so a later run picks them up
+            log.warning("%s: archive unreadable (%s); using the %d feed posts only", pub.name, exc, len(entries))
+            errors.append({"url": pub.url, "error": f"archive unreadable, used feed posts only: {exc}",
+                           "kind": "feed_only"})
     return [(u, d) for u, d in entries if d and d >= settings.START_DATE]
 
 
@@ -117,7 +133,10 @@ def gather_candidates(args, processed, errors):
             _record_error(errors, url, url, exc)
 
     if args.publication_url:
-        pubs = [_resolve_publication(args.publication_url, configured)]
+        try:
+            pubs = [_resolve_publication(args.publication_url, configured)]
+        except fetch.FetchError as exc:
+            sys.exit(f"Stopped: {exc}")
         log.info("Publication: %s (%s)", pubs[0].name, pubs[0].url)
     elif post_urls:
         pubs = []
@@ -128,7 +147,7 @@ def gather_candidates(args, processed, errors):
     failed = 0
     for pub in pubs:
         try:
-            entries = _publication_entries(pub, args)
+            entries = _publication_entries(pub, args, errors)
         except (fetch.FetchError, ValueError) as exc:
             _record_error(errors, pub.name, pub.url, exc)
             failed += not isinstance(exc, fetch.NotPublicError)
@@ -262,7 +281,8 @@ def run_report(title, records, skipped, errors):
     if skipped:
         lines += [f"## Skipped ({len(skipped)})", ""]
         lines += [f"- {s['title']} ({s['publication']}): {s['reason']} · {s['url']}" for s in skipped] + [""]
-    for kind, heading in (("not_public", "Not publicly readable"), ("error", "Errors")):
+    for kind, heading in (("not_public", "Not publicly readable"), ("feed_only", "Feed posts only (archive unreadable)"),
+                          ("error", "Errors")):
         items = [e for e in errors if e["kind"] == kind]
         if items:
             lines += [f"## {heading} ({len(items)})", ""] + [f"- {e['url']}: {e['error']}" for e in items] + [""]

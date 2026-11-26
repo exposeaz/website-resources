@@ -36,12 +36,17 @@ Tasks that change the same file must not run at the same time.
 Run `opclaude update-substack-posts/run-weekly.sh` from anywhere in the repo once a week.
 It runs `pixi run pipeline` on the `bot/substack-articles` branch and opens (or updates) the PR; extra arguments go to the pipeline.
 It refuses to start with uncommitted changes, and returns you to your branch when it finishes.
+It also refuses when `bot/substack-articles` has local commits that were never pushed, because it resets that branch to match GitHub.
 Substack returns HTTP 403 to GitHub-hosted runners, so `.github/workflows/update-substack-posts.yml` no longer runs on a schedule; it can still be started by hand from the Actions tab.
 The pipeline exits with an error when every publication fails to fetch, so a total outage can't pass as "no new posts".
+A publication whose archive can't be read still contributes its recent feed posts; the run report lists it under "Feed posts only", and its older posts are picked up once the archive works again.
 It fetches new posts, has Claude judge each from its full text, saves them to `articles.json`, and exports publishable ones to `data.json`.
 A post is publishable if it is relevant and scores 5, or was picked by fill, and isn't marked a duplicate; posts added with `--post-url` always are.
 Posts Claude tags `news` (mainly reporting events) go to the News category instead, with a lower bar (relevant, score 2 or more); they never count toward fill's tag totals or cap, and the site leaves them out of tag and search results unless the visitor shows them.
 To force-include specific posts or check one publication, pass `--post-url` or `--publication-url` to the script (or start the workflow from the Actions tab).
+Pass a publication's own address (e.g. `name.substack.com`), not a `substack.com/@name` profile link.
+Each run checks posts back to `START_DATE` (default 2023-10-07) and skips ones already processed, so missed weeks catch up on their own.
+To check only recent posts, set it for one run, e.g. `START_DATE=2026-10-25 opclaude update-substack-posts/run-weekly.sh`.
 
 ## Clean-up steps (run by hand, in this order)
 
