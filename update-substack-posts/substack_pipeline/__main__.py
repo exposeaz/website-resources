@@ -6,6 +6,7 @@ import logging
 import sys
 from dataclasses import dataclass
 from datetime import date, datetime, timezone
+from urllib.parse import urlsplit
 
 from config import settings
 from substack_pipeline import export, fetch, state
@@ -60,6 +61,10 @@ def _resolve_publication(url_or_name, configured):
         if pub.name.lower() == url_or_name.strip().lower():
             return pub
     key = fetch.base_url(url_or_name if "://" in url_or_name else f"https://{url_or_name}")
+    # substack.com links (profiles like substack.com/@name, or posts opened in the app) name no publication
+    if urlsplit(key).netloc in ("substack.com", "www.substack.com"):
+        raise fetch.FetchError(f"{url_or_name} is a substack.com link, not a publication; use the "
+                               "publication's own address (e.g. name.substack.com) or the post's link there")
     for pub in configured:
         if pub.url == key:
             return pub
@@ -128,7 +133,10 @@ def gather_candidates(args, processed, errors):
             _record_error(errors, url, url, exc)
 
     if args.publication_url:
-        pubs = [_resolve_publication(args.publication_url, configured)]
+        try:
+            pubs = [_resolve_publication(args.publication_url, configured)]
+        except fetch.FetchError as exc:
+            sys.exit(f"Stopped: {exc}")
         log.info("Publication: %s (%s)", pubs[0].name, pubs[0].url)
     elif post_urls:
         pubs = []
