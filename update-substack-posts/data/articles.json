@@ -28,7 +28,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -245,7 +245,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -283,7 +283,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -359,7 +359,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -434,7 +434,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -512,7 +512,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -590,7 +590,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -914,7 +914,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -952,7 +952,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -989,7 +989,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -1060,7 +1060,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -1196,7 +1196,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -1233,7 +1233,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -1297,7 +1297,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -1369,7 +1369,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -1409,7 +1409,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -1706,7 +1706,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -1741,7 +1742,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -1885,7 +1887,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -3626,7 +3628,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -3882,7 +3884,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -3958,7 +3960,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -3997,7 +3999,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -4692,7 +4694,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -4734,7 +4736,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Joshua Dabelstein",
@@ -4832,7 +4835,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -5123,7 +5126,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Joshua Dabelstein",
@@ -5190,7 +5194,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -5731,7 +5735,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -15741,7 +15745,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Kevin Deutsch",
@@ -22257,7 +22262,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -22320,7 +22326,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -22728,7 +22734,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -22910,7 +22917,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Jennifer Kogan / Levari",
@@ -25818,7 +25826,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -26223,7 +26231,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "ESK",
@@ -26358,7 +26367,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "ESK",
@@ -26421,7 +26431,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -26739,7 +26749,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "David Christopher Kaufman",
@@ -27805,7 +27816,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -28098,7 +28109,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -29429,7 +29440,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "fill_checks": {
@@ -29514,7 +29525,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Whole Story Institute",
@@ -29553,7 +29565,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Whole Story Institute",
@@ -29585,7 +29598,7 @@
     "forced": false,
     "relevance_score": 4,
     "scoped_tags_reviewed": "2b1263741753",
-    "exported_resources": false,
+    "exported_resources": true,
     "retagged": "c78da2b03775",
     "reread": "cb796fb0988c",
     "scoped_tag_checks": {
@@ -29761,7 +29774,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Whole Story Institute",
@@ -29836,7 +29850,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Whole Story Institute",
@@ -48898,7 +48913,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -48932,7 +48948,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Institute for Critical Study of Antizionism (ICSA)",
@@ -49093,7 +49110,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Naya Lekht",
@@ -49492,7 +49510,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Kile B. Jones",
@@ -49561,7 +49580,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Kile B. Jones",
@@ -49625,7 +49645,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Kile B. Jones",
@@ -50047,7 +50068,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Whole Story Institute",
@@ -50178,7 +50200,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "Whole Story Institute",
@@ -50373,7 +50396,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "pat604johnson",
@@ -50527,7 +50551,8 @@
     "scoped_tag_checks": {
       "advocacy": "c5bcdd14c455"
     },
-    "hand_picked": true
+    "hand_picked": true,
+    "exported_resources": true
   },
   {
     "publication": "pat604johnson",
