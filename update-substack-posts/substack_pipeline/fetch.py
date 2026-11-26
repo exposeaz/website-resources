@@ -163,15 +163,22 @@ def archive_entries(pub_url, since=None, limit=None):
     Stops before `since` or after `limit` entries, whichever comes first.
     """
     entries = []
-    offset = 0
+    seen = set()
+    cursor = None
     while limit is None or len(entries) < limit:
         page_size = settings.ARCHIVE_PAGE_SIZE if limit is None else min(settings.ARCHIVE_PAGE_SIZE, limit - len(entries))
-        page = _get(
-            f"{base_url(pub_url)}/api/v1/archive",
-            params={"sort": "new", "offset": offset, "limit": page_size},
-        ).json()
-        if not page:
+        params = {"sort": "new", "limit": page_size}
+        # Substack pages the archive with a cursor from the previous response and rejects any offset
+        if cursor:
+            params["cursor"] = cursor
+        data = _get(f"{base_url(pub_url)}/api/v1/archive", params=params).json()
+        # Older responses were a bare list of posts with no cursor
+        page = data if isinstance(data, list) else data.get("posts") or []
+        urls = {post.get("canonical_url") for post in page}
+        # A repeated page means the cursor was ignored; stop rather than loop forever
+        if not page or urls <= seen:
             return entries
+        seen |= urls
         for post in page:
             published = _parse_date(post.get("post_date"))
             if since and published and published < since:
@@ -179,7 +186,9 @@ def archive_entries(pub_url, since=None, limit=None):
             url = post.get("canonical_url")
             if url:
                 entries.append((url, published))
-        offset += len(page)
+        cursor = None if isinstance(data, list) else data.get("nextCursor")
+        if not cursor:
+            break
     return entries[:limit]
 
 

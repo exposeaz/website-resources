@@ -32,6 +32,20 @@ git fetch origin main
 open_pr="$(gh pr list --head "$PR_BRANCH" --state open --json number --jq '.[].number')"
 if [ -n "$open_pr" ]; then
   git fetch origin "$PR_BRANCH"
+fi
+
+# The checkout below resets the bot branch, so never discard local commits that were never pushed
+if git rev-parse -q --verify "refs/heads/$PR_BRANCH" >/dev/null; then
+  unpushed="$(git log --oneline "refs/heads/$PR_BRANCH" --not --remotes)"
+  if [ -n "$unpushed" ]; then
+    echo "Branch $PR_BRANCH has commits that were never pushed:" >&2
+    echo "$unpushed" >&2
+    echo "Push them first (git push origin $PR_BRANCH), or delete the branch if they are already merged." >&2
+    exit 1
+  fi
+fi
+
+if [ -n "$open_pr" ]; then
   git checkout -q -B "$PR_BRANCH" FETCH_HEAD
 else
   git checkout -q -B "$PR_BRANCH" origin/main
