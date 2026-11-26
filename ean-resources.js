@@ -43,6 +43,7 @@
       { title: "Open a resource", body: "Select a resource to see its full description, citation, and tags, with a link to the original source." },
       { title: "Browsing Substacks", body: "Selecting a Substack shows a set of AI-curated articles about antizionism from that Substack. A link to the Substack itself is also provided." },
       { title: "Cards or list", body: "Switch between `Cards` and `List` at any time. List view also lets you sort by title, author, year, or type." },
+      { title: "Browse by author", body: "Select an author's name on any resource to show only their work. Select the name again, or the author filter under the search bar, to remove it." },
       { title: "Clear filters", body: "Clears the search box and all selected tags. Use `All resource types` to return to the main page." }
     ] },
     { heading: "About the library", items: [
@@ -70,7 +71,7 @@
   document.body.appendChild(modalRoot);
   var state = {
     data: null, view: "categories", categoryId: null, substackId: null,
-    search: "", activeTags: [], tagMode: "any", modalResourceId: null, layout: loadLayout(),
+    search: "", activeTags: [], tagMode: "any", author: null, modalResourceId: null, layout: loadLayout(),
     shown: PAGE_SIZE, pageKey: null, showNews: false, sortKey: null, sortDir: 1, helpOpen: false
   };
 
@@ -112,11 +113,39 @@
     return r.author;
   }
 
-  // Meta line for cards and rows: author, source (the Substack, when different from the author), year, then type
-  function metaParts(r, withType) {
+  // Meta line for cards and rows: author, source (the Substack, when different from the author), year, then type.
+  // Returns HTML, with each author name as a link that filters to that author.
+  function metaHtml(r, withType) {
     var sub = (r.category === ARTICLE_CATEGORY || r.category === NEWS_CATEGORY) && substackFor(r);
     var source = sub && sub.title !== r.author ? sub.title : "";
-    return [r.author, source, r.year ? String(r.year) : "", withType ? categoryLabel(r.category) : ""].filter(Boolean);
+    var parts = [source, r.year ? String(r.year) : "", withType ? categoryLabel(r.category) : ""].filter(Boolean).map(esc);
+    if (r.author) parts.unshift(authorLinksHtml(r.author));
+    return parts.join(' &middot; ');
+  }
+
+  // Individual people/organisations in an author string:
+  // "Lauren Swersky, Josh Warhit, and Ioana Timariu" -> three names; "(ed.)" and "et al." are dropped
+  function authorNames(author) {
+    return (author || "").replace(/\((eds?\.?)\)|\bet al\.?/gi, "")
+      .split(/\s*,\s*(?:and\s+)?|\s+and\s+|\s*\/\s*|\s+&\s+/)
+      .map(function (n) { return n.trim(); }).filter(Boolean);
+  }
+  function hasAuthor(r, name) {
+    var want = name.toLowerCase();
+    return authorNames(r.author).some(function (n) { return n.toLowerCase() === want; });
+  }
+  // The author string as written, with each name inside it made clickable
+  function authorLinksHtml(author) {
+    var html = "", pos = 0;
+    authorNames(author).forEach(function (name) {
+      var at = author.indexOf(name, pos);
+      if (at === -1) return;
+      var active = state.author && state.author.toLowerCase() === name.toLowerCase();
+      html += esc(author.slice(pos, at)) + '<button type="button" class="ean-author-link" data-author="' + esc(name) + '"' +
+        (active ? ' data-active="true"' : '') + ' title="Show only work by ' + esc(name) + '">' + esc(name) + '</button>';
+      pos = at + name.length;
+    });
+    return html + esc(author.slice(pos));
   }
 
   function esc(s) {
@@ -127,6 +156,7 @@
 
   // `inherited`: extra searchable text, e.g. a Substack's title/author for its articles
   function matchesFilters(r, inherited) {
+    if (state.author && !hasAuthor(r, state.author)) return false;
     // Every word must appear somewhere (text or tag labels), in any order, so "Adam Louis-Klein" matches "Louis-Klein, Adam"
     var words = state.search.trim().toLowerCase().split(/\s+/).filter(Boolean);
     if (words.length) {
@@ -190,9 +220,14 @@
 
   function renderToolbar() {
     var html = '<div class="ean-toolbar">';
-    html += '<input class="ean-search" type="text" placeholder="Search titles, descriptions, citations..." value="' + esc(state.search) + '" />';
+    html += '<input class="ean-search" type="text" placeholder="Search titles, authors, descriptions, citations..." value="' + esc(state.search) + '" />';
     html += '<button type="button" class="ean-clear-btn" data-clear-filters="1">Clear filters</button>';
     html += '</div>';
+    if (state.author) {
+      html += '<div class="ean-author-filter"><span class="ean-tagmode-label">Author:</span>' +
+        '<button type="button" class="sqs-block-button-element sqs-block-button-element--primary ean-author-chip" data-clear-author="1" aria-label="Remove author filter: ' + esc(state.author) + '">' +
+        esc(state.author) + ' &times;</button></div>';
+    }
     html += '<p class="ean-tag-hint">' + esc(TAG_HINT) + '</p>';
     html += '<div class="ean-tagbar">';
     orderedTags().forEach(function (t) {
@@ -303,10 +338,8 @@
     // just re-add: html += resourceImageHtml(r);
     if (showsType()) html += '<span class="ean-res-badge">' + esc(categoryLabel(r.category)) + '</span>';
     html += '<h4>' + esc(r.title) + '</h4>';
-    var meta = metaParts(r, false);
-    if (meta.length) {
-      html += '<div class="ean-res-author">' + meta.map(esc).join(' &middot; ') + '</div>';
-    }
+    var meta = metaHtml(r, false);
+    if (meta) html += '<div class="ean-res-author">' + meta + '</div>';
     html += substackCountHtml(r);
     html += tagsHtml(r, CARD_TAG_LIMIT);
     html += '</div>';
@@ -339,10 +372,10 @@
   }
 
   function renderResourceRow(r) {
-    var meta = metaParts(r, showsType());
+    var meta = metaHtml(r, showsType());
     var html = '<div class="ean-res-row" data-res="' + esc(r.id) + '">';
     html += '<div class="ean-res-row-main"><h4>' + esc(r.title) + '</h4>';
-    html += '<div class="ean-res-row-meta">' + meta.map(esc).join(' &middot; ') + '</div>';
+    html += '<div class="ean-res-row-meta">' + meta + '</div>';
     html += substackCountHtml(r) + '</div>';
     html += tagsHtml(r, CARD_TAG_LIMIT);
     html += '</div>';
@@ -417,8 +450,9 @@
     }
     html += '</div>';
     html += '<h4>' + esc(r.title) + '</h4>';
-    if (bylineFor(r)) {
-      html += '<div class="ean-res-author">' + esc(bylineFor(r)) + '</div>';
+    var byline = bylineFor(r);
+    if (byline) {
+      html += '<div class="ean-res-author">' + (byline === r.author ? authorLinksHtml(r.author) : esc(byline)) + '</div>';
     }
     if (r.description) {
       html += '<p class="ean-res-desc">' + esc(r.description) + '</p>';
@@ -467,12 +501,12 @@
 
   function render() {
     // A new listing (view, search or tags changed) starts again from the first page
-    var pageKey = JSON.stringify([state.view, state.categoryId, state.substackId, state.search, state.activeTags, state.tagMode, state.showNews, state.sortKey, state.sortDir]);
+    var pageKey = JSON.stringify([state.view, state.categoryId, state.substackId, state.search, state.activeTags, state.tagMode, state.author, state.showNews, state.sortKey, state.sortDir]);
     if (pageKey !== state.pageKey) {
       state.pageKey = pageKey;
       state.shown = PAGE_SIZE;
     }
-    var filtering = state.search.trim() !== "" || state.activeTags.length > 0;
+    var filtering = state.search.trim() !== "" || state.activeTags.length > 0 || !!state.author;
     var html = renderHelpLinks() + renderToolbar();
 
     if (state.view === "substack") {
@@ -584,7 +618,31 @@
     masonryResizeTimer = setTimeout(layoutMasonry, 150);
   });
 
+  // Author names sit inside clickable cards/rows/modals, so they stop the click there.
+  // Selecting the active author again removes the filter.
+  function bindAuthorLinks(container) {
+    container.querySelectorAll("[data-author]").forEach(function (btn) {
+      btn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        var name = btn.getAttribute("data-author");
+        state.author = state.author && state.author.toLowerCase() === name.toLowerCase() ? null : name;
+        state.modalResourceId = null;
+        render();
+        root.scrollIntoView();
+      });
+    });
+  }
+
   function attachEvents() {
+    bindAuthorLinks(root);
+    bindAuthorLinks(modalRoot);
+    var clearAuthor = root.querySelector("[data-clear-author]");
+    if (clearAuthor) {
+      clearAuthor.addEventListener("click", function () {
+        state.author = null;
+        render();
+      });
+    }
     var searchEl = root.querySelector(".ean-search");
     if (searchEl) {
       searchEl.addEventListener("input", function (e) {
@@ -625,6 +683,7 @@
       clearBtn.addEventListener("click", function () {
         state.search = "";
         state.activeTags = [];
+        state.author = null;
         render();
       });
     }
